@@ -144,16 +144,16 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
                         .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
                             .addComponent(txtDob))
-                        .addContainerGap(12, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                         .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblWeight))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(26, 26, 26)
                         .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         tabBodyPersonalInformationLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtDob, txtFirstName, txtHeight, txtLastName, txtMobileNumber, txtSsn, txtWeight});
@@ -257,5 +257,10 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         txtLastName.setText(person.getLastName());
         txtMobileNumber.setText(person.getMobileNumber());
         txtAge.setText(Integer.toString(person.getAge()));
+        txtHeight.setText(Float.toString(person.getHeight()));
+        txtWeight.setText(Float.toString(person.getWeight()));
+        txtSsn.setText(person.getSsn());
+        
+//        txtDob.setText(person.getDob());
     }
 }
