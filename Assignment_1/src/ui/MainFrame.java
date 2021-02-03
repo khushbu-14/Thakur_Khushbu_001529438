@@ -29,38 +29,216 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs = new javax.swing.JTabbedPane();
         tabPersonalInfo = new javax.swing.JPanel();
+        tabBodyPersonalInformation = new javax.swing.JPanel();
+        lblFirstName = new javax.swing.JLabel();
+        txtFirstName = new javax.swing.JTextField();
+        lblLastName = new javax.swing.JLabel();
+        txtLastName = new javax.swing.JTextField();
+        lblMobileNumber = new javax.swing.JLabel();
+        txtMobileNumber = new javax.swing.JTextField();
+        lblDateOfBirth = new javax.swing.JLabel();
+        lblAge = new javax.swing.JLabel();
+        txtAge = new javax.swing.JTextField();
+        lblHeight = new javax.swing.JLabel();
+        txtHeight = new javax.swing.JTextField();
+        txtDob = new javax.swing.JFormattedTextField();
+        txtWeight = new javax.swing.JTextField();
+        lblWeight = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtSsn = new javax.swing.JTextField();
+        btnSavePersonalInformation = new javax.swing.JButton();
         tabAddress = new javax.swing.JPanel();
+        tabBodyAddress = new javax.swing.JPanel();
         tabBankInformation = new javax.swing.JPanel();
         tabLicense = new javax.swing.JPanel();
         tabMedical = new javax.swing.JPanel();
+        tabReport = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         actionTabs.setBackground(new java.awt.Color(255, 255, 255));
         actionTabs.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
 
+        lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblFirstName.setText("First Name");
+
+        txtFirstName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFirstNameActionPerformed(evt);
+            }
+        });
+
+        lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblLastName.setText("Last Name");
+
+        txtLastName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLastNameActionPerformed(evt);
+            }
+        });
+
+        lblMobileNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblMobileNumber.setText("Mobile Number");
+
+        txtMobileNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMobileNumberActionPerformed(evt);
+            }
+        });
+
+        lblDateOfBirth.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblDateOfBirth.setText("Date of birth");
+
+        lblAge.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblAge.setText("Age");
+
+        txtAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeActionPerformed(evt);
+            }
+        });
+
+        lblHeight.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblHeight.setText("Height (inches)");
+
+        txtHeight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHeightActionPerformed(evt);
+            }
+        });
+
+        txtWeight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtWeightActionPerformed(evt);
+            }
+        });
+
+        lblWeight.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblWeight.setText("Weight (pounds)");
+
+        jLabel1.setText("Social Security Number");
+
+        btnSavePersonalInformation.setText("Save");
+
+        javax.swing.GroupLayout tabBodyPersonalInformationLayout = new javax.swing.GroupLayout(tabBodyPersonalInformation);
+        tabBodyPersonalInformation.setLayout(tabBodyPersonalInformationLayout);
+        tabBodyPersonalInformationLayout.setHorizontalGroup(
+            tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMobileNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                                .addGap(0, 34, Short.MAX_VALUE)
+                                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyPersonalInformationLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtSsn)
+                    .addComponent(txtMobileNumber)
+                    .addComponent(txtFirstName)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                            .addComponent(txtDob))
+                        .addContainerGap(15, Short.MAX_VALUE))
+                    .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblWeight))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(15, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyPersonalInformationLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSavePersonalInformation)
+                .addGap(283, 283, 283))
+        );
+        tabBodyPersonalInformationLayout.setVerticalGroup(
+            tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFirstName)
+                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblLastName)
+                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMobileNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDateOfBirth)
+                    .addComponent(txtDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMobileNumber))
+                .addGap(18, 18, 18)
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAge)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHeight))
+                .addGap(18, 18, 18)
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblWeight)
+                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSsn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(41, 41, 41)
+                .addComponent(btnSavePersonalInformation)
+                .addContainerGap(110, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout tabPersonalInfoLayout = new javax.swing.GroupLayout(tabPersonalInfo);
         tabPersonalInfo.setLayout(tabPersonalInfoLayout);
         tabPersonalInfoLayout.setHorizontalGroup(
             tabPersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addGroup(tabPersonalInfoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tabBodyPersonalInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         tabPersonalInfoLayout.setVerticalGroup(
             tabPersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGroup(tabPersonalInfoLayout.createSequentialGroup()
+                .addComponent(tabBodyPersonalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         actionTabs.addTab("Personal", tabPersonalInfo);
+
+        javax.swing.GroupLayout tabBodyAddressLayout = new javax.swing.GroupLayout(tabBodyAddress);
+        tabBodyAddress.setLayout(tabBodyAddressLayout);
+        tabBodyAddressLayout.setHorizontalGroup(
+            tabBodyAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 726, Short.MAX_VALUE)
+        );
+        tabBodyAddressLayout.setVerticalGroup(
+            tabBodyAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 365, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout tabAddressLayout = new javax.swing.GroupLayout(tabAddress);
         tabAddress.setLayout(tabAddressLayout);
         tabAddressLayout.setHorizontalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addComponent(tabBodyAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         tabAddressLayout.setVerticalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addComponent(tabBodyAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("Address", tabAddress);
@@ -73,7 +251,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabBankInformationLayout.setVerticalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGap(0, 365, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("Bank", tabBankInformation);
@@ -86,7 +264,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabLicenseLayout.setVerticalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGap(0, 365, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("License", tabLicense);
@@ -99,10 +277,23 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabMedicalLayout.setVerticalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGap(0, 365, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("Medical", tabMedical);
+
+        javax.swing.GroupLayout tabReportLayout = new javax.swing.GroupLayout(tabReport);
+        tabReport.setLayout(tabReportLayout);
+        tabReportLayout.setHorizontalGroup(
+            tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 726, Short.MAX_VALUE)
+        );
+        tabReportLayout.setVerticalGroup(
+            tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 365, Short.MAX_VALUE)
+        );
+
+        actionTabs.addTab("Report", tabReport);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,11 +303,35 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(actionTabs, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(actionTabs)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFirstNameActionPerformed
+
+    private void txtLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLastNameActionPerformed
+
+    private void txtMobileNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMobileNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMobileNumberActionPerformed
+
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
+
+    private void txtHeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHeightActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHeightActionPerformed
+
+    private void txtWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWeightActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtWeightActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,10 +370,30 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane actionTabs;
+    private javax.swing.JButton btnSavePersonalInformation;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblDateOfBirth;
+    private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblHeight;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblMobileNumber;
+    private javax.swing.JLabel lblWeight;
     private javax.swing.JPanel tabAddress;
     private javax.swing.JPanel tabBankInformation;
+    private javax.swing.JPanel tabBodyAddress;
+    private javax.swing.JPanel tabBodyPersonalInformation;
     private javax.swing.JPanel tabLicense;
     private javax.swing.JPanel tabMedical;
     private javax.swing.JPanel tabPersonalInfo;
+    private javax.swing.JPanel tabReport;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JFormattedTextField txtDob;
+    private javax.swing.JTextField txtFirstName;
+    private javax.swing.JTextField txtHeight;
+    private javax.swing.JTextField txtLastName;
+    private javax.swing.JTextField txtMobileNumber;
+    private javax.swing.JTextField txtSsn;
+    private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables
 }
