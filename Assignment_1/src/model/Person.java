@@ -10,36 +10,36 @@ public class Person {
 //    personal information
  private String firstName;
  private String lastName;
- private int mobileNumber;
+ private String mobileNumber;
  private Date dob;
  private int age;
  private float height;
  private float weight;
- private int ssn;
+ private String ssn;
  
 // address
  private String streetAddress;
  private String city;
  private String state;
- private int zipcode;
+ private String zipcode;
  
 // bank saving
  private String savingBankName;
- private int savingBankRoutingNumber;
- private int savingBankAccountNumber;
- private int savingAccountBalance;
+ private String savingBankRoutingNumber;
+ private String savingBankAccountNumber;
+ private String savingAccountBalance;
  private boolean isSavingAccountType;
  
  // bank checking
  private String checkingBankName;
- private int checkingBankRoutingNumber;
- private int checkingBankAccountNumber;
- private int checkingAccountBalance;
+ private String checkingBankRoutingNumber;
+ private String checkingBankAccountNumber;
+ private String checkingAccountBalance;
  private boolean isCheckingAccountType;
  
 // license information
  
- private int licenseNumber;
+ private String licenseNumber;
  private Date dateIssued;
  private Date dateOfExpiry;
  private String bloodType;
@@ -47,7 +47,7 @@ public class Person {
  
 // medical record
  
- private int recordNumber;
+ private String recordNumber;
  private String alergy1;
  private String alergy2;
  private String alergy3;
@@ -68,11 +68,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public int getMobileNumber() {
+    public String getMobileNumber() {
         return mobileNumber;
     }
 
-    public void setMobileNumber(int mobileNumber) {
+    public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
 
@@ -108,11 +108,11 @@ public class Person {
         this.weight = weight;
     }
 
-    public int getSsn() {
+    public String getSsn() {
         return ssn;
     }
 
-    public void setSsn(int ssn) {
+    public void setSsn(String ssn) {
         this.ssn = ssn;
     }
 
@@ -140,11 +140,11 @@ public class Person {
         this.state = state;
     }
 
-    public int getZipcode() {
+    public String getZipcode() {
         return zipcode;
     }
 
-    public void setZipcode(int zipcode) {
+    public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
 
@@ -156,27 +156,27 @@ public class Person {
         this.savingBankName = savingBankName;
     }
 
-    public int getSavingBankRoutingNumber() {
+    public String getSavingBankRoutingNumber() {
         return savingBankRoutingNumber;
     }
 
-    public void setSavingBankRoutingNumber(int savingBankRoutingNumber) {
+    public void setSavingBankRoutingNumber(String savingBankRoutingNumber) {
         this.savingBankRoutingNumber = savingBankRoutingNumber;
     }
 
-    public int getSavingBankAccountNumber() {
+    public String getSavingBankAccountNumber() {
         return savingBankAccountNumber;
     }
 
-    public void setSavingBankAccountNumber(int savingBankAccountNumber) {
+    public void setSavingBankAccountNumber(String savingBankAccountNumber) {
         this.savingBankAccountNumber = savingBankAccountNumber;
     }
 
-    public int getSavingAccountBalance() {
+    public String getSavingAccountBalance() {
         return savingAccountBalance;
     }
 
-    public void setSavingAccountBalance(int savingAccountBalance) {
+    public void setSavingAccountBalance(String savingAccountBalance) {
         this.savingAccountBalance = savingAccountBalance;
     }
 
@@ -196,27 +196,27 @@ public class Person {
         this.checkingBankName = checkingBankName;
     }
 
-    public int getCheckingBankRoutingNumber() {
+    public String getCheckingBankRoutingNumber() {
         return checkingBankRoutingNumber;
     }
 
-    public void setCheckingBankRoutingNumber(int checkingBankRoutingNumber) {
+    public void setCheckingBankRoutingNumber(String checkingBankRoutingNumber) {
         this.checkingBankRoutingNumber = checkingBankRoutingNumber;
     }
 
-    public int getCheckingBankAccountNumber() {
+    public String getCheckingBankAccountNumber() {
         return checkingBankAccountNumber;
     }
 
-    public void setCheckingBankAccountNumber(int checkingBankAccountNumber) {
+    public void setCheckingBankAccountNumber(String checkingBankAccountNumber) {
         this.checkingBankAccountNumber = checkingBankAccountNumber;
     }
 
-    public int getCheckingAccountBalance() {
+    public String getCheckingAccountBalance() {
         return checkingAccountBalance;
     }
 
-    public void setCheckingAccountBalance(int checkingAccountBalance) {
+    public void setCheckingAccountBalance(String checkingAccountBalance) {
         this.checkingAccountBalance = checkingAccountBalance;
     }
 
@@ -228,11 +228,11 @@ public class Person {
         this.isCheckingAccountType = isCheckingAccountType;
     }
 
-    public int getLicenseNumber() {
+    public String getLicenseNumber() {
         return licenseNumber;
     }
 
-    public void setLicenseNumber(int licenseNumber) {
+    public void setLicenseNumber(String licenseNumber) {
         this.licenseNumber = licenseNumber;
     }
 
@@ -268,11 +268,11 @@ public class Person {
         this.picture = picture;
     }
 
-    public int getRecordNumber() {
+    public String getRecordNumber() {
         return recordNumber;
     }
 
-    public void setRecordNumber(int recordNumber) {
+    public void setRecordNumber(String recordNumber) {
         this.recordNumber = recordNumber;
     }
 
@@ -299,4 +299,6 @@ public class Person {
     public void setAlergy3(String alergy3) {
         this.alergy3 = alergy3;
     }
+
+   
 }
