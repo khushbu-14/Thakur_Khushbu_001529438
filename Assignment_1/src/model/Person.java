@@ -11,11 +11,15 @@ public class Person {
  private String firstName;
  private String lastName;
  private String mobileNumber;
- private Date dob;
+ private String dob;
  private int age;
  private float height;
  private float weight;
  private String ssn;
+ private int dobDay;
+ private int dobMonth;
+ private int dobYear;
+ 
  
 // address
  private String streetAddress;
@@ -76,11 +80,11 @@ public class Person {
         this.mobileNumber = mobileNumber;
     }
 
-    public Date getDob() {
+     public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
@@ -299,6 +303,32 @@ public class Person {
     public void setAlergy3(String alergy3) {
         this.alergy3 = alergy3;
     }
+
+    public int getDobDay() {
+        return dobDay;
+    }
+
+    public void setDobDay(int dobDay) {
+        this.dobDay = dobDay;
+    }
+
+    public int getDobMonth() {
+        return dobMonth;
+    }
+
+    public void setDobMonth(int dobMonth) {
+        this.dobMonth = dobMonth;
+    }
+
+    public int getDobYear() {
+        return dobYear;
+    }
+
+    public void setDobYear(int dobYear) {
+        this.dobYear = dobYear;
+    }
+    
+    
 
    
 }
