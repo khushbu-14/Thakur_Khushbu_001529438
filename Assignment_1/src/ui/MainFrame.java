@@ -32,6 +32,7 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         actionTabs = new javax.swing.JTabbedPane();
         tabPersonalInfo = new javax.swing.JPanel();
         splitPanelPersonalInfo = new javax.swing.JSplitPane();
@@ -45,11 +46,21 @@ public class MainFrame extends javax.swing.JFrame {
         tabLicense = new javax.swing.JPanel();
         tabMedical = new javax.swing.JPanel();
         tabReport = new javax.swing.JPanel();
+        splitPaneReport = new javax.swing.JSplitPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         actionTabs.setBackground(new java.awt.Color(255, 255, 255));
         actionTabs.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        actionTabs.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                actionTabsMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanePersonalInfoLayout = new javax.swing.GroupLayout(controlPanePersonalInfo);
         controlPanePersonalInfo.setLayout(controlPanePersonalInfoLayout);
@@ -59,7 +70,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         controlPanePersonalInfoLayout.setVerticalGroup(
             controlPanePersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 361, Short.MAX_VALUE)
+            .addGap(0, 436, Short.MAX_VALUE)
         );
 
         splitPanelPersonalInfo.setRightComponent(controlPanePersonalInfo);
@@ -99,7 +110,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(btnCreatePersonalInfo)
                 .addGap(40, 40, 40)
                 .addComponent(btnViewPersonalInfo)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
 
         workPanePersonalInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreatePersonalInfo, btnViewPersonalInfo});
@@ -127,7 +138,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabBodyAddressLayout.setVerticalGroup(
             tabBodyAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout tabAddressLayout = new javax.swing.GroupLayout(tabAddress);
@@ -151,7 +162,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabBankInformationLayout.setVerticalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("Bank", tabBankInformation);
@@ -164,7 +175,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabLicenseLayout.setVerticalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("License", tabLicense);
@@ -177,20 +188,52 @@ public class MainFrame extends javax.swing.JFrame {
         );
         tabMedicalLayout.setVerticalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         actionTabs.addTab("Medical", tabMedical);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 346, Short.MAX_VALUE)
+        );
+
+        splitPaneReport.setLeftComponent(jPanel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 346, Short.MAX_VALUE)
+        );
+
+        splitPaneReport.setRightComponent(jPanel2);
 
         javax.swing.GroupLayout tabReportLayout = new javax.swing.GroupLayout(tabReport);
         tabReport.setLayout(tabReportLayout);
         tabReportLayout.setHorizontalGroup(
             tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addGroup(tabReportLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(splitPaneReport, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         tabReportLayout.setVerticalGroup(
             tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGroup(tabReportLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(splitPaneReport, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         actionTabs.addTab("Report", tabReport);
@@ -221,6 +264,14 @@ public class MainFrame extends javax.swing.JFrame {
         ViewPersonalInfoJPanel personalInformationViewPanel = new ViewPersonalInfoJPanel(person);
         splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel); 
     }//GEN-LAST:event_btnViewPersonalInfoActionPerformed
+
+    private void actionTabsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionTabsMouseClicked
+        // TODO add your handling code here:
+        ReportJPanel reportPanel = new ReportJPanel(person);
+        splitPaneReport.setRightComponent(reportPanel);
+//        scrollPanelReport.add(reportPanel);
+//        tabReport.add(reportPanel);
+    }//GEN-LAST:event_actionTabsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -262,6 +313,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnCreatePersonalInfo;
     private javax.swing.JButton btnViewPersonalInfo;
     private javax.swing.JPanel controlPanePersonalInfo;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSplitPane splitPaneReport;
     private javax.swing.JSplitPane splitPanelPersonalInfo;
     private javax.swing.JPanel tabAddress;
     private javax.swing.JPanel tabBankInformation;

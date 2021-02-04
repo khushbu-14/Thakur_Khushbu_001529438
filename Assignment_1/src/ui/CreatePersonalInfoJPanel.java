@@ -27,8 +27,8 @@ public class CreatePersonalInfoJPanel extends javax.swing.JPanel {
         this.person = person;
     }
     
-     private String pattern = "dd-MMM-yyyy";
-     private SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+//     private String pattern = "dd-MMM-yyyy";
+//     private SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -187,18 +187,19 @@ public class CreatePersonalInfoJPanel extends javax.swing.JPanel {
                 .addGap(33, 33, 33)
                 .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
-                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtFirstName)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                                 .addGap(5, 5, 5)
                                 .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(txtLastName))
+                            .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtFirstName)
+                                .addComponent(txtLastName)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(lblDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
-                                    .addGap(2, 2, 2)
-                                    .addComponent(lblDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addComponent(txtMobileNumber)
                                 .addComponent(lblMobileNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(txtDob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -216,12 +217,12 @@ public class CreatePersonalInfoJPanel extends javax.swing.JPanel {
                                     .addComponent(lblSsn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(28, 28, 28))
                             .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
-                                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addComponent(lblWeight))
-                                    .addComponent(txtWeight))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
+                                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                         .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(159, 159, 159)))
