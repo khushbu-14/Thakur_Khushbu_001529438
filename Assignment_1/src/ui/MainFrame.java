@@ -41,7 +41,11 @@ public class MainFrame extends javax.swing.JFrame {
         btnCreatePersonalInfo = new javax.swing.JButton();
         btnViewPersonalInfo = new javax.swing.JButton();
         tabAddress = new javax.swing.JPanel();
-        tabBodyAddress = new javax.swing.JPanel();
+        splitPanelAddressInfo = new javax.swing.JSplitPane();
+        controlPaneAddressInfo = new javax.swing.JPanel();
+        workPaneAddressInfo = new javax.swing.JPanel();
+        btnCreateAddressInfo = new javax.swing.JButton();
+        btnViewAddressInfo = new javax.swing.JButton();
         tabBankInformation = new javax.swing.JPanel();
         splitPanelBankInfo = new javax.swing.JSplitPane();
         controlPaneBankInfo = new javax.swing.JPanel();
@@ -140,26 +144,70 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("Personal", tabPersonalInfo);
 
-        javax.swing.GroupLayout tabBodyAddressLayout = new javax.swing.GroupLayout(tabBodyAddress);
-        tabBodyAddress.setLayout(tabBodyAddressLayout);
-        tabBodyAddressLayout.setHorizontalGroup(
-            tabBodyAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+        javax.swing.GroupLayout controlPaneAddressInfoLayout = new javax.swing.GroupLayout(controlPaneAddressInfo);
+        controlPaneAddressInfo.setLayout(controlPaneAddressInfoLayout);
+        controlPaneAddressInfoLayout.setHorizontalGroup(
+            controlPaneAddressInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
         );
-        tabBodyAddressLayout.setVerticalGroup(
-            tabBodyAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+        controlPaneAddressInfoLayout.setVerticalGroup(
+            controlPaneAddressInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
         );
+
+        splitPanelAddressInfo.setRightComponent(controlPaneAddressInfo);
+
+        btnCreateAddressInfo.setText("Create");
+        btnCreateAddressInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateAddressInfoActionPerformed(evt);
+            }
+        });
+
+        btnViewAddressInfo.setText("View");
+        btnViewAddressInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewAddressInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout workPaneAddressInfoLayout = new javax.swing.GroupLayout(workPaneAddressInfo);
+        workPaneAddressInfo.setLayout(workPaneAddressInfoLayout);
+        workPaneAddressInfoLayout.setHorizontalGroup(
+            workPaneAddressInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneAddressInfoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(workPaneAddressInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateAddressInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnViewAddressInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        workPaneAddressInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateAddressInfo, btnViewAddressInfo});
+
+        workPaneAddressInfoLayout.setVerticalGroup(
+            workPaneAddressInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneAddressInfoLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(btnCreateAddressInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnViewAddressInfo)
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        workPaneAddressInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateAddressInfo, btnViewAddressInfo});
+
+        splitPanelAddressInfo.setLeftComponent(workPaneAddressInfo);
 
         javax.swing.GroupLayout tabAddressLayout = new javax.swing.GroupLayout(tabAddress);
         tabAddress.setLayout(tabAddressLayout);
         tabAddressLayout.setHorizontalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabBodyAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(splitPanelAddressInfo)
         );
         tabAddressLayout.setVerticalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabBodyAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(splitPanelAddressInfo)
         );
 
         actionTabs.addTab("Address", tabAddress);
@@ -420,6 +468,18 @@ public class MainFrame extends javax.swing.JFrame {
          splitPanelLicenseInfo.setRightComponent(licenseViewPanel);
     }//GEN-LAST:event_btnViewLicenseInfoActionPerformed
 
+    private void btnCreateAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAddressInfoActionPerformed
+        // TODO add your handling code here:
+        CreateAddressJPanel addressInformationPanel = new CreateAddressJPanel(person);
+        splitPanelAddressInfo.setRightComponent(addressInformationPanel); 
+    }//GEN-LAST:event_btnCreateAddressInfoActionPerformed
+
+    private void btnViewAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAddressInfoActionPerformed
+        // TODO add your handling code here:
+        ViewAddressJPanel addressViewPanel = new ViewAddressJPanel(person);
+        splitPanelAddressInfo.setRightComponent(addressViewPanel);
+    }//GEN-LAST:event_btnViewAddressInfoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -457,12 +517,15 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane actionTabs;
+    private javax.swing.JButton btnCreateAddressInfo;
     private javax.swing.JButton btnCreateBankInfo;
     private javax.swing.JButton btnCreateLicenseInfo;
     private javax.swing.JButton btnCreatePersonalInfo;
+    private javax.swing.JButton btnViewAddressInfo;
     private javax.swing.JButton btnViewBankInfo;
     private javax.swing.JButton btnViewLicenseInfo;
     private javax.swing.JButton btnViewPersonalInfo;
+    private javax.swing.JPanel controlPaneAddressInfo;
     private javax.swing.JPanel controlPaneBankInfo;
     private javax.swing.JPanel controlPaneLicenseInfo;
     private javax.swing.JPanel controlPanePersonalInfo;
@@ -470,16 +533,17 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane splitPaneReport;
+    private javax.swing.JSplitPane splitPanelAddressInfo;
     private javax.swing.JSplitPane splitPanelBankInfo;
     private javax.swing.JSplitPane splitPanelLicenseInfo;
     private javax.swing.JSplitPane splitPanelPersonalInfo;
     private javax.swing.JPanel tabAddress;
     private javax.swing.JPanel tabBankInformation;
-    private javax.swing.JPanel tabBodyAddress;
     private javax.swing.JPanel tabLicense;
     private javax.swing.JPanel tabMedical;
     private javax.swing.JPanel tabPersonalInfo;
     private javax.swing.JPanel tabReport;
+    private javax.swing.JPanel workPaneAddressInfo;
     private javax.swing.JPanel workPaneBankInfo;
     private javax.swing.JPanel workPaneLicenseInfo;
     private javax.swing.JPanel workPanePersonalInfo;

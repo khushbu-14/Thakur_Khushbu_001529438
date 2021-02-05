@@ -65,7 +65,6 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
         lblSCheckingBankRoutingNo = new javax.swing.JLabel();
         txtCheckingAccBalance = new javax.swing.JTextField();
         lblCheckingBankAccBalance = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
         btnSaveBankInfo = new javax.swing.JButton();
 
         jSplitPaneBankInfo.setDividerLocation(250);
@@ -282,7 +281,7 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
             tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
                 .addContainerGap())
         );
         tabBodyBankInformationLayout.setVerticalGroup(
@@ -291,17 +290,6 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 176, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 52, Short.MAX_VALUE)
         );
 
         btnSaveBankInfo.setBackground(new java.awt.Color(255, 255, 255));
@@ -323,8 +311,6 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(136, 136, 136)
                 .addComponent(btnSaveBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -332,10 +318,8 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(tabBodyBankInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSaveBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnSaveBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -400,7 +384,6 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JCheckBox checkBoxChecking;
     private javax.swing.JCheckBox checkBoxSavings;
     private org.jdatepicker.DateComponentFormatter dateComponentFormatter1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelChecking;
     private javax.swing.JPanel jPanelSavings;
     private javax.swing.JSplitPane jSplitPaneBankInfo;
