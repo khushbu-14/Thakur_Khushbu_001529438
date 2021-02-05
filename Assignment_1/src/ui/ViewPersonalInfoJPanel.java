@@ -38,7 +38,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblFirstName = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
         lblLastName = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
+        txtDateOfBirth = new javax.swing.JTextField();
         lblMobileNumber = new javax.swing.JLabel();
         lblDateOfBirth = new javax.swing.JLabel();
         lblAge = new javax.swing.JLabel();
@@ -50,11 +50,14 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         txtSsn = new javax.swing.JTextField();
         txtAge = new javax.swing.JSpinner();
         txtMobileNumber = new javax.swing.JFormattedTextField();
-        txtDob = new org.jdatepicker.JDatePicker();
+        txtLastName = new javax.swing.JTextField();
 
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblFirstName.setText("First Name");
 
+        txtFirstName.setFocusTraversalKeysEnabled(false);
+        txtFirstName.setFocusable(false);
+        txtFirstName.setRequestFocusEnabled(false);
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFirstNameActionPerformed(evt);
@@ -64,9 +67,12 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblLastName.setText("Last Name");
 
-        txtLastName.addActionListener(new java.awt.event.ActionListener() {
+        txtDateOfBirth.setFocusTraversalKeysEnabled(false);
+        txtDateOfBirth.setFocusable(false);
+        txtDateOfBirth.setRequestFocusEnabled(false);
+        txtDateOfBirth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLastNameActionPerformed(evt);
+                txtDateOfBirthActionPerformed(evt);
             }
         });
 
@@ -82,12 +88,18 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblHeight.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblHeight.setText("Height (inches)");
 
+        txtHeight.setFocusTraversalKeysEnabled(false);
+        txtHeight.setFocusable(false);
+        txtHeight.setRequestFocusEnabled(false);
         txtHeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHeightActionPerformed(evt);
             }
         });
 
+        txtWeight.setFocusTraversalKeysEnabled(false);
+        txtWeight.setFocusable(false);
+        txtWeight.setRequestFocusEnabled(false);
         txtWeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWeightActionPerformed(evt);
@@ -100,7 +112,12 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblSsn.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblSsn.setText("Social Security Number");
 
+        txtSsn.setFocusTraversalKeysEnabled(false);
+        txtSsn.setFocusable(false);
+        txtSsn.setRequestFocusEnabled(false);
+
         txtAge.setModel(new javax.swing.SpinnerNumberModel(1, 1, 100, 1));
+        txtAge.setRequestFocusEnabled(false);
         txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtAgeKeyPressed(evt);
@@ -112,6 +129,18 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtMobileNumber.setFocusTraversalKeysEnabled(false);
+        txtMobileNumber.setFocusable(false);
+        txtMobileNumber.setRequestFocusEnabled(false);
+
+        txtLastName.setFocusTraversalKeysEnabled(false);
+        txtLastName.setFocusable(false);
+        txtLastName.setRequestFocusEnabled(false);
+        txtLastName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLastNameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout tabBodyPersonalInformationLayout = new javax.swing.GroupLayout(tabBodyPersonalInformation);
         tabBodyPersonalInformation.setLayout(tabBodyPersonalInformationLayout);
@@ -143,11 +172,14 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
                             .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                                 .addGap(3, 3, 3)
                                 .addComponent(lblDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(txtDob, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addGap(15, 15, 15))
+                            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                                .addComponent(txtDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                                .addGap(9, 9, 9))
+                            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                                .addComponent(txtLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                                .addContainerGap())))
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                         .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblHeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -164,21 +196,23 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
                 .addGap(33, 33, 33)
                 .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                        .addGap(4, 4, 4)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtLastName)))
                     .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtFirstName)
-                        .addComponent(txtLastName)
                         .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(lblDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                            .addComponent(txtDateOfBirth)))
                     .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtMobileNumber)
-                        .addComponent(lblMobileNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(txtDob, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                        .addComponent(lblMobileNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(8, 8, 8)
                 .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAge)
@@ -218,9 +252,9 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFirstNameActionPerformed
 
-    private void txtLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNameActionPerformed
+    private void txtDateOfBirthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateOfBirthActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtLastNameActionPerformed
+    }//GEN-LAST:event_txtDateOfBirthActionPerformed
 
     private void txtHeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHeightActionPerformed
         // TODO add your handling code here:
@@ -234,6 +268,10 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgeKeyPressed
 
+    private void txtLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLastNameActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblAge;
@@ -246,7 +284,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblWeight;
     private javax.swing.JPanel tabBodyPersonalInformation;
     private javax.swing.JSpinner txtAge;
-    private org.jdatepicker.JDatePicker txtDob;
+    private javax.swing.JTextField txtDateOfBirth;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtHeight;
     private javax.swing.JTextField txtLastName;
@@ -263,9 +301,9 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         txtHeight.setText(Float.toString(person.getHeight()));
         txtWeight.setText(Float.toString(person.getWeight()));
         txtSsn.setText(person.getSsn());
-        
-        txtDob.getModel().setDate(person.getDobYear(),person.getDobMonth(),person.getDobDay());
-        txtDob.getModel().setSelected(true);
+        txtDateOfBirth.setText(person.getDateOfBirth());
+//        txtDob.getModel().setDate(person.getDobYear(),person.getDobMonth(),person.getDobDay());
+//        txtDob.getModel().setSelected(true);
 //        txtDob.setText(person.getDob());
     }
 }

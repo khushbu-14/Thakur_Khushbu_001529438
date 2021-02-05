@@ -275,16 +275,17 @@ public class CreatePersonalInfoJPanel extends javax.swing.JPanel {
         person.setHeight(Float.parseFloat(txtHeight.getText()));
         person.setWeight(Float.parseFloat(txtWeight.getText()));
         person.setSsn(txtSsn.getText());
-                
+        person.setDateOfBirth(txtDob.getFormattedTextField().getText());
+        
 //        System.out.println(SimpleDateFormat.format(txtDob.getModel().getValue()));
 //        String dob = dateFormat.format(txtDob.getValue());
 //        int day = txtDob.getModel().getDay();
 //        int month = txtDob.getModel().getMonth();
 //        int year = txtDob.getModel().getYear();
         
-        person.setDobDay(txtDob.getModel().getDay());
-        person.setDobMonth(txtDob.getModel().getMonth());
-        person.setDobYear(txtDob.getModel().getYear());
+//        person.setDobDay(txtDob.getModel().getDay());
+//        person.setDobMonth(txtDob.getModel().getMonth());
+//        person.setDobYear(txtDob.getModel().getYear());
         
 //        System.out.println("" + day +"-"+ month +"-"+ year);
 //        person.setDob(day +"-"+ month +"-"+ year);

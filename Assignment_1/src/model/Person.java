@@ -1,6 +1,8 @@
 package model;
 
+import java.awt.image.BufferedImage;
 import java.util.Date;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -11,14 +13,15 @@ public class Person {
  private String firstName;
  private String lastName;
  private String mobileNumber;
- private String dob;
+// private String dob;
  private int age;
  private float height;
  private float weight;
  private String ssn;
- private int dobDay;
- private int dobMonth;
- private int dobYear;
+ private String dateOfBirth;
+// private int dobDay;
+// private int dobMonth;
+// private int dobYear;
  
  
 // address
@@ -44,10 +47,13 @@ public class Person {
 // license information
  
  private String licenseNumber;
- private Date dateIssued;
- private Date dateOfExpiry;
+ private String dateIssued;
+ private String dateOfExpiry;
+// private Date dateIssued;
+// private Date dateOfExpiry;
  private String bloodType;
- private String picture;
+ 
+ private ImageIcon picture;
  
 // medical record
  
@@ -80,13 +86,13 @@ public class Person {
         this.mobileNumber = mobileNumber;
     }
 
-     public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
+//     public String getDob() {
+//        return dob;
+//    }
+//
+//    public void setDob(String dob) {
+//        this.dob = dob;
+//    }
 
     public int getAge() {
         return age;
@@ -240,19 +246,19 @@ public class Person {
         this.licenseNumber = licenseNumber;
     }
 
-    public Date getDateIssued() {
+    public String getDateIssued() {
         return dateIssued;
     }
 
-    public void setDateIssued(Date dateIssued) {
+    public void setDateIssued(String dateIssued) {
         this.dateIssued = dateIssued;
     }
 
-    public Date getDateOfExpiry() {
+    public String getDateOfExpiry() {
         return dateOfExpiry;
     }
 
-    public void setDateOfExpiry(Date dateOfExpiry) {
+    public void setDateOfExpiry(String dateOfExpiry) {
         this.dateOfExpiry = dateOfExpiry;
     }
 
@@ -264,13 +270,14 @@ public class Person {
         this.bloodType = bloodType;
     }
 
-    public String getPicture() {
+    public ImageIcon getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(ImageIcon picture) {
         this.picture = picture;
     }
+
 
     public String getRecordNumber() {
         return recordNumber;
@@ -304,31 +311,37 @@ public class Person {
         this.alergy3 = alergy3;
     }
 
-    public int getDobDay() {
-        return dobDay;
+//    public int getDobDay() {
+//        return dobDay;
+//    }
+//
+//    public void setDobDay(int dobDay) {
+//        this.dobDay = dobDay;
+//    }
+//
+//    public int getDobMonth() {
+//        return dobMonth;
+//    }
+//
+//    public void setDobMonth(int dobMonth) {
+//        this.dobMonth = dobMonth;
+//    }
+//
+//    public int getDobYear() {
+//        return dobYear;
+//    }
+//
+//    public void setDobYear(int dobYear) {
+//        this.dobYear = dobYear;
+//    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDobDay(int dobDay) {
-        this.dobDay = dobDay;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
-
-    public int getDobMonth() {
-        return dobMonth;
-    }
-
-    public void setDobMonth(int dobMonth) {
-        this.dobMonth = dobMonth;
-    }
-
-    public int getDobYear() {
-        return dobYear;
-    }
-
-    public void setDobYear(int dobYear) {
-        this.dobYear = dobYear;
-    }
-    
-    
 
    
 }

@@ -39,6 +39,15 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPaneFirstName = new javax.swing.JPanel();
         lblFirstName = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JLabel();
+        jPaneLastName = new javax.swing.JPanel();
+        lblLastName = new javax.swing.JLabel();
+        txtLastName = new javax.swing.JLabel();
+        jPaneMobileNo = new javax.swing.JPanel();
+        lblMobileNo = new javax.swing.JLabel();
+        txtMobileNo = new javax.swing.JLabel();
+        jPaneDob = new javax.swing.JPanel();
+        lblDob = new javax.swing.JLabel();
+        txtMobileNo1 = new javax.swing.JLabel();
 
         panePersonalInfo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -49,6 +58,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         lblTitlePersonalInfo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         lblFirstName.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblFirstName.setText("First Name : ");
 
         javax.swing.GroupLayout jPaneFirstNameLayout = new javax.swing.GroupLayout(jPaneFirstName);
@@ -72,6 +82,78 @@ public class ReportJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        lblLastName.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblLastName.setText("Last Name : ");
+
+        javax.swing.GroupLayout jPaneLastNameLayout = new javax.swing.GroupLayout(jPaneLastName);
+        jPaneLastName.setLayout(jPaneLastNameLayout);
+        jPaneLastNameLayout.setHorizontalGroup(
+            jPaneLastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPaneLastNameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPaneLastNameLayout.setVerticalGroup(
+            jPaneLastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPaneLastNameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPaneLastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblLastName)
+                    .addComponent(txtLastName))
+                .addContainerGap())
+        );
+
+        lblMobileNo.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblMobileNo.setText("Mobile Number :");
+
+        javax.swing.GroupLayout jPaneMobileNoLayout = new javax.swing.GroupLayout(jPaneMobileNo);
+        jPaneMobileNo.setLayout(jPaneMobileNoLayout);
+        jPaneMobileNoLayout.setHorizontalGroup(
+            jPaneMobileNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPaneMobileNoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPaneMobileNoLayout.setVerticalGroup(
+            jPaneMobileNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPaneMobileNoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPaneMobileNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMobileNo)
+                    .addComponent(txtMobileNo))
+                .addContainerGap())
+        );
+
+        lblDob.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblDob.setText("Date of birth :");
+
+        javax.swing.GroupLayout jPaneDobLayout = new javax.swing.GroupLayout(jPaneDob);
+        jPaneDob.setLayout(jPaneDobLayout);
+        jPaneDobLayout.setHorizontalGroup(
+            jPaneDobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPaneDobLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDob, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtMobileNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPaneDobLayout.setVerticalGroup(
+            jPaneDobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPaneDobLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPaneDobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDob)
+                    .addComponent(txtMobileNo1))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout panePersonalInfoLayout = new javax.swing.GroupLayout(panePersonalInfo);
         panePersonalInfo.setLayout(panePersonalInfoLayout);
         panePersonalInfoLayout.setHorizontalGroup(
@@ -79,7 +161,11 @@ public class ReportJPanel extends javax.swing.JPanel {
             .addComponent(lblTitlePersonalInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panePersonalInfoLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jPaneFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panePersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPaneDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPaneMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPaneLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPaneFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         panePersonalInfoLayout.setVerticalGroup(
@@ -88,7 +174,13 @@ public class ReportJPanel extends javax.swing.JPanel {
                 .addComponent(lblTitlePersonalInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPaneFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 382, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPaneLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPaneMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPaneDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 288, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -98,24 +190,33 @@ public class ReportJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(panePersonalInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(364, Short.MAX_VALUE))
+                .addContainerGap(343, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(panePersonalInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPaneDob;
     private javax.swing.JPanel jPaneFirstName;
+    private javax.swing.JPanel jPaneLastName;
+    private javax.swing.JPanel jPaneMobileNo;
+    private javax.swing.JLabel lblDob;
     private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblMobileNo;
     private javax.swing.JLabel lblTitlePersonalInfo;
     private javax.swing.JPanel panePersonalInfo;
     private javax.swing.JLabel txtFirstName;
+    private javax.swing.JLabel txtLastName;
+    private javax.swing.JLabel txtMobileNo;
+    private javax.swing.JLabel txtMobileNo1;
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {

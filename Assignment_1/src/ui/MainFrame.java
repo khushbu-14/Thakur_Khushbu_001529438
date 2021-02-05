@@ -43,7 +43,17 @@ public class MainFrame extends javax.swing.JFrame {
         tabAddress = new javax.swing.JPanel();
         tabBodyAddress = new javax.swing.JPanel();
         tabBankInformation = new javax.swing.JPanel();
+        splitPanelBankInfo = new javax.swing.JSplitPane();
+        controlPaneBankInfo = new javax.swing.JPanel();
+        workPaneBankInfo = new javax.swing.JPanel();
+        btnCreateBankInfo = new javax.swing.JButton();
+        btnViewBankInfo = new javax.swing.JButton();
         tabLicense = new javax.swing.JPanel();
+        splitPanelLicenseInfo = new javax.swing.JSplitPane();
+        controlPaneLicenseInfo = new javax.swing.JPanel();
+        workPaneLicenseInfo = new javax.swing.JPanel();
+        btnCreateLicenseInfo = new javax.swing.JButton();
+        btnViewLicenseInfo = new javax.swing.JButton();
         tabMedical = new javax.swing.JPanel();
         tabReport = new javax.swing.JPanel();
         splitPaneReport = new javax.swing.JSplitPane();
@@ -106,11 +116,11 @@ public class MainFrame extends javax.swing.JFrame {
         workPanePersonalInfoLayout.setVerticalGroup(
             workPanePersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workPanePersonalInfoLayout.createSequentialGroup()
-                .addGap(134, 134, 134)
+                .addGap(166, 166, 166)
                 .addComponent(btnCreatePersonalInfo)
                 .addGap(40, 40, 40)
                 .addComponent(btnViewPersonalInfo)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         workPanePersonalInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreatePersonalInfo, btnViewPersonalInfo});
@@ -154,28 +164,138 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("Address", tabAddress);
 
+        javax.swing.GroupLayout controlPaneBankInfoLayout = new javax.swing.GroupLayout(controlPaneBankInfo);
+        controlPaneBankInfo.setLayout(controlPaneBankInfoLayout);
+        controlPaneBankInfoLayout.setHorizontalGroup(
+            controlPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
+        );
+        controlPaneBankInfoLayout.setVerticalGroup(
+            controlPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
+        );
+
+        splitPanelBankInfo.setRightComponent(controlPaneBankInfo);
+
+        btnCreateBankInfo.setText("Create");
+        btnCreateBankInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateBankInfoActionPerformed(evt);
+            }
+        });
+
+        btnViewBankInfo.setText("View");
+        btnViewBankInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewBankInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout workPaneBankInfoLayout = new javax.swing.GroupLayout(workPaneBankInfo);
+        workPaneBankInfo.setLayout(workPaneBankInfoLayout);
+        workPaneBankInfoLayout.setHorizontalGroup(
+            workPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneBankInfoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(workPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateBankInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnViewBankInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        workPaneBankInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateBankInfo, btnViewBankInfo});
+
+        workPaneBankInfoLayout.setVerticalGroup(
+            workPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneBankInfoLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(btnCreateBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnViewBankInfo)
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        workPaneBankInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateBankInfo, btnViewBankInfo});
+
+        splitPanelBankInfo.setLeftComponent(workPaneBankInfo);
+
         javax.swing.GroupLayout tabBankInformationLayout = new javax.swing.GroupLayout(tabBankInformation);
         tabBankInformation.setLayout(tabBankInformationLayout);
         tabBankInformationLayout.setHorizontalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addComponent(splitPanelBankInfo)
         );
         tabBankInformationLayout.setVerticalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addComponent(splitPanelBankInfo)
         );
 
         actionTabs.addTab("Bank", tabBankInformation);
+
+        javax.swing.GroupLayout controlPaneLicenseInfoLayout = new javax.swing.GroupLayout(controlPaneLicenseInfo);
+        controlPaneLicenseInfo.setLayout(controlPaneLicenseInfoLayout);
+        controlPaneLicenseInfoLayout.setHorizontalGroup(
+            controlPaneLicenseInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
+        );
+        controlPaneLicenseInfoLayout.setVerticalGroup(
+            controlPaneLicenseInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
+        );
+
+        splitPanelLicenseInfo.setRightComponent(controlPaneLicenseInfo);
+
+        btnCreateLicenseInfo.setText("Create");
+        btnCreateLicenseInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateLicenseInfoActionPerformed(evt);
+            }
+        });
+
+        btnViewLicenseInfo.setText("View");
+        btnViewLicenseInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewLicenseInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout workPaneLicenseInfoLayout = new javax.swing.GroupLayout(workPaneLicenseInfo);
+        workPaneLicenseInfo.setLayout(workPaneLicenseInfoLayout);
+        workPaneLicenseInfoLayout.setHorizontalGroup(
+            workPaneLicenseInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneLicenseInfoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(workPaneLicenseInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateLicenseInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnViewLicenseInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        workPaneLicenseInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateLicenseInfo, btnViewLicenseInfo});
+
+        workPaneLicenseInfoLayout.setVerticalGroup(
+            workPaneLicenseInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneLicenseInfoLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(btnCreateLicenseInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnViewLicenseInfo)
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        workPaneLicenseInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateLicenseInfo, btnViewLicenseInfo});
+
+        splitPanelLicenseInfo.setLeftComponent(workPaneLicenseInfo);
 
         javax.swing.GroupLayout tabLicenseLayout = new javax.swing.GroupLayout(tabLicense);
         tabLicense.setLayout(tabLicenseLayout);
         tabLicenseLayout.setHorizontalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addComponent(splitPanelLicenseInfo)
         );
         tabLicenseLayout.setVerticalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addComponent(splitPanelLicenseInfo)
         );
 
         actionTabs.addTab("License", tabLicense);
@@ -193,11 +313,14 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("Medical", tabMedical);
 
+        splitPaneReport.setDividerLocation(0);
+        splitPaneReport.setDividerSize(0);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,7 +333,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGap(0, 669, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,6 +396,30 @@ public class MainFrame extends javax.swing.JFrame {
 //        tabReport.add(reportPanel);
     }//GEN-LAST:event_actionTabsMouseClicked
 
+    private void btnCreateBankInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBankInfoActionPerformed
+        // TODO add your handling code here:
+         CreateBankInfoJPanel bankInformationCreatePanel = new CreateBankInfoJPanel(person);
+         splitPanelBankInfo.setRightComponent(bankInformationCreatePanel); 
+    }//GEN-LAST:event_btnCreateBankInfoActionPerformed
+
+    private void btnViewBankInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBankInfoActionPerformed
+        // TODO add your handling code here:
+         ViewBankInfoJPanel bankViewPanel = new ViewBankInfoJPanel(person);
+         splitPanelBankInfo.setRightComponent(bankViewPanel); 
+    }//GEN-LAST:event_btnViewBankInfoActionPerformed
+
+    private void btnCreateLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLicenseInfoActionPerformed
+        // TODO add your handling code here:
+        CreateDriverLicenseInfoJPanel licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel(person);
+        splitPanelLicenseInfo.setRightComponent(licenseInformationCreatePanel); 
+    }//GEN-LAST:event_btnCreateLicenseInfoActionPerformed
+
+    private void btnViewLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLicenseInfoActionPerformed
+        // TODO add your handling code here:
+        ViewDriverLicenseInfoJPanel licenseViewPanel = new ViewDriverLicenseInfoJPanel(person);
+         splitPanelLicenseInfo.setRightComponent(licenseViewPanel);
+    }//GEN-LAST:event_btnViewLicenseInfoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -310,13 +457,21 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane actionTabs;
+    private javax.swing.JButton btnCreateBankInfo;
+    private javax.swing.JButton btnCreateLicenseInfo;
     private javax.swing.JButton btnCreatePersonalInfo;
+    private javax.swing.JButton btnViewBankInfo;
+    private javax.swing.JButton btnViewLicenseInfo;
     private javax.swing.JButton btnViewPersonalInfo;
+    private javax.swing.JPanel controlPaneBankInfo;
+    private javax.swing.JPanel controlPaneLicenseInfo;
     private javax.swing.JPanel controlPanePersonalInfo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane splitPaneReport;
+    private javax.swing.JSplitPane splitPanelBankInfo;
+    private javax.swing.JSplitPane splitPanelLicenseInfo;
     private javax.swing.JSplitPane splitPanelPersonalInfo;
     private javax.swing.JPanel tabAddress;
     private javax.swing.JPanel tabBankInformation;
@@ -325,6 +480,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel tabMedical;
     private javax.swing.JPanel tabPersonalInfo;
     private javax.swing.JPanel tabReport;
+    private javax.swing.JPanel workPaneBankInfo;
+    private javax.swing.JPanel workPaneLicenseInfo;
     private javax.swing.JPanel workPanePersonalInfo;
     // End of variables declaration//GEN-END:variables
 }

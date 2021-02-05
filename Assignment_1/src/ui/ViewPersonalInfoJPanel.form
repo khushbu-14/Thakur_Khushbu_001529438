@@ -71,12 +71,17 @@
                                   <Component id="lblDateOfBirth" pref="95" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtLastName" alignment="0" pref="190" max="32767" attributes="0"/>
-                              <Component id="txtDob" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="txtDateOfBirth" pref="190" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="txtLastName" pref="193" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -100,12 +105,14 @@
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                          <Component id="lblLastName" pref="25" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblLastName" alignment="3" max="32767" attributes="0"/>
+                              <Component id="txtLastName" alignment="3" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtFirstName" alignment="3" max="32767" attributes="0"/>
-                          <Component id="txtLastName" alignment="3" max="32767" attributes="0"/>
                           <Component id="lblFirstName" alignment="3" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -113,13 +120,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                          <Component id="lblDateOfBirth" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDateOfBirth" alignment="3" pref="31" max="32767" attributes="0"/>
+                              <Component id="txtDateOfBirth" alignment="3" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtMobileNumber" alignment="3" max="32767" attributes="0"/>
                           <Component id="lblMobileNumber" alignment="3" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="txtDob" alignment="0" pref="33" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -153,6 +162,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtFirstName">
+          <Properties>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFirstNameActionPerformed"/>
           </Events>
@@ -163,9 +177,14 @@
             <Property name="text" type="java.lang.String" value="Last Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtLastName">
+        <Component class="javax.swing.JTextField" name="txtDateOfBirth">
+          <Properties>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLastNameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDateOfBirthActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblMobileNumber">
@@ -193,11 +212,21 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtHeight">
+          <Properties>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHeightActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtWeight">
+          <Properties>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtWeightActionPerformed"/>
           </Events>
@@ -215,12 +244,18 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSsn">
+          <Properties>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JSpinner" name="txtAge">
           <Properties>
             <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
               <SpinnerModel initial="1" maximum="100" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAgeKeyPressed"/>
@@ -231,9 +266,20 @@
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="###-###-####" subtype="-1" type="5"/>
             </Property>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="org.jdatepicker.JDatePicker" name="txtDob">
+        <Component class="javax.swing.JTextField" name="txtLastName">
+          <Properties>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLastNameActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
