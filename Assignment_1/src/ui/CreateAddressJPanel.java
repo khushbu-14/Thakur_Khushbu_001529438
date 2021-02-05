@@ -179,7 +179,7 @@ public class CreateAddressJPanel extends javax.swing.JPanel {
         person.setCity(txtCity.getText());
         person.setState(txtState.getText());
         person.setZipcode(txtzipcode.getText());
-        JOptionPane.showMessageDialog(this, "Bank Information saved successfully!");
+        JOptionPane.showMessageDialog(this, "Address Information saved successfully!");
     }//GEN-LAST:event_btnSaveAddressInfoActionPerformed
 
 

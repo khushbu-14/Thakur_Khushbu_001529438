@@ -59,6 +59,11 @@ public class MainFrame extends javax.swing.JFrame {
         btnCreateLicenseInfo = new javax.swing.JButton();
         btnViewLicenseInfo = new javax.swing.JButton();
         tabMedical = new javax.swing.JPanel();
+        splitPanelMedicalInfo = new javax.swing.JSplitPane();
+        controlPaneMedicalInfo = new javax.swing.JPanel();
+        workPaneMedicalInfo = new javax.swing.JPanel();
+        btnCreateMedicalInfo = new javax.swing.JButton();
+        btnViewMedicalInfo = new javax.swing.JButton();
         tabReport = new javax.swing.JPanel();
         splitPaneReport = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
@@ -348,15 +353,70 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("License", tabLicense);
 
+        javax.swing.GroupLayout controlPaneMedicalInfoLayout = new javax.swing.GroupLayout(controlPaneMedicalInfo);
+        controlPaneMedicalInfo.setLayout(controlPaneMedicalInfoLayout);
+        controlPaneMedicalInfoLayout.setHorizontalGroup(
+            controlPaneMedicalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
+        );
+        controlPaneMedicalInfoLayout.setVerticalGroup(
+            controlPaneMedicalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
+        );
+
+        splitPanelMedicalInfo.setRightComponent(controlPaneMedicalInfo);
+
+        btnCreateMedicalInfo.setText("Create");
+        btnCreateMedicalInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateMedicalInfoActionPerformed(evt);
+            }
+        });
+
+        btnViewMedicalInfo.setText("View");
+        btnViewMedicalInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewMedicalInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout workPaneMedicalInfoLayout = new javax.swing.GroupLayout(workPaneMedicalInfo);
+        workPaneMedicalInfo.setLayout(workPaneMedicalInfoLayout);
+        workPaneMedicalInfoLayout.setHorizontalGroup(
+            workPaneMedicalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneMedicalInfoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(workPaneMedicalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateMedicalInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnViewMedicalInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        workPaneMedicalInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateMedicalInfo, btnViewMedicalInfo});
+
+        workPaneMedicalInfoLayout.setVerticalGroup(
+            workPaneMedicalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneMedicalInfoLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(btnCreateMedicalInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnViewMedicalInfo)
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        workPaneMedicalInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateMedicalInfo, btnViewMedicalInfo});
+
+        splitPanelMedicalInfo.setLeftComponent(workPaneMedicalInfo);
+
         javax.swing.GroupLayout tabMedicalLayout = new javax.swing.GroupLayout(tabMedical);
         tabMedical.setLayout(tabMedicalLayout);
         tabMedicalLayout.setHorizontalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addComponent(splitPanelMedicalInfo)
         );
         tabMedicalLayout.setVerticalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addComponent(splitPanelMedicalInfo)
         );
 
         actionTabs.addTab("Medical", tabMedical);
@@ -480,6 +540,18 @@ public class MainFrame extends javax.swing.JFrame {
         splitPanelAddressInfo.setRightComponent(addressViewPanel);
     }//GEN-LAST:event_btnViewAddressInfoActionPerformed
 
+    private void btnCreateMedicalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateMedicalInfoActionPerformed
+        // TODO add your handling code here:
+        CreateMedicalRecordJPanel medicalRecordInformationPanel = new CreateMedicalRecordJPanel(person);
+        splitPanelMedicalInfo.setRightComponent(medicalRecordInformationPanel); 
+    }//GEN-LAST:event_btnCreateMedicalInfoActionPerformed
+
+    private void btnViewMedicalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewMedicalInfoActionPerformed
+        // TODO add your handling code here:
+        ViewMedicalRecordJPanel medicalRecordPanel = new ViewMedicalRecordJPanel(person);
+        splitPanelMedicalInfo.setRightComponent(medicalRecordPanel);
+    }//GEN-LAST:event_btnViewMedicalInfoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -520,14 +592,17 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnCreateAddressInfo;
     private javax.swing.JButton btnCreateBankInfo;
     private javax.swing.JButton btnCreateLicenseInfo;
+    private javax.swing.JButton btnCreateMedicalInfo;
     private javax.swing.JButton btnCreatePersonalInfo;
     private javax.swing.JButton btnViewAddressInfo;
     private javax.swing.JButton btnViewBankInfo;
     private javax.swing.JButton btnViewLicenseInfo;
+    private javax.swing.JButton btnViewMedicalInfo;
     private javax.swing.JButton btnViewPersonalInfo;
     private javax.swing.JPanel controlPaneAddressInfo;
     private javax.swing.JPanel controlPaneBankInfo;
     private javax.swing.JPanel controlPaneLicenseInfo;
+    private javax.swing.JPanel controlPaneMedicalInfo;
     private javax.swing.JPanel controlPanePersonalInfo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
@@ -536,6 +611,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane splitPanelAddressInfo;
     private javax.swing.JSplitPane splitPanelBankInfo;
     private javax.swing.JSplitPane splitPanelLicenseInfo;
+    private javax.swing.JSplitPane splitPanelMedicalInfo;
     private javax.swing.JSplitPane splitPanelPersonalInfo;
     private javax.swing.JPanel tabAddress;
     private javax.swing.JPanel tabBankInformation;
@@ -546,6 +622,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel workPaneAddressInfo;
     private javax.swing.JPanel workPaneBankInfo;
     private javax.swing.JPanel workPaneLicenseInfo;
+    private javax.swing.JPanel workPaneMedicalInfo;
     private javax.swing.JPanel workPanePersonalInfo;
     // End of variables declaration//GEN-END:variables
 }

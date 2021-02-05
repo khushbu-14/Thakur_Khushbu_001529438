@@ -57,7 +57,7 @@ public class Person {
  
 // medical record
  
- private String recordNumber;
+ private String medicalRecordNumber;
  private String alergy1;
  private String alergy2;
  private String alergy3;
@@ -278,13 +278,12 @@ public class Person {
         this.picture = picture;
     }
 
-
-    public String getRecordNumber() {
-        return recordNumber;
+    public String getMedicalRecordNumber() {
+        return medicalRecordNumber;
     }
 
-    public void setRecordNumber(String recordNumber) {
-        this.recordNumber = recordNumber;
+    public void setMedicalRecordNumber(String medicalRecordNumber) {
+        this.medicalRecordNumber = medicalRecordNumber;
     }
 
     public String getAlergy1() {
