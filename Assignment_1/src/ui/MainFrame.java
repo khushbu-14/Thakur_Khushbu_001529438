@@ -65,9 +65,9 @@ public class MainFrame extends javax.swing.JFrame {
         btnCreateMedicalInfo = new javax.swing.JButton();
         btnViewMedicalInfo = new javax.swing.JButton();
         tabReport = new javax.swing.JPanel();
-        splitPaneReport = new javax.swing.JSplitPane();
+        splitPane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        reportPanel = new javax.swing.JPanel();
 
         jMenu1.setText("jMenu1");
 
@@ -421,50 +421,43 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("Medical", tabMedical);
 
-        splitPaneReport.setDividerLocation(0);
-        splitPaneReport.setDividerSize(0);
+        splitPane.setDividerLocation(1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 645, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 346, Short.MAX_VALUE)
+            .addGap(0, 436, Short.MAX_VALUE)
         );
 
-        splitPaneReport.setLeftComponent(jPanel1);
+        splitPane.setRightComponent(jPanel1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 669, Short.MAX_VALUE)
+        javax.swing.GroupLayout reportPanelLayout = new javax.swing.GroupLayout(reportPanel);
+        reportPanel.setLayout(reportPanelLayout);
+        reportPanelLayout.setHorizontalGroup(
+            reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 346, Short.MAX_VALUE)
+        reportPanelLayout.setVerticalGroup(
+            reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
         );
 
-        splitPaneReport.setRightComponent(jPanel2);
+        splitPane.setLeftComponent(reportPanel);
 
         javax.swing.GroupLayout tabReportLayout = new javax.swing.GroupLayout(tabReport);
         tabReport.setLayout(tabReportLayout);
         tabReportLayout.setHorizontalGroup(
             tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabReportLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(splitPaneReport, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabReportLayout.setVerticalGroup(
             tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabReportLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(splitPaneReport, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+            .addComponent(splitPane)
         );
 
         actionTabs.addTab("Report", tabReport);
@@ -499,7 +492,11 @@ public class MainFrame extends javax.swing.JFrame {
     private void actionTabsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionTabsMouseClicked
         // TODO add your handling code here:
         ReportJPanel reportPanel = new ReportJPanel(person);
-        splitPaneReport.setRightComponent(reportPanel);
+        ViewReports reports = new ViewReports(person);
+        splitPane.setRightComponent(reports);
+//        scrollPane.add(reports);
+//        splitPaneReport.setRightComponent(reportPanel);
+//        splitPaneReport.setRightComponent(reports);
 //        scrollPanelReport.add(reportPanel);
 //        tabReport.add(reportPanel);
     }//GEN-LAST:event_actionTabsMouseClicked
@@ -606,8 +603,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel controlPanePersonalInfo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane splitPaneReport;
+    private javax.swing.JPanel reportPanel;
+    private javax.swing.JSplitPane splitPane;
     private javax.swing.JSplitPane splitPanelAddressInfo;
     private javax.swing.JSplitPane splitPanelBankInfo;
     private javax.swing.JSplitPane splitPanelLicenseInfo;
