@@ -309,7 +309,7 @@ public class ViewBankInfoJPanel extends javax.swing.JPanel {
             tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
+                .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
                 .addContainerGap())
         );
         tabBodyBankInformationLayout.setVerticalGroup(

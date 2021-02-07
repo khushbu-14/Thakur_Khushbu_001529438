@@ -70,7 +70,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lblZipcode" min="-2" pref="141" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txtzipcode" min="-2" pref="375" max="-2" attributes="0"/>
+                                  <Component id="txtZipcode" min="-2" pref="375" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -95,7 +95,6 @@
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jPanelCity" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -105,7 +104,7 @@
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblZipcode" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtzipcode" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtZipcode" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="58" max="32767" attributes="0"/>
               </Group>
@@ -177,7 +176,7 @@
             <Property name="text" type="java.lang.String" value="Zipcode :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtzipcode">
+        <Component class="javax.swing.JFormattedTextField" name="txtZipcode">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">

@@ -92,7 +92,7 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
                         .addGroup(jPanelSavingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelSavingsLayout.setVerticalGroup(
             jPanelSavingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +155,7 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
                     .addGroup(jPanelCheckingLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(txtExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelCheckingLayout.setVerticalGroup(
             jPanelCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,7 +185,7 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
                     .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(lblProfilePictureTxt)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(444, 480, Short.MAX_VALUE))
                     .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
                         .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)

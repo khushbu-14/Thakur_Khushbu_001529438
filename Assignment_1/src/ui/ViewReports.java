@@ -32,27 +32,38 @@ public class ViewReports extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        lblFullName = new javax.swing.JLabel();
+        jPanelLeft = new javax.swing.JPanel();
+        txtFullName = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         lblDob2 = new javax.swing.JLabel();
-        txtDob2 = new javax.swing.JLabel();
+        txtAge = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        txtDob3 = new javax.swing.JLabel();
+        txtHeight = new javax.swing.JLabel();
         lblDob3 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         txtWeight = new javax.swing.JLabel();
         lblWeight = new javax.swing.JLabel();
-        lblPicture = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        txtMobileNo = new javax.swing.JLabel();
+        lblProfilePicture = new javax.swing.JLabel();
+        jPanelMobileNumber = new javax.swing.JPanel();
+        txtMobileNumber = new javax.swing.JLabel();
         lblSsn = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        jPanelSsn = new javax.swing.JPanel();
         txtSsn = new javax.swing.JLabel();
         lblSsn1 = new javax.swing.JLabel();
+        jPanellbMedicalRecordNumber = new javax.swing.JPanel();
+        txtMedicalRecordNo = new javax.swing.JLabel();
+        lbMedicalRecordNumber = new javax.swing.JLabel();
+        jPanellbMedicalRecordNumber1 = new javax.swing.JPanel();
+        lbMedicalRecordNumber1 = new javax.swing.JLabel();
+        jPanelAlergy1 = new javax.swing.JPanel();
+        txtAlergy1 = new javax.swing.JLabel();
+        jPanelAlergy2 = new javax.swing.JPanel();
+        txtAlergy2 = new javax.swing.JLabel();
+        jPanelAlergy3 = new javax.swing.JPanel();
+        txtAlergy3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lblDob = new javax.swing.JLabel();
-        txtDob4 = new javax.swing.JLabel();
+        txtDateOfBirth = new javax.swing.JLabel();
         jPanelStreetAddress = new javax.swing.JPanel();
         txtStreetAddress = new javax.swing.JLabel();
         lblDob1 = new javax.swing.JLabel();
@@ -62,29 +73,63 @@ public class ViewReports extends javax.swing.JPanel {
         jPanelState = new javax.swing.JPanel();
         txtState = new javax.swing.JLabel();
         lblState = new javax.swing.JLabel();
-        jPanelState1 = new javax.swing.JPanel();
-        txtState1 = new javax.swing.JLabel();
-        lblState1 = new javax.swing.JLabel();
+        jPanelZipcode = new javax.swing.JPanel();
+        txtZipcode = new javax.swing.JLabel();
+        lblZipcode = new javax.swing.JLabel();
+        jPanelBloodType = new javax.swing.JPanel();
+        txtBloodType = new javax.swing.JLabel();
+        lblBloodType = new javax.swing.JLabel();
+        jPanelLicenseIssueDate = new javax.swing.JPanel();
+        txtIssueDate = new javax.swing.JLabel();
+        lblLicenseIssueDate = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        lblLicenseExpiryDate1 = new javax.swing.JLabel();
+        jPanelLicenseExpiryDate = new javax.swing.JPanel();
+        txtExpiryDate = new javax.swing.JLabel();
+        lblLicenseExpiryDate = new javax.swing.JLabel();
+        jPanelLicenseExpiryDate2 = new javax.swing.JPanel();
+        txtLicenseNo = new javax.swing.JLabel();
+        lblLicenseExpiryDate2 = new javax.swing.JLabel();
+        jPanelLicenseExpiryDate1 = new javax.swing.JPanel();
+        lblSavingsBankName = new javax.swing.JLabel();
+        txtSavingsBankName = new javax.swing.JLabel();
+        lblSavingsBankAccNo = new javax.swing.JLabel();
+        txtSavingsBankAccNo = new javax.swing.JLabel();
+        lblSavingsBankRoutingNo = new javax.swing.JLabel();
+        txtSavingsBankRoutingNo = new javax.swing.JLabel();
+        lblSavingsBankAccBalance = new javax.swing.JLabel();
+        txtSavingsAccBalance = new javax.swing.JLabel();
+        lblCheckingBankName = new javax.swing.JLabel();
+        txtCheckingBankName = new javax.swing.JLabel();
+        lblCheckingBankAccNo = new javax.swing.JLabel();
+        txtCheckingBankAccNo = new javax.swing.JLabel();
+        lblSCheckingBankRoutingNo = new javax.swing.JLabel();
+        txtCheckingBankRoutingNo = new javax.swing.JLabel();
+        lblCheckingBankAccBalance = new javax.swing.JLabel();
+        txtCheckingAccBalance = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lblLicenseIssueDate11 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        lblLicenseIssueDate12 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(243, 243, 243));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelLeft.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblFullName.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        lblFullName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFullName.setText("Khushbu Thakur");
+        txtFullName.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        txtFullName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jPanel4.setBackground(new java.awt.Color(236, 236, 245));
+        jPanel4.setBackground(new java.awt.Color(243, 243, 243));
 
         lblDob2.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblDob2.setForeground(new java.awt.Color(153, 153, 153));
         lblDob2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDob2.setText("Age");
 
-        txtDob2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        txtDob2.setForeground(new java.awt.Color(51, 51, 51));
-        txtDob2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtDob2.setText("27");
+        txtAge.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        txtAge.setForeground(new java.awt.Color(51, 51, 51));
+        txtAge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -94,25 +139,24 @@ public class ViewReports extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblDob2, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                    .addComponent(txtDob2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtDob2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDob2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel5.setBackground(new java.awt.Color(236, 236, 245));
+        jPanel5.setBackground(new java.awt.Color(243, 243, 243));
 
-        txtDob3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        txtDob3.setForeground(new java.awt.Color(51, 51, 51));
-        txtDob3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtDob3.setText("5.5 inch");
+        txtHeight.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        txtHeight.setForeground(new java.awt.Color(51, 51, 51));
+        txtHeight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         lblDob3.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblDob3.setForeground(new java.awt.Color(153, 153, 153));
@@ -127,25 +171,24 @@ public class ViewReports extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblDob3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtDob3, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE))
+                    .addComponent(txtHeight, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtDob3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDob3)
                 .addContainerGap())
         );
 
-        jPanel6.setBackground(new java.awt.Color(236, 236, 245));
+        jPanel6.setBackground(new java.awt.Color(243, 243, 243));
 
         txtWeight.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         txtWeight.setForeground(new java.awt.Color(51, 51, 51));
         txtWeight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtWeight.setText("60 kg");
 
         lblWeight.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblWeight.setForeground(new java.awt.Color(153, 153, 153));
@@ -173,17 +216,16 @@ public class ViewReports extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        lblPicture.setIcon(new javax.swing.ImageIcon("/Users/vaisansar/Desktop/Screenshot 2021-01-29 at 9.19.11 AM.png")); // NOI18N
-        lblPicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        lblPicture.setMaximumSize(new java.awt.Dimension(120, 120));
-        lblPicture.setMinimumSize(new java.awt.Dimension(120, 120));
+        lblProfilePicture.setIcon(new javax.swing.ImageIcon("/Users/vaisansar/Desktop/Screenshot 2021-01-29 at 9.19.11 AM.png")); // NOI18N
+        lblProfilePicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        lblProfilePicture.setMaximumSize(new java.awt.Dimension(120, 120));
+        lblProfilePicture.setMinimumSize(new java.awt.Dimension(120, 120));
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(204, 204, 204)));
+        jPanelMobileNumber.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelMobileNumber.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(204, 204, 204)));
 
-        txtMobileNo.setForeground(new java.awt.Color(51, 51, 51));
-        txtMobileNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtMobileNo.setText("123456789");
+        txtMobileNumber.setForeground(new java.awt.Color(51, 51, 51));
+        txtMobileNumber.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         lblSsn.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSsn.setForeground(new java.awt.Color(153, 153, 153));
@@ -191,33 +233,32 @@ public class ViewReports extends javax.swing.JPanel {
         lblSsn.setText("Mobile Number");
         lblSsn.setIconTextGap(10);
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblSsn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMobileNo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        javax.swing.GroupLayout jPanelMobileNumberLayout = new javax.swing.GroupLayout(jPanelMobileNumber);
+        jPanelMobileNumber.setLayout(jPanelMobileNumberLayout);
+        jPanelMobileNumberLayout.setHorizontalGroup(
+            jPanelMobileNumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMobileNumberLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelMobileNumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSsn, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMobileNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+        jPanelMobileNumberLayout.setVerticalGroup(
+            jPanelMobileNumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMobileNumberLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblSsn, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(txtMobileNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
         );
 
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel8.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
+        jPanelSsn.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelSsn.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
 
         txtSsn.setForeground(new java.awt.Color(51, 51, 51));
         txtSsn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtSsn.setText("123456789");
 
         lblSsn1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSsn1.setForeground(new java.awt.Color(153, 153, 153));
@@ -225,74 +266,214 @@ public class ViewReports extends javax.swing.JPanel {
         lblSsn1.setText("Social Security Number");
         lblSsn1.setIconTextGap(10);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblSsn1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSsn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        javax.swing.GroupLayout jPanelSsnLayout = new javax.swing.GroupLayout(jPanelSsn);
+        jPanelSsn.setLayout(jPanelSsnLayout);
+        jPanelSsnLayout.setHorizontalGroup(
+            jPanelSsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSsnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelSsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSsn1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSsn, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+        jPanelSsnLayout.setVerticalGroup(
+            jPanelSsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSsnLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(lblSsn1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSsn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanellbMedicalRecordNumber.setBackground(new java.awt.Color(255, 255, 255));
+        jPanellbMedicalRecordNumber.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
+
+        txtMedicalRecordNo.setForeground(new java.awt.Color(51, 51, 51));
+        txtMedicalRecordNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        lbMedicalRecordNumber.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lbMedicalRecordNumber.setForeground(new java.awt.Color(153, 153, 153));
+        lbMedicalRecordNumber.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbMedicalRecordNumber.setText("Medical Record Number");
+        lbMedicalRecordNumber.setIconTextGap(10);
+
+        javax.swing.GroupLayout jPanellbMedicalRecordNumberLayout = new javax.swing.GroupLayout(jPanellbMedicalRecordNumber);
+        jPanellbMedicalRecordNumber.setLayout(jPanellbMedicalRecordNumberLayout);
+        jPanellbMedicalRecordNumberLayout.setHorizontalGroup(
+            jPanellbMedicalRecordNumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanellbMedicalRecordNumberLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanellbMedicalRecordNumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbMedicalRecordNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMedicalRecordNo, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanellbMedicalRecordNumberLayout.setVerticalGroup(
+            jPanellbMedicalRecordNumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanellbMedicalRecordNumberLayout.createSequentialGroup()
+                .addComponent(lbMedicalRecordNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtMedicalRecordNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanellbMedicalRecordNumber1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanellbMedicalRecordNumber1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
+
+        lbMedicalRecordNumber1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lbMedicalRecordNumber1.setForeground(new java.awt.Color(153, 153, 153));
+        lbMedicalRecordNumber1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbMedicalRecordNumber1.setText("Alergies");
+        lbMedicalRecordNumber1.setIconTextGap(10);
+
+        jPanelAlergy1.setBackground(new java.awt.Color(243, 243, 243));
+
+        txtAlergy1.setForeground(new java.awt.Color(51, 51, 51));
+        txtAlergy1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanelAlergy1Layout = new javax.swing.GroupLayout(jPanelAlergy1);
+        jPanelAlergy1.setLayout(jPanelAlergy1Layout);
+        jPanelAlergy1Layout.setHorizontalGroup(
+            jPanelAlergy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlergy1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAlergy1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanelAlergy1Layout.setVerticalGroup(
+            jPanelAlergy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlergy1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAlergy1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        jPanelAlergy2.setBackground(new java.awt.Color(243, 243, 243));
+
+        txtAlergy2.setForeground(new java.awt.Color(51, 51, 51));
+        txtAlergy2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanelAlergy2Layout = new javax.swing.GroupLayout(jPanelAlergy2);
+        jPanelAlergy2.setLayout(jPanelAlergy2Layout);
+        jPanelAlergy2Layout.setHorizontalGroup(
+            jPanelAlergy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlergy2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanelAlergy2Layout.setVerticalGroup(
+            jPanelAlergy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlergy2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanelAlergy3.setBackground(new java.awt.Color(243, 243, 243));
+
+        txtAlergy3.setForeground(new java.awt.Color(51, 51, 51));
+        txtAlergy3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtAlergy3.setText("NA");
+
+        javax.swing.GroupLayout jPanelAlergy3Layout = new javax.swing.GroupLayout(jPanelAlergy3);
+        jPanelAlergy3.setLayout(jPanelAlergy3Layout);
+        jPanelAlergy3Layout.setHorizontalGroup(
+            jPanelAlergy3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlergy3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAlergy3, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanelAlergy3Layout.setVerticalGroup(
+            jPanelAlergy3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlergy3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAlergy3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanellbMedicalRecordNumber1Layout = new javax.swing.GroupLayout(jPanellbMedicalRecordNumber1);
+        jPanellbMedicalRecordNumber1.setLayout(jPanellbMedicalRecordNumber1Layout);
+        jPanellbMedicalRecordNumber1Layout.setHorizontalGroup(
+            jPanellbMedicalRecordNumber1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanellbMedicalRecordNumber1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanellbMedicalRecordNumber1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbMedicalRecordNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelAlergy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelAlergy3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanellbMedicalRecordNumber1Layout.setVerticalGroup(
+            jPanellbMedicalRecordNumber1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanellbMedicalRecordNumber1Layout.createSequentialGroup()
+                .addComponent(lbMedicalRecordNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelAlergy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanelAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanelAlergy3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanelLeftLayout = new javax.swing.GroupLayout(jPanelLeft);
+        jPanelLeft.setLayout(jPanelLeftLayout);
+        jPanelLeftLayout.setHorizontalGroup(
+            jPanelLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLeftLayout.createSequentialGroup()
+                .addGroup(jPanelLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLeftLayout.createSequentialGroup()
                         .addGap(95, 95, 95)
-                        .addComponent(lblPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelLeftLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(lblFullName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanelLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanelMobileNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtFullName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanelLeftLayout.createSequentialGroup()
                                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jPanelSsn, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanellbMedicalRecordNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanellbMedicalRecordNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPanel4, jPanel5, jPanel6});
+        jPanelLeftLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPanel4, jPanel5, jPanel6});
 
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        jPanelLeftLayout.setVerticalGroup(
+            jPanelLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLeftLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblFullName)
+                .addComponent(txtFullName)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addComponent(jPanelMobileNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanelSsn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jPanellbMedicalRecordNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanellbMedicalRecordNumber1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(23, 23, 23))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel4, jPanel5, jPanel6});
+        jPanelLeftLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel4, jPanel5, jPanel6});
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(177, 80));
@@ -302,9 +483,9 @@ public class ViewReports extends javax.swing.JPanel {
         lblDob.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblDob.setText("Birthday");
 
-        txtDob4.setForeground(new java.awt.Color(51, 51, 51));
-        txtDob4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtDob4.setText("14th Jan, 1994");
+        txtDateOfBirth.setForeground(new java.awt.Color(51, 51, 51));
+        txtDateOfBirth.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtDateOfBirth.setText("14th Jan, 1994");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -313,7 +494,7 @@ public class ViewReports extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDob4, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(txtDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                     .addComponent(lblDob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -323,7 +504,7 @@ public class ViewReports extends javax.swing.JPanel {
                 .addGap(14, 14, 14)
                 .addComponent(lblDob)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtDob4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -346,7 +527,7 @@ public class ViewReports extends javax.swing.JPanel {
             .addGroup(jPanelStreetAddressLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanelStreetAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtStreetAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(txtStreetAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                     .addComponent(lblDob1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -379,7 +560,7 @@ public class ViewReports extends javax.swing.JPanel {
             .addGroup(jPanelCityLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanelCityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                     .addComponent(lblCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -398,7 +579,7 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtState.setForeground(new java.awt.Color(51, 51, 51));
         txtState.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtState.setText("MA");
+        txtState.setText("Massaceuteus");
 
         lblState.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblState.setForeground(new java.awt.Color(153, 153, 153));
@@ -412,7 +593,7 @@ public class ViewReports extends javax.swing.JPanel {
             .addGroup(jPanelStateLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanelStateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtState, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(txtState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -426,38 +607,439 @@ public class ViewReports extends javax.swing.JPanel {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jPanelState1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelState1.setPreferredSize(new java.awt.Dimension(177, 80));
+        jPanelZipcode.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelZipcode.setPreferredSize(new java.awt.Dimension(177, 80));
 
-        txtState1.setForeground(new java.awt.Color(51, 51, 51));
-        txtState1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtState1.setText("MA");
+        txtZipcode.setForeground(new java.awt.Color(51, 51, 51));
+        txtZipcode.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtZipcode.setText("02120");
 
-        lblState1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        lblState1.setForeground(new java.awt.Color(153, 153, 153));
-        lblState1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblState1.setText("State");
+        lblZipcode.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblZipcode.setForeground(new java.awt.Color(153, 153, 153));
+        lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblZipcode.setText("Zipcode");
 
-        javax.swing.GroupLayout jPanelState1Layout = new javax.swing.GroupLayout(jPanelState1);
-        jPanelState1.setLayout(jPanelState1Layout);
-        jPanelState1Layout.setHorizontalGroup(
-            jPanelState1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelState1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelZipcodeLayout = new javax.swing.GroupLayout(jPanelZipcode);
+        jPanelZipcode.setLayout(jPanelZipcodeLayout);
+        jPanelZipcodeLayout.setHorizontalGroup(
+            jPanelZipcodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelZipcodeLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanelState1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtState1, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
-                    .addComponent(lblState1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelZipcodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtZipcode, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(lblZipcode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanelState1Layout.setVerticalGroup(
-            jPanelState1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelState1Layout.createSequentialGroup()
+        jPanelZipcodeLayout.setVerticalGroup(
+            jPanelZipcodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelZipcodeLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(lblState1)
+                .addComponent(lblZipcode)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtState1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
+
+        jPanelBloodType.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelBloodType.setPreferredSize(new java.awt.Dimension(177, 80));
+
+        txtBloodType.setForeground(new java.awt.Color(51, 51, 51));
+        txtBloodType.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtBloodType.setText("B+");
+
+        lblBloodType.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblBloodType.setForeground(new java.awt.Color(153, 153, 153));
+        lblBloodType.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblBloodType.setText("Blood Type");
+
+        javax.swing.GroupLayout jPanelBloodTypeLayout = new javax.swing.GroupLayout(jPanelBloodType);
+        jPanelBloodType.setLayout(jPanelBloodTypeLayout);
+        jPanelBloodTypeLayout.setHorizontalGroup(
+            jPanelBloodTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBloodTypeLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanelBloodTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBloodType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblBloodType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelBloodTypeLayout.setVerticalGroup(
+            jPanelBloodTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBloodTypeLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblBloodType)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        jPanelLicenseIssueDate.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelLicenseIssueDate.setPreferredSize(new java.awt.Dimension(177, 80));
+
+        txtIssueDate.setForeground(new java.awt.Color(51, 51, 51));
+        txtIssueDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtIssueDate.setText("15th Feb, 2016");
+
+        lblLicenseIssueDate.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblLicenseIssueDate.setForeground(new java.awt.Color(153, 153, 153));
+        lblLicenseIssueDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblLicenseIssueDate.setText("License Issue Date");
+
+        javax.swing.GroupLayout jPanelLicenseIssueDateLayout = new javax.swing.GroupLayout(jPanelLicenseIssueDate);
+        jPanelLicenseIssueDate.setLayout(jPanelLicenseIssueDateLayout);
+        jPanelLicenseIssueDateLayout.setHorizontalGroup(
+            jPanelLicenseIssueDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseIssueDateLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanelLicenseIssueDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtIssueDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblLicenseIssueDate, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelLicenseIssueDateLayout.setVerticalGroup(
+            jPanelLicenseIssueDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseIssueDateLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblLicenseIssueDate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        lblLicenseExpiryDate1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        lblLicenseExpiryDate1.setForeground(new java.awt.Color(102, 102, 102));
+        lblLicenseExpiryDate1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLicenseExpiryDate1.setText("Bank Account Details");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblLicenseExpiryDate1, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblLicenseExpiryDate1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanelLicenseExpiryDate.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelLicenseExpiryDate.setPreferredSize(new java.awt.Dimension(177, 80));
+
+        txtExpiryDate.setForeground(new java.awt.Color(51, 51, 51));
+        txtExpiryDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtExpiryDate.setText("15th Feb, 2026");
+
+        lblLicenseExpiryDate.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblLicenseExpiryDate.setForeground(new java.awt.Color(153, 153, 153));
+        lblLicenseExpiryDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblLicenseExpiryDate.setText("License Expiry Date");
+
+        javax.swing.GroupLayout jPanelLicenseExpiryDateLayout = new javax.swing.GroupLayout(jPanelLicenseExpiryDate);
+        jPanelLicenseExpiryDate.setLayout(jPanelLicenseExpiryDateLayout);
+        jPanelLicenseExpiryDateLayout.setHorizontalGroup(
+            jPanelLicenseExpiryDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseExpiryDateLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanelLicenseExpiryDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtExpiryDate, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(lblLicenseExpiryDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelLicenseExpiryDateLayout.setVerticalGroup(
+            jPanelLicenseExpiryDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseExpiryDateLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblLicenseExpiryDate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        jPanelLicenseExpiryDate2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelLicenseExpiryDate2.setPreferredSize(new java.awt.Dimension(177, 80));
+
+        txtLicenseNo.setForeground(new java.awt.Color(51, 51, 51));
+        txtLicenseNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtLicenseNo.setText("15th Feb, 2026");
+
+        lblLicenseExpiryDate2.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblLicenseExpiryDate2.setForeground(new java.awt.Color(153, 153, 153));
+        lblLicenseExpiryDate2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblLicenseExpiryDate2.setText("License Number");
+
+        javax.swing.GroupLayout jPanelLicenseExpiryDate2Layout = new javax.swing.GroupLayout(jPanelLicenseExpiryDate2);
+        jPanelLicenseExpiryDate2.setLayout(jPanelLicenseExpiryDate2Layout);
+        jPanelLicenseExpiryDate2Layout.setHorizontalGroup(
+            jPanelLicenseExpiryDate2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseExpiryDate2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanelLicenseExpiryDate2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtLicenseNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblLicenseExpiryDate2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelLicenseExpiryDate2Layout.setVerticalGroup(
+            jPanelLicenseExpiryDate2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseExpiryDate2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblLicenseExpiryDate2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtLicenseNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        jPanelLicenseExpiryDate1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelLicenseExpiryDate1.setPreferredSize(new java.awt.Dimension(177, 80));
+
+        lblSavingsBankName.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblSavingsBankName.setForeground(new java.awt.Color(153, 153, 153));
+        lblSavingsBankName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblSavingsBankName.setText("Bank Name");
+
+        txtSavingsBankName.setForeground(new java.awt.Color(51, 51, 51));
+        txtSavingsBankName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtSavingsBankName.setText("SBI");
+
+        lblSavingsBankAccNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblSavingsBankAccNo.setForeground(new java.awt.Color(153, 153, 153));
+        lblSavingsBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblSavingsBankAccNo.setText("Account Number");
+
+        txtSavingsBankAccNo.setForeground(new java.awt.Color(51, 51, 51));
+        txtSavingsBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtSavingsBankAccNo.setText("123");
+
+        lblSavingsBankRoutingNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblSavingsBankRoutingNo.setForeground(new java.awt.Color(153, 153, 153));
+        lblSavingsBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblSavingsBankRoutingNo.setText("Routing Number");
+
+        txtSavingsBankRoutingNo.setForeground(new java.awt.Color(51, 51, 51));
+        txtSavingsBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtSavingsBankRoutingNo.setText("15th Feb, 2016");
+
+        lblSavingsBankAccBalance.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblSavingsBankAccBalance.setForeground(new java.awt.Color(153, 153, 153));
+        lblSavingsBankAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblSavingsBankAccBalance.setText("Account Balance");
+
+        txtSavingsAccBalance.setForeground(new java.awt.Color(51, 51, 51));
+        txtSavingsAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtSavingsAccBalance.setText("15th Feb, 2016");
+
+        lblCheckingBankName.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblCheckingBankName.setForeground(new java.awt.Color(153, 153, 153));
+        lblCheckingBankName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCheckingBankName.setText("Bank Name");
+
+        txtCheckingBankName.setForeground(new java.awt.Color(51, 51, 51));
+        txtCheckingBankName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtCheckingBankName.setText("ICICI");
+
+        lblCheckingBankAccNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblCheckingBankAccNo.setForeground(new java.awt.Color(153, 153, 153));
+        lblCheckingBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCheckingBankAccNo.setText("Account Number");
+
+        txtCheckingBankAccNo.setForeground(new java.awt.Color(51, 51, 51));
+        txtCheckingBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtCheckingBankAccNo.setText("123");
+
+        lblSCheckingBankRoutingNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblSCheckingBankRoutingNo.setForeground(new java.awt.Color(153, 153, 153));
+        lblSCheckingBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblSCheckingBankRoutingNo.setText("Routing Number");
+
+        txtCheckingBankRoutingNo.setForeground(new java.awt.Color(51, 51, 51));
+        txtCheckingBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtCheckingBankRoutingNo.setText("123");
+
+        lblCheckingBankAccBalance.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblCheckingBankAccBalance.setForeground(new java.awt.Color(153, 153, 153));
+        lblCheckingBankAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCheckingBankAccBalance.setText("Account Balance");
+
+        txtCheckingAccBalance.setForeground(new java.awt.Color(51, 51, 51));
+        txtCheckingAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtCheckingAccBalance.setText("15th Feb, 2016");
+
+        jPanel3.setBackground(new java.awt.Color(243, 243, 243));
+
+        lblLicenseIssueDate11.setBackground(new java.awt.Color(243, 243, 243));
+        lblLicenseIssueDate11.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblLicenseIssueDate11.setForeground(new java.awt.Color(102, 102, 102));
+        lblLicenseIssueDate11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLicenseIssueDate11.setText("Savings Bank Account");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblLicenseIssueDate11, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblLicenseIssueDate11, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel7.setBackground(new java.awt.Color(243, 243, 243));
+
+        lblLicenseIssueDate12.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        lblLicenseIssueDate12.setForeground(new java.awt.Color(102, 102, 102));
+        lblLicenseIssueDate12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLicenseIssueDate12.setText("Checking Bank Account");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblLicenseIssueDate12, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblLicenseIssueDate12, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel8.setBackground(new java.awt.Color(243, 243, 243));
+        jPanel8.setPreferredSize(new java.awt.Dimension(4, 100));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 4, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanelLicenseExpiryDate1Layout = new javax.swing.GroupLayout(jPanelLicenseExpiryDate1);
+        jPanelLicenseExpiryDate1.setLayout(jPanelLicenseExpiryDate1Layout);
+        jPanelLicenseExpiryDate1Layout.setHorizontalGroup(
+            jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtSavingsBankAccNo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblSavingsBankAccNo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSavingsAccBalance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblSavingsBankAccBalance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))
+                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtSavingsBankName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblSavingsBankName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSavingsBankRoutingNo, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+                            .addComponent(lblSavingsBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(16, 16, 16)
+                .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtCheckingBankAccNo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCheckingBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtCheckingAccBalance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCheckingBankAccBalance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtCheckingBankName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCheckingBankName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtCheckingBankRoutingNo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblSCheckingBankRoutingNo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+
+        jPanelLicenseExpiryDate1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPanel3, jPanel7});
+
+        jPanelLicenseExpiryDate1Layout.setVerticalGroup(
+            jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                .addComponent(lblCheckingBankName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCheckingBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                .addComponent(lblSCheckingBankRoutingNo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCheckingBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                        .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                .addGap(0, 24, Short.MAX_VALUE)
+                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                        .addComponent(lblSavingsBankRoutingNo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtSavingsBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                        .addComponent(lblSavingsBankName)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtSavingsBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanelLicenseExpiryDate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                        .addComponent(lblSavingsBankAccNo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtSavingsBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                        .addComponent(lblSavingsBankAccBalance)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtSavingsAccBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                        .addComponent(lblCheckingBankAccNo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtCheckingBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelLicenseExpiryDate1Layout.createSequentialGroup()
+                                        .addComponent(lblCheckingBankAccBalance)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtCheckingAccBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(37, 37, 37))))
+        );
+
+        jPanelLicenseExpiryDate1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel3, jPanel7});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -465,28 +1047,41 @@ public class ViewReports extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanelLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanelStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanelState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelState, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                    .addComponent(jPanelLicenseExpiryDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanelState1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                        .addComponent(jPanelZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelBloodType, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelLicenseIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelLicenseExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelLicenseExpiryDate2, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPanel2, jPanelCity, jPanelLicenseExpiryDate, jPanelLicenseIssueDate, jPanelStreetAddress, jPanelZipcode});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanelLeft, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(12, 12, 12))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -495,53 +1090,148 @@ public class ViewReports extends javax.swing.JPanel {
                             .addComponent(jPanelStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanelState1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                            .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanelLicenseIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelLicenseExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelLicenseExpiryDate2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelLicenseExpiryDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel2, jPanelBloodType, jPanelCity, jPanelLicenseExpiryDate, jPanelLicenseExpiryDate2, jPanelLicenseIssueDate, jPanelState, jPanelStreetAddress, jPanelZipcode});
+
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanelAlergy1;
+    private javax.swing.JPanel jPanelAlergy2;
+    private javax.swing.JPanel jPanelAlergy3;
+    private javax.swing.JPanel jPanelBloodType;
     private javax.swing.JPanel jPanelCity;
+    private javax.swing.JPanel jPanelLeft;
+    private javax.swing.JPanel jPanelLicenseExpiryDate;
+    private javax.swing.JPanel jPanelLicenseExpiryDate1;
+    private javax.swing.JPanel jPanelLicenseExpiryDate2;
+    private javax.swing.JPanel jPanelLicenseIssueDate;
+    private javax.swing.JPanel jPanelMobileNumber;
+    private javax.swing.JPanel jPanelSsn;
     private javax.swing.JPanel jPanelState;
-    private javax.swing.JPanel jPanelState1;
     private javax.swing.JPanel jPanelStreetAddress;
+    private javax.swing.JPanel jPanelZipcode;
+    private javax.swing.JPanel jPanellbMedicalRecordNumber;
+    private javax.swing.JPanel jPanellbMedicalRecordNumber1;
+    private javax.swing.JLabel lbMedicalRecordNumber;
+    private javax.swing.JLabel lbMedicalRecordNumber1;
+    private javax.swing.JLabel lblBloodType;
+    private javax.swing.JLabel lblCheckingBankAccBalance;
+    private javax.swing.JLabel lblCheckingBankAccNo;
+    private javax.swing.JLabel lblCheckingBankName;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblDob;
     private javax.swing.JLabel lblDob1;
     private javax.swing.JLabel lblDob2;
     private javax.swing.JLabel lblDob3;
-    private javax.swing.JLabel lblFullName;
-    private javax.swing.JLabel lblPicture;
+    private javax.swing.JLabel lblLicenseExpiryDate;
+    private javax.swing.JLabel lblLicenseExpiryDate1;
+    private javax.swing.JLabel lblLicenseExpiryDate2;
+    private javax.swing.JLabel lblLicenseIssueDate;
+    private javax.swing.JLabel lblLicenseIssueDate11;
+    private javax.swing.JLabel lblLicenseIssueDate12;
+    private javax.swing.JLabel lblProfilePicture;
+    private javax.swing.JLabel lblSCheckingBankRoutingNo;
+    private javax.swing.JLabel lblSavingsBankAccBalance;
+    private javax.swing.JLabel lblSavingsBankAccNo;
+    private javax.swing.JLabel lblSavingsBankName;
+    private javax.swing.JLabel lblSavingsBankRoutingNo;
     private javax.swing.JLabel lblSsn;
     private javax.swing.JLabel lblSsn1;
     private javax.swing.JLabel lblState;
-    private javax.swing.JLabel lblState1;
     private javax.swing.JLabel lblWeight;
+    private javax.swing.JLabel lblZipcode;
+    private javax.swing.JLabel txtAge;
+    private javax.swing.JLabel txtAlergy1;
+    private javax.swing.JLabel txtAlergy2;
+    private javax.swing.JLabel txtAlergy3;
+    private javax.swing.JLabel txtBloodType;
+    private javax.swing.JLabel txtCheckingAccBalance;
+    private javax.swing.JLabel txtCheckingBankAccNo;
+    private javax.swing.JLabel txtCheckingBankName;
+    private javax.swing.JLabel txtCheckingBankRoutingNo;
     private javax.swing.JLabel txtCity;
-    private javax.swing.JLabel txtDob2;
-    private javax.swing.JLabel txtDob3;
-    private javax.swing.JLabel txtDob4;
-    private javax.swing.JLabel txtMobileNo;
+    private javax.swing.JLabel txtDateOfBirth;
+    private javax.swing.JLabel txtExpiryDate;
+    private javax.swing.JLabel txtFullName;
+    private javax.swing.JLabel txtHeight;
+    private javax.swing.JLabel txtIssueDate;
+    private javax.swing.JLabel txtLicenseNo;
+    private javax.swing.JLabel txtMedicalRecordNo;
+    private javax.swing.JLabel txtMobileNumber;
+    private javax.swing.JLabel txtSavingsAccBalance;
+    private javax.swing.JLabel txtSavingsBankAccNo;
+    private javax.swing.JLabel txtSavingsBankName;
+    private javax.swing.JLabel txtSavingsBankRoutingNo;
     private javax.swing.JLabel txtSsn;
     private javax.swing.JLabel txtState;
-    private javax.swing.JLabel txtState1;
     private javax.swing.JLabel txtStreetAddress;
     private javax.swing.JLabel txtWeight;
+    private javax.swing.JLabel txtZipcode;
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
+        // personal information
+        txtFullName.setText(person.getFirstName() +" " + person.getLastName());        
+        txtMobileNumber.setText(person.getMobileNumber());
+        txtAge.setText(Integer.toString(person.getAge()));
+        txtHeight.setText(Float.toString(person.getHeight()) + " inch" );
+        txtWeight.setText(Float.toString(person.getWeight()) + " kg");
+        txtSsn.setText(person.getSsn());
+        txtDateOfBirth.setText(person.getDateOfBirth());
         
+        // address
+        txtStreetAddress.setText(person.getStreetAddress());
+        txtCity.setText(person.getCity());
+        txtState.setText(person.getState());
+        txtZipcode.setText(person.getZipcode());
+        
+        // saving bank
+        txtSavingsBankName.setText(person.getSavingBankName());
+        txtSavingsBankRoutingNo.setText(person.getCheckingBankRoutingNumber());
+        txtSavingsBankAccNo.setText(person.getSavingBankAccountNumber());
+        txtSavingsAccBalance.setText(person.getSavingAccountBalance());
+            
+        // checking bank
+        txtCheckingBankName.setText(person.getCheckingBankName());
+        txtCheckingBankAccNo.setText(person.getCheckingBankAccountNumber());
+        txtCheckingAccBalance.setText(person.getCheckingAccountBalance());
+        txtCheckingBankRoutingNo.setText(person.getCheckingBankRoutingNumber());
+        
+        // license
+        txtIssueDate.setText(person.getDateIssued());
+        txtExpiryDate.setText(person.getDateOfExpiry());
+        txtBloodType.setText(person.getBloodType());
+        txtLicenseNo.setText(person.getLicenseNumber());
+        lblProfilePicture.setIcon(person.getPicture());
+        
+        // medical
+        txtMedicalRecordNo.setText(person.getMedicalRecordNumber());
+        txtAlergy1.setText(person.getAlergy1());
+        txtAlergy2.setText(person.getAlergy2());
+        txtAlergy3.setText(person.getAlergy3());
     }
 }

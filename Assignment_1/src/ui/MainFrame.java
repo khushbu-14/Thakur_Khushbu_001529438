@@ -46,6 +46,18 @@ public class MainFrame extends javax.swing.JFrame {
         workPaneAddressInfo = new javax.swing.JPanel();
         btnCreateAddressInfo = new javax.swing.JButton();
         btnViewAddressInfo = new javax.swing.JButton();
+        tabSaving = new javax.swing.JPanel();
+        splitPanelSavingInfo = new javax.swing.JSplitPane();
+        controlPaneSavingInfo = new javax.swing.JPanel();
+        workPaneSavingInfo = new javax.swing.JPanel();
+        btnCreateSavingInfo = new javax.swing.JButton();
+        btnViewSavingInfo = new javax.swing.JButton();
+        tabChecking = new javax.swing.JPanel();
+        splitPanelCheckingInfo = new javax.swing.JSplitPane();
+        controlPaneCheckingInfo = new javax.swing.JPanel();
+        workPaneCheckingInfo = new javax.swing.JPanel();
+        btnCreateCheckingInfo = new javax.swing.JButton();
+        btnViewCheckingInfo = new javax.swing.JButton();
         tabBankInformation = new javax.swing.JPanel();
         splitPanelBankInfo = new javax.swing.JSplitPane();
         controlPaneBankInfo = new javax.swing.JPanel();
@@ -216,6 +228,142 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("Address", tabAddress);
+
+        javax.swing.GroupLayout controlPaneSavingInfoLayout = new javax.swing.GroupLayout(controlPaneSavingInfo);
+        controlPaneSavingInfo.setLayout(controlPaneSavingInfoLayout);
+        controlPaneSavingInfoLayout.setHorizontalGroup(
+            controlPaneSavingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
+        );
+        controlPaneSavingInfoLayout.setVerticalGroup(
+            controlPaneSavingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
+        );
+
+        splitPanelSavingInfo.setRightComponent(controlPaneSavingInfo);
+
+        btnCreateSavingInfo.setText("Create");
+        btnCreateSavingInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateSavingInfoActionPerformed(evt);
+            }
+        });
+
+        btnViewSavingInfo.setText("View");
+        btnViewSavingInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewSavingInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout workPaneSavingInfoLayout = new javax.swing.GroupLayout(workPaneSavingInfo);
+        workPaneSavingInfo.setLayout(workPaneSavingInfoLayout);
+        workPaneSavingInfoLayout.setHorizontalGroup(
+            workPaneSavingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneSavingInfoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(workPaneSavingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateSavingInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnViewSavingInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        workPaneSavingInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateSavingInfo, btnViewSavingInfo});
+
+        workPaneSavingInfoLayout.setVerticalGroup(
+            workPaneSavingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneSavingInfoLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(btnCreateSavingInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnViewSavingInfo)
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        workPaneSavingInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateSavingInfo, btnViewSavingInfo});
+
+        splitPanelSavingInfo.setLeftComponent(workPaneSavingInfo);
+
+        javax.swing.GroupLayout tabSavingLayout = new javax.swing.GroupLayout(tabSaving);
+        tabSaving.setLayout(tabSavingLayout);
+        tabSavingLayout.setHorizontalGroup(
+            tabSavingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPanelSavingInfo)
+        );
+        tabSavingLayout.setVerticalGroup(
+            tabSavingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPanelSavingInfo)
+        );
+
+        actionTabs.addTab("Saving", tabSaving);
+
+        javax.swing.GroupLayout controlPaneCheckingInfoLayout = new javax.swing.GroupLayout(controlPaneCheckingInfo);
+        controlPaneCheckingInfo.setLayout(controlPaneCheckingInfoLayout);
+        controlPaneCheckingInfoLayout.setHorizontalGroup(
+            controlPaneCheckingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
+        );
+        controlPaneCheckingInfoLayout.setVerticalGroup(
+            controlPaneCheckingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 436, Short.MAX_VALUE)
+        );
+
+        splitPanelCheckingInfo.setRightComponent(controlPaneCheckingInfo);
+
+        btnCreateCheckingInfo.setText("Create");
+        btnCreateCheckingInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateCheckingInfoActionPerformed(evt);
+            }
+        });
+
+        btnViewCheckingInfo.setText("View");
+        btnViewCheckingInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewCheckingInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout workPaneCheckingInfoLayout = new javax.swing.GroupLayout(workPaneCheckingInfo);
+        workPaneCheckingInfo.setLayout(workPaneCheckingInfoLayout);
+        workPaneCheckingInfoLayout.setHorizontalGroup(
+            workPaneCheckingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneCheckingInfoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(workPaneCheckingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateCheckingInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnViewCheckingInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        workPaneCheckingInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateCheckingInfo, btnViewCheckingInfo});
+
+        workPaneCheckingInfoLayout.setVerticalGroup(
+            workPaneCheckingInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(workPaneCheckingInfoLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(btnCreateCheckingInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnViewCheckingInfo)
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        workPaneCheckingInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateCheckingInfo, btnViewCheckingInfo});
+
+        splitPanelCheckingInfo.setLeftComponent(workPaneCheckingInfo);
+
+        javax.swing.GroupLayout tabCheckingLayout = new javax.swing.GroupLayout(tabChecking);
+        tabChecking.setLayout(tabCheckingLayout);
+        tabCheckingLayout.setHorizontalGroup(
+            tabCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPanelCheckingInfo)
+        );
+        tabCheckingLayout.setVerticalGroup(
+            tabCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPanelCheckingInfo)
+        );
+
+        actionTabs.addTab("Checking", tabChecking);
 
         javax.swing.GroupLayout controlPaneBankInfoLayout = new javax.swing.GroupLayout(controlPaneBankInfo);
         controlPaneBankInfo.setLayout(controlPaneBankInfoLayout);
@@ -440,7 +588,7 @@ public class MainFrame extends javax.swing.JFrame {
         reportPanel.setLayout(reportPanelLayout);
         reportPanelLayout.setHorizontalGroup(
             reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         reportPanelLayout.setVerticalGroup(
             reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -453,7 +601,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabReport.setLayout(tabReportLayout);
         tabReportLayout.setHorizontalGroup(
             tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPane)
         );
         tabReportLayout.setVerticalGroup(
             tabReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -549,6 +697,30 @@ public class MainFrame extends javax.swing.JFrame {
         splitPanelMedicalInfo.setRightComponent(medicalRecordPanel);
     }//GEN-LAST:event_btnViewMedicalInfoActionPerformed
 
+    private void btnCreateSavingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateSavingInfoActionPerformed
+        // TODO add your handling code here:
+        CreateSavingBankInfo savingBankInformation = new CreateSavingBankInfo(person);
+        splitPanelSavingInfo.setRightComponent(savingBankInformation); 
+    }//GEN-LAST:event_btnCreateSavingInfoActionPerformed
+
+    private void btnViewSavingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewSavingInfoActionPerformed
+        // TODO add your handling code here:
+        ViewSavingBankInfo savingViewPanel = new ViewSavingBankInfo(person);
+        splitPanelSavingInfo.setRightComponent(savingViewPanel);
+    }//GEN-LAST:event_btnViewSavingInfoActionPerformed
+
+    private void btnCreateCheckingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCheckingInfoActionPerformed
+        // TODO add your handling code here:
+        CreateCheckingBankInfo checkingBankInformation = new CreateCheckingBankInfo(person);
+        splitPanelCheckingInfo.setRightComponent(checkingBankInformation); 
+    }//GEN-LAST:event_btnCreateCheckingInfoActionPerformed
+
+    private void btnViewCheckingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewCheckingInfoActionPerformed
+        // TODO add your handling code here:
+        ViewCheckingBankInfo checkingViewPanel = new ViewCheckingBankInfo(person);
+        splitPanelCheckingInfo.setRightComponent(checkingViewPanel);
+    }//GEN-LAST:event_btnViewCheckingInfoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -588,38 +760,50 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane actionTabs;
     private javax.swing.JButton btnCreateAddressInfo;
     private javax.swing.JButton btnCreateBankInfo;
+    private javax.swing.JButton btnCreateCheckingInfo;
     private javax.swing.JButton btnCreateLicenseInfo;
     private javax.swing.JButton btnCreateMedicalInfo;
     private javax.swing.JButton btnCreatePersonalInfo;
+    private javax.swing.JButton btnCreateSavingInfo;
     private javax.swing.JButton btnViewAddressInfo;
     private javax.swing.JButton btnViewBankInfo;
+    private javax.swing.JButton btnViewCheckingInfo;
     private javax.swing.JButton btnViewLicenseInfo;
     private javax.swing.JButton btnViewMedicalInfo;
     private javax.swing.JButton btnViewPersonalInfo;
+    private javax.swing.JButton btnViewSavingInfo;
     private javax.swing.JPanel controlPaneAddressInfo;
     private javax.swing.JPanel controlPaneBankInfo;
+    private javax.swing.JPanel controlPaneCheckingInfo;
     private javax.swing.JPanel controlPaneLicenseInfo;
     private javax.swing.JPanel controlPaneMedicalInfo;
     private javax.swing.JPanel controlPanePersonalInfo;
+    private javax.swing.JPanel controlPaneSavingInfo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel reportPanel;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JSplitPane splitPanelAddressInfo;
     private javax.swing.JSplitPane splitPanelBankInfo;
+    private javax.swing.JSplitPane splitPanelCheckingInfo;
     private javax.swing.JSplitPane splitPanelLicenseInfo;
     private javax.swing.JSplitPane splitPanelMedicalInfo;
     private javax.swing.JSplitPane splitPanelPersonalInfo;
+    private javax.swing.JSplitPane splitPanelSavingInfo;
     private javax.swing.JPanel tabAddress;
     private javax.swing.JPanel tabBankInformation;
+    private javax.swing.JPanel tabChecking;
     private javax.swing.JPanel tabLicense;
     private javax.swing.JPanel tabMedical;
     private javax.swing.JPanel tabPersonalInfo;
     private javax.swing.JPanel tabReport;
+    private javax.swing.JPanel tabSaving;
     private javax.swing.JPanel workPaneAddressInfo;
     private javax.swing.JPanel workPaneBankInfo;
+    private javax.swing.JPanel workPaneCheckingInfo;
     private javax.swing.JPanel workPaneLicenseInfo;
     private javax.swing.JPanel workPaneMedicalInfo;
     private javax.swing.JPanel workPanePersonalInfo;
+    private javax.swing.JPanel workPaneSavingInfo;
     // End of variables declaration//GEN-END:variables
 }

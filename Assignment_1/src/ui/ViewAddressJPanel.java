@@ -42,7 +42,7 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
         lblState = new javax.swing.JLabel();
         txtState = new javax.swing.JTextField();
         lblZipcode = new javax.swing.JLabel();
-        txtzipcode = new javax.swing.JFormattedTextField();
+        txtZipcode = new javax.swing.JFormattedTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtStreetAddress = new javax.swing.JTextArea();
 
@@ -87,8 +87,8 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
         lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblZipcode.setText("Zipcode :");
 
-        txtzipcode.setEditable(false);
-        txtzipcode.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
+        txtZipcode.setEditable(false);
+        txtZipcode.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
 
         txtStreetAddress.setEditable(false);
         txtStreetAddress.setColumns(4);
@@ -113,7 +113,7 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tabBodyAddressInformationLayout.createSequentialGroup()
                                 .addComponent(lblZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
                         .addComponent(lblStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -129,7 +129,6 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyAddressInformationLayout.createSequentialGroup()
                         .addComponent(lblStreetAddress)
                         .addGap(18, 18, 18)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -138,11 +137,11 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblZipcode)
-                    .addComponent(txtzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
-        tabBodyAddressInformationLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtState, txtzipcode});
+        tabBodyAddressInformationLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtState, txtZipcode});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -175,13 +174,13 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtState;
     private javax.swing.JTextArea txtStreetAddress;
-    private javax.swing.JFormattedTextField txtzipcode;
+    private javax.swing.JFormattedTextField txtZipcode;
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
        txtStreetAddress.setText(person.getStreetAddress());
        txtCity.setText(person.getCity());
        txtState.setText(person.getState());
-       txtzipcode.setText(person.getZipcode());
+       txtZipcode.setText(person.getZipcode());
     }
 }
