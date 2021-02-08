@@ -49,7 +49,6 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
         txtMobileNumber = new javax.swing.JFormattedTextField();
         lblLastName = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
-        lblAge1 = new javax.swing.JLabel();
         lblDateOfBirth = new javax.swing.JLabel();
         txtDob = new org.jdatepicker.JDatePicker();
         txtHeight = new javax.swing.JTextField();
@@ -59,6 +58,7 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
         txtWeight = new javax.swing.JTextField();
         lblWeight = new javax.swing.JLabel();
         btnSavePersonalInformation = new javax.swing.JButton();
+        titleChecking = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(249, 244, 244));
 
@@ -106,9 +106,6 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
                 txtLastNameActionPerformed(evt);
             }
         });
-
-        lblAge1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblAge1.setText("Age");
 
         lblDateOfBirth.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblDateOfBirth.setText("Date of Birth");
@@ -158,46 +155,55 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
             }
         });
 
+        titleChecking.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        titleChecking.setText("Add Personal Information");
+
         javax.swing.GroupLayout tabBodyPersonalInformationLayout = new javax.swing.GroupLayout(tabBodyPersonalInformation);
         tabBodyPersonalInformation.setLayout(tabBodyPersonalInformationLayout);
         tabBodyPersonalInformationLayout.setHorizontalGroup(
             tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtSsn)
-                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                                .addComponent(txtMobileNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblFirstName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtFirstName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblMobileNumber, javax.swing.GroupLayout.Alignment.LEADING))))
-                    .addComponent(lblSsn))
-                .addGap(100, 100, 100)
-                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblWeight)
-                    .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtWeight)
-                        .addComponent(lblLastName, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtLastName, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblDateOfBirth, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtDob, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                        .addComponent(lblHeight, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtHeight, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblAge1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(62, 62, 62))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyPersonalInformationLayout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(btnSavePersonalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(229, 229, 229))
+            .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtSsn)
+                                .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
+                                        .addComponent(txtMobileNumber, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblFirstName, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtFirstName, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblMobileNumber, javax.swing.GroupLayout.Alignment.LEADING))))
+                            .addComponent(lblSsn))
+                        .addGap(100, 100, 100)
+                        .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblWeight)
+                            .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtWeight)
+                                .addComponent(lblLastName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtLastName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblDateOfBirth, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtDob, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
+                                .addComponent(lblHeight, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtHeight, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(titleChecking)))
+                .addGap(62, 62, 62))
         );
         tabBodyPersonalInformationLayout.setVerticalGroup(
             tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyPersonalInformationLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(11, 11, 11)
+                .addComponent(titleChecking)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                         .addComponent(lblLastName)
@@ -236,9 +242,7 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
                         .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(36, 36, 36)
                 .addComponent(btnSavePersonalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(lblAge1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -316,7 +320,6 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
     private javax.swing.JButton btnSavePersonalInformation;
     private org.jdatepicker.DateComponentFormatter dateComponentFormatter1;
     private javax.swing.JLabel lblAge;
-    private javax.swing.JLabel lblAge1;
     private javax.swing.JLabel lblDateOfBirth;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblHeight;
@@ -325,6 +328,7 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
     private javax.swing.JLabel lblSsn;
     private javax.swing.JLabel lblWeight;
     private javax.swing.JPanel tabBodyPersonalInformation;
+    private javax.swing.JLabel titleChecking;
     private javax.swing.JSpinner txtAge;
     private org.jdatepicker.JDatePicker txtDob;
     private javax.swing.JTextField txtFirstName;

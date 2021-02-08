@@ -96,6 +96,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         tabPersonalInfo.setBackground(new java.awt.Color(246, 243, 243));
 
+        splitPanelPersonalInfo.setBackground(new java.awt.Color(249, 244, 244));
         splitPanelPersonalInfo.setForeground(new java.awt.Color(255, 255, 255));
 
         controlPanePersonalInfo.setBackground(new java.awt.Color(255, 255, 255));
@@ -113,7 +114,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         splitPanelPersonalInfo.setRightComponent(controlPanePersonalInfo);
 
-        workPanePersonalInfo.setBackground(new java.awt.Color(246, 243, 243));
+        workPanePersonalInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreatePersonalInfo.setText("Create");
         btnCreatePersonalInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +135,7 @@ public class MainFrame extends javax.swing.JFrame {
         workPanePersonalInfoLayout.setHorizontalGroup(
             workPanePersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workPanePersonalInfoLayout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+                .addGap(10, 10, 10)
                 .addGroup(workPanePersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreatePersonalInfo, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnViewPersonalInfo, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -161,7 +162,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabPersonalInfo.setLayout(tabPersonalInfoLayout);
         tabPersonalInfoLayout.setHorizontalGroup(
             tabPersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelPersonalInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelPersonalInfo)
         );
         tabPersonalInfoLayout.setVerticalGroup(
             tabPersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,6 +170,10 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("Personal", tabPersonalInfo);
+
+        splitPanelAddressInfo.setBackground(new java.awt.Color(249, 244, 244));
+
+        controlPaneAddressInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPaneAddressInfoLayout = new javax.swing.GroupLayout(controlPaneAddressInfo);
         controlPaneAddressInfo.setLayout(controlPaneAddressInfoLayout);
@@ -182,6 +187,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelAddressInfo.setRightComponent(controlPaneAddressInfo);
+
+        workPaneAddressInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreateAddressInfo.setText("Create");
         btnCreateAddressInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -229,7 +236,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabAddress.setLayout(tabAddressLayout);
         tabAddressLayout.setHorizontalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelAddressInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelAddressInfo)
         );
         tabAddressLayout.setVerticalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,6 +244,10 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("Address", tabAddress);
+
+        splitPanelSavingInfo.setBackground(new java.awt.Color(249, 244, 244));
+
+        controlPaneSavingInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPaneSavingInfoLayout = new javax.swing.GroupLayout(controlPaneSavingInfo);
         controlPaneSavingInfo.setLayout(controlPaneSavingInfoLayout);
@@ -250,6 +261,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelSavingInfo.setRightComponent(controlPaneSavingInfo);
+
+        workPaneSavingInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreateSavingInfo.setText("Create");
         btnCreateSavingInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -297,7 +310,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabSaving.setLayout(tabSavingLayout);
         tabSavingLayout.setHorizontalGroup(
             tabSavingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelSavingInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelSavingInfo)
         );
         tabSavingLayout.setVerticalGroup(
             tabSavingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,6 +318,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("Saving", tabSaving);
+
+        controlPaneCheckingInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPaneCheckingInfoLayout = new javax.swing.GroupLayout(controlPaneCheckingInfo);
         controlPaneCheckingInfo.setLayout(controlPaneCheckingInfoLayout);
@@ -318,6 +333,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelCheckingInfo.setRightComponent(controlPaneCheckingInfo);
+
+        workPaneCheckingInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreateCheckingInfo.setText("Create");
         btnCreateCheckingInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -365,7 +382,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabChecking.setLayout(tabCheckingLayout);
         tabCheckingLayout.setHorizontalGroup(
             tabCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelCheckingInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelCheckingInfo)
         );
         tabCheckingLayout.setVerticalGroup(
             tabCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -373,6 +390,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("Checking", tabChecking);
+
+        controlPaneBankInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPaneBankInfoLayout = new javax.swing.GroupLayout(controlPaneBankInfo);
         controlPaneBankInfo.setLayout(controlPaneBankInfoLayout);
@@ -386,6 +405,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelBankInfo.setRightComponent(controlPaneBankInfo);
+
+        workPaneBankInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreateBankInfo.setText("Create");
         btnCreateBankInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -433,7 +454,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabBankInformation.setLayout(tabBankInformationLayout);
         tabBankInformationLayout.setHorizontalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelBankInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelBankInfo)
         );
         tabBankInformationLayout.setVerticalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,6 +462,10 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("Bank", tabBankInformation);
+
+        splitPanelLicenseInfo.setBackground(new java.awt.Color(249, 244, 244));
+
+        controlPaneLicenseInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPaneLicenseInfoLayout = new javax.swing.GroupLayout(controlPaneLicenseInfo);
         controlPaneLicenseInfo.setLayout(controlPaneLicenseInfoLayout);
@@ -454,6 +479,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelLicenseInfo.setRightComponent(controlPaneLicenseInfo);
+
+        workPaneLicenseInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreateLicenseInfo.setText("Create");
         btnCreateLicenseInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -501,7 +528,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabLicense.setLayout(tabLicenseLayout);
         tabLicenseLayout.setHorizontalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelLicenseInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelLicenseInfo)
         );
         tabLicenseLayout.setVerticalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -509,6 +536,10 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         actionTabs.addTab("License", tabLicense);
+
+        splitPanelMedicalInfo.setBackground(new java.awt.Color(249, 244, 244));
+
+        controlPaneMedicalInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPaneMedicalInfoLayout = new javax.swing.GroupLayout(controlPaneMedicalInfo);
         controlPaneMedicalInfo.setLayout(controlPaneMedicalInfoLayout);
@@ -522,6 +553,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelMedicalInfo.setRightComponent(controlPaneMedicalInfo);
+
+        workPaneMedicalInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         btnCreateMedicalInfo.setText("Create");
         btnCreateMedicalInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -569,7 +602,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabMedical.setLayout(tabMedicalLayout);
         tabMedicalLayout.setHorizontalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelMedicalInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
+            .addComponent(splitPanelMedicalInfo)
         );
         tabMedicalLayout.setVerticalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -578,7 +611,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("Medical", tabMedical);
 
+        splitPane.setBackground(new java.awt.Color(249, 244, 244));
         splitPane.setDividerLocation(1);
+
+        jPanel1.setBackground(new java.awt.Color(249, 244, 244));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
