@@ -34,26 +34,22 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         tabBodyBankInformation = new javax.swing.JPanel();
-        jSplitPaneBankInfo = new javax.swing.JSplitPane();
-        jPanelSavings = new javax.swing.JPanel();
         txtLicenseNo = new javax.swing.JTextField();
         lblLicenseNo = new javax.swing.JLabel();
         lblIssueDate = new javax.swing.JLabel();
-        txtIssueDate = new javax.swing.JTextField();
-        jPanelChecking = new javax.swing.JPanel();
+        txtBloodType = new javax.swing.JTextField();
         lblBloodType = new javax.swing.JLabel();
         lblExpiryDate = new javax.swing.JLabel();
-        txtBloodType = new javax.swing.JTextField();
-        txtExpiryDate = new javax.swing.JTextField();
         lblProfilePicture = new javax.swing.JLabel();
-        lblProfilePictureTxt = new javax.swing.JLabel();
+        titleChecking = new javax.swing.JLabel();
+        txtIssueDate = new javax.swing.JTextField();
+        txtExpiryDate = new javax.swing.JTextField();
 
-        jSplitPaneBankInfo.setDividerLocation(250);
-        jSplitPaneBankInfo.setDividerSize(10);
-        jSplitPaneBankInfo.setResizeWeight(0.5);
+        setBackground(new java.awt.Color(249, 244, 244));
 
-        txtLicenseNo.setEditable(false);
-        txtLicenseNo.setFocusable(false);
+        tabBodyBankInformation.setBackground(new java.awt.Color(249, 244, 244));
+
+        txtLicenseNo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtLicenseNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLicenseNoActionPerformed(evt);
@@ -68,47 +64,12 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
         lblIssueDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblIssueDate.setText("License Issue Date");
 
-        txtIssueDate.setEditable(false);
-        txtIssueDate.addActionListener(new java.awt.event.ActionListener() {
+        txtBloodType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtBloodType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIssueDateActionPerformed(evt);
+                txtBloodTypeActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanelSavingsLayout = new javax.swing.GroupLayout(jPanelSavings);
-        jPanelSavings.setLayout(jPanelSavingsLayout);
-        jPanelSavingsLayout.setHorizontalGroup(
-            jPanelSavingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSavingsLayout.createSequentialGroup()
-                .addGroup(jPanelSavingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelSavingsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(txtLicenseNo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelSavingsLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(lblLicenseNo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelSavingsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanelSavingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelSavingsLayout.setVerticalGroup(
-            jPanelSavingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSavingsLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(lblLicenseNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtLicenseNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblIssueDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(243, 243, 243))
-        );
-
-        jSplitPaneBankInfo.setLeftComponent(jPanelSavings);
 
         lblBloodType.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblBloodType.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -118,89 +79,71 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
         lblExpiryDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblExpiryDate.setText("License Date of Expiry");
 
-        txtBloodType.setEditable(false);
-        txtBloodType.setDragEnabled(false);
-        txtBloodType.setFocusTraversalKeysEnabled(false);
-        txtBloodType.setFocusable(false);
-        txtBloodType.addActionListener(new java.awt.event.ActionListener() {
+        titleChecking.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        titleChecking.setText("View License Details");
+
+        txtIssueDate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtIssueDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBloodTypeActionPerformed(evt);
+                txtIssueDateActionPerformed(evt);
             }
         });
 
-        txtExpiryDate.setEditable(false);
-        txtExpiryDate.setDragEnabled(false);
-        txtExpiryDate.setFocusTraversalKeysEnabled(false);
-        txtExpiryDate.setFocusable(false);
+        txtExpiryDate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtExpiryDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtExpiryDateActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanelCheckingLayout = new javax.swing.GroupLayout(jPanelChecking);
-        jPanelChecking.setLayout(jPanelCheckingLayout);
-        jPanelCheckingLayout.setHorizontalGroup(
-            jPanelCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCheckingLayout.createSequentialGroup()
-                .addGroup(jPanelCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelCheckingLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(jPanelCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanelCheckingLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(txtBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelCheckingLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(txtExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelCheckingLayout.setVerticalGroup(
-            jPanelCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCheckingLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(lblBloodType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(12, 12, 12)
-                .addComponent(txtBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblExpiryDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(246, 246, 246))
-        );
-
-        jSplitPaneBankInfo.setRightComponent(jPanelChecking);
-
-        lblProfilePictureTxt.setText("Profile Picture");
-
         javax.swing.GroupLayout tabBodyBankInformationLayout = new javax.swing.GroupLayout(tabBodyBankInformation);
         tabBodyBankInformation.setLayout(tabBodyBankInformationLayout);
         tabBodyBankInformationLayout.setHorizontalGroup(
             tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(80, 80, 80)
                 .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblLicenseNo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLicenseNo, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+                        .addComponent(txtIssueDate)
+                        .addComponent(txtExpiryDate))
                     .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(lblProfilePictureTxt)
-                        .addGap(444, 480, Short.MAX_VALUE))
+                        .addGap(102, 102, 102)
+                        .addComponent(titleChecking))
                     .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
-                        .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(lblProfilePicture, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())))
+                        .addGap(110, 110, 110)
+                        .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         tabBodyBankInformationLayout.setVerticalGroup(
             tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
-                .addComponent(jSplitPaneBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(titleChecking)
+                .addGap(18, 18, 18)
+                .addComponent(lblLicenseNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(10, 10, 10)
+                .addComponent(txtLicenseNo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblIssueDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblProfilePictureTxt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtIssueDate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblExpiryDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(txtExpiryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -213,7 +156,9 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabBodyBankInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(tabBodyBankInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -221,13 +166,13 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLicenseNoActionPerformed
 
-    private void txtIssueDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueDateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIssueDateActionPerformed
-
     private void txtBloodTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBloodTypeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBloodTypeActionPerformed
+
+    private void txtIssueDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIssueDateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIssueDateActionPerformed
 
     private void txtExpiryDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtExpiryDateActionPerformed
         // TODO add your handling code here:
@@ -235,16 +180,13 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanelChecking;
-    private javax.swing.JPanel jPanelSavings;
-    private javax.swing.JSplitPane jSplitPaneBankInfo;
     private javax.swing.JLabel lblBloodType;
     private javax.swing.JLabel lblExpiryDate;
     private javax.swing.JLabel lblIssueDate;
     private javax.swing.JLabel lblLicenseNo;
     private javax.swing.JLabel lblProfilePicture;
-    private javax.swing.JLabel lblProfilePictureTxt;
     private javax.swing.JPanel tabBodyBankInformation;
+    private javax.swing.JLabel titleChecking;
     private javax.swing.JTextField txtBloodType;
     private javax.swing.JTextField txtExpiryDate;
     private javax.swing.JTextField txtIssueDate;

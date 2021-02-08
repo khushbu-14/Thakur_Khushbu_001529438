@@ -713,7 +713,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btnCreateLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLicenseInfoActionPerformed
         // TODO add your handling code here:
-        CreateDriverLicenseInfoJPanel licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel(person);
+//        CreateDriverLicenseInfoJPanel licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel(person);
+        CreateDriverLicenseInfoJPanel1 licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel1(person);
         splitPanelLicenseInfo.setRightComponent(licenseInformationCreatePanel); 
     }//GEN-LAST:event_btnCreateLicenseInfoActionPerformed
 
