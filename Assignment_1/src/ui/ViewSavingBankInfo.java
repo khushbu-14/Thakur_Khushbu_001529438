@@ -66,7 +66,10 @@ public class ViewSavingBankInfo extends javax.swing.JPanel {
         lblSavingBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSavingBankAccNo.setText("Bank Account Number");
 
+        txtSavingsBankRoutingNo.setEditable(false);
         txtSavingsBankRoutingNo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtSavingsBankRoutingNo.setFocusTraversalKeysEnabled(false);
+        txtSavingsBankRoutingNo.setFocusable(false);
         txtSavingsBankRoutingNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSavingsBankRoutingNoActionPerformed(evt);
@@ -86,7 +89,10 @@ public class ViewSavingBankInfo extends javax.swing.JPanel {
         titleChecking.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         titleChecking.setText("View Saving Account Details");
 
+        txtSavingsBankName.setEditable(false);
         txtSavingsBankName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtSavingsBankName.setFocusTraversalKeysEnabled(false);
+        txtSavingsBankName.setFocusable(false);
         txtSavingsBankName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSavingsBankNameActionPerformed(evt);
@@ -101,14 +107,20 @@ public class ViewSavingBankInfo extends javax.swing.JPanel {
         lblSavingBankAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSavingBankAccBalance.setText("Account Balance");
 
+        txtSavingsAccBalance.setEditable(false);
         txtSavingsAccBalance.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtSavingsAccBalance.setFocusTraversalKeysEnabled(false);
+        txtSavingsAccBalance.setFocusable(false);
         txtSavingsAccBalance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSavingsAccBalanceActionPerformed(evt);
             }
         });
 
+        txtSavingsBankAccNo.setEditable(false);
         txtSavingsBankAccNo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtSavingsBankAccNo.setFocusTraversalKeysEnabled(false);
+        txtSavingsBankAccNo.setFocusable(false);
         txtSavingsBankAccNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSavingsBankAccNoActionPerformed(evt);
@@ -120,23 +132,18 @@ public class ViewSavingBankInfo extends javax.swing.JPanel {
         tabBodyBankInformationLayout.setHorizontalGroup(
             tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
+                .addGap(94, 94, 94)
                 .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSavingsBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSavingsBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSavingBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSavingBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleChecking)))
-                    .addGroup(tabBodyBankInformationLayout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addGroup(tabBodyBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSavingsAccBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSavingsBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(checkBoxSavings, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSavingBankAccBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSavingBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(txtSavingsBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSavingsBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSavingBankRoutingNo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSavingBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titleChecking)
+                    .addComponent(txtSavingsAccBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSavingsBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkBoxSavings, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSavingBankAccBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSavingBankAccNo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(171, Short.MAX_VALUE))
         );
         tabBodyBankInformationLayout.setVerticalGroup(

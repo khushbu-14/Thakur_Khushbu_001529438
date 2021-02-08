@@ -38,11 +38,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnSaveAddressInfo" min="-2" pref="284" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtzipcode" linkSize="9" alignment="0" pref="317" max="32767" attributes="0"/>
                           <Component id="lblZipcode" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -57,6 +56,10 @@
                       </Group>
                       <EmptySpace min="-2" pref="543" max="-2" attributes="0"/>
                       <Component id="tabBodyAddressInformation" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                      <Component id="btnSaveAddressInfo" min="-2" pref="262" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>

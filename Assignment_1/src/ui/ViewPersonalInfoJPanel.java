@@ -56,6 +56,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblFirstName.setText("First Name");
 
+        txtFirstName.setEditable(false);
         txtFirstName.setFocusTraversalKeysEnabled(false);
         txtFirstName.setFocusable(false);
         txtFirstName.setRequestFocusEnabled(false);
@@ -68,6 +69,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblLastName.setText("Last Name");
 
+        txtDateOfBirth.setEditable(false);
         txtDateOfBirth.setFocusTraversalKeysEnabled(false);
         txtDateOfBirth.setFocusable(false);
         txtDateOfBirth.setRequestFocusEnabled(false);
@@ -89,6 +91,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblHeight.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblHeight.setText("Height (inches)");
 
+        txtHeight.setEditable(false);
         txtHeight.setFocusTraversalKeysEnabled(false);
         txtHeight.setFocusable(false);
         txtHeight.setRequestFocusEnabled(false);
@@ -98,6 +101,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtWeight.setEditable(false);
         txtWeight.setFocusTraversalKeysEnabled(false);
         txtWeight.setFocusable(false);
         txtWeight.setRequestFocusEnabled(false);
@@ -113,10 +117,12 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         lblSsn.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblSsn.setText("Social Security Number");
 
+        txtSsn.setEditable(false);
         txtSsn.setFocusTraversalKeysEnabled(false);
         txtSsn.setFocusable(false);
         txtSsn.setRequestFocusEnabled(false);
 
+        txtMobileNumber.setEditable(false);
         try {
             txtMobileNumber.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###-###-####")));
         } catch (java.text.ParseException ex) {
@@ -126,6 +132,7 @@ public class ViewPersonalInfoJPanel extends javax.swing.JPanel {
         txtMobileNumber.setFocusable(false);
         txtMobileNumber.setRequestFocusEnabled(false);
 
+        txtLastName.setEditable(false);
         txtLastName.setFocusTraversalKeysEnabled(false);
         txtLastName.setFocusable(false);
         txtLastName.setRequestFocusEnabled(false);

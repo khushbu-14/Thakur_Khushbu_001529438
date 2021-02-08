@@ -54,32 +54,23 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="94" pref="94" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtCheckingBankRoutingNo" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
-                              <Component id="txtCheckingBankName" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
-                              <Component id="lblSCheckingBankRoutingNo" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
-                              <Component id="lblCheckingBankName" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
+                      <Component id="txtCheckingBankRoutingNo" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
+                      <Component id="txtCheckingBankName" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
+                      <Component id="lblSCheckingBankRoutingNo" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
+                      <Component id="lblCheckingBankName" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
+                      <Component id="txtCheckingAccBalance" alignment="0" min="-2" pref="237" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="txtCheckingBankAccNo" alignment="1" min="-2" pref="237" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="titleChecking" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtCheckingAccBalance" alignment="0" min="-2" pref="237" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="txtCheckingBankAccNo" alignment="1" min="-2" pref="237" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="titleChecking" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="checkBoxChecking" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
-                              <Component id="lblCheckingBankAccBalance" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
-                              <Component id="lblCheckingBankAccNo" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="checkBoxChecking" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
+                      <Component id="lblCheckingBankAccBalance" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
+                      <Component id="lblCheckingBankAccNo" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="171" max="32767" attributes="0"/>
               </Group>
@@ -134,6 +125,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtCheckingBankRoutingNo">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="10">
@@ -141,6 +133,8 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCheckingBankRoutingNoActionPerformed"/>
@@ -151,6 +145,8 @@
             <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Checking Bank Account"/>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="titleChecking">
@@ -163,6 +159,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtCheckingBankName">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="10">
@@ -170,6 +167,8 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCheckingBankNameActionPerformed"/>
@@ -195,6 +194,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtCheckingAccBalance">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="10">
@@ -202,6 +202,8 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCheckingAccBalanceActionPerformed"/>
@@ -209,6 +211,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtCheckingBankAccNo">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="10">
@@ -216,6 +219,8 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCheckingBankAccNoActionPerformed"/>

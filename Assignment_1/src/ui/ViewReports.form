@@ -85,7 +85,7 @@
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanelLicenseExpiryDate1" min="-2" pref="267" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -589,7 +589,7 @@
                       <Component id="jPanelAlergy2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jPanelAlergy3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -642,6 +642,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
+                    <Property name="text" type="java.lang.String" value="NA"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -680,6 +681,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
+                    <Property name="text" type="java.lang.String" value="NA"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -887,7 +889,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="75 St. Alphonsus"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCity">
@@ -1005,7 +1006,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="02120"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblZipcode">
@@ -1064,7 +1064,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="B+"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblBloodType">
@@ -1123,7 +1122,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="15th Feb, 2016"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblLicenseIssueDate">
@@ -1215,7 +1213,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="15th Feb, 2026"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblLicenseExpiryDate">
@@ -1274,7 +1271,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="15th Feb, 2026"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblLicenseExpiryDate2">
@@ -1464,7 +1460,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="SBI"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSavingsBankAccNo">
@@ -1485,7 +1480,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="123"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSavingsBankRoutingNo">
@@ -1506,7 +1500,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="15th Feb, 2016"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSavingsBankAccBalance">
@@ -1527,7 +1520,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="15th Feb, 2016"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCheckingBankName">
@@ -1548,7 +1540,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="ICICI"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCheckingBankAccNo">
@@ -1569,7 +1560,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="123"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSCheckingBankRoutingNo">
@@ -1590,7 +1580,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="123"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCheckingBankAccBalance">
@@ -1611,7 +1600,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="15th Feb, 2016"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel3">

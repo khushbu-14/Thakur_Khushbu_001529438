@@ -332,6 +332,7 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtAlergy1.setForeground(new java.awt.Color(51, 51, 51));
         txtAlergy1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtAlergy1.setText("NA");
 
         javax.swing.GroupLayout jPanelAlergy1Layout = new javax.swing.GroupLayout(jPanelAlergy1);
         jPanelAlergy1.setLayout(jPanelAlergy1Layout);
@@ -354,6 +355,7 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtAlergy2.setForeground(new java.awt.Color(51, 51, 51));
         txtAlergy2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtAlergy2.setText("NA");
 
         javax.swing.GroupLayout jPanelAlergy2Layout = new javax.swing.GroupLayout(jPanelAlergy2);
         jPanelAlergy2.setLayout(jPanelAlergy2Layout);
@@ -418,7 +420,7 @@ public class ViewReports extends javax.swing.JPanel {
                 .addComponent(jPanelAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelAlergy3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelLeftLayout = new javax.swing.GroupLayout(jPanelLeft);
@@ -546,7 +548,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtCity.setForeground(new java.awt.Color(51, 51, 51));
         txtCity.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtCity.setText("75 St. Alphonsus");
 
         lblCity.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblCity.setForeground(new java.awt.Color(153, 153, 153));
@@ -612,7 +613,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtZipcode.setForeground(new java.awt.Color(51, 51, 51));
         txtZipcode.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtZipcode.setText("02120");
 
         lblZipcode.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblZipcode.setForeground(new java.awt.Color(153, 153, 153));
@@ -645,7 +645,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtBloodType.setForeground(new java.awt.Color(51, 51, 51));
         txtBloodType.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtBloodType.setText("B+");
 
         lblBloodType.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblBloodType.setForeground(new java.awt.Color(153, 153, 153));
@@ -678,7 +677,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtIssueDate.setForeground(new java.awt.Color(51, 51, 51));
         txtIssueDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtIssueDate.setText("15th Feb, 2016");
 
         lblLicenseIssueDate.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblLicenseIssueDate.setForeground(new java.awt.Color(153, 153, 153));
@@ -730,7 +728,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtExpiryDate.setForeground(new java.awt.Color(51, 51, 51));
         txtExpiryDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtExpiryDate.setText("15th Feb, 2026");
 
         lblLicenseExpiryDate.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblLicenseExpiryDate.setForeground(new java.awt.Color(153, 153, 153));
@@ -763,7 +760,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtLicenseNo.setForeground(new java.awt.Color(51, 51, 51));
         txtLicenseNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtLicenseNo.setText("15th Feb, 2026");
 
         lblLicenseExpiryDate2.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblLicenseExpiryDate2.setForeground(new java.awt.Color(153, 153, 153));
@@ -801,7 +797,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtSavingsBankName.setForeground(new java.awt.Color(51, 51, 51));
         txtSavingsBankName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtSavingsBankName.setText("SBI");
 
         lblSavingsBankAccNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSavingsBankAccNo.setForeground(new java.awt.Color(153, 153, 153));
@@ -810,7 +805,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtSavingsBankAccNo.setForeground(new java.awt.Color(51, 51, 51));
         txtSavingsBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtSavingsBankAccNo.setText("123");
 
         lblSavingsBankRoutingNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSavingsBankRoutingNo.setForeground(new java.awt.Color(153, 153, 153));
@@ -819,7 +813,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtSavingsBankRoutingNo.setForeground(new java.awt.Color(51, 51, 51));
         txtSavingsBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtSavingsBankRoutingNo.setText("15th Feb, 2016");
 
         lblSavingsBankAccBalance.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSavingsBankAccBalance.setForeground(new java.awt.Color(153, 153, 153));
@@ -828,7 +821,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtSavingsAccBalance.setForeground(new java.awt.Color(51, 51, 51));
         txtSavingsAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtSavingsAccBalance.setText("15th Feb, 2016");
 
         lblCheckingBankName.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblCheckingBankName.setForeground(new java.awt.Color(153, 153, 153));
@@ -837,7 +829,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtCheckingBankName.setForeground(new java.awt.Color(51, 51, 51));
         txtCheckingBankName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtCheckingBankName.setText("ICICI");
 
         lblCheckingBankAccNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblCheckingBankAccNo.setForeground(new java.awt.Color(153, 153, 153));
@@ -846,7 +837,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtCheckingBankAccNo.setForeground(new java.awt.Color(51, 51, 51));
         txtCheckingBankAccNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtCheckingBankAccNo.setText("123");
 
         lblSCheckingBankRoutingNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSCheckingBankRoutingNo.setForeground(new java.awt.Color(153, 153, 153));
@@ -855,7 +845,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtCheckingBankRoutingNo.setForeground(new java.awt.Color(51, 51, 51));
         txtCheckingBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtCheckingBankRoutingNo.setText("123");
 
         lblCheckingBankAccBalance.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblCheckingBankAccBalance.setForeground(new java.awt.Color(153, 153, 153));
@@ -864,7 +853,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtCheckingAccBalance.setForeground(new java.awt.Color(51, 51, 51));
         txtCheckingAccBalance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtCheckingAccBalance.setText("15th Feb, 2016");
 
         jPanel3.setBackground(new java.awt.Color(243, 243, 243));
 
@@ -1102,7 +1090,7 @@ public class ViewReports extends javax.swing.JPanel {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanelLicenseExpiryDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 75, Short.MAX_VALUE))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel2, jPanelBloodType, jPanelCity, jPanelLicenseExpiryDate, jPanelLicenseExpiryDate2, jPanelLicenseIssueDate, jPanelState, jPanelStreetAddress, jPanelZipcode});
@@ -1211,7 +1199,7 @@ public class ViewReports extends javax.swing.JPanel {
         
         // saving bank
         txtSavingsBankName.setText(person.getSavingBankName());
-        txtSavingsBankRoutingNo.setText(person.getCheckingBankRoutingNumber());
+        txtSavingsBankRoutingNo.setText(person.getSavingBankRoutingNumber());
         txtSavingsBankAccNo.setText(person.getSavingBankAccountNumber());
         txtSavingsAccBalance.setText(person.getSavingAccountBalance());
             

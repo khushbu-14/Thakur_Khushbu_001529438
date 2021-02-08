@@ -67,17 +67,26 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
         lblState.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblState.setText("State :");
 
+        txtState.setEditable(false);
         txtState.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtState.setFocusTraversalKeysEnabled(false);
+        txtState.setFocusable(false);
 
         lblStreetAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblStreetAddress.setText("Street Address");
 
+        txtStreetAddress.setEditable(false);
         txtStreetAddress.setColumns(4);
         txtStreetAddress.setRows(5);
-        txtStreetAddress.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtStreetAddress.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(246, 243, 243), 10, true));
+        txtStreetAddress.setFocusTraversalKeysEnabled(false);
+        txtStreetAddress.setFocusable(false);
         jScrollPane2.setViewportView(txtStreetAddress);
 
+        txtCity.setEditable(false);
         txtCity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtCity.setFocusTraversalKeysEnabled(false);
+        txtCity.setFocusable(false);
 
         lblCity.setBackground(new java.awt.Color(249, 244, 244));
         lblCity.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -86,8 +95,11 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
         lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblZipcode.setText("Zipcode :");
 
+        txtZipcode.setEditable(false);
         txtZipcode.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtZipcode.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
+        txtZipcode.setFocusTraversalKeysEnabled(false);
+        txtZipcode.setFocusable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -49,7 +49,10 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
 
         tabBodyBankInformation.setBackground(new java.awt.Color(249, 244, 244));
 
+        txtLicenseNo.setEditable(false);
         txtLicenseNo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtLicenseNo.setFocusTraversalKeysEnabled(false);
+        txtLicenseNo.setFocusable(false);
         txtLicenseNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLicenseNoActionPerformed(evt);
@@ -64,7 +67,10 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
         lblIssueDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblIssueDate.setText("License Issue Date");
 
+        txtBloodType.setEditable(false);
         txtBloodType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtBloodType.setFocusTraversalKeysEnabled(false);
+        txtBloodType.setFocusable(false);
         txtBloodType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBloodTypeActionPerformed(evt);
@@ -82,14 +88,20 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
         titleChecking.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         titleChecking.setText("View License Details");
 
+        txtIssueDate.setEditable(false);
         txtIssueDate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtIssueDate.setFocusTraversalKeysEnabled(false);
+        txtIssueDate.setFocusable(false);
         txtIssueDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIssueDateActionPerformed(evt);
             }
         });
 
+        txtExpiryDate.setEditable(false);
         txtExpiryDate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtExpiryDate.setFocusTraversalKeysEnabled(false);
+        txtExpiryDate.setFocusable(false);
         txtExpiryDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtExpiryDateActionPerformed(evt);

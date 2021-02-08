@@ -163,6 +163,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtFirstName">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
@@ -179,6 +180,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtDateOfBirth">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
@@ -213,6 +215,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtHeight">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
@@ -223,6 +226,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtWeight">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
@@ -245,6 +249,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtSsn">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
@@ -252,6 +257,7 @@
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="txtMobileNumber">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="###-###-####" subtype="-1" type="5"/>
             </Property>
@@ -262,6 +268,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtLastName">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>

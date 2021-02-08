@@ -52,7 +52,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblSsn = new javax.swing.JLabel();
         txtWeight = new javax.swing.JTextField();
         lblWeight = new javax.swing.JLabel();
-        txtLastName1 = new javax.swing.JTextField();
+        txtLastName = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
         titleChecking = new javax.swing.JLabel();
 
@@ -63,8 +63,11 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblFirstName.setText("First Name");
 
+        txtFirstName.setEditable(false);
         txtFirstName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtFirstName.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtFirstName.setFocusTraversalKeysEnabled(false);
+        txtFirstName.setFocusable(false);
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFirstNameActionPerformed(evt);
@@ -77,18 +80,24 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblAge.setText("Age");
 
+        txtMobileNumber.setEditable(false);
         txtMobileNumber.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         try {
             txtMobileNumber.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###-###-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtMobileNumber.setFocusTraversalKeysEnabled(false);
+        txtMobileNumber.setFocusable(false);
 
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblLastName.setText("Last Name");
 
+        txtDateOfBirth.setEditable(false);
         txtDateOfBirth.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtDateOfBirth.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtDateOfBirth.setFocusTraversalKeysEnabled(false);
+        txtDateOfBirth.setFocusable(false);
         txtDateOfBirth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDateOfBirthActionPerformed(evt);
@@ -101,8 +110,11 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblDateOfBirth.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblDateOfBirth.setText("Date of Birth");
 
+        txtHeight.setEditable(false);
         txtHeight.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtHeight.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtHeight.setFocusTraversalKeysEnabled(false);
+        txtHeight.setFocusable(false);
         txtHeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHeightActionPerformed(evt);
@@ -112,8 +124,11 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblHeight.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblHeight.setText("Height (inches)");
 
+        txtSsn.setEditable(false);
         txtSsn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtSsn.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtSsn.setFocusTraversalKeysEnabled(false);
+        txtSsn.setFocusable(false);
         txtSsn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSsnActionPerformed(evt);
@@ -123,8 +138,11 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblSsn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSsn.setText("Social Security Number");
 
+        txtWeight.setEditable(false);
         txtWeight.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtWeight.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtWeight.setFocusTraversalKeysEnabled(false);
+        txtWeight.setFocusable(false);
         txtWeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWeightActionPerformed(evt);
@@ -134,16 +152,22 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         lblWeight.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblWeight.setText("Weight (Kgs)");
 
-        txtLastName1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
-        txtLastName1.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
-        txtLastName1.addActionListener(new java.awt.event.ActionListener() {
+        txtLastName.setEditable(false);
+        txtLastName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtLastName.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtLastName.setFocusTraversalKeysEnabled(false);
+        txtLastName.setFocusable(false);
+        txtLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLastName1ActionPerformed(evt);
+                txtLastNameActionPerformed(evt);
             }
         });
 
+        txtAge.setEditable(false);
         txtAge.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtAge.setBounds(new java.awt.Rectangle(10, 10, 0, 0));
+        txtAge.setFocusTraversalKeysEnabled(false);
+        txtAge.setFocusable(false);
         txtAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAgeActionPerformed(evt);
@@ -179,7 +203,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
                     .addComponent(lblHeight)
                     .addComponent(txtHeight)
                     .addComponent(lblAge1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtLastName1))
+                    .addComponent(txtLastName))
                 .addGap(62, 62, 62))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyPersonalInformationLayout.createSequentialGroup()
                 .addContainerGap()
@@ -187,7 +211,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
                 .addGap(253, 253, 253))
         );
 
-        tabBodyPersonalInformationLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtDateOfBirth, txtFirstName, txtHeight, txtLastName1, txtMobileNumber, txtSsn, txtWeight});
+        tabBodyPersonalInformationLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtDateOfBirth, txtFirstName, txtHeight, txtLastName, txtMobileNumber, txtSsn, txtWeight});
 
         tabBodyPersonalInformationLayout.setVerticalGroup(
             tabBodyPersonalInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,7 +223,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
                     .addGroup(tabBodyPersonalInformationLayout.createSequentialGroup()
                         .addComponent(lblLastName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtLastName1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(lblDateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -236,7 +260,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tabBodyPersonalInformationLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtAge, txtDateOfBirth, txtFirstName, txtHeight, txtLastName1, txtMobileNumber, txtSsn, txtWeight});
+        tabBodyPersonalInformationLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtAge, txtDateOfBirth, txtFirstName, txtHeight, txtLastName, txtMobileNumber, txtSsn, txtWeight});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -274,9 +298,9 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFirstNameActionPerformed
 
-    private void txtLastName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastName1ActionPerformed
+    private void txtLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtLastName1ActionPerformed
+    }//GEN-LAST:event_txtLastNameActionPerformed
 
     private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
         // TODO add your handling code here:
@@ -300,7 +324,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
     private javax.swing.JTextField txtDateOfBirth;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtHeight;
-    private javax.swing.JTextField txtLastName1;
+    private javax.swing.JTextField txtLastName;
     private javax.swing.JFormattedTextField txtMobileNumber;
     private javax.swing.JTextField txtSsn;
     private javax.swing.JTextField txtWeight;
@@ -308,6 +332,7 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
 
     private void displayData() {
         txtFirstName.setText(person.getFirstName());
+        txtLastName.setText(person.getLastName());
         txtDateOfBirth.setText(person.getLastName());
         txtMobileNumber.setText(person.getMobileNumber());
         txtAge.setText(Integer.toString(person.getAge()));
