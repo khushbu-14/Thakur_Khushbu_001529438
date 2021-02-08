@@ -9,9 +9,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -311,10 +308,12 @@ public class CreateDriverLicenseInfoJPanel extends javax.swing.JPanel {
       JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         final File f = chooser.getSelectedFile();
-        String filename = f.getAbsolutePath();
+        
         if (f == null) {
             return;
         }
+        
+        String filename = f.getAbsolutePath();
         txtProfilePicture.setText(filename);
         
         try {

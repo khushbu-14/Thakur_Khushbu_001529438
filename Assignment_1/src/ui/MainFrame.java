@@ -84,6 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(246, 243, 243));
 
         actionTabs.setBackground(new java.awt.Color(255, 255, 255));
         actionTabs.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
@@ -92,6 +93,12 @@ public class MainFrame extends javax.swing.JFrame {
                 actionTabsMouseClicked(evt);
             }
         });
+
+        tabPersonalInfo.setBackground(new java.awt.Color(246, 243, 243));
+
+        splitPanelPersonalInfo.setForeground(new java.awt.Color(255, 255, 255));
+
+        controlPanePersonalInfo.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout controlPanePersonalInfoLayout = new javax.swing.GroupLayout(controlPanePersonalInfo);
         controlPanePersonalInfo.setLayout(controlPanePersonalInfoLayout);
@@ -105,6 +112,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         splitPanelPersonalInfo.setRightComponent(controlPanePersonalInfo);
+
+        workPanePersonalInfo.setBackground(new java.awt.Color(246, 243, 243));
 
         btnCreatePersonalInfo.setText("Create");
         btnCreatePersonalInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +161,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabPersonalInfo.setLayout(tabPersonalInfoLayout);
         tabPersonalInfoLayout.setHorizontalGroup(
             tabPersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelPersonalInfo)
+            .addComponent(splitPanelPersonalInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabPersonalInfoLayout.setVerticalGroup(
             tabPersonalInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +229,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabAddress.setLayout(tabAddressLayout);
         tabAddressLayout.setHorizontalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelAddressInfo)
+            .addComponent(splitPanelAddressInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabAddressLayout.setVerticalGroup(
             tabAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,7 +297,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabSaving.setLayout(tabSavingLayout);
         tabSavingLayout.setHorizontalGroup(
             tabSavingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelSavingInfo)
+            .addComponent(splitPanelSavingInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabSavingLayout.setVerticalGroup(
             tabSavingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,7 +365,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabChecking.setLayout(tabCheckingLayout);
         tabCheckingLayout.setHorizontalGroup(
             tabCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelCheckingInfo)
+            .addComponent(splitPanelCheckingInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabCheckingLayout.setVerticalGroup(
             tabCheckingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -424,7 +433,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabBankInformation.setLayout(tabBankInformationLayout);
         tabBankInformationLayout.setHorizontalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelBankInfo)
+            .addComponent(splitPanelBankInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabBankInformationLayout.setVerticalGroup(
             tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -492,7 +501,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabLicense.setLayout(tabLicenseLayout);
         tabLicenseLayout.setHorizontalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelLicenseInfo)
+            .addComponent(splitPanelLicenseInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabLicenseLayout.setVerticalGroup(
             tabLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -560,7 +569,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabMedical.setLayout(tabMedicalLayout);
         tabMedicalLayout.setHorizontalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelMedicalInfo)
+            .addComponent(splitPanelMedicalInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         tabMedicalLayout.setVerticalGroup(
             tabMedicalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -575,7 +584,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 645, Short.MAX_VALUE)
+            .addGap(0, 745, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -627,13 +636,18 @@ public class MainFrame extends javax.swing.JFrame {
     private void btnCreatePersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonalInfoActionPerformed
         // TODO add your handling code here:
         
-        CreatePersonalInfoJPanel personalInformationCreatePanel = new CreatePersonalInfoJPanel(person);
-        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel); 
+//        CreatePersonalInfoJPanel personalInformationCreatePanel = new CreatePersonalInfoJPanel(person);
+//        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel);
+
+        CreatePersonalInfoJPanel1 personalInformationCreatePanel = new CreatePersonalInfoJPanel1(person);
+        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel);
     }//GEN-LAST:event_btnCreatePersonalInfoActionPerformed
 
     private void btnViewPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonalInfoActionPerformed
         // TODO add your handling code here:
-        ViewPersonalInfoJPanel personalInformationViewPanel = new ViewPersonalInfoJPanel(person);
+//        ViewPersonalInfoJPanel personalInformationViewPanel = new ViewPersonalInfoJPanel(person);
+//        splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel); 
+        ViewPersonalInfoJPanel1 personalInformationViewPanel = new ViewPersonalInfoJPanel1(person);
         splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel); 
     }//GEN-LAST:event_btnViewPersonalInfoActionPerformed
 
