@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package ui;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import javax.swing.JOptionPane;
 import model.Person;
 
 /**

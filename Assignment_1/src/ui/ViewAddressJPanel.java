@@ -35,134 +35,109 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         tabBodyAddressInformation = new javax.swing.JPanel();
-        lblStreetAddress = new javax.swing.JLabel();
-        jPanelCity = new javax.swing.JPanel();
-        lblCity = new javax.swing.JLabel();
-        txtCity = new javax.swing.JTextField();
         lblState = new javax.swing.JLabel();
         txtState = new javax.swing.JTextField();
-        lblZipcode = new javax.swing.JLabel();
-        txtZipcode = new javax.swing.JFormattedTextField();
+        lblStreetAddress = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtStreetAddress = new javax.swing.JTextArea();
+        txtCity = new javax.swing.JTextField();
+        lblCity = new javax.swing.JLabel();
+        lblZipcode = new javax.swing.JLabel();
+        txtZipcode = new javax.swing.JFormattedTextField();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        lblStreetAddress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblStreetAddress.setText("Street Address :");
+        setBackground(new java.awt.Color(249, 244, 244));
 
-        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblCity.setText("City :");
-
-        txtCity.setEditable(false);
-
-        javax.swing.GroupLayout jPanelCityLayout = new javax.swing.GroupLayout(jPanelCity);
-        jPanelCity.setLayout(jPanelCityLayout);
-        jPanelCityLayout.setHorizontalGroup(
-            jPanelCityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCityLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanelCityLayout.setVerticalGroup(
-            jPanelCityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCityLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelCityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCity)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        lblState.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblState.setText("State :");
-
-        txtState.setEditable(false);
-
-        lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblZipcode.setText("Zipcode :");
-
-        txtZipcode.setEditable(false);
-        txtZipcode.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
-
-        txtStreetAddress.setEditable(false);
-        txtStreetAddress.setColumns(4);
-        txtStreetAddress.setRows(5);
-        jScrollPane2.setViewportView(txtStreetAddress);
+        tabBodyAddressInformation.setBackground(new java.awt.Color(249, 244, 244));
 
         javax.swing.GroupLayout tabBodyAddressInformationLayout = new javax.swing.GroupLayout(tabBodyAddressInformation);
         tabBodyAddressInformation.setLayout(tabBodyAddressInformationLayout);
         tabBodyAddressInformationLayout.setHorizontalGroup(
             tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
-                                .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tabBodyAddressInformationLayout.createSequentialGroup()
-                                .addComponent(lblZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
-                        .addComponent(lblStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(412, Short.MAX_VALUE))
+            .addGap(0, 750, Short.MAX_VALUE)
         );
         tabBodyAddressInformationLayout.setVerticalGroup(
             tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabBodyAddressInformationLayout.createSequentialGroup()
-                        .addComponent(lblStreetAddress)
-                        .addGap(18, 18, 18)))
-                .addComponent(jPanelCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblState))
-                .addGap(26, 26, 26)
-                .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblZipcode)
-                    .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(58, Short.MAX_VALUE))
+            .addGap(0, 397, Short.MAX_VALUE)
         );
 
-        tabBodyAddressInformationLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtState, txtZipcode});
+        lblState.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblState.setText("State :");
+
+        txtState.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+
+        lblStreetAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblStreetAddress.setText("Street Address");
+
+        txtStreetAddress.setColumns(4);
+        txtStreetAddress.setRows(5);
+        txtStreetAddress.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        jScrollPane2.setViewportView(txtStreetAddress);
+
+        txtCity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+
+        lblCity.setBackground(new java.awt.Color(249, 244, 244));
+        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCity.setText("City :");
+
+        lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblZipcode.setText("Zipcode :");
+
+        txtZipcode.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtZipcode.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(100, 100, 100)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblCity)
+                        .addComponent(txtCity)
+                        .addComponent(lblState)
+                        .addComponent(txtState)
+                        .addComponent(lblStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblZipcode)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tabBodyAddressInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(tabBodyAddressInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(tabBodyAddressInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblStreetAddress)
+                .addGap(12, 12, 12)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblCity)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblState)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblZipcode)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanelCity;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;

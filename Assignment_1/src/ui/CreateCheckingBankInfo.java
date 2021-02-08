@@ -54,6 +54,10 @@ public class CreateCheckingBankInfo extends javax.swing.JPanel {
         txtCheckingBankAccNo = new javax.swing.JTextField();
         btnSaveBankInfo = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(249, 244, 244));
+
+        tabBodyBankInformation.setBackground(new java.awt.Color(249, 244, 244));
+
         lblSCheckingBankRoutingNo.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblSCheckingBankRoutingNo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSCheckingBankRoutingNo.setText("Bank Routing Number");

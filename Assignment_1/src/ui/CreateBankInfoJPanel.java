@@ -67,6 +67,11 @@ public class CreateBankInfoJPanel extends javax.swing.JPanel {
         lblCheckingBankAccBalance = new javax.swing.JLabel();
         btnSaveBankInfo = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(249, 244, 244));
+
+        tabBodyBankInformation.setBackground(new java.awt.Color(249, 244, 244));
+
+        jSplitPaneBankInfo.setBackground(new java.awt.Color(249, 244, 244));
         jSplitPaneBankInfo.setDividerLocation(250);
         jSplitPaneBankInfo.setDividerSize(10);
         jSplitPaneBankInfo.setResizeWeight(0.5);

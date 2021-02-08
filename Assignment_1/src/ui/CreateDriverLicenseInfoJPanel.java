@@ -60,9 +60,16 @@ public class CreateDriverLicenseInfoJPanel extends javax.swing.JPanel {
         btnSaveLicenseInfo = new javax.swing.JButton();
         lblProfilePicture = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(249, 244, 244));
+
+        tabBodyBankInformation.setBackground(new java.awt.Color(249, 244, 244));
+
+        jSplitPaneBankInfo.setBackground(new java.awt.Color(249, 244, 244));
         jSplitPaneBankInfo.setDividerLocation(250);
         jSplitPaneBankInfo.setDividerSize(10);
         jSplitPaneBankInfo.setResizeWeight(0.5);
+
+        jPanelSavings.setBackground(new java.awt.Color(249, 244, 244));
 
         txtLicenseNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +119,8 @@ public class CreateDriverLicenseInfoJPanel extends javax.swing.JPanel {
         );
 
         jSplitPaneBankInfo.setLeftComponent(jPanelSavings);
+
+        jPanelChecking.setBackground(new java.awt.Color(249, 244, 244));
 
         txtBloodType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
