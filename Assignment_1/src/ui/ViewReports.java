@@ -5,7 +5,13 @@
  */
 package ui;
 
+import model.Address;
+import model.Checking;
+import model.License;
+import model.MedicalRecord;
 import model.Person;
+import model.PersonalInformation;
+import model.Saving;
 
 /**
  *
@@ -13,16 +19,43 @@ import model.Person;
  */
 public class ViewReports extends javax.swing.JPanel {
 
-    Person person;
+//    Person person;
+    PersonalInformation personalInformation;
+    Address address;
+    Saving saving;
+    Checking checking;
+    License license;
+    MedicalRecord medicalRecord;
+    
     /**
      * Creates new form ViewReports
+     * @param personalInformation
+     * @param address
+     * @param saving
+     * @param checking
+     * @param license
+     * @param medicalRecord
      */
-    public ViewReports(Person person) {
+    
+    public ViewReports(PersonalInformation personalInformation, Address address, Saving saving, Checking checking, License license, MedicalRecord medicalRecord) {
         initComponents();
-        this.person = person;
+        this.personalInformation = personalInformation;
+        this.address = address;
+        this.saving = saving;
+        this.checking = checking;
+        this.license = license;
+        this.medicalRecord = medicalRecord;
         displayData();
     }
-
+    
+//
+//     public ViewReports(Address address) {
+////        initComponents();
+//        System.out.println("called address");
+//        this.address = address;
+//        displayAddressData();
+//    }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -487,7 +520,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtDateOfBirth.setForeground(new java.awt.Color(51, 51, 51));
         txtDateOfBirth.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtDateOfBirth.setText("14th Jan, 1994");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -515,7 +547,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtStreetAddress.setForeground(new java.awt.Color(51, 51, 51));
         txtStreetAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtStreetAddress.setText("75 St. Alphonsus");
 
         lblDob1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblDob1.setForeground(new java.awt.Color(153, 153, 153));
@@ -580,7 +611,6 @@ public class ViewReports extends javax.swing.JPanel {
 
         txtState.setForeground(new java.awt.Color(51, 51, 51));
         txtState.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtState.setText("Massaceuteus");
 
         lblState.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         lblState.setForeground(new java.awt.Color(153, 153, 153));
@@ -1183,43 +1213,55 @@ public class ViewReports extends javax.swing.JPanel {
 
     private void displayData() {
         // personal information
-        txtFullName.setText(person.getFirstName() +" " + person.getLastName());        
-        txtMobileNumber.setText(person.getMobileNumber());
-        txtAge.setText(Integer.toString(person.getAge()));
-        txtHeight.setText(Float.toString(person.getHeight()) + " inch" );
-        txtWeight.setText(Float.toString(person.getWeight()) + " kg");
-        txtSsn.setText(person.getSsn());
-        txtDateOfBirth.setText(person.getDateOfBirth());
+        String firstName = personalInformation.getFirstName();
+        String lastName = personalInformation.getLastName();
+        
+        if(firstName == null){
+            firstName = " ";
+        }
+        
+        if(lastName == null){
+            lastName = " ";
+        }
+        
+        txtFullName.setText(firstName +" " + lastName);        
+        
+        txtMobileNumber.setText(personalInformation.getMobileNumber());
+        txtAge.setText(Integer.toString(personalInformation.getAge()));
+        txtHeight.setText(Float.toString(personalInformation.getHeight()) + " inch" );
+        txtWeight.setText(Float.toString(personalInformation.getWeight()) + " kg");
+        txtSsn.setText(personalInformation.getSsn());
+        txtDateOfBirth.setText(personalInformation.getDateOfBirth());
         
         // address
-        txtStreetAddress.setText(person.getStreetAddress());
-        txtCity.setText(person.getCity());
-        txtState.setText(person.getState());
-        txtZipcode.setText(person.getZipcode());
+        txtStreetAddress.setText(address.getStreetAddress());
+        txtCity.setText(address.getCity());
+        txtState.setText(address.getState());
+        txtZipcode.setText(address.getZipcode());
         
         // saving bank
-        txtSavingsBankName.setText(person.getSavingBankName());
-        txtSavingsBankRoutingNo.setText(person.getSavingBankRoutingNumber());
-        txtSavingsBankAccNo.setText(person.getSavingBankAccountNumber());
-        txtSavingsAccBalance.setText(person.getSavingAccountBalance());
+        txtSavingsBankName.setText(saving.getSavingBankName());
+        txtSavingsBankRoutingNo.setText(saving.getSavingBankRoutingNumber());
+        txtSavingsBankAccNo.setText(saving.getSavingBankAccountNumber());
+        txtSavingsAccBalance.setText(saving.getSavingAccountBalance());
             
         // checking bank
-        txtCheckingBankName.setText(person.getCheckingBankName());
-        txtCheckingBankAccNo.setText(person.getCheckingBankAccountNumber());
-        txtCheckingAccBalance.setText(person.getCheckingAccountBalance());
-        txtCheckingBankRoutingNo.setText(person.getCheckingBankRoutingNumber());
+        txtCheckingBankName.setText(checking.getCheckingBankName());
+        txtCheckingBankAccNo.setText(checking.getCheckingBankAccountNumber());
+        txtCheckingAccBalance.setText(checking.getCheckingAccountBalance());
+        txtCheckingBankRoutingNo.setText(checking.getCheckingBankRoutingNumber());
         
         // license
-        txtIssueDate.setText(person.getDateIssued());
-        txtExpiryDate.setText(person.getDateOfExpiry());
-        txtBloodType.setText(person.getBloodType());
-        txtLicenseNo.setText(person.getLicenseNumber());
-        lblProfilePicture.setIcon(person.getPicture());
+        txtIssueDate.setText(license.getDateIssued());
+        txtExpiryDate.setText(license.getDateOfExpiry());
+        txtBloodType.setText(license.getBloodType());
+        txtLicenseNo.setText(license.getLicenseNumber());
+        lblProfilePicture.setIcon(license.getPicture());
         
         // medical
-        txtMedicalRecordNo.setText(person.getMedicalRecordNumber());
-        txtAlergy1.setText(person.getAlergy1());
-        txtAlergy2.setText(person.getAlergy2());
-        txtAlergy3.setText(person.getAlergy3());
+        txtMedicalRecordNo.setText(medicalRecord.getMedicalRecordNumber());
+        txtAlergy1.setText(medicalRecord.getAlergy1());
+        txtAlergy2.setText(medicalRecord.getAlergy2());
+        txtAlergy3.setText(medicalRecord.getAlergy3());
     }
 }

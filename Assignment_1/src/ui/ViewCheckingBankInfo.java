@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import model.Checking;
 import model.Person;
 
 /**
@@ -17,14 +18,20 @@ import model.Person;
  */
 public class ViewCheckingBankInfo extends javax.swing.JPanel {
 
-    Person person;
+//    Person person;
+    Checking checking;
     
     /**
      * Creates new form PersonalInformationPanel
      */
-    public ViewCheckingBankInfo(Person person) {
+//    public ViewCheckingBankInfo(Person person) {
+//        initComponents();
+//        this.person = person;
+//        displayData();
+//    }
+    public ViewCheckingBankInfo(Checking checking) {
         initComponents();
-        this.person = person;
+        this.checking = checking;
         displayData();
     }
     
@@ -223,11 +230,11 @@ public class ViewCheckingBankInfo extends javax.swing.JPanel {
     private void displayData() {
 //        System.out.println(person.isIsSavingAccountType() + " savings view");
         
-        txtCheckingBankName.setText(person.getCheckingBankName());
-        txtCheckingBankAccNo.setText(person.getCheckingBankAccountNumber());
-        txtCheckingAccBalance.setText(person.getCheckingAccountBalance());
-        checkBoxChecking.setSelected(person.isIsCheckingAccountType());
-        txtCheckingBankRoutingNo.setText(person.getCheckingBankRoutingNumber());
+        txtCheckingBankName.setText(checking.getCheckingBankName());
+        txtCheckingBankAccNo.setText(checking.getCheckingBankAccountNumber());
+        txtCheckingAccBalance.setText(checking.getCheckingAccountBalance());
+        checkBoxChecking.setSelected(checking.isIsCheckingAccountType());
+        txtCheckingBankRoutingNo.setText(checking.getCheckingBankRoutingNumber());
 //        System.out.println(person.isIsCheckingAccountType() + " checking view");
     }
 }

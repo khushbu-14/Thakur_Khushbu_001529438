@@ -783,7 +783,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="14th Jan, 1994"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -830,7 +829,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="75 St. Alphonsus"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblDob1">
@@ -947,7 +945,6 @@
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="Massaceuteus"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblState">

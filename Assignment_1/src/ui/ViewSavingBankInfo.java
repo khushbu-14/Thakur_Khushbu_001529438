@@ -5,11 +5,12 @@
  */
 package ui;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import javax.swing.JOptionPane;
-import model.Person;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
+//import javax.swing.JOptionPane;
+//import model.Person;
+import model.Saving;
 
 /**
  *
@@ -17,14 +18,16 @@ import model.Person;
  */
 public class ViewSavingBankInfo extends javax.swing.JPanel {
 
-    Person person;
+//    Person person;
+    Saving saving;
     
     /**
      * Creates new form PersonalInformationPanel
+     * @param saving
      */
-    public ViewSavingBankInfo(Person person) {
+    public ViewSavingBankInfo(Saving saving) {
         initComponents();
-        this.person = person;
+        this.saving = saving;
         displayData();
     }
     
@@ -226,11 +229,11 @@ public class ViewSavingBankInfo extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
-            txtSavingsBankName.setText(person.getSavingBankName());
-            txtSavingsBankRoutingNo.setText(person.getSavingBankRoutingNumber());
-            txtSavingsBankAccNo.setText(person.getSavingBankAccountNumber());
-            txtSavingsAccBalance.setText(person.getSavingAccountBalance());
-            checkBoxSavings.setSelected(person.isIsSavingAccountType());
+            txtSavingsBankName.setText(saving.getSavingBankName());
+            txtSavingsBankRoutingNo.setText(saving.getSavingBankRoutingNumber());
+            txtSavingsBankAccNo.setText(saving.getSavingBankAccountNumber());
+            txtSavingsAccBalance.setText(saving.getSavingAccountBalance());
+            checkBoxSavings.setSelected(saving.isIsSavingAccountType());
         }
 }
 

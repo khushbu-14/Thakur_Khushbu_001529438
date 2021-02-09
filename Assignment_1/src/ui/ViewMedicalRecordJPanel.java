@@ -6,20 +6,22 @@
 package ui;
 
 import javax.swing.JOptionPane;
-import model.Person;
+import model.MedicalRecord;
+//import model.Person;
 
 /**
  *
  * @author khushbu
  */
 public class ViewMedicalRecordJPanel extends javax.swing.JPanel {
-    Person person;
+//    Person person;
+    MedicalRecord medicalRecord;
     /**
      * Creates new form CreateAddressJPanel
      */
-    public ViewMedicalRecordJPanel(Person person) {
+    public ViewMedicalRecordJPanel(MedicalRecord medicalRecord) {
         initComponents();
-        this.person = person;
+        this.medicalRecord = medicalRecord;
         displayData();
     }
 
@@ -67,7 +69,7 @@ public class ViewMedicalRecordJPanel extends javax.swing.JPanel {
         txtAlergy1.setEditable(false);
         txtAlergy1.setColumns(4);
         txtAlergy1.setRows(5);
-        txtAlergy1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(246, 243, 243), 10, true));
+        txtAlergy1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtAlergy1.setFocusable(false);
         jScrollPaneAlergy1.setViewportView(txtAlergy1);
 
@@ -80,7 +82,7 @@ public class ViewMedicalRecordJPanel extends javax.swing.JPanel {
         txtAlergy2.setEditable(false);
         txtAlergy2.setColumns(4);
         txtAlergy2.setRows(5);
-        txtAlergy2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(246, 243, 243), 10, true));
+        txtAlergy2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtAlergy2.setFocusable(false);
         jScrollPaneAlergy2.setViewportView(txtAlergy2);
 
@@ -90,7 +92,7 @@ public class ViewMedicalRecordJPanel extends javax.swing.JPanel {
         txtAlergy3.setEditable(false);
         txtAlergy3.setColumns(4);
         txtAlergy3.setRows(5);
-        txtAlergy3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(246, 243, 243), 10, true));
+        txtAlergy3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
         txtAlergy3.setFocusable(false);
         jScrollPaneAlergy3.setViewportView(txtAlergy3);
 
@@ -185,9 +187,9 @@ public class ViewMedicalRecordJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
-        txtMedicalRecordNo.setText(person.getMedicalRecordNumber());
-        txtAlergy1.setText(person.getAlergy1());
-        txtAlergy2.setText(person.getAlergy2());
-        txtAlergy3.setText(person.getAlergy3()); 
+        txtMedicalRecordNo.setText(medicalRecord.getMedicalRecordNumber());
+        txtAlergy1.setText(medicalRecord.getAlergy1());
+        txtAlergy2.setText(medicalRecord.getAlergy2());
+        txtAlergy3.setText(medicalRecord.getAlergy3()); 
     }
 }

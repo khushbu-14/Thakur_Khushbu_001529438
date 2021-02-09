@@ -5,11 +5,12 @@
  */
 package ui;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import javax.swing.JOptionPane;
-import model.Person;
+import model.Checking;
+//import model.Person;
 
 /**
  *
@@ -17,16 +18,23 @@ import model.Person;
  */
 public class CreateCheckingBankInfo extends javax.swing.JPanel {
 
-    Person person;
+//    Person person;
+    Checking checking;
     
     /**
      * Creates new form PersonalInformationPanel
      */
-    public CreateCheckingBankInfo(Person person) {
+//    public CreateCheckingBankInfo(Person person) {
+//        initComponents();
+//        this.person = person;
+//    }
+    
+     public CreateCheckingBankInfo(Checking checking) {
         initComponents();
-        this.person = person;
+        this.checking = checking;
     }
     
+//    
 //     private String pattern = "dd-MMM-yyyy";
 //     private SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
 
@@ -216,11 +224,11 @@ public class CreateCheckingBankInfo extends javax.swing.JPanel {
 
 //        System.out.println(checkBoxSavings.isSelected()+ " savings");
         
-        person.setCheckingBankName(txtCheckingBankName.getText());
-        person.setCheckingBankAccountNumber(txtCheckingBankAccNo.getText());
-        person.setCheckingBankRoutingNumber(txtCheckingBankRoutingNo.getText());
-        person.setCheckingAccountBalance(txtCheckingAccBalance.getText());
-        person.setIsCheckingAccountType(checkBoxChecking.isSelected());
+        checking.setCheckingBankName(txtCheckingBankName.getText());
+        checking.setCheckingBankAccountNumber(txtCheckingBankAccNo.getText());
+        checking.setCheckingBankRoutingNumber(txtCheckingBankRoutingNo.getText());
+        checking.setCheckingAccountBalance(txtCheckingAccBalance.getText());
+        checking.setIsCheckingAccountType(checkBoxChecking.isSelected());
         
 //        System.out.println(checkBoxChecking.isSelected() + " checking");
 

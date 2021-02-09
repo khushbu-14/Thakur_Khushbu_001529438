@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import model.Person;
+import model.Saving;
 
 /**
  *
@@ -18,13 +19,15 @@ import model.Person;
 public class CreateSavingBankInfo extends javax.swing.JPanel {
 
     Person person;
+    Saving saving;
     
     /**
      * Creates new form PersonalInformationPanel
+     * @param saving
      */
-    public CreateSavingBankInfo(Person person) {
+    public CreateSavingBankInfo(Saving saving) {
         initComponents();
-        this.person = person;
+        this.saving = saving;
     }
     
 //     private String pattern = "dd-MMM-yyyy";
@@ -213,11 +216,11 @@ public class CreateSavingBankInfo extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSavingsBankAccNoActionPerformed
 
     private void btnSaveSavingsInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveSavingsInfoActionPerformed
-         person.setSavingBankName(txtSavingsBankName.getText());
-         person.setSavingBankAccountNumber(txtSavingsBankAccNo.getText());
-         person.setSavingBankRoutingNumber(txtSavingsBankRoutingNo.getText());
-         person.setSavingAccountBalance(txtSavingsAccBalance.getText());
-         person.setIsSavingAccountType(checkBoxSavings.isSelected());
+         saving.setSavingBankName(txtSavingsBankName.getText());
+         saving.setSavingBankAccountNumber(txtSavingsBankAccNo.getText());
+         saving.setSavingBankRoutingNumber(txtSavingsBankRoutingNo.getText());
+         saving.setSavingAccountBalance(txtSavingsAccBalance.getText());
+         saving.setIsSavingAccountType(checkBoxSavings.isSelected());
 
         JOptionPane.showMessageDialog(this, "Saving bank information saved successfully!");
     }//GEN-LAST:event_btnSaveSavingsInfoActionPerformed

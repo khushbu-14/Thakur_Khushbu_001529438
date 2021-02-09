@@ -5,6 +5,7 @@
  */
 package ui;
 import model.Person;
+import model.PersonalInformation;
 
 /**
  *
@@ -13,13 +14,15 @@ import model.Person;
 public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
 
     Person person;
+    PersonalInformation personalInformation;
     
     /**
      * Creates new form PersonalInformationPanel
+     * @param personalInformation
      */
-    public ViewPersonalInfoJPanel1(Person person) {
+    public ViewPersonalInfoJPanel1(PersonalInformation personalInformation) {
         initComponents();
-        this.person = person;
+        this.personalInformation = personalInformation;
         displayData();
     }
     
@@ -331,14 +334,14 @@ public class ViewPersonalInfoJPanel1 extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
-        txtFirstName.setText(person.getFirstName());
-        txtLastName.setText(person.getLastName());
-        txtDateOfBirth.setText(person.getLastName());
-        txtMobileNumber.setText(person.getMobileNumber());
-        txtAge.setText(Integer.toString(person.getAge()));
-        txtHeight.setText(Float.toString(person.getHeight()));
-        txtWeight.setText(Float.toString(person.getWeight()));
-        txtSsn.setText(person.getSsn());
-        txtDateOfBirth.setText(person.getDateOfBirth());
+        txtFirstName.setText(personalInformation.getFirstName());
+        txtLastName.setText(personalInformation.getLastName());
+        txtDateOfBirth.setText(personalInformation.getLastName());
+        txtMobileNumber.setText(personalInformation.getMobileNumber());
+        txtAge.setText(Integer.toString(personalInformation.getAge()));
+        txtHeight.setText(Float.toString(personalInformation.getHeight()));
+        txtWeight.setText(Float.toString(personalInformation.getWeight()));
+        txtSsn.setText(personalInformation.getSsn());
+        txtDateOfBirth.setText(personalInformation.getDateOfBirth());
     }
 }

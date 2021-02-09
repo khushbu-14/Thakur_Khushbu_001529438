@@ -5,11 +5,12 @@
  */
 package ui;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import javax.swing.JOptionPane;
 import model.Person;
+import model.PersonalInformation;
 
 /**
  *
@@ -17,14 +18,15 @@ import model.Person;
  */
 public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
 
-    Person person;
+//    Person person;
+    PersonalInformation personalInformation;
     
     /**
      * Creates new form PersonalInformationPanel
      */
-    public CreatePersonalInfoJPanel1(Person person) {
+    public CreatePersonalInfoJPanel1(PersonalInformation personalInformation) {
         initComponents();
-        this.person = person;
+        this.personalInformation = personalInformation;
     }
     
 //     private String pattern = "dd-MMM-yyyy";
@@ -288,16 +290,16 @@ public class CreatePersonalInfoJPanel1 extends javax.swing.JPanel {
     private void btnSavePersonalInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePersonalInformationActionPerformed
         // TODO add your handling code here:
 
-        person.setFirstName(txtFirstName.getText());
-        person.setLastName(txtLastName.getText());
-        person.setMobileNumber(txtMobileNumber.getText());
+        personalInformation.setFirstName(txtFirstName.getText());
+        personalInformation.setLastName(txtLastName.getText());
+        personalInformation.setMobileNumber(txtMobileNumber.getText());
         String age = txtAge.getValue() + "";
-        person.setAge(Integer.parseInt(age));
+        personalInformation.setAge(Integer.parseInt(age));
 
-        person.setHeight(Float.parseFloat(txtHeight.getText()));
-        person.setWeight(Float.parseFloat(txtWeight.getText()));
-        person.setSsn(txtSsn.getText());
-        person.setDateOfBirth(txtDob.getFormattedTextField().getText());
+        personalInformation.setHeight(Float.parseFloat(txtHeight.getText()));
+        personalInformation.setWeight(Float.parseFloat(txtWeight.getText()));
+        personalInformation.setSsn(txtSsn.getText());
+        personalInformation.setDateOfBirth(txtDob.getFormattedTextField().getText());
 
         //        System.out.println(SimpleDateFormat.format(txtDob.getModel().getValue()));
         //        String dob = dateFormat.format(txtDob.getValue());

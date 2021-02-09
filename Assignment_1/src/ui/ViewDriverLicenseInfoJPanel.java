@@ -5,7 +5,8 @@
  */
 package ui;
 
-import model.Person;
+import model.License;
+//import model.Person;
 
 /**
  *
@@ -17,10 +18,11 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
      * Creates new form ViewBankInfoJPanel
      */
     
-    Person person;
-    public ViewDriverLicenseInfoJPanel(Person person) {
+//    Person person;
+    License license;
+    public ViewDriverLicenseInfoJPanel(License license) {
         initComponents();
-        this.person = person;
+        this.license = license;
         displayData();
     }
 
@@ -206,10 +208,10 @@ public class ViewDriverLicenseInfoJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
-        txtIssueDate.setText(person.getDateIssued());
-        txtExpiryDate.setText(person.getDateOfExpiry());
-        txtBloodType.setText(person.getBloodType());
-        txtLicenseNo.setText(person.getLicenseNumber());
-        lblProfilePicture.setIcon(person.getPicture());
+        txtIssueDate.setText(license.getDateIssued());
+        txtExpiryDate.setText(license.getDateOfExpiry());
+        txtBloodType.setText(license.getBloodType());
+        txtLicenseNo.setText(license.getLicenseNumber());
+        lblProfilePicture.setIcon(license.getPicture());
     }
 }

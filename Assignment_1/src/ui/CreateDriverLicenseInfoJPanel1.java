@@ -13,7 +13,8 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import model.Person;
+import model.License;
+//import model.Person;
 
 /**
  *
@@ -21,14 +22,17 @@ import model.Person;
  */
 public class CreateDriverLicenseInfoJPanel1 extends javax.swing.JPanel {
 
-    Person person;
+//    Person person;
+    License license;
     
     /**
      * Creates new form PersonalInformationPanel
+     * @param license
      */
-    public CreateDriverLicenseInfoJPanel1(Person person) {
+    
+    public CreateDriverLicenseInfoJPanel1(License license) {
         initComponents();
-        this.person = person;
+        this.license = license;
     }
     
 //     private String pattern = "dd-MMM-yyyy";
@@ -228,10 +232,10 @@ public class CreateDriverLicenseInfoJPanel1 extends javax.swing.JPanel {
 
     private void btnSaveLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveLicenseInfoActionPerformed
         // TODO add your handling code here:
-        person.setBloodType(txtBloodType.getText());
-        person.setLicenseNumber(txtLicenseNo.getText());
-        person.setDateIssued(txtIssueDate.getFormattedTextField().getText());
-        person.setDateOfExpiry(txtExpiryDate.getFormattedTextField().getText());
+        license.setBloodType(txtBloodType.getText());
+        license.setLicenseNumber(txtLicenseNo.getText());
+        license.setDateIssued(txtIssueDate.getFormattedTextField().getText());
+        license.setDateOfExpiry(txtExpiryDate.getFormattedTextField().getText());
 //        System.out.println(txtExpiryDate.getFormattedTextField().getText());
 //        System.out.println(txtIssueDate.getFormattedTextField().getText());
 
@@ -307,7 +311,7 @@ public class CreateDriverLicenseInfoJPanel1 extends javax.swing.JPanel {
            lblProfilePicture.setIcon(scaledProfilePicture);
 //           person.setPicture(profilePicture);
            
-           person.setPicture(scaledProfilePicture);
+           license.setPicture(scaledProfilePicture);
             
         } catch (Exception ex) {
             ex.printStackTrace();

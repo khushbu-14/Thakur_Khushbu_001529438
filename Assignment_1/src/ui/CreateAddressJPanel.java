@@ -6,6 +6,7 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.Address;
 import model.Person;
 
 /**
@@ -14,13 +15,19 @@ import model.Person;
  */
 public class CreateAddressJPanel extends javax.swing.JPanel {
     Person person;
+    Address address;
     /**
      * Creates new form CreateAddressJPanel
      */
-    public CreateAddressJPanel(Person person) {
+    
+     public CreateAddressJPanel(Address address) {
         initComponents();
-        this.person = person;
+        this.address = address;
     }
+//    public CreateAddressJPanel(Person person) {
+//        initComponents();
+//        this.person = person;
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -162,10 +169,10 @@ public class CreateAddressJPanel extends javax.swing.JPanel {
 
     private void btnSaveAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveAddressInfoActionPerformed
         // TODO add your handling code here:
-        person.setStreetAddress(txtStreetAddress.getText());
-        person.setCity(txtCity.getText());
-        person.setState(txtState.getText());
-        person.setZipcode(txtzipcode.getText());
+        address.setStreetAddress(txtStreetAddress.getText());
+        address.setCity(txtCity.getText());
+        address.setState(txtState.getText());
+        address.setZipcode(txtzipcode.getText());
         JOptionPane.showMessageDialog(this, "Address Information saved successfully!");
     }//GEN-LAST:event_btnSaveAddressInfoActionPerformed
 

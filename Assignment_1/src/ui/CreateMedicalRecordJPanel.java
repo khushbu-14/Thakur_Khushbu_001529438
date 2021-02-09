@@ -6,6 +6,7 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.MedicalRecord;
 import model.Person;
 
 /**
@@ -14,12 +15,13 @@ import model.Person;
  */
 public class CreateMedicalRecordJPanel extends javax.swing.JPanel {
     Person person;
+    MedicalRecord medicalRecord;
     /**
      * Creates new form CreateAddressJPanel
      */
-    public CreateMedicalRecordJPanel(Person person) {
+    public CreateMedicalRecordJPanel(MedicalRecord medicalRecord) {
         initComponents();
-        this.person = person;
+        this.medicalRecord = medicalRecord;
     }
 
     /**
@@ -103,11 +105,8 @@ public class CreateMedicalRecordJPanel extends javax.swing.JPanel {
             .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
-                        .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMedicalRecordNo, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMedicalRecordNo, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblMedicalRecordNo, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMedicalRecordNo, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,8 +118,8 @@ public class CreateMedicalRecordJPanel extends javax.swing.JPanel {
                                     .addComponent(jScrollPaneAlergy1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(tabBodyAddressInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPaneAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(776, Short.MAX_VALUE))))
+                                    .addComponent(jScrollPaneAlergy2, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(776, Short.MAX_VALUE))
             .addGroup(tabBodyAddressInformationLayout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(btnSaveMedicalRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,10 +180,10 @@ public class CreateMedicalRecordJPanel extends javax.swing.JPanel {
 
     private void btnSaveMedicalRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveMedicalRecordActionPerformed
         // TODO add your handling code here:
-       person.setMedicalRecordNumber(txtMedicalRecordNo.getText());
-       person.setAlergy1(txtAlergy1.getText());
-       person.setAlergy2(txtAlergy2.getText());
-       person.setAlergy3(txtAlergy3.getText());
+       medicalRecord.setMedicalRecordNumber(txtMedicalRecordNo.getText());
+       medicalRecord.setAlergy1(txtAlergy1.getText());
+       medicalRecord.setAlergy2(txtAlergy2.getText());
+       medicalRecord.setAlergy3(txtAlergy3.getText());
        
        JOptionPane.showMessageDialog(this, "Medical Record saved successfully!");
     }//GEN-LAST:event_btnSaveMedicalRecordActionPerformed

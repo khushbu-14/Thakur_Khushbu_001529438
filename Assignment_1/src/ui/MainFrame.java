@@ -6,7 +6,12 @@
 package ui;
 
 import model.Person;
-
+import model.Address;
+import model.Checking;
+import model.License;
+import model.MedicalRecord;
+import model.PersonalInformation;
+import model.Saving;
 /**
  *
  * @author khushbu
@@ -14,13 +19,24 @@ import model.Person;
 public class MainFrame extends javax.swing.JFrame {
     
     Person person;
-
+    PersonalInformation personalInformation;
+    Address address;
+    Checking checking;
+    Saving saving;
+    License license;
+    MedicalRecord medicalRecord;
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
+        personalInformation = new PersonalInformation();
         person = new Person();
+        address = new Address();
+        checking = new Checking();
+        saving = new Saving();
+        license = new License();
+        medicalRecord = new MedicalRecord();
     }
 
     /**
@@ -58,12 +74,6 @@ public class MainFrame extends javax.swing.JFrame {
         workPaneCheckingInfo = new javax.swing.JPanel();
         btnCreateCheckingInfo = new javax.swing.JButton();
         btnViewCheckingInfo = new javax.swing.JButton();
-        tabBankInformation = new javax.swing.JPanel();
-        splitPanelBankInfo = new javax.swing.JSplitPane();
-        controlPaneBankInfo = new javax.swing.JPanel();
-        workPaneBankInfo = new javax.swing.JPanel();
-        btnCreateBankInfo = new javax.swing.JButton();
-        btnViewBankInfo = new javax.swing.JButton();
         tabLicense = new javax.swing.JPanel();
         splitPanelLicenseInfo = new javax.swing.JSplitPane();
         controlPaneLicenseInfo = new javax.swing.JPanel();
@@ -391,78 +401,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         actionTabs.addTab("Checking", tabChecking);
 
-        controlPaneBankInfo.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout controlPaneBankInfoLayout = new javax.swing.GroupLayout(controlPaneBankInfo);
-        controlPaneBankInfo.setLayout(controlPaneBankInfoLayout);
-        controlPaneBankInfoLayout.setHorizontalGroup(
-            controlPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 645, Short.MAX_VALUE)
-        );
-        controlPaneBankInfoLayout.setVerticalGroup(
-            controlPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
-        );
-
-        splitPanelBankInfo.setRightComponent(controlPaneBankInfo);
-
-        workPaneBankInfo.setBackground(new java.awt.Color(249, 244, 244));
-
-        btnCreateBankInfo.setText("Create");
-        btnCreateBankInfo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateBankInfoActionPerformed(evt);
-            }
-        });
-
-        btnViewBankInfo.setText("View");
-        btnViewBankInfo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewBankInfoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout workPaneBankInfoLayout = new javax.swing.GroupLayout(workPaneBankInfo);
-        workPaneBankInfo.setLayout(workPaneBankInfoLayout);
-        workPaneBankInfoLayout.setHorizontalGroup(
-            workPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(workPaneBankInfoLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(workPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreateBankInfo, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnViewBankInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        workPaneBankInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreateBankInfo, btnViewBankInfo});
-
-        workPaneBankInfoLayout.setVerticalGroup(
-            workPaneBankInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(workPaneBankInfoLayout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addComponent(btnCreateBankInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(btnViewBankInfo)
-                .addContainerGap(174, Short.MAX_VALUE))
-        );
-
-        workPaneBankInfoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateBankInfo, btnViewBankInfo});
-
-        splitPanelBankInfo.setLeftComponent(workPaneBankInfo);
-
-        javax.swing.GroupLayout tabBankInformationLayout = new javax.swing.GroupLayout(tabBankInformation);
-        tabBankInformation.setLayout(tabBankInformationLayout);
-        tabBankInformationLayout.setHorizontalGroup(
-            tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelBankInfo)
-        );
-        tabBankInformationLayout.setVerticalGroup(
-            tabBankInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanelBankInfo)
-        );
-
-        actionTabs.addTab("Bank", tabBankInformation);
-
         splitPanelLicenseInfo.setBackground(new java.awt.Color(249, 244, 244));
 
         controlPaneLicenseInfo.setBackground(new java.awt.Color(255, 255, 255));
@@ -669,108 +607,96 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCreatePersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonalInfoActionPerformed
-        // TODO add your handling code here:
-        
-//        CreatePersonalInfoJPanel personalInformationCreatePanel = new CreatePersonalInfoJPanel(person);
-//        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel);
-
-        CreatePersonalInfoJPanel1 personalInformationCreatePanel = new CreatePersonalInfoJPanel1(person);
-        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel);
-    }//GEN-LAST:event_btnCreatePersonalInfoActionPerformed
-
-    private void btnViewPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonalInfoActionPerformed
-        // TODO add your handling code here:
-//        ViewPersonalInfoJPanel personalInformationViewPanel = new ViewPersonalInfoJPanel(person);
-//        splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel); 
-        ViewPersonalInfoJPanel1 personalInformationViewPanel = new ViewPersonalInfoJPanel1(person);
-        splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel); 
-    }//GEN-LAST:event_btnViewPersonalInfoActionPerformed
-
     private void actionTabsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionTabsMouseClicked
         // TODO add your handling code here:
-        ReportJPanel reportPanel = new ReportJPanel(person);
-        ViewReports reports = new ViewReports(person);
+        //        ReportJPanel reportPanel = new ReportJPanel(person);
+        ViewReports reports = new ViewReports(personalInformation, address, saving, checking, license, medicalRecord);
         splitPane.setRightComponent(reports);
-//        scrollPane.add(reports);
-//        splitPaneReport.setRightComponent(reportPanel);
-//        splitPaneReport.setRightComponent(reports);
-//        scrollPanelReport.add(reportPanel);
-//        tabReport.add(reportPanel);
+        //        scrollPane.add(reports);
+        //        splitPaneReport.setRightComponent(reportPanel);
+        //        splitPaneReport.setRightComponent(reports);
+        //        scrollPanelReport.add(reportPanel);
+        //        tabReport.add(reportPanel);
     }//GEN-LAST:event_actionTabsMouseClicked
-
-    private void btnCreateBankInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBankInfoActionPerformed
-        // TODO add your handling code here:
-         CreateBankInfoJPanel bankInformationCreatePanel = new CreateBankInfoJPanel(person);
-         splitPanelBankInfo.setRightComponent(bankInformationCreatePanel); 
-    }//GEN-LAST:event_btnCreateBankInfoActionPerformed
-
-    private void btnViewBankInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBankInfoActionPerformed
-        // TODO add your handling code here:
-         ViewBankInfoJPanel bankViewPanel = new ViewBankInfoJPanel(person);
-         splitPanelBankInfo.setRightComponent(bankViewPanel); 
-    }//GEN-LAST:event_btnViewBankInfoActionPerformed
-
-    private void btnCreateLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLicenseInfoActionPerformed
-        // TODO add your handling code here:
-//        CreateDriverLicenseInfoJPanel licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel(person);
-        CreateDriverLicenseInfoJPanel1 licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel1(person);
-        splitPanelLicenseInfo.setRightComponent(licenseInformationCreatePanel); 
-    }//GEN-LAST:event_btnCreateLicenseInfoActionPerformed
-
-    private void btnViewLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLicenseInfoActionPerformed
-        // TODO add your handling code here:
-        ViewDriverLicenseInfoJPanel licenseViewPanel = new ViewDriverLicenseInfoJPanel(person);
-         splitPanelLicenseInfo.setRightComponent(licenseViewPanel);
-    }//GEN-LAST:event_btnViewLicenseInfoActionPerformed
-
-    private void btnCreateAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAddressInfoActionPerformed
-        // TODO add your handling code here:
-        CreateAddressJPanel addressInformationPanel = new CreateAddressJPanel(person);
-        splitPanelAddressInfo.setRightComponent(addressInformationPanel); 
-    }//GEN-LAST:event_btnCreateAddressInfoActionPerformed
-
-    private void btnViewAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAddressInfoActionPerformed
-        // TODO add your handling code here:
-        ViewAddressJPanel addressViewPanel = new ViewAddressJPanel(person);
-        splitPanelAddressInfo.setRightComponent(addressViewPanel);
-    }//GEN-LAST:event_btnViewAddressInfoActionPerformed
-
-    private void btnCreateMedicalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateMedicalInfoActionPerformed
-        // TODO add your handling code here:
-        CreateMedicalRecordJPanel medicalRecordInformationPanel = new CreateMedicalRecordJPanel(person);
-        splitPanelMedicalInfo.setRightComponent(medicalRecordInformationPanel); 
-    }//GEN-LAST:event_btnCreateMedicalInfoActionPerformed
 
     private void btnViewMedicalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewMedicalInfoActionPerformed
         // TODO add your handling code here:
-        ViewMedicalRecordJPanel medicalRecordPanel = new ViewMedicalRecordJPanel(person);
+        ViewMedicalRecordJPanel medicalRecordPanel = new ViewMedicalRecordJPanel(medicalRecord);
         splitPanelMedicalInfo.setRightComponent(medicalRecordPanel);
     }//GEN-LAST:event_btnViewMedicalInfoActionPerformed
 
-    private void btnCreateSavingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateSavingInfoActionPerformed
+    private void btnCreateMedicalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateMedicalInfoActionPerformed
         // TODO add your handling code here:
-        CreateSavingBankInfo savingBankInformation = new CreateSavingBankInfo(person);
-        splitPanelSavingInfo.setRightComponent(savingBankInformation); 
-    }//GEN-LAST:event_btnCreateSavingInfoActionPerformed
+        CreateMedicalRecordJPanel medicalRecordInformationPanel = new CreateMedicalRecordJPanel(medicalRecord);
+        splitPanelMedicalInfo.setRightComponent(medicalRecordInformationPanel);
+    }//GEN-LAST:event_btnCreateMedicalInfoActionPerformed
 
-    private void btnViewSavingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewSavingInfoActionPerformed
+    private void btnViewLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLicenseInfoActionPerformed
         // TODO add your handling code here:
-        ViewSavingBankInfo savingViewPanel = new ViewSavingBankInfo(person);
-        splitPanelSavingInfo.setRightComponent(savingViewPanel);
-    }//GEN-LAST:event_btnViewSavingInfoActionPerformed
+        ViewDriverLicenseInfoJPanel licenseViewPanel = new ViewDriverLicenseInfoJPanel(license);
+        splitPanelLicenseInfo.setRightComponent(licenseViewPanel);
+    }//GEN-LAST:event_btnViewLicenseInfoActionPerformed
 
-    private void btnCreateCheckingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCheckingInfoActionPerformed
+    private void btnCreateLicenseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLicenseInfoActionPerformed
         // TODO add your handling code here:
-        CreateCheckingBankInfo checkingBankInformation = new CreateCheckingBankInfo(person);
-        splitPanelCheckingInfo.setRightComponent(checkingBankInformation); 
-    }//GEN-LAST:event_btnCreateCheckingInfoActionPerformed
+        //        CreateDriverLicenseInfoJPanel licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel(person);
+        CreateDriverLicenseInfoJPanel1 licenseInformationCreatePanel = new CreateDriverLicenseInfoJPanel1(license);
+        splitPanelLicenseInfo.setRightComponent(licenseInformationCreatePanel);
+    }//GEN-LAST:event_btnCreateLicenseInfoActionPerformed
 
     private void btnViewCheckingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewCheckingInfoActionPerformed
         // TODO add your handling code here:
-        ViewCheckingBankInfo checkingViewPanel = new ViewCheckingBankInfo(person);
+        ViewCheckingBankInfo checkingViewPanel = new ViewCheckingBankInfo(checking);
         splitPanelCheckingInfo.setRightComponent(checkingViewPanel);
     }//GEN-LAST:event_btnViewCheckingInfoActionPerformed
+
+    private void btnCreateCheckingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCheckingInfoActionPerformed
+        // TODO add your handling code here:
+        CreateCheckingBankInfo checkingBankInformation = new CreateCheckingBankInfo(checking);
+        splitPanelCheckingInfo.setRightComponent(checkingBankInformation);
+    }//GEN-LAST:event_btnCreateCheckingInfoActionPerformed
+
+    private void btnViewSavingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewSavingInfoActionPerformed
+        // TODO add your handling code here:
+        ViewSavingBankInfo savingViewPanel = new ViewSavingBankInfo(saving);
+        splitPanelSavingInfo.setRightComponent(savingViewPanel);
+    }//GEN-LAST:event_btnViewSavingInfoActionPerformed
+
+    private void btnCreateSavingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateSavingInfoActionPerformed
+        // TODO add your handling code here:
+        CreateSavingBankInfo savingBankInformation = new CreateSavingBankInfo(saving);
+        splitPanelSavingInfo.setRightComponent(savingBankInformation);
+    }//GEN-LAST:event_btnCreateSavingInfoActionPerformed
+
+    private void btnViewAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAddressInfoActionPerformed
+        // TODO add your handling code here:
+        ViewAddressJPanel addressViewPanel = new ViewAddressJPanel(address);
+        splitPanelAddressInfo.setRightComponent(addressViewPanel);
+    }//GEN-LAST:event_btnViewAddressInfoActionPerformed
+
+    private void btnCreateAddressInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAddressInfoActionPerformed
+        // TODO add your handling code here:
+        CreateAddressJPanel addressInformationPanel = new CreateAddressJPanel(address);
+        splitPanelAddressInfo.setRightComponent(addressInformationPanel);
+    }//GEN-LAST:event_btnCreateAddressInfoActionPerformed
+
+    private void btnViewPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonalInfoActionPerformed
+        // TODO add your handling code here:
+        //        ViewPersonalInfoJPanel personalInformationViewPanel = new ViewPersonalInfoJPanel(person);
+        //        splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel);
+        ViewPersonalInfoJPanel1 personalInformationViewPanel = new ViewPersonalInfoJPanel1(personalInformation);
+        splitPanelPersonalInfo.setRightComponent(personalInformationViewPanel);
+    }//GEN-LAST:event_btnViewPersonalInfoActionPerformed
+
+    private void btnCreatePersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonalInfoActionPerformed
+        // TODO add your handling code here:
+
+        //        CreatePersonalInfoJPanel personalInformationCreatePanel = new CreatePersonalInfoJPanel(person);
+        //        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel);
+
+        CreatePersonalInfoJPanel1 personalInformationCreatePanel = new CreatePersonalInfoJPanel1(personalInformation);
+        splitPanelPersonalInfo.setRightComponent(personalInformationCreatePanel);
+    }//GEN-LAST:event_btnCreatePersonalInfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -810,21 +736,18 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane actionTabs;
     private javax.swing.JButton btnCreateAddressInfo;
-    private javax.swing.JButton btnCreateBankInfo;
     private javax.swing.JButton btnCreateCheckingInfo;
     private javax.swing.JButton btnCreateLicenseInfo;
     private javax.swing.JButton btnCreateMedicalInfo;
     private javax.swing.JButton btnCreatePersonalInfo;
     private javax.swing.JButton btnCreateSavingInfo;
     private javax.swing.JButton btnViewAddressInfo;
-    private javax.swing.JButton btnViewBankInfo;
     private javax.swing.JButton btnViewCheckingInfo;
     private javax.swing.JButton btnViewLicenseInfo;
     private javax.swing.JButton btnViewMedicalInfo;
     private javax.swing.JButton btnViewPersonalInfo;
     private javax.swing.JButton btnViewSavingInfo;
     private javax.swing.JPanel controlPaneAddressInfo;
-    private javax.swing.JPanel controlPaneBankInfo;
     private javax.swing.JPanel controlPaneCheckingInfo;
     private javax.swing.JPanel controlPaneLicenseInfo;
     private javax.swing.JPanel controlPaneMedicalInfo;
@@ -835,14 +758,12 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel reportPanel;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JSplitPane splitPanelAddressInfo;
-    private javax.swing.JSplitPane splitPanelBankInfo;
     private javax.swing.JSplitPane splitPanelCheckingInfo;
     private javax.swing.JSplitPane splitPanelLicenseInfo;
     private javax.swing.JSplitPane splitPanelMedicalInfo;
     private javax.swing.JSplitPane splitPanelPersonalInfo;
     private javax.swing.JSplitPane splitPanelSavingInfo;
     private javax.swing.JPanel tabAddress;
-    private javax.swing.JPanel tabBankInformation;
     private javax.swing.JPanel tabChecking;
     private javax.swing.JPanel tabLicense;
     private javax.swing.JPanel tabMedical;
@@ -850,7 +771,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel tabReport;
     private javax.swing.JPanel tabSaving;
     private javax.swing.JPanel workPaneAddressInfo;
-    private javax.swing.JPanel workPaneBankInfo;
     private javax.swing.JPanel workPaneCheckingInfo;
     private javax.swing.JPanel workPaneLicenseInfo;
     private javax.swing.JPanel workPaneMedicalInfo;

@@ -6,20 +6,27 @@
 package ui;
 
 import javax.swing.JOptionPane;
-import model.Person;
-
+//import model.Person;
+import model.Address;
 /**
  *
  * @author khushbu
  */
 public class ViewAddressJPanel extends javax.swing.JPanel {
-    Person person;
+//    Person person;
+    Address address;
     /**
      * Creates new form CreateAddressJPanel
      */
-    public ViewAddressJPanel(Person person) {
+//    public ViewAddressJPanel(Person person) {
+//        initComponents();
+//        this.person = person;
+//        displayData();
+//    }
+    
+     public ViewAddressJPanel( Address address) {
         initComponents();
-        this.person = person;
+        this.address = address;
         displayData();
     }
 
@@ -165,9 +172,9 @@ public class ViewAddressJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void displayData() {
-       txtStreetAddress.setText(person.getStreetAddress());
-       txtCity.setText(person.getCity());
-       txtState.setText(person.getState());
-       txtZipcode.setText(person.getZipcode());
+       txtStreetAddress.setText(address.getStreetAddress());
+       txtCity.setText(address.getCity());
+       txtState.setText(address.getState());
+       txtZipcode.setText(address.getZipcode());
     }
 }
