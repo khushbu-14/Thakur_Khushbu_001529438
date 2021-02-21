@@ -392,5 +392,5 @@ public class Patient {
         }
 
         return patientType;
-    }   
+    }
 }

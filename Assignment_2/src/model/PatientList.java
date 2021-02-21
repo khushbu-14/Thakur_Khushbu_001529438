@@ -35,7 +35,7 @@ public class PatientList {
 
     public Patient getPatient(String name) {
 //        if(this.patientList.size() == 0) return null;
-        
+
         for (Patient patient : this.patientList) {
             if (patient.getName().equals(name.toUpperCase())) {
                 return patient;

@@ -16,22 +16,17 @@ import java.util.regex.Pattern;
  */
 public class Main {
 
-//    Patient patient;
-//    VitalSigns vitalSigns;
-//    VitalSignHistory history;
+//    maintains all patients
     static PatientList patientList = new PatientList();
     static Patient patient;
 
+    //    regex for boolean answers
     static String booleanRegex = "(yes)|(no)+";
     static Pattern p = Pattern.compile(booleanRegex, Pattern.CASE_INSENSITIVE);
 
     public static void main(String[] args) {
+//        start console
         getPatientInput();
-
-//        Patient patient = new Patient();
-//        VitalSignHistory history = new VitalSignHistory();
-//        VitalSignHistory history;
-//        userData.close();
     }
 
     private static void getPatientInput() {
@@ -60,7 +55,7 @@ public class Main {
             userData.next();
         }
 
-        name = userData.next();
+        name = userData.nextLine();
 
         patient = patientList.getPatient(name);
 
@@ -90,12 +85,12 @@ public class Main {
             }
 
             age = userData.nextInt();
-            
-        }else{
+
+        } else {
             age = patient.getAge();
             isNewBornOrInfant = patient.getIsNewBornOrInfant();
         }
-        
+
         printInConsole("Respiratory Rate");
 
         while (!userData.hasNextDouble()) {
@@ -162,40 +157,32 @@ public class Main {
         patient.currentVitalSign.setWeightInPounds(weightInPounds);
         patient.currentVitalSign.setIsNormal(isNormal);
 
-        VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
-
-        vitalSigns.setBloodPressure(bloodPressure);
-        vitalSigns.setHeartRate(heartRate);
-        vitalSigns.setRespiratoryRate(respiratoryRate);
-        vitalSigns.setWeightInKilos(weightInKilos);
-        vitalSigns.setWeightInPounds(weightInPounds);
-        vitalSigns.setCaptureTime(captureTime);
-        vitalSigns.setIsNormal(isNormal);
-
         printStatements(result);
         ArrayList<VitalSigns> currentHistory = patient.vitalSignHistory.getHistory();
 
         for (int i = 0; i < currentHistory.size(); i++) {
             printStatements("------------ vital Signs " + (i + 1) + " ------------");
             printStatements("Vitals of : " + name + " for time : " + currentHistory.get(i).getCaptureTime());
-
-            printStatements(currentHistory.get(i).getBloodPressure() + " Blood Pressue");
+            
+            printStatements(currentHistory.get(i).getRespiratoryRate() + " Respiratory Rate");
 //            System.out.println(currentHistory.get(i).getCaptureTime() + " Capture Time");
             printStatements(currentHistory.get(i).getHeartRate() + " Heart Rate");
-            printStatements(currentHistory.get(i).getRespiratoryRate() + " Respiratory Rate");
+            printStatements(currentHistory.get(i).getBloodPressure() + " Blood Pressue");
+            
             printStatements(currentHistory.get(i).getWeightInKilos() + " Weight (Kgs)");
             printStatements(currentHistory.get(i).getWeightInPounds() + " Weight (Pounds)");
             printStatements(currentHistory.get(i).getIsNormal() == true ? "This record is normal." : "This record in not normal.");
         }
-        
-        printStatements("Respiratory Rate is : " + patient.isThisVitalSignNormal("Respiratory Rate"));
-        
-        printStatements("Heart Rate is : " + patient.isThisVitalSignNormal("Heart Rate"));
-        
-        printStatements("Heart Rate1 is : " + patient.isThisVitalSignNormal("Heart Rate1"));
-        
-        printStatements("Heart is : " + patient.isThisVitalSignNormal("Heart"));
 
+        /*
+            printStatements("Respiratory Rate is : " + patient.isThisVitalSignNormal("Respiratory Rate"));
+
+            printStatements("Heart Rate is : " + patient.isThisVitalSignNormal("Heart Rate"));
+
+            printStatements("Heart Rate1 is : " + patient.isThisVitalSignNormal("Heart Rate1"));
+
+            printStatements("Heart is : " + patient.isThisVitalSignNormal("Heart"));
+         */
         repeatPatientInput(userData);
     }
 
@@ -228,6 +215,9 @@ public class Main {
 
         String shouldContinue = userData.next(p).trim().toUpperCase();
 
+        // save current vital signs to history
+        saveCurrentVitalSign();
+
         if (shouldContinue.contains("YES")) {
             getPatientInput();
         } else {
@@ -241,5 +231,17 @@ public class Main {
 
     private static void printStatements(String val) {
         System.out.println(val);
+    }
+
+    private static void saveCurrentVitalSign() {
+        //  save current vital sign object to history
+        VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
+        vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());
+        vitalSigns.setHeartRate(patient.currentVitalSign.getHeartRate());
+        vitalSigns.setRespiratoryRate(patient.currentVitalSign.getRespiratoryRate());
+        vitalSigns.setWeightInKilos(patient.currentVitalSign.getWeightInKilos());
+        vitalSigns.setWeightInPounds(patient.currentVitalSign.getWeightInPounds());
+        vitalSigns.setCaptureTime(patient.currentVitalSign.getCaptureTime());
+        vitalSigns.setIsNormal(patient.currentVitalSign.getIsNormal());
     }
 }
