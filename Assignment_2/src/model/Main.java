@@ -24,6 +24,8 @@ public class Main {
     static String booleanRegex = "(yes)|(no)+";
     static Pattern p = Pattern.compile(booleanRegex, Pattern.CASE_INSENSITIVE);
 
+    static final double weightConversion = 2.20462;
+
     public static void main(String[] args) {
 //        start console
         getPatientInput();
@@ -38,6 +40,7 @@ public class Main {
         double respiratoryRate;
         double heartRate;
         double bloodPressure;
+        Boolean isWeightInKg = true;
         double weightInKilos;
         double weightInPounds;
         Date captureTime;
@@ -121,19 +124,52 @@ public class Main {
 
         bloodPressure = userData.nextDouble();
 
-        printInConsole("Weight in (KGS)");
+        printStatements("Choose from below how you want to enter weight!");
+
+        printStatements("1) KGS -> Press 1\n2) Pounds -> Press 2");
+
+        while (!userData.hasNextInt()) {
+            System.out.println("That's not a valid option!");
+            printStatements("1) KGS -> Press 1\n2) Pounds -> Press 2");
+            userData.next();
+        }
+        
+        switch (userData.nextInt()) {
+            case 1:
+                isWeightInKg = true;
+                printInConsole("Weight in (KGS)");
+                break;
+            case 2:
+                isWeightInKg = false;
+                printInConsole("Weight in (POUNDS)");
+                break;
+
+            default:
+                printStatements("Unrecognized option. Setting to KGS.");
+                isWeightInKg = true;
+                printInConsole("Weight in (KGS)");
+//                userData.next();
+                break;
+        }
 
         while (!userData.hasNextDouble()) {
-            System.out.println("That's not a valid Weight in (KGS)! Only numbers allowed.");
+            System.out.println("That's not a valid Weight! Only numbers allowed.");
             userData.next();
         }
 
-        weightInKilos = userData.nextDouble();
+        if (isWeightInKg) {
+            weightInKilos = userData.nextDouble();
+            weightInPounds = weightInKilos * weightConversion;
+            printStatements("Your weight in pounds is : " + weightInPounds);
+        } else {
+            weightInPounds = userData.nextDouble();
+            weightInKilos = weightInPounds / weightConversion;
+        }
 
-        weightInPounds = weightInKilos * 2.20462;
-
-        printStatements("Your weight in pounds is : " + weightInPounds);
-
+//        weightInKilos = isWeightInKg ? userData.nextDouble() : ;
+//
+//        weightInPounds = weightInKilos * 2.20462;
+//        printStatements("Your weight in pounds is : " + weightInPounds);
         isNormal = patient.isPatientNormal(age, respiratoryRate,
                 heartRate, bloodPressure, weightInKilos,
                 weightInPounds, isNewBornOrInfant);
