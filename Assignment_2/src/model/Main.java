@@ -55,7 +55,7 @@ public class Main {
             userData.next();
         }
 
-        name = userData.nextLine();
+        name = userData.nextLine().toUpperCase();
 
         patient = patientList.getPatient(name);
 
@@ -89,6 +89,10 @@ public class Main {
         } else {
             age = patient.getAge();
             isNewBornOrInfant = patient.getIsNewBornOrInfant();
+            printStatements("Welcome back "+ name);
+            
+            String patientType = patient.getPatientType(age, isNewBornOrInfant);
+            printStatements("You belong to group : "+ patientType);
         }
 
         printInConsole("Respiratory Rate");
@@ -171,6 +175,7 @@ public class Main {
             %-s -> left align
             %-10s -> 10 spaces
          */
+        
         if (currentHistory.size() >= 1) {
             System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
             System.out.printf("|%-5s| %-20s| %-15s| %-18s| %-15s| %-15s| %-35s|", "NO.", "RESPIRATORY RATE", "HEART RATE", "BLOOD PRESSURE", "WEIGHT", "STATUS", "TIME");
@@ -267,7 +272,7 @@ public class Main {
         System.out.println(val);
     }
 
-    private static void newVitalSign() {
+    private static VitalSigns newVitalSign() {
         //  save current vital sign object to history
         VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
         vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());
@@ -277,5 +282,6 @@ public class Main {
         vitalSigns.setWeightInPounds(patient.currentVitalSign.getWeightInPounds());
         vitalSigns.setCaptureTime(patient.currentVitalSign.getCaptureTime());
         vitalSigns.setIsNormal(patient.currentVitalSign.getIsNormal());
+        return patient.currentVitalSign;
     }
 }
