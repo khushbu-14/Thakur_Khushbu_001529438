@@ -89,10 +89,10 @@ public class Main {
         } else {
             age = patient.getAge();
             isNewBornOrInfant = patient.getIsNewBornOrInfant();
-            printStatements("Welcome back " + name);
-
+            printStatements("Welcome back "+ name);
+            
             String patientType = patient.getPatientType(age, isNewBornOrInfant);
-            printStatements("You belong to group : " + patientType);
+            printStatements("You belong to group : "+ patientType);
         }
 
         printInConsole("Respiratory Rate");
@@ -175,12 +175,10 @@ public class Main {
             %-s -> left align
             %-10s -> 10 spaces
          */
+        
         if (currentHistory.size() >= 1) {
             System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-            System.out.printf("|%-5s| %-20s| %-15s| %-18s| %-15s| %-15s| %-15s| %-35s|", "NO.",
-                    "RESPIRATORY RATE", "HEART RATE",
-                    "BLOOD PRESSURE", "WEIGHT (KG)",
-                    "WEIGHT (POUND)", "STATUS", "TIME");
+            System.out.printf("|%-5s| %-20s| %-15s| %-18s| %-15s| %-15s| %-35s|", "NO.", "RESPIRATORY RATE", "HEART RATE", "BLOOD PRESSURE", "WEIGHT", "STATUS", "TIME");
             System.out.println();
             System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
         }
@@ -190,13 +188,12 @@ public class Main {
 //            printStatements("------------ vital Signs " + (i + 1) + " ------------");
 //            printStatements("Vitals of : " + name + " for time : " + currentHistory.get(i).getCaptureTime());
 //            %2d %5s %5s %5s %5s %7s %5s
-            System.out.format("|%-5d| %-20.2f| %-15.2f| %-18.2f| %-15.2f| %-15.2f| %-15s| %-35s|",
+            System.out.format("|%-5d| %-20f| %-15f| %-18f| %-15f| %-15s| %-35s|",
                     (i + 1),
                     currentHistory.get(i).getRespiratoryRate(),
                     currentHistory.get(i).getHeartRate(),
                     currentHistory.get(i).getBloodPressure(),
                     currentHistory.get(i).getWeightInKilos(),
-                    currentHistory.get(i).getWeightInPounds(),
                     currentHistory.get(i).getIsNormal() == true ? "NORMAL" : "ABNORMAL",
                     currentHistory.get(i).getCaptureTime()
             );
@@ -213,7 +210,7 @@ public class Main {
             printStatements(currentHistory.get(i).getIsNormal() == true ? "This record is normal." : "This record in not normal.");
              */
         }
-
+        
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
         /*
@@ -258,8 +255,7 @@ public class Main {
         String shouldContinue = userData.next(p).trim().toUpperCase();
 
         // save current vital signs to history
-        patient.newVitalSign();
-//        newVitalSign();
+        newVitalSign();
 
         if (shouldContinue.contains("YES")) {
             getPatientInput();
@@ -276,7 +272,7 @@ public class Main {
         System.out.println(val);
     }
 
-    private static VitalSigns newVitalSign1() {
+    private static VitalSigns newVitalSign() {
         //  save current vital sign object to history
         VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
         vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());

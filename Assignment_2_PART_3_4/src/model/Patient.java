@@ -391,17 +391,4 @@ public class Patient {
 
         return patientType;
     }
-
-    public VitalSigns newVitalSign() {
-        //  save current vital sign object to history
-        VitalSigns vitalSigns = vitalSignHistory.addNewVitals();
-        vitalSigns.setBloodPressure(currentVitalSign.getBloodPressure());
-        vitalSigns.setHeartRate(currentVitalSign.getHeartRate());
-        vitalSigns.setRespiratoryRate(currentVitalSign.getRespiratoryRate());
-        vitalSigns.setWeightInKilos(currentVitalSign.getWeightInKilos());
-        vitalSigns.setWeightInPounds(currentVitalSign.getWeightInPounds());
-        vitalSigns.setCaptureTime(currentVitalSign.getCaptureTime());
-        vitalSigns.setIsNormal(currentVitalSign.getIsNormal());
-        return currentVitalSign;
-    }
 }
