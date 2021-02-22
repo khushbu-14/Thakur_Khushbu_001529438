@@ -146,7 +146,7 @@ public class Patient {
 
     public Boolean checkRespiratoryRate(double respiratoryRate, String patientType) {
         Boolean isNormal = false;
-
+        System.out.println("respiratoryRate :" + respiratoryRate);
         switch (patientType) {
             case "NEWBORN":
                 if (respiratoryRate >= 30 && respiratoryRate <= 50) {
@@ -329,7 +329,8 @@ public class Patient {
     }
 
     public Boolean isThisVitalSignNormal(String vsign) {
-        Boolean isMatched = false, isNormal = false;
+        Boolean isMatched = false;
+//                , isNormal = false;
 
         String vitalsRegex = "(RESPIRATORY RATE)|(HEART RATE)|(BLOOD PRESSURE)|(WEIGHT)+";
 
@@ -339,7 +340,7 @@ public class Patient {
             isMatched = true;
         }
 
-        if (isMatched) {
+        /* if (isMatched) {
             String patientType = getPatientType(age, isNewBornOrInfant);
 
             switch (currentVSign) {
@@ -366,6 +367,37 @@ public class Patient {
         }
 
         return isMatched && isNormal;
+         */
+        return isMatched;
+    }
+
+    public Boolean isThisMatchedVitalSignNormal(String vsign) {
+        String patientType = getPatientType(age, isNewBornOrInfant);
+        String currentVSign = vsign.toUpperCase();
+        Boolean isNormal;
+
+        switch (currentVSign) {
+            case "RESPIRATORY RATE":
+                isNormal = checkRespiratoryRate(currentVitalSign.getRespiratoryRate(), patientType);
+                break;
+
+            case "HEART RATE":
+                isNormal = checkHeartRate(currentVitalSign.getHeartRate(), patientType);
+                break;
+
+            case "BLOOD PRESSURE":
+                isNormal = checkBloodPressue(currentVitalSign.getBloodPressure(), patientType);
+                break;
+
+            case "WEIGHT":
+                isNormal = checkWeight(currentVitalSign.getWeightInKilos(), currentVitalSign.getWeightInPounds(), patientType);
+                break;
+
+            default:
+                isNormal = false;
+                break;
+        }
+        return isNormal;
     }
 
     public String getPatientType(int age, Boolean isNewBornOrInfant) {

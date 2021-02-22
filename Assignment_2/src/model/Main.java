@@ -133,7 +133,7 @@ public class Main {
             printStatements("1) KGS -> Press 1\n2) Pounds -> Press 2");
             userData.next();
         }
-        
+
         switch (userData.nextInt()) {
             case 1:
                 isWeightInKg = true;
@@ -212,13 +212,13 @@ public class Main {
             %-10s -> 10 spaces
          */
         if (currentHistory.size() >= 1) {
-            System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
             System.out.printf("|%-5s| %-20s| %-15s| %-18s| %-15s| %-15s| %-15s| %-35s|", "NO.",
                     "RESPIRATORY RATE", "HEART RATE",
                     "BLOOD PRESSURE", "WEIGHT (KG)",
                     "WEIGHT (POUND)", "STATUS", "TIME");
             System.out.println();
-            System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
 
         for (int i = 0; i < currentHistory.size(); i++) {
@@ -261,7 +261,7 @@ public class Main {
 
             printStatements("Heart is : " + patient.isThisVitalSignNormal("Heart"));
          */
-        repeatPatientInput(userData);
+        checkForAttribute(userData);
     }
 
     private static void repeatPatientInput(Scanner userData) {
@@ -304,6 +304,50 @@ public class Main {
         }
     }
 
+    private static void checkForAttribute(Scanner userData) {
+        String attrName;
+
+        printStatements("Do you want to check any attribute for this patient?  Enter Yes or No!");
+
+        while (!userData.hasNext(p)) {
+            System.out.println("That's not a correct answer! Enter YES or NO.");
+            userData.next();
+        }
+
+        String shouldContinueWithAttribute = userData.next(p).trim().toUpperCase();
+
+        if (shouldContinueWithAttribute.contains("YES")) {
+            userData.nextLine();
+
+            printInConsole("Attribute Name");
+
+            while (!userData.hasNext()) {
+                System.out.println("That's not a correct answer! Enter valid attribute name.");
+                userData.next();
+            }
+
+            attrName = userData.nextLine().toUpperCase();
+//            System.out.println(" attr : " + attrName);
+
+            Boolean isExist = patient.isThisVitalSignNormal(attrName);
+
+            if (isExist) {
+                printStatements(attrName + " matches with our records");
+                Boolean isNormal = patient.isThisMatchedVitalSignNormal(attrName);
+                String txt = isNormal == true ? "normal" : "not normal";
+                printStatements(attrName + " is " + txt);
+            } else {
+                printStatements(attrName + " does not match with our records");
+            }
+
+            //  ask for another input
+            checkForAttribute(userData);
+        } else {
+            //   ask for next patient entry
+            repeatPatientInput(userData);
+        }
+    }
+
     private static void printInConsole(String val) {
         System.out.println("Please enter your " + val);
     }
@@ -312,16 +356,16 @@ public class Main {
         System.out.println(val);
     }
 
-    private static VitalSigns newVitalSign1() {
-        //  save current vital sign object to history
-        VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
-        vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());
-        vitalSigns.setHeartRate(patient.currentVitalSign.getHeartRate());
-        vitalSigns.setRespiratoryRate(patient.currentVitalSign.getRespiratoryRate());
-        vitalSigns.setWeightInKilos(patient.currentVitalSign.getWeightInKilos());
-        vitalSigns.setWeightInPounds(patient.currentVitalSign.getWeightInPounds());
-        vitalSigns.setCaptureTime(patient.currentVitalSign.getCaptureTime());
-        vitalSigns.setIsNormal(patient.currentVitalSign.getIsNormal());
-        return patient.currentVitalSign;
-    }
+//    private static VitalSigns newVitalSign1() {
+//        //  save current vital sign object to history
+//        VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
+//        vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());
+//        vitalSigns.setHeartRate(patient.currentVitalSign.getHeartRate());
+//        vitalSigns.setRespiratoryRate(patient.currentVitalSign.getRespiratoryRate());
+//        vitalSigns.setWeightInKilos(patient.currentVitalSign.getWeightInKilos());
+//        vitalSigns.setWeightInPounds(patient.currentVitalSign.getWeightInPounds());
+//        vitalSigns.setCaptureTime(patient.currentVitalSign.getCaptureTime());
+//        vitalSigns.setIsNormal(patient.currentVitalSign.getIsNormal());
+//        return patient.currentVitalSign;
+//    }
 }
