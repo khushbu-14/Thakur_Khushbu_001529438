@@ -146,7 +146,7 @@ public class Patient {
 
     public Boolean checkRespiratoryRate(double respiratoryRate, String patientType) {
         Boolean isNormal = false;
-        System.out.println("respiratoryRate :" + respiratoryRate);
+//        System.out.println("respiratoryRate :" + respiratoryRate);
         switch (patientType) {
             case "NEWBORN":
                 if (respiratoryRate >= 30 && respiratoryRate <= 50) {
