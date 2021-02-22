@@ -157,22 +157,56 @@ public class Main {
         patient.currentVitalSign.setWeightInPounds(weightInPounds);
         patient.currentVitalSign.setIsNormal(isNormal);
 
+        System.out.println("----------------------------------------------------");
         printStatements(result);
+        System.out.println("----------------------------------------------------");
+
         ArrayList<VitalSigns> currentHistory = patient.vitalSignHistory.getHistory();
 
+        /*
+            %d -> integer
+            %s - string
+            %f floating point number
+
+            %-s -> left align
+            %-10s -> 10 spaces
+         */
+        if (currentHistory.size() >= 1) {
+            System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.printf("|%-5s| %-20s| %-15s| %-18s| %-15s| %-15s| %-35s|", "NO.", "RESPIRATORY RATE", "HEART RATE", "BLOOD PRESSURE", "WEIGHT", "STATUS", "TIME");
+            System.out.println();
+            System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+        }
+
         for (int i = 0; i < currentHistory.size(); i++) {
-            printStatements("------------ vital Signs " + (i + 1) + " ------------");
-            printStatements("Vitals of : " + name + " for time : " + currentHistory.get(i).getCaptureTime());
-            
-            printStatements(currentHistory.get(i).getRespiratoryRate() + " Respiratory Rate");
+
+//            printStatements("------------ vital Signs " + (i + 1) + " ------------");
+//            printStatements("Vitals of : " + name + " for time : " + currentHistory.get(i).getCaptureTime());
+//            %2d %5s %5s %5s %5s %7s %5s
+            System.out.format("|%-5d| %-20f| %-15f| %-18f| %-15f| %-15s| %-35s|",
+                    (i + 1),
+                    currentHistory.get(i).getRespiratoryRate(),
+                    currentHistory.get(i).getHeartRate(),
+                    currentHistory.get(i).getBloodPressure(),
+                    currentHistory.get(i).getWeightInKilos(),
+                    currentHistory.get(i).getIsNormal() == true ? "NORMAL" : "ABNORMAL",
+                    currentHistory.get(i).getCaptureTime()
+            );
+
+            System.out.println();
+
+            /*printStatements(currentHistory.get(i).getRespiratoryRate() + " Respiratory Rate");
 //            System.out.println(currentHistory.get(i).getCaptureTime() + " Capture Time");
             printStatements(currentHistory.get(i).getHeartRate() + " Heart Rate");
             printStatements(currentHistory.get(i).getBloodPressure() + " Blood Pressue");
-            
+
             printStatements(currentHistory.get(i).getWeightInKilos() + " Weight (Kgs)");
             printStatements(currentHistory.get(i).getWeightInPounds() + " Weight (Pounds)");
             printStatements(currentHistory.get(i).getIsNormal() == true ? "This record is normal." : "This record in not normal.");
+             */
         }
+        
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
         /*
             printStatements("Respiratory Rate is : " + patient.isThisVitalSignNormal("Respiratory Rate"));
@@ -216,7 +250,7 @@ public class Main {
         String shouldContinue = userData.next(p).trim().toUpperCase();
 
         // save current vital signs to history
-        saveCurrentVitalSign();
+        newVitalSign();
 
         if (shouldContinue.contains("YES")) {
             getPatientInput();
@@ -233,7 +267,7 @@ public class Main {
         System.out.println(val);
     }
 
-    private static void saveCurrentVitalSign() {
+    private static void newVitalSign() {
         //  save current vital sign object to history
         VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
         vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());
