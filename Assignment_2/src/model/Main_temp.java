@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  *
  * @author khushbu
  */
-public class Main {
+public class Main_temp {
 
 //    maintains all patients
     static PatientList patientList = new PatientList();
@@ -84,6 +84,73 @@ public class Main {
 
             age = getInput("age", userData);
 
+            /*do {
+                printStatements("Please enter positive age");
+                while (!userData.hasNextInt()) {
+                    String input = userData.next();
+                    System.out.printf("\"%s\" is not a valid number.\n", input);
+                }
+                age = userData.nextInt();
+            } while (age < 0);
+             */
+
+ /*while(!userData.hasNextInt() || age < 0){
+              System.out.println("Sorry age cant be negative or be letter");
+              age = userData.nextInt();
+            }*/
+ /* while (!userData.hasNextInt()) {
+                printStatements("That's not a valid age! Only numbers allowed.");
+                userData.next();
+            } */
+ /*while (true) {
+                if (!userData.hasNextInt()) {
+                    System.out.println("Sorry age cant be negative or be letter");
+                    break;
+                }
+                if (isBooleanStr.contains("YES")) {
+                    printInConsole("Age in months");
+                } else {
+                    printInConsole("Age in years");
+                }
+                age = userData.nextInt();
+            }*/
+
+ /* int tmpInt = 0;
+            boolean flag = false;
+            while ((flag = !userData.hasNextInt()) || (tmpInt = userData.nextInt()) < 0) {
+                if (flag) {
+                    userData.next();
+                    flag = false;
+                }
+                System.out.println("Value must be a positive integer !");
+                userData.nextLine();
+            } */
+            //   age = userData.nextInt();
+            /* while (isBooleanStr.contains("YES") && (temp = userData.nextInt()) > 13) {
+                userData.nextLine();
+                printStatements("Your age should be between 0 - 12 months.");
+                userData.next();
+                
+            }
+
+            while (isBooleanStr.contains("NO") && (temp = userData.nextInt()) < 1) {
+                userData.nextLine();
+                userData.next();
+                printStatements("Your age should be greater than 1 years");
+            } */
+//            age = userData.nextInt();
+
+            /*
+                if (isBooleanStr.contains("YES") && age > 13) {
+                    printStatements("Your age should be between 0 - 12 months.");
+                    userData.nextLine();
+                    userData.next();
+                } else if (isBooleanStr.contains("NO") && age < 1) {
+                    printStatements("Your age should be greater than 1 years");
+                    userData.nextLine();
+                    userData.next();
+                } 
+             */
         } else {
             age = patient.getAge();
             isNewBornOrInfant = patient.getIsNewBornOrInfant();
@@ -93,10 +160,34 @@ public class Main {
             printStatements("You belong to group : " + patientType);
         }
 
+//        printInConsole("Respiratory Rate");
+
+        /*while (!userData.hasNextDouble()) {
+            System.out.println("That's not a valid Respiratory Rate! Only numbers allowed.");
+            userData.next();
+        }
+
+        respiratoryRate = userData.nextDouble();
+         */
         respiratoryRate = getDoubleInput("respiratory rate", userData);
 
+//        printInConsole("Heart Rate");
+
+        /*while (!userData.hasNextDouble()) {
+            System.out.println("That's not a valid Heart Rate! Only numbers allowed.");
+            userData.next();
+        }
+        heartRate = userData.nextDouble();*/
         heartRate = getDoubleInput("heart rate", userData);
 
+//        printInConsole("Blood Pressure");
+
+        /* while (!userData.hasNextDouble()) {
+            System.out.println("That's not a valid Blood Pressure! Only numbers allowed.");
+            userData.next();
+        }
+
+        bloodPressure = userData.nextDouble();*/
         bloodPressure = getDoubleInput("blood pressure", userData);
 
         printStatements("Choose from below how you want to enter weight!");
@@ -112,32 +203,42 @@ public class Main {
         switch (userData.nextInt()) {
             case 1:
                 isWeightInKg = true;
-//                printInConsole("Weight in (KGS)");
+                printInConsole("Weight in (KGS)");
                 break;
             case 2:
                 isWeightInKg = false;
-//                printInConsole("Weight in (POUNDS)");
+                printInConsole("Weight in (POUNDS)");
                 break;
 
             default:
                 printStatements("Unrecognized option. Setting to KGS.");
                 isWeightInKg = true;
-//                printInConsole("Weight in (KGS)");
+                printInConsole("Weight in (KGS)");
+//                userData.next();
                 break;
         }
 
+        /*while (!userData.hasNextDouble()) {
+            System.out.println("That's not a valid Weight! Only numbers allowed.");
+            userData.next();
+        }*/
         if (isWeightInKg) {
+//            weightInKilos = userData.nextDouble();
 
             weightInKilos = getDoubleInput("weight (kgs)", userData);
 
             weightInPounds = weightInKilos * weightConversion;
             printStatements("Your weight in pounds is : " + weightInPounds);
         } else {
-
+//            weightInPounds = userData.nextDouble();
             weightInPounds = getDoubleInput("weight (pounds)", userData);
             weightInKilos = weightInPounds / weightConversion;
         }
 
+//        weightInKilos = isWeightInKg ? userData.nextDouble() : ;
+//
+//        weightInPounds = weightInKilos * 2.20462;
+//        printStatements("Your weight in pounds is : " + weightInPounds);
         isNormal = patient.isPatientNormal(age, respiratoryRate,
                 heartRate, bloodPressure, weightInKilos,
                 weightInPounds, isNewBornOrInfant);
@@ -191,6 +292,9 @@ public class Main {
 
         for (int i = 0; i < currentHistory.size(); i++) {
 
+//            printStatements("------------ vital Signs " + (i + 1) + " ------------");
+//            printStatements("Vitals of : " + name + " for time : " + currentHistory.get(i).getCaptureTime());
+//            %2d %5s %5s %5s %5s %7s %5s
             System.out.format("|%-5d| %-20.2f| %-15.2f| %-18.2f| %-15.2f| %-15.2f| %-15s| %-35s|",
                     (i + 1),
                     currentHistory.get(i).getRespiratoryRate(),
@@ -203,15 +307,56 @@ public class Main {
             );
 
             System.out.println();
+
+            /*printStatements(currentHistory.get(i).getRespiratoryRate() + " Respiratory Rate");
+//            System.out.println(currentHistory.get(i).getCaptureTime() + " Capture Time");
+            printStatements(currentHistory.get(i).getHeartRate() + " Heart Rate");
+            printStatements(currentHistory.get(i).getBloodPressure() + " Blood Pressue");
+
+            printStatements(currentHistory.get(i).getWeightInKilos() + " Weight (Kgs)");
+            printStatements(currentHistory.get(i).getWeightInPounds() + " Weight (Pounds)");
+            printStatements(currentHistory.get(i).getIsNormal() == true ? "This record is normal." : "This record in not normal.");
+             */
         }
 
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
+        /*
+            printStatements("Respiratory Rate is : " + patient.isThisVitalSignNormal("Respiratory Rate"));
+
+            printStatements("Heart Rate is : " + patient.isThisVitalSignNormal("Heart Rate"));
+
+            printStatements("Heart Rate1 is : " + patient.isThisVitalSignNormal("Heart Rate1"));
+
+            printStatements("Heart is : " + patient.isThisVitalSignNormal("Heart"));
+         */
         checkForAttribute(userData);
+    }
+
+    private static void setPatientInput() {
+
     }
 
     private static void repeatPatientInput(Scanner userData) {
 
+        /* printStatements("Do you want to input new vital signs for? " + patient.getName() + "? Enter Yes or No!");
+
+        while (!userData.hasNext(p)) {
+            System.out.println("That's not a correct answer! Enter YES or NO.");
+            userData.next();
+        }
+        String shouldContinue = userData.next(p).trim().toUpperCase();
+
+        if (shouldContinue.contains("YES")) {
+
+        } else {
+            printStatements("Do you want enter vital signs for new or existing patient? Enter Yes or No!");
+
+            while (!userData.hasNext(p)) {
+                System.out.println("That's not a correct answer! Enter YES or NO.");
+                userData.next();
+            }
+        } */
         printStatements("Do you want to enter vital signs for new or existing patient? Enter Yes or No!");
 
         while (!userData.hasNext(p)) {
@@ -255,6 +400,7 @@ public class Main {
             }
 
             attrName = userData.nextLine().toUpperCase();
+//            System.out.println(" attr : " + attrName);
 
             Boolean isExist = patient.isThisVitalSignNormal(attrName);
 
@@ -283,10 +429,22 @@ public class Main {
         System.out.println(val);
     }
 
+//    private static VitalSigns newVitalSign1() {
+//        //  save current vital sign object to history
+//        VitalSigns vitalSigns = patient.vitalSignHistory.addNewVitals();
+//        vitalSigns.setBloodPressure(patient.currentVitalSign.getBloodPressure());
+//        vitalSigns.setHeartRate(patient.currentVitalSign.getHeartRate());
+//        vitalSigns.setRespiratoryRate(patient.currentVitalSign.getRespiratoryRate());
+//        vitalSigns.setWeightInKilos(patient.currentVitalSign.getWeightInKilos());
+//        vitalSigns.setWeightInPounds(patient.currentVitalSign.getWeightInPounds());
+//        vitalSigns.setCaptureTime(patient.currentVitalSign.getCaptureTime());
+//        vitalSigns.setIsNormal(patient.currentVitalSign.getIsNormal());
+//        return patient.currentVitalSign;
+//    }
     private static int getInput(String type, Scanner userData) {
         int res;
         do {
-            printStatements("Please enter valid " + type);
+            printStatements("Please enter positive " + type);
             while (!userData.hasNextInt()) {
                 String input = userData.next();
                 System.out.printf("\"%s\" is not a valid number.\n", input);
@@ -300,7 +458,7 @@ public class Main {
     private static double getDoubleInput(String type, Scanner userData) {
         double res;
         do {
-            printStatements("Please enter valid " + type);
+            printStatements("Please enter positive " + type);
             while (!userData.hasNextDouble()) {
                 String input = userData.next();
                 System.out.printf("\"%s\" is not a valid number.\n", input);

@@ -329,16 +329,26 @@ public class Patient {
     }
 
     public Boolean isThisVitalSignNormal(String vsign) {
+        
         Boolean isMatched = false;
-//                , isNormal = false;
+        
+        String currentVSign = vsign.toUpperCase();
+        
+        if (currentVSign.equals("RESPIRATORY RATE") || currentVSign.equals("HEART RATE")
+                || currentVSign.equals("BLOOD PRESSURE") || currentVSign.equals("WEIGHT")) {
+            isMatched = true;
+        }
+        
+        return isMatched;
+        // isNormal = false;
 
-        String vitalsRegex = "(RESPIRATORY RATE)|(HEART RATE)|(BLOOD PRESSURE)|(WEIGHT)+";
+        /*String vitalsRegex = "(RESPIRATORY RATE)|(HEART RATE)|(BLOOD PRESSURE)|(WEIGHT)+";
 
         String currentVSign = vsign.toUpperCase();
 
         if (currentVSign.matches(vitalsRegex)) {
             isMatched = true;
-        }
+        }*/
 
         /* if (isMatched) {
             String patientType = getPatientType(age, isNewBornOrInfant);
@@ -368,7 +378,7 @@ public class Patient {
 
         return isMatched && isNormal;
          */
-        return isMatched;
+        
     }
 
     public Boolean isThisMatchedVitalSignNormal(String vsign) {
@@ -418,6 +428,9 @@ public class Patient {
                 patientType = "SCHOOL-AGE";
             } else if (age > 12) {
                 patientType = "ADOLSCENT";
+            }else{
+                patientType = "ADOLSCENT";
+                System.out.println("You have entered wrong age! We are assigning you to TODDLER age group!");
             }
         }
 
