@@ -429,7 +429,7 @@ public class Patient {
             } else if (age > 12) {
                 patientType = "ADOLSCENT";
             }else{
-                patientType = "ADOLSCENT";
+                patientType = "TODDLER";
                 System.out.println("You have entered wrong age! We are assigning you to TODDLER age group!");
             }
         }

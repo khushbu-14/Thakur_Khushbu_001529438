@@ -28,6 +28,22 @@ public class Test {
         
         patient = patientList.addNewPatient();
         
+        System.out.println("A patient with below conditions, should not be normal");
+        System.out.println("patientNormal : " + patient.isPatientNormal(0, 0, 0, 0, 0, 0, Boolean.FALSE));
+        System.out.println("---------------------------------------------------------------------------------------------");
+        
+        System.out.println("A patient with below conditions, should not be normal");
+        System.out.println("patientNormal : " + patient.isPatientNormal(0, 30, 130, 110, 14, 22, Boolean.FALSE));
+        System.out.println("---------------------------------------------------------------------------------------------");
+        
+        System.out.println("A patient with below conditions, should not be normal");
+        System.out.println("patientNormal : " + patient.isPatientNormal(0, 0, 0, 0, 0, 0, Boolean.TRUE));
+        System.out.println("---------------------------------------------------------------------------------------------");
+        
+        System.out.println("A patient with below conditions, should not be normal");
+        System.out.println("patientNormal : " + patient.isPatientNormal(0, 0, 0, 0, 0, 0, Boolean.FALSE));
+        System.out.println("---------------------------------------------------------------------------------------------");
+        
         System.out.println("A patient with below conditions, should be normal");
         Boolean patientNormal = patient.isPatientNormal(0, 30, 159.9, 60, 2, 3, Boolean.TRUE);
         System.out.println("patientNormal : " + patientNormal);
