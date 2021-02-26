@@ -9,6 +9,7 @@ package model;
  *
  * @author khushbu
  */
+
 public class VitalSigns {
 
     private double respiratoryRate;

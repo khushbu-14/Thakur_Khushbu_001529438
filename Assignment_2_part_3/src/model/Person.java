@@ -16,7 +16,7 @@ public class Person {
     private String profession;
     private Boolean isNewBornOrInfant;
     private int personId;
-    static int count = 0;
+    private static int count = 0;
 
 //    public Person(String name) {
 //        this.name = name;
@@ -66,23 +66,23 @@ public class Person {
         this.personId = personId;
     }
 
-    public String getPersonType(int age, Boolean isNewBornOrInfant) {
+    public String getPersonType(int userAge, Boolean isUserNewBornOrInfant) {
         String personType = null;
 
-        if (isNewBornOrInfant) {
-            if (age <= 12) {
+        if (isUserNewBornOrInfant) {
+            if (userAge <= 12) {
                 personType = "NEWBORN";
             } else {
                 personType = "INFANT";
             }
         } else {
-            if (age > 1 && age <= 3) {
+            if (userAge > 1 && userAge <= 3) {
                 personType = "TODDLER";
-            } else if (age > 3 && age <= 5) {
+            } else if (userAge > 3 && userAge <= 5) {
                 personType = "PRE-SCHOOLER";
-            } else if (age > 5 && age <= 12) {
+            } else if (userAge > 5 && userAge <= 12) {
                 personType = "SCHOOL-AGE";
-            } else if (age > 12) {
+            } else if (userAge > 12) {
                 personType = "ADOLSCENT";
             } else {
                 personType = "TODDLER";

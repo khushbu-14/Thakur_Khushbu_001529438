@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class PatientDirectory {
 
     private ArrayList<Patient> patientList;
-    
-    public PatientDirectory(){
+
+    public PatientDirectory() {
         patientList = new ArrayList<>();
     }
 
@@ -33,11 +33,24 @@ public class PatientDirectory {
         this.patientList.add(patient);
         return patient;
     }
-    
-    public Patient searchPatient(String name){
-        for(Patient patient : this.patientList){
-            if(patient.getName().equals(name)){
-               return patient; 
+
+    public Patient searchPatient(String name) {
+        for (Patient patient : this.patientList) {
+            if (patient.getName().equals(name)) {
+                return patient;
+            }
+        }
+        return null;
+    }
+
+    public Patient searchPatient1(int personId) {
+//        System.out.println("personId : " + personId);
+
+        for (Patient patient : this.patientList) {
+            int patientId = patient.getPatientId();
+//            System.out.println("patientId : " + patientId);
+            if (patientId == personId) {
+                return patient;
             }
         }
         return null;

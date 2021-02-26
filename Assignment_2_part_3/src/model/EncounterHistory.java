@@ -30,7 +30,7 @@ public class EncounterHistory {
     public void setEncouterHistory(ArrayList<Encounter> encouterHistory) {
         this.encouterHistory = encouterHistory;
     }
-
+    
 //    this adds new record in the array, and returns empty encounter object.
     public Encounter addEncounter() {
         Encounter encounter = new Encounter();

@@ -14,12 +14,11 @@ public class Patient extends Person {
     private Boolean isNormal;
     private EncounterHistory history;
     private int patientId;
-    static int count = 0;
 
     public Patient() {
-        count++;
+        // invoke constructor
+        //create encounter list 
         history = new EncounterHistory();
-        patientId = count;
     }
 
     public Boolean getIsNormal() {
@@ -45,206 +44,206 @@ public class Patient extends Person {
     public void setPatientId(int patientId) {
         this.patientId = patientId;
     }
-
+    
     public Boolean isPatientNormal(int age, double respiratoryRate, double heartRate, double bloodPressure, double weightInKilos, double weightInPounds, Boolean isNewBornOrInfant) {
 
         String patientType = this.getPersonType(age, isNewBornOrInfant);
 
-        Boolean isNormal = false;
+        Boolean isPatientNormal = false;
 
         if (patientType != null) {
             if (((!checkRespiratoryRate(respiratoryRate, patientType) || !checkHeartRate(heartRate, patientType)) || !checkBloodPressue(bloodPressure, patientType))
                     || !checkWeight(weightInKilos, weightInPounds, patientType)) {
-                isNormal = false;
+                isPatientNormal = false;
             } else {
-                isNormal = true;
+                isPatientNormal = true;
             }
         }
-        return isNormal;
+        return isPatientNormal;
     }
 
     public Boolean checkRespiratoryRate(double respiratoryRate, String patientType) {
-        Boolean isNormal = false;
+        Boolean isPatientNormal = false;
 //        System.out.println("respiratoryRate :" + respiratoryRate);
         switch (patientType) {
             case "NEWBORN":
                 if (respiratoryRate >= 30 && respiratoryRate <= 50) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "INFANT":
                 if (respiratoryRate >= 20 && respiratoryRate <= 30) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "TODDLER":
                 if (respiratoryRate >= 20 && respiratoryRate <= 30) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "PRE-SCHOOLER":
                 if (respiratoryRate >= 20 && respiratoryRate <= 30) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "SCHOOL-AGE":
                 if (respiratoryRate >= 20 && respiratoryRate <= 30) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "ADOLSCENT":
                 if (respiratoryRate >= 12 && respiratoryRate <= 20) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
             default:
-                isNormal = false;
+                isPatientNormal = false;
                 break;
         }
-        return isNormal;
+        return isPatientNormal;
     }
 
     public Boolean checkHeartRate(double heartRate, String patientType) {
-        Boolean isNormal = false;
+        Boolean isPatientNormal = false;
 
         switch (patientType) {
             case "NEWBORN":
                 if (heartRate >= 120 && heartRate <= 160) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "INFANT":
                 if (heartRate >= 80 && heartRate <= 140) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "TODDLER":
                 if (heartRate >= 80 && heartRate <= 130) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "PRE-SCHOOLER":
                 if (heartRate >= 80 && heartRate <= 120) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "SCHOOL-AGE":
                 if (heartRate >= 70 && heartRate <= 110) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "ADOLSCENT":
                 if (heartRate >= 55 && heartRate <= 105) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
             default:
-                isNormal = false;
+                isPatientNormal = false;
                 break;
         }
-        return isNormal;
+        return isPatientNormal;
     }
 
     public Boolean checkBloodPressue(double bloodPressure, String patientType) {
-        Boolean isNormal = false;
+        Boolean isPatientNormal = false;
 
         switch (patientType) {
             case "NEWBORN":
                 if (bloodPressure >= 50 && bloodPressure <= 70) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "INFANT":
                 if (bloodPressure >= 70 && bloodPressure <= 100) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "TODDLER":
                 if (bloodPressure >= 80 && bloodPressure <= 110) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "PRE-SCHOOLER":
                 if (bloodPressure >= 80 && bloodPressure <= 110) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "SCHOOL-AGE":
                 if (bloodPressure >= 80 && bloodPressure <= 120) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "ADOLSCENT":
                 if (bloodPressure >= 110 && bloodPressure <= 120) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
             default:
-                isNormal = false;
+                isPatientNormal = false;
                 break;
         }
-        return isNormal;
+        return isPatientNormal;
     }
 
     public Boolean checkWeight(double weightInKilos, double weightInPounds, String patientType) {
-        Boolean isNormal = false;
+        Boolean isPatientNormal = false;
 
         switch (patientType) {
             case "NEWBORN":
                 if ((weightInKilos >= 2 && weightInKilos <= 3) || (weightInPounds >= 4.5 && weightInPounds <= 7)) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "INFANT":
                 if ((weightInKilos >= 4 && weightInKilos <= 10) || (weightInPounds >= 9 && weightInPounds <= 22)) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "TODDLER":
                 if ((weightInKilos >= 10 && weightInKilos <= 14) || (weightInPounds >= 22 && weightInPounds <= 31)) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "PRE-SCHOOLER":
                 if ((weightInKilos >= 14 && weightInKilos <= 18) || (weightInPounds >= 31 && weightInPounds <= 40)) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "SCHOOL-AGE":
                 if ((weightInKilos >= 20 && weightInKilos <= 42) || (weightInPounds >= 41 && weightInPounds <= 92)) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
 
             case "ADOLSCENT":
                 if ((weightInKilos > 50) || (weightInPounds > 110)) {
-                    isNormal = true;
+                    isPatientNormal = true;
                 }
                 break;
             default:
-                isNormal = false;
+                isPatientNormal = false;
                 break;
         }
-        return isNormal;
+        return isPatientNormal;
     }
 
     public Boolean isThisVitalSignNormal(String vsign) {
@@ -259,7 +258,7 @@ public class Patient extends Person {
         }
 
         return isMatched;
-        // isNormal = false;
+        // isPatientNormal = false;
 
         /*String vitalsRegex = "(RESPIRATORY RATE)|(HEART RATE)|(BLOOD PRESSURE)|(WEIGHT)+";
 
@@ -274,28 +273,28 @@ public class Patient extends Person {
 
             switch (currentVSign) {
                 case "RESPIRATORY RATE":
-                    isNormal = checkRespiratoryRate(currentVitalSign.getRespiratoryRate(), patientType);
+                    isPatientNormal = checkRespiratoryRate(currentVitalSign.getRespiratoryRate(), patientType);
                     break;
 
                 case "HEART RATE":
-                    isNormal = checkHeartRate(currentVitalSign.getHeartRate(), patientType);
+                    isPatientNormal = checkHeartRate(currentVitalSign.getHeartRate(), patientType);
                     break;
 
                 case "BLOOD PRESSURE":
-                    isNormal = checkBloodPressue(currentVitalSign.getBloodPressure(), patientType);
+                    isPatientNormal = checkBloodPressue(currentVitalSign.getBloodPressure(), patientType);
                     break;
 
                 case "WEIGHT":
-                    isNormal = checkWeight(currentVitalSign.getWeightInKilos(), currentVitalSign.getWeightInPounds(), patientType);
+                    isPatientNormal = checkWeight(currentVitalSign.getWeightInKilos(), currentVitalSign.getWeightInPounds(), patientType);
                     break;
 
                 default:
-                    isNormal = false;
+                    isPatientNormal = false;
                     break;
             }
         }
 
-        return isMatched && isNormal;
+        return isMatched && isPatientNormal;
          */
     }
 
