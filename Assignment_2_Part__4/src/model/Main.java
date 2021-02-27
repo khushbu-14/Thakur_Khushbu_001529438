@@ -7,6 +7,7 @@ package model;
  */
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -24,6 +25,7 @@ public class Main {
 
     static ArrayList<City> cityList = new ArrayList<>();
 
+//    static HashMap<String, String> medicalAnalysisData = new HashMap<String, String>();
     //    regex for boolean answers
     static String booleanRegex = "(yes)|(no)+";
     static Pattern p = Pattern.compile(booleanRegex, Pattern.CASE_INSENSITIVE);
@@ -60,8 +62,11 @@ public class Main {
     static ArrayList<Community> communityList;
 
     public static void main(String[] args) {
+        userData = new Scanner(System.in);
+
         createCityDatabase();
-        getPersonInput();
+        nextAction();
+//        getPersonInput();
     }
 
     private static void createCityDatabase() {
@@ -161,6 +166,13 @@ public class Main {
             }
             person.setProfession(profession);
 
+            cityName = getUserCityName();
+            person.getResidence().setCityName(cityName);
+
+            communityName = getUserCommunityName();
+            person.getResidence().setCommunityName(communityName);
+
+            /*
             printStatements("Choose city name from below :");
             printCityList();
 
@@ -209,16 +221,11 @@ public class Main {
 
             communityName = communityList.get(communityResult - 1).getCommunityName();
             person.getResidence().setCommunityName(communityName);
-
+             */
             printInConsole("House number");
 
-//            while (!userData.hasNext()) {
-//                System.out.println("That's not a correct answer! Enter valid house number.");
-//                userData.next();
-//            }
-
             houseNo = getInput("house number");
-            
+
             person.getResidence().setHouseNo(houseNo);
         } else {
 
@@ -250,13 +257,13 @@ public class Main {
 
         int res;
         printStatements(name + ", What do you want to do next?");
-        printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Exit -> Press 4");
+        printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Analyze Data -> Press 4\n5) Exit -> Press 5");
 
         do {
             while (!userData.hasNextInt()) {
                 System.out.println("That's not a valid option!");
                 printStatements(name + ", What do you want to do next?");
-                printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Exit -> Press 4");
+                printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Analyze Data -> Press 4\n5) Exit -> Press 5");
                 userData.next();
             }
 
@@ -279,8 +286,10 @@ public class Main {
 
                     getPersonInput();
                     break;
-
                 case 4:
+                    analyzeData();
+                    break;
+                case 5:
                     userData.close();
                     break;
 
@@ -371,10 +380,17 @@ public class Main {
 
         isNormal = patient.isPatientNormal(age, bloodPressure, isNewBornOrInfant);
 
+        String personType = patient.getPersonType(age, isNewBornOrInfant);
+
+//        int lastNum = Integer.parseInt(medicalAnalysisData.get(personType));
         if (isNormal) {
             result = name + " You are normal";
+//            if (lastNum != 0) {
+//                lastNum -= 1;
+//            }
         } else {
             result = name + " You are not normal. Please consult doctor.";
+//            lastNum += 1;
         }
 
         captureTime = new Date();
@@ -383,6 +399,7 @@ public class Main {
         patient.setAge(age);
         patient.setIsNewBornOrInfant(isNewBornOrInfant);
 
+//        medicalAnalysisData.put(personType, Integer.toString(lastNum));
         Encounter encounter = patient.getHistory().addEncounter();
 
         encounter.setEncounterTime(captureTime);
@@ -407,34 +424,41 @@ public class Main {
 
     private static void viewDetails() {
 
-        patient = getPatientDetails();
-
-        printPersonDetails();
-
-        if (patient == null) {
-            printStatements("You have no medical history records!");
-            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        if (person == null) {
+            System.out.println("Oops! We have no users in our database");
         } else {
-            printPatientHistory();
-        }
+            patient = getPatientDetails();
 
+            printPersonDetails();
+
+            if (patient == null) {
+                printStatements("You have no medical history records!");
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+            } else {
+                printPatientHistory();
+            }
+        }
         nextAction();
     }
 
     private static void printPersonDetails() {
+
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        System.out.printf("Name : %s \n", person.getName());
+        if (person != null) {
+            System.out.printf("Name : %s \n", person.getName());
 
-        System.out.printf("Age Group : %s \n",
-                person.getPersonType(person.getAge(), person.getIsNewBornOrInfant()));
+            System.out.printf("Age Group : %s \n",
+                    person.getPersonType(person.getAge(), person.getIsNewBornOrInfant()));
 
-        System.out.printf("Age :  %d \n", person.getAge());
+            System.out.printf("Age :  %d \n", person.getAge());
 
-        System.out.printf("Profession : %s \n", person.getProfession());
+            System.out.printf("Profession : %s \n", person.getProfession());
 
-        System.out.printf("Address : %s %s %s \n", person.getResidence().getHouseNo(), person.getResidence().getCommunityName(), person.getResidence().getCityName());
-
+            System.out.printf("Address : %s %s %s \n", person.getResidence().getHouseNo(), person.getResidence().getCommunityName(), person.getResidence().getCityName());
+        } else {
+            System.out.println("Oops! We have no users in our database");
+        }
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
@@ -554,5 +578,100 @@ public class Main {
         } while (res == null);
 
         return res;
+    }
+
+    private static String getUserCityName() {
+        String res;
+
+        printStatements("Choose city name from below :");
+        printCityList();
+
+        int cityResult;
+
+        do {
+
+            while (!userData.hasNextInt()) {
+                System.out.println("That's not a valid option!");
+                printStatements("Choose your valid option");
+                userData.next();
+            }
+
+            cityResult = userData.nextInt();
+
+            if (cityResult != 1 || cityResult != 2) {
+                printCityList();
+            }
+
+        } while (cityResult > 2 || cityResult < 1);
+
+        communityList = cityList.get(cityResult - 1).getCommunityList();
+
+        res = cityList.get(cityResult - 1).getCityName();
+        return res;
+    }
+
+    private static String getUserCommunityName() {
+        String res;
+
+        printStatements("Choose community name from below :");
+
+        printCommunityList();
+
+        int communityResult;
+
+        do {
+
+            while (!userData.hasNextInt()) {
+                System.out.println("That's not a valid option!");
+                printStatements("Choose your valid option");
+                userData.next();
+            }
+
+            communityResult = userData.nextInt();
+
+            if (communityResult > 4 || communityResult < 1) {
+                printCommunityList();
+            }
+
+        } while (communityResult > 4 || communityResult < 1);
+
+        res = communityList.get(communityResult - 1).getCommunityName();
+
+        return res;
+    }
+
+    private static void analyzeData() {
+
+        if (person == null) {
+            System.out.println("Oops! We have no users in our database");
+        } else {
+
+            String cName = getUserCityName();
+            String comName = getUserCommunityName();
+            HashMap<String, String> medicalAnalysisData = new HashMap<>();
+
+            for (String i : person.getAgeGroups()) {
+                medicalAnalysisData.put(i, "0");
+            }
+
+            for (Patient patientItem : patientList.getPatientList()) {
+                if (patientItem.getResidence().getCommunityName().equals(comName)) {
+                    if (patientItem.getIsNormal()) {
+
+                    } else {
+                        String personType = patientItem.getPersonAgeGroup();
+                        int num = Integer.parseInt(medicalAnalysisData.get(personType));
+                        num++;
+                        medicalAnalysisData.put(personType, "" + num);
+                    }
+                }
+            }
+
+            for (String i : medicalAnalysisData.keySet()) {
+                System.out.println(i + " : " + medicalAnalysisData.get(i));
+            }
+        }
+
+        nextAction();
     }
 }

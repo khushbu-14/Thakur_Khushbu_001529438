@@ -420,7 +420,7 @@ public class Main {
         return res;
     }
 
-    static private Patient getPatientDetails() {
+    private static Patient getPatientDetails() {
         return patientList.searchPatient1(currentPersonId);
     }
 }

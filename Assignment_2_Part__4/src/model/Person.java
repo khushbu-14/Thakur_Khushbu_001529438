@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 /**
  *
  * @author khushbu
@@ -17,7 +20,10 @@ public class Person {
     private Boolean isNewBornOrInfant;
     private int personId;
     private static int count = 0;
+    private String personAgeGroup;
     Residence residence;
+
+    private HashSet<String> ageGroups = new HashSet<>();
 
 //    public Person(String name) {
 //        this.name = name;
@@ -26,6 +32,12 @@ public class Person {
         count++;
         personId = count;
         residence = new Residence();
+        ageGroups.add("NEWBORN");
+        ageGroups.add("INFANT");
+        ageGroups.add("TODDLER");
+        ageGroups.add("PRE-SCHOOLER");
+        ageGroups.add("SCHOOL-AGE");
+        ageGroups.add("ADOLSCENT");
     }
 
     public String getName() {
@@ -66,6 +78,22 @@ public class Person {
 
     public void setPersonId(int personId) {
         this.personId = personId;
+    }
+
+    public HashSet<String> getAgeGroups() {
+        return ageGroups;
+    }
+
+    public void setAgeGroups(HashSet<String> ageGroups) {
+        this.ageGroups = ageGroups;
+    }
+
+    public String getPersonAgeGroup() {
+        return personAgeGroup;
+    }
+
+    public void setPersonAgeGroup(String personAgeGroup) {
+        this.personAgeGroup = personAgeGroup;
     }
 
     public String getPersonType(int userAge, Boolean isUserNewBornOrInfant) {

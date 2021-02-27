@@ -47,7 +47,8 @@ public class Patient extends Person {
     
     public Boolean isPatientNormal(int age,  double bloodPressure, Boolean isNewBornOrInfant) {
 
-        String patientType = this.getPersonType(age, isNewBornOrInfant);
+        String patientType = this.getPersonAgeGroup();
+//                this.getPersonType(age, isNewBornOrInfant);
 
         Boolean isPatientNormal = false;
 
