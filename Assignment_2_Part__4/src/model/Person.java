@@ -133,6 +133,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("Name: " + name + " Age: " + age + " Profession: " + profession + " Age Group : " + personAgeGroup);
+        return String.format("Name: " + name + "\n Age: " + age + "\n Profession: " + profession + "\n Age Group : " + personAgeGroup);
     }
 }

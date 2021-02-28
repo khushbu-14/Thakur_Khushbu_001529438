@@ -12,28 +12,30 @@ import java.util.ArrayList;
  * @author khushbu
  */
 public class PatientDirectory {
-
+    
     private ArrayList<Patient> patientList;
-
+    
     public PatientDirectory() {
         patientList = new ArrayList<>();
     }
-
+    
     public ArrayList<Patient> getPatientList() {
         return patientList;
     }
-
+    
     public void setPatientList(ArrayList<Patient> patientList) {
         this.patientList = patientList;
     }
-
-    public Patient addNewPatient() {
+    
+    public Patient addNewPatient(Person person) {
         Patient patient = new Patient();
-
+        patient.setAge(person.getAge());
+        patient.setName(person.getName());
+        patient.setPatientId(person.getPersonId());
         this.patientList.add(patient);
         return patient;
     }
-
+    
     public Patient searchPatient(String name) {
         for (Patient patient : this.patientList) {
             if (patient.getName().equals(name)) {
@@ -42,13 +44,10 @@ public class PatientDirectory {
         }
         return null;
     }
-
+    
     public Patient searchPatient1(int personId) {
-//        System.out.println("personId : " + personId);
-
         for (Patient patient : this.patientList) {
             int patientId = patient.getPatientId();
-//            System.out.println("patientId : " + patientId);
             if (patientId == personId) {
                 return patient;
             }

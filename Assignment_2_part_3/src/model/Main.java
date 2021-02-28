@@ -57,14 +57,15 @@ public class Main {
 
         userData = new Scanner(System.in);
 
-        printInConsole("Name");
-
-        while (!userData.hasNext()) {
-            System.out.println("That's not a correct answer! Enter valid name.");
-            userData.next();
-        }
-
-        name = userData.nextLine().toUpperCase();
+        name = getStringInput("name");
+//        printInConsole("Name");
+//
+//        while (!userData.hasNext()) {
+//            System.out.println("That's not a correct answer! Enter valid name.");
+//            userData.next();
+//        }
+//
+//        name = userData.nextLine().trim().toUpperCase();
 
         person = personList.searchPerson(name);
         result = name;
@@ -87,6 +88,12 @@ public class Main {
             person.setIsNewBornOrInfant(isNewBornOrInfant);
 
             age = getInput("age");
+
+            if (isNewBornOrInfant && age > 12) {
+                printStatements("Oops! age in months cannot be greater than 12. Setting it to 12");
+                age = 12;
+            }
+
             person.setAge(age);
 
             if (isNewBornOrInfant || age < 14) {
@@ -203,7 +210,7 @@ public class Main {
         if (patient == null) {
             //  if patient does not exists, add new record
             printStatements("Hope you are feeling well. This is your first visit with us! \n");
-            patient = patientList.addNewPatient();
+            patient = patientList.addNewPatient(person);
             patient.setPatientId(currentPersonId);
 
         } else {
@@ -328,9 +335,17 @@ public class Main {
         System.out.printf("Age Group : %s \n",
                 person.getPersonType(person.getAge(), person.getIsNewBornOrInfant()));
 
-        System.out.printf("Age :  %d \n", person.getAge());
+        if (person.getIsNewBornOrInfant()) {
+            System.out.printf("Age :  %d months old \n", person.getAge());
+        } else {
+            System.out.printf("Age :  %d years old \n", person.getAge());
+        }
+        if (person.getProfession() == null) {
+            System.out.println("Profession : NA \n");
+        } else {
+            System.out.printf("Profession : %s \n", person.getProfession());
+        }
 
-        System.out.printf("Profession : %s \n", person.getProfession());
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
@@ -422,5 +437,23 @@ public class Main {
 
     private static Patient getPatientDetails() {
         return patientList.searchPatient1(currentPersonId);
+    }
+
+    private static String getStringInput(String type) {
+        String res = null;
+
+        do {
+            printStatements("Please enter your " + type);
+            while (!userData.hasNext()) {
+                String input = userData.next();
+                System.out.printf("\"%s\" is not a valid option.\n", input);
+                System.out.println("Enter valid " + type);
+            }
+
+            res = userData.nextLine().trim().toUpperCase();
+
+        } while (res == null || res.trim().equals(""));
+
+        return res;
     }
 }

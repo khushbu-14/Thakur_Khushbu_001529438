@@ -9,7 +9,6 @@ package model;
  *
  * @author khushbu
  */
-
 public class Patient extends Person {
 
     private Boolean isNormal;
@@ -50,7 +49,6 @@ public class Patient extends Person {
 
 //        String patientType = this.getPersonAgeGroup();
 //                this.getPersonType(age, isNewBornOrInfant);
-
         Boolean isPatientNormal = false;
 
         if (personType != null) {
@@ -302,6 +300,6 @@ public class Patient extends Person {
 
     @Override
     public String toString() {
-        return String.format("Is patient normal: " + isNormal + " Patient Id: " + patientId);
+        return String.format("Name: " + this.getName() + "\n Age: " + this.getAge() + "\n Profession: " + this.getProfession() + "\n Age Group : " + this.getPersonAgeGroup() + "\nIs patient normal: " + isNormal + "\n Patient Id: " + patientId + " \n Address : " + this.getResidence().getHouseNo() + " " + this.getResidence().getCommunityName() + " " + this.getResidence().getCityName());
     }
 }

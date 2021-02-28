@@ -35,6 +35,7 @@ public class PatientDirectory {
         patient.setAge(person.getAge());
         patient.setPersonAgeGroup(person.getPersonAgeGroup());
         patient.setPatientId(person.getPersonId());
+        patient.setProfession(person.getProfession());
 
         this.patientList.add(patient);
         return patient;

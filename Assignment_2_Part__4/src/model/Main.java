@@ -91,7 +91,7 @@ public class Main {
         city1.addNewCommunity("Kandivali");
     }
 
-    private static void getPersonInput() {
+    private static void getPersonInput(Boolean shouldVisitDoctor) {
 
         userData = new Scanner(System.in);
 
@@ -126,6 +126,12 @@ public class Main {
             person.setIsNewBornOrInfant(isNewBornOrInfant);
 
             age = getInput("age");
+
+            if (isNewBornOrInfant && age > 12) {
+                printStatements("Oops! age in months cannot be greater than 12. Setting it to 12");
+                age = 12;
+            }
+
             person.setAge(age);
 
             personType = person.getPersonType(age, isNewBornOrInfant);
@@ -229,7 +235,6 @@ public class Main {
             person.getResidence().setCommunityName(communityName);
              */
 //            printInConsole("House number");Ï
-
             houseNo = getStringInput("house number");
 
             person.getResidence().setHouseNo(houseNo);
@@ -256,7 +261,11 @@ public class Main {
 
         currentPersonId = person.getPersonId();
 
-        nextAction();
+        if (shouldVisitDoctor) {
+            visitDoctor();
+        } else {
+            nextAction();
+        }
     }
 
     private static void nextAction() {
@@ -270,21 +279,20 @@ public class Main {
         printStatements("3) Change user -> Press 3\n");
         printStatements("4) Analyze Data -> Press 4\n");
         printStatements("5) List all persons in database -> Press 5 \n");
-        printStatements("5) List all PATIENTS -> Press 6 \n");
-        printStatements("6) Exit -> Press 7");
+        printStatements("6) List all PATIENTS -> Press 6 \n");
+        printStatements("7) Exit -> Press 7");
 
         do {
             while (!userData.hasNextInt()) {
                 System.out.println("That's not a valid option!");
                 greetUser();
-//                printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Analyze Data -> Press 4\n5) Exit -> Press 5");
                 printStatements("1) Visit Doctor -> Press 1\n");
                 printStatements("2) View my details -> Press 2\n");
                 printStatements("3) Change user -> Press 3\n");
                 printStatements("4) Analyze Data -> Press 4\n");
                 printStatements("5) List all persons in database -> Press 5 \n");
-                printStatements("5) List all PATIENTS -> Press 6 \n");
-                printStatements("6) Exit -> Press 7");
+                printStatements("6) List all PATIENTS -> Press 6 \n");
+                printStatements("7) Exit -> Press 7");
                 userData.next();
             }
 
@@ -306,7 +314,7 @@ public class Main {
                     person = null;
                     patient = null;
 
-                    getPersonInput();
+                    getPersonInput(false);
                     break;
 
                 case 4:
@@ -336,7 +344,7 @@ public class Main {
 
         if (person == null) {
             System.out.println("Oops! We have no users in our database");
-            getPersonInput();
+            getPersonInput(true);
         } else {
             if (patient == null) {
                 patient = getPatientDetails();
@@ -351,9 +359,9 @@ public class Main {
 
                 patient = patientList.addNewPatient(currentPerson);
 
-                System.out.println(patient.getResidence().getCityName());
-                System.out.println(patient.getResidence().getCommunityName());
-                System.out.println(patient.getResidence().getHouseNo());
+//                System.out.println(patient.getResidence().getCityName());
+//                System.out.println(patient.getResidence().getCommunityName());
+//                System.out.println(patient.getResidence().getHouseNo());
 
             } else {
                 printStatements("You have visited before " + patient.getHistory().getEncouterHistory().size() + " times");
@@ -368,17 +376,17 @@ public class Main {
             System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
 
             /*
-        respiratoryRate = getDoubleInput("respiratory rate");
+                respiratoryRate = getDoubleInput("respiratory rate");
 
-        heartRate = getDoubleInput("heart rate");
+                heartRate = getDoubleInput("heart rate");
 
-        bloodPressure = getDoubleInput("blood pressure");
+                bloodPressure = getDoubleInput("blood pressure");
 
-        printStatements("Choose from below how you want to enter weight!");
+                printStatements("Choose from below how you want to enter weight!");
 
-        printStatements("1) KGS -> Press 1\n2) Pounds -> Press 2");
+                printStatements("1) KGS -> Press 1\n2) Pounds -> Press 2");
 
-        int res;
+                int res;
 
         do {
             while (!userData.hasNextInt()) {
@@ -494,7 +502,11 @@ public class Main {
             System.out.printf("Age Group : %s \n",
                     person.getPersonType(person.getAge(), person.getIsNewBornOrInfant()));
 
-            System.out.printf("Age :  %d \n", person.getAge());
+            if (person.getIsNewBornOrInfant()) {
+                System.out.printf("Age :  %d months old \n", person.getAge());
+            } else {
+                System.out.printf("Age :  %d years old \n", person.getAge());
+            }
 
             System.out.printf("Profession : %s \n", person.getProfession());
 
@@ -616,7 +628,7 @@ public class Main {
                 System.out.println("Enter valid " + type);
             }
 
-            res = userData.nextLine().toUpperCase();
+            res = userData.nextLine().trim().toUpperCase();
 
         } while (res == null || res.trim().equals(""));
 
@@ -757,6 +769,7 @@ public class Main {
         } else {
             for (Patient patientItem : patientList.getPatientList()) {
                 System.out.println(patientItem);
+                System.out.println("---- ----- ---- ----- ----- ------ ----- ----- ---- ---- ----- -----");
             }
         }
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
