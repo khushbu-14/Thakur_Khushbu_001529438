@@ -276,7 +276,7 @@ public class Main {
 
         printStatements("1) Visit Doctor -> Press 1\n");
         printStatements("2) View my details -> Press 2\n");
-        printStatements("3) Change user -> Press 3\n");
+        printStatements("3) Change /  user -> Press 3\n");
         printStatements("4) Analyze Data -> Press 4\n");
         printStatements("5) List all persons in database -> Press 5 \n");
         printStatements("6) List all PATIENTS -> Press 6 \n");
@@ -362,7 +362,6 @@ public class Main {
 //                System.out.println(patient.getResidence().getCityName());
 //                System.out.println(patient.getResidence().getCommunityName());
 //                System.out.println(patient.getResidence().getHouseNo());
-
             } else {
                 printStatements("You have visited before " + patient.getHistory().getEncouterHistory().size() + " times");
                 String txt = patient.getIsNormal() ? "normal" : "not normal.";
@@ -700,7 +699,7 @@ public class Main {
         if (person == null) {
             System.out.println("Oops! We have no users in our database");
         } else {
-
+            int total = 0;
             String cName = getUserCityName();
             String comName = getUserCommunityName();
             HashMap<String, String> medicalAnalysisData = new HashMap<>();
@@ -718,6 +717,7 @@ public class Main {
                         int num = Integer.parseInt(medicalAnalysisData.get(currentPersonType));
                         num++;
                         medicalAnalysisData.put(currentPersonType, "" + num);
+                        total++;
                     }
                 }
             }
@@ -727,6 +727,8 @@ public class Main {
             for (String i : medicalAnalysisData.keySet()) {
                 System.out.println(i + " : " + medicalAnalysisData.get(i));
             }
+            System.out.println("---- ----- ---- ----- ----- ------ ----- ----- ---- ---- ----- -----");
+            System.out.println("Total : " + total);
             System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
 
