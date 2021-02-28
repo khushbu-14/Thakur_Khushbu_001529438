@@ -13,16 +13,16 @@ public class Residence {
 
     private String cityName;
     private String communityName;
-    private int houseNo;
+    private String houseNo;
 
-    public int getHouseNo() {
+    public String getHouseNo() {
         return houseNo;
     }
 
-    public void setHouseNo(int houseNo) {
+    public void setHouseNo(String houseNo) {
         this.houseNo = houseNo;
     }
-    
+
     private int zipcode;
 
     public String getCityName() {
@@ -47,5 +47,10 @@ public class Residence {
 
     public void setZipcode(int zipcode) {
         this.zipcode = zipcode;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("House Number: " + houseNo + " Community: " + communityName + " City: " + cityName);
     }
 }

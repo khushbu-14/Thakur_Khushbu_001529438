@@ -9,6 +9,7 @@ package model;
  *
  * @author khushbu
  */
+
 public class Patient extends Person {
 
     private Boolean isNormal;
@@ -44,20 +45,21 @@ public class Patient extends Person {
     public void setPatientId(int patientId) {
         this.patientId = patientId;
     }
-    
-    public Boolean isPatientNormal(int age,  double bloodPressure, Boolean isNewBornOrInfant) {
 
-        String patientType = this.getPersonAgeGroup();
+    public Boolean isPatientNormal(int age, double bloodPressure, Boolean isNewBornOrInfant, String personType) {
+
+//        String patientType = this.getPersonAgeGroup();
 //                this.getPersonType(age, isNewBornOrInfant);
 
         Boolean isPatientNormal = false;
 
-        if (patientType != null) {
-            if (!checkBloodPressue(bloodPressure, patientType)) {
-                isPatientNormal = false;
-            } else {
-                isPatientNormal = true;
-            }
+        if (personType != null) {
+            isPatientNormal = checkBloodPressue(bloodPressure, personType);
+//            if (checkBloodPressue(bloodPressure, patientType)) {
+//                isPatientNormal = false;
+//            } else {
+//                isPatientNormal = true;
+//            }
         }
         return isPatientNormal;
     }
@@ -298,4 +300,8 @@ public class Patient extends Person {
          */
     }
 
+    @Override
+    public String toString() {
+        return String.format("Is patient normal: " + isNormal + " Patient Id: " + patientId);
+    }
 }

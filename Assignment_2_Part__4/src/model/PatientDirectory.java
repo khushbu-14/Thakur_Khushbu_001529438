@@ -27,8 +27,14 @@ public class PatientDirectory {
         this.patientList = patientList;
     }
 
-    public Patient addNewPatient() {
+    public Patient addNewPatient(Person person) {
         Patient patient = new Patient();
+
+//        set all person details in patient
+        patient.setResidence(person.getResidence());
+        patient.setAge(person.getAge());
+        patient.setPersonAgeGroup(person.getPersonAgeGroup());
+        patient.setPatientId(person.getPersonId());
 
         this.patientList.add(patient);
         return patient;
@@ -44,11 +50,9 @@ public class PatientDirectory {
     }
 
     public Patient searchPatient1(int personId) {
-//        System.out.println("personId : " + personId);
 
         for (Patient patient : this.patientList) {
             int patientId = patient.getPatientId();
-//            System.out.println("patientId : " + patientId);
             if (patientId == personId) {
                 return patient;
             }

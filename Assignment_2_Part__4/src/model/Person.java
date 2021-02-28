@@ -130,4 +130,9 @@ public class Person {
     public void setResidence(Residence residence) {
         this.residence = residence;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Name: " + name + " Age: " + age + " Profession: " + profession + " Age Group : " + personAgeGroup);
+    }
 }

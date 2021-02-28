@@ -45,6 +45,7 @@ public class Main {
     static double weightInPounds;
     static Date captureTime;
     static String profession;
+    static String personType;
 
     static Boolean isNormal;
 
@@ -57,7 +58,7 @@ public class Main {
     static String cityName;
     static String communityName;
 //    static int zipcode;
-    static int houseNo;
+    static String houseNo;
 
     static ArrayList<Community> communityList;
 
@@ -94,15 +95,16 @@ public class Main {
 
         userData = new Scanner(System.in);
 
-        printInConsole("Name");
+//        printInConsole("Name");
+        name = getStringInput("name");
 
-        while (!userData.hasNext()) {
-            System.out.println("That's not a correct answer! Enter valid name.");
-            userData.next();
-        }
-
-        name = userData.nextLine().toUpperCase();
-
+//        while (!userData.hasNext()) {
+//            System.out.println("That's not a correct answer! Enter valid name.");
+//            userData.next();
+//        }
+//
+//        name = userData.nextLine().toUpperCase();
+//        currentPersonName = name;
         person = personList.searchPerson(name);
         result = name;
 
@@ -126,11 +128,15 @@ public class Main {
             age = getInput("age");
             person.setAge(age);
 
+            personType = person.getPersonType(age, isNewBornOrInfant);
+
+            person.setPersonAgeGroup(personType);
+
             if (isNewBornOrInfant || age < 14) {
                 profession = "OTHERS";
             } else {
                 printStatements("Choose your profession from below");
-                printStatements("1) DOCTOR -> Press 1\n2) MEDICAL STAFF -> Press 2\n2) OTHERS -> Press 3");
+                printStatements("1) DOCTOR -> Press 1\n2) MEDICAL STAFF -> Press 2\n3) OTHERS -> Press 3");
 
                 int professionResult;
 
@@ -222,9 +228,9 @@ public class Main {
             communityName = communityList.get(communityResult - 1).getCommunityName();
             person.getResidence().setCommunityName(communityName);
              */
-            printInConsole("House number");
+//            printInConsole("House number");Ï
 
-            houseNo = getInput("house number");
+            houseNo = getStringInput("house number");
 
             person.getResidence().setHouseNo(houseNo);
         } else {
@@ -238,14 +244,14 @@ public class Main {
 
             printStatements("Welcome back " + name);
 
-            String personType = person.getPersonType(age, isNewBornOrInfant);
+            personType = person.getPersonType(age, isNewBornOrInfant);
             printStatements("You belong to group : " + personType);
 
             printStatements("Your profession is : " + profession);
 
             printStatements("Your address is : " + profession);
 
-            System.out.printf("Address : %s %s %s \n", houseNo, communityName, cityName);
+            System.out.printf("Address : %s, %s, %s \n", houseNo, communityName, cityName);
         }
 
         currentPersonId = person.getPersonId();
@@ -256,14 +262,29 @@ public class Main {
     private static void nextAction() {
 
         int res;
-        printStatements(name + ", What do you want to do next?");
-        printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Analyze Data -> Press 4\n5) Exit -> Press 5");
+
+        greetUser();
+
+        printStatements("1) Visit Doctor -> Press 1\n");
+        printStatements("2) View my details -> Press 2\n");
+        printStatements("3) Change user -> Press 3\n");
+        printStatements("4) Analyze Data -> Press 4\n");
+        printStatements("5) List all persons in database -> Press 5 \n");
+        printStatements("5) List all PATIENTS -> Press 6 \n");
+        printStatements("6) Exit -> Press 7");
 
         do {
             while (!userData.hasNextInt()) {
                 System.out.println("That's not a valid option!");
-                printStatements(name + ", What do you want to do next?");
-                printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Analyze Data -> Press 4\n5) Exit -> Press 5");
+                greetUser();
+//                printStatements("1) Visit Doctor -> Press 1\n2) View my details -> Press 2\n3) Change user -> Press 3\n4) Analyze Data -> Press 4\n5) Exit -> Press 5");
+                printStatements("1) Visit Doctor -> Press 1\n");
+                printStatements("2) View my details -> Press 2\n");
+                printStatements("3) Change user -> Press 3\n");
+                printStatements("4) Analyze Data -> Press 4\n");
+                printStatements("5) List all persons in database -> Press 5 \n");
+                printStatements("5) List all PATIENTS -> Press 6 \n");
+                printStatements("6) Exit -> Press 7");
                 userData.next();
             }
 
@@ -274,6 +295,7 @@ public class Main {
                     patient = null;
                     visitDoctor();
                     break;
+
                 case 2:
                     patient = null;
                     viewDetails();
@@ -286,10 +308,20 @@ public class Main {
 
                     getPersonInput();
                     break;
+
                 case 4:
                     analyzeData();
                     break;
+
                 case 5:
+                    listAllPersons();
+                    break;
+
+                case 6:
+                    listAllPatients();
+                    break;
+
+                case 7:
                     userData.close();
                     break;
 
@@ -297,35 +329,45 @@ public class Main {
                     printStatements("Unrecognized option.");
                     break;
             }
-        } while (res > 4 || res < 1);
+        } while (res > 7 || res < 1);
     }
 
     private static void visitDoctor() {
 
-        if (patient == null) {
-            patient = getPatientDetails();
-        }
-
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
-
-        if (patient == null) {
-            //  if patient does not exists, add new record
-            printStatements("Hope you are feeling well. This is your first visit with us! \n");
-            patient = patientList.addNewPatient();
-            patient.setPatientId(currentPersonId);
-
+        if (person == null) {
+            System.out.println("Oops! We have no users in our database");
+            getPersonInput();
         } else {
-            printStatements("You have visited before " + patient.getHistory().getEncouterHistory().size() + " times");
-            String txt = patient.getIsNormal() ? "normal" : "not normal.";
-            printStatements("Your last records show that you were " + txt + " Let's check you again!");
-        }
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+            if (patient == null) {
+                patient = getPatientDetails();
+            }
 
-        printStatements("Please provide us with few of your details. \n");
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+            if (patient == null) {
+                //  if patient does not exists, add new record
+                printStatements("Hope you are feeling well. This is your first visit with us! \n");
+                Person currentPerson = personList.searchPerson(name);
 
-        /*
+                patient = patientList.addNewPatient(currentPerson);
+
+                System.out.println(patient.getResidence().getCityName());
+                System.out.println(patient.getResidence().getCommunityName());
+                System.out.println(patient.getResidence().getHouseNo());
+
+            } else {
+                printStatements("You have visited before " + patient.getHistory().getEncouterHistory().size() + " times");
+                String txt = patient.getIsNormal() ? "normal" : "not normal.";
+                printStatements("Your last records show that you were " + txt + " Let's check you again!");
+            }
+
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            printStatements("Please provide us with few of your details. \n");
+
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            /*
         respiratoryRate = getDoubleInput("respiratory rate");
 
         heartRate = getDoubleInput("heart rate");
@@ -373,53 +415,54 @@ public class Main {
             weightInPounds = getDoubleInput("weight (pounds)");
             weightInKilos = weightInPounds / weightConversion;
         }
-         */
-        bloodPressure = getDoubleInput("blood pressure");
+             */
+            bloodPressure = getDoubleInput("blood pressure");
 
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        isNormal = patient.isPatientNormal(age, bloodPressure, isNewBornOrInfant);
+            isNormal = patient.isPatientNormal(age, bloodPressure, isNewBornOrInfant, personType);
 
-        String personType = patient.getPersonType(age, isNewBornOrInfant);
+            String personType = patient.getPersonType(age, isNewBornOrInfant);
 
 //        int lastNum = Integer.parseInt(medicalAnalysisData.get(personType));
-        if (isNormal) {
-            result = name + " You are normal";
+            if (isNormal) {
+                result = name + " You are normal";
 //            if (lastNum != 0) {
 //                lastNum -= 1;
 //            }
-        } else {
-            result = name + " You are not normal. Please consult doctor.";
+            } else {
+                result = name + " You are not normal. Please consult doctor.";
 //            lastNum += 1;
-        }
+            }
 
-        captureTime = new Date();
+            captureTime = new Date();
 
-        patient.setName(name);
-        patient.setAge(age);
-        patient.setIsNewBornOrInfant(isNewBornOrInfant);
+            patient.setName(name);
+            patient.setAge(age);
+            patient.setIsNewBornOrInfant(isNewBornOrInfant);
 
 //        medicalAnalysisData.put(personType, Integer.toString(lastNum));
-        Encounter encounter = patient.getHistory().addEncounter();
+            Encounter encounter = patient.getHistory().addEncounter();
 
-        encounter.setEncounterTime(captureTime);
-        VitalSigns currentVitalSigns = encounter.getVitalSigns();
+            encounter.setEncounterTime(captureTime);
+            VitalSigns currentVitalSigns = encounter.getVitalSigns();
 
-        currentVitalSigns.setBloodPressure(bloodPressure);
-        currentVitalSigns.setIsRecordNormal(isNormal);
+            currentVitalSigns.setBloodPressure(bloodPressure);
+            currentVitalSigns.setIsRecordNormal(isNormal);
 
-        /* currentVitalSigns.setHeartRate(heartRate);
+            /* currentVitalSigns.setHeartRate(heartRate);
         currentVitalSigns.setRespiratoryRate(respiratoryRate);
         currentVitalSigns.setWeightInKilos(weightInKilos);
         currentVitalSigns.setWeightInPounds(weightInPounds);
         currentVitalSigns.setIsRecordNormal(isNormal); */
-        patient.setIsNormal(isNormal);
+            patient.setIsNormal(isNormal);
 
-        System.out.println("----------------------------------------------------");
-        printStatements(result);
-        System.out.println("----------------------------------------------------");
+            System.out.println("----------------------------------------------------");
+            printStatements(result);
+            System.out.println("----------------------------------------------------");
+            nextAction();
+        }
 
-        nextAction();
     }
 
     private static void viewDetails() {
@@ -455,7 +498,7 @@ public class Main {
 
             System.out.printf("Profession : %s \n", person.getProfession());
 
-            System.out.printf("Address : %s %s %s \n", person.getResidence().getHouseNo(), person.getResidence().getCommunityName(), person.getResidence().getCityName());
+            System.out.printf("Address : %s, %s, %s \n", person.getResidence().getHouseNo(), person.getResidence().getCommunityName(), person.getResidence().getCityName());
         } else {
             System.out.println("Oops! We have no users in our database");
         }
@@ -575,7 +618,7 @@ public class Main {
 
             res = userData.nextLine().toUpperCase();
 
-        } while (res == null);
+        } while (res == null || res.trim().equals(""));
 
         return res;
     }
@@ -659,19 +702,64 @@ public class Main {
                     if (patientItem.getIsNormal()) {
 
                     } else {
-                        String personType = patientItem.getPersonAgeGroup();
-                        int num = Integer.parseInt(medicalAnalysisData.get(personType));
+                        String currentPersonType = patientItem.getPersonAgeGroup();
+                        int num = Integer.parseInt(medicalAnalysisData.get(currentPersonType));
                         num++;
-                        medicalAnalysisData.put(personType, "" + num);
+                        medicalAnalysisData.put(currentPersonType, "" + num);
                     }
                 }
             }
 
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("Number of abnormal cases for each age groups are : \n");
             for (String i : medicalAnalysisData.keySet()) {
                 System.out.println(i + " : " + medicalAnalysisData.get(i));
             }
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
 
+        nextAction();
+    }
+
+    private static void greetUser() {
+        if (!"".equals(name)) {
+            printStatements(name + ", What do you want to do?");
+        } else {
+            printStatements("What do you want to do?");
+        }
+    }
+
+    private static void listAllPersons() {
+        if (person == null) {
+            System.out.println("Oops! We have no users in our database");
+        } else {
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            if (personList.getPersonList().isEmpty()) {
+                System.out.println("No persons found!");
+            } else {
+                for (Person personItem : personList.getPersonList()) {
+                    System.out.println(personItem);
+                    System.out.println("---- ----- ---- ----- ----- ------ ----- ----- ---- ---- ----- -----");
+                    System.out.println(personItem.getResidence());
+                }
+            }
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        }
+
+        nextAction();
+    }
+
+    private static void listAllPatients() {
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        if (patientList.getPatientList().isEmpty()) {
+            System.out.println("No patient found!");
+        } else {
+            for (Patient patientItem : patientList.getPatientList()) {
+                System.out.println(patientItem);
+            }
+        }
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------");
         nextAction();
     }
 }

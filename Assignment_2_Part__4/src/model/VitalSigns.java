@@ -9,7 +9,6 @@ package model;
  *
  * @author khushbu
  */
-
 public class VitalSigns {
 
     private double respiratoryRate;
@@ -67,4 +66,8 @@ public class VitalSigns {
         this.isRecordNormal = isRecordNormal;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Blood Pressure : " + bloodPressure);
+    }
 }

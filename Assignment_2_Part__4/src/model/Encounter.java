@@ -37,4 +37,9 @@ public class Encounter {
     public void setVitalSigns(VitalSigns vitalSigns) {
         this.vitalSigns = vitalSigns;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("Last encounter time: " + encounterTime);
+    }
 }

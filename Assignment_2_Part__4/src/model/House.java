@@ -9,6 +9,7 @@ package model;
  *
  * @author khushbu
  */
+
 public class House {
 
     private String houseNo;
