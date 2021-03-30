@@ -101,13 +101,13 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         navbarLayout.setHorizontalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navbarLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(70, 70, 70)
                 .addComponent(btnCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addGap(80, 80, 80)
                 .addComponent(btnRestaurant, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
+                .addGap(80, 80, 80)
                 .addComponent(btnDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+                .addGap(70, 70, 70))
         );
         navbarLayout.setVerticalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,10 +127,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         adminPanel.setLayout(adminPanelLayout);
         adminPanelLayout.setHorizontalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(adminPanelLayout.createSequentialGroup()
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addGap(1, 1, 1)
-                .addComponent(navbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +158,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnDeliveryManActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliveryManActionPerformed
         // TODO add your handling code here:
 
-
+        manageDeliveryMan();
     }//GEN-LAST:event_btnDeliveryManActionPerformed
 
 
@@ -183,6 +185,15 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         userinterface.SystemAdminWorkArea.ManageRestaurantsPanel manageRestaurant = new userinterface.SystemAdminWorkArea.ManageRestaurantsPanel(mainPanel, ecosystem);
 
         mainPanel.add("ManageRestaurantPanel", manageRestaurant);
+
+        CardLayout layout = (CardLayout) mainPanel.getLayout();
+        layout.next(mainPanel);
+    }
+
+    private void manageDeliveryMan() {
+        userinterface.SystemAdminWorkArea.ManageDeliveryManPanel manageDeliveryManPanel = new userinterface.SystemAdminWorkArea.ManageDeliveryManPanel(mainPanel, ecosystem);
+
+        mainPanel.add("ManageDeliveryManPanel", manageDeliveryManPanel);
 
         CardLayout layout = (CardLayout) mainPanel.getLayout();
         layout.next(mainPanel);
