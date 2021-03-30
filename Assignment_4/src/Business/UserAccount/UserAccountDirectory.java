@@ -55,4 +55,8 @@ public class UserAccountDirectory {
         userAccountList.add(userAccount);
         return userAccount;
     }
+    
+     public void removeUserAccount(UserAccount user){
+        userAccountList.remove(user);
+    }
 }
