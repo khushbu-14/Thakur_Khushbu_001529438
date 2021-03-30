@@ -32,7 +32,13 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         this.userProcessContainer = parentContainerPanel;
         this.ecosystem = ecosystem;
         utils = new Utils();
+
         initComponents();
+        
+        btnSave.setVisible(true);
+        btnUpdateSave.setVisible(false);
+        txtUsername.setEditable(true);
+        
         populateTable();
     }
 
@@ -60,6 +66,7 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         txtUsername = new javax.swing.JTextField();
         lblUsername = new javax.swing.JLabel();
+        btnUpdateSave = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(249, 244, 244));
 
@@ -163,6 +170,18 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblUsername.setText("Username :");
 
+        btnUpdateSave.setBackground(new java.awt.Color(108, 175, 243));
+        btnUpdateSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
+        btnUpdateSave.setText("Update");
+        btnUpdateSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnUpdateSave.setBorderPainted(false);
+        btnUpdateSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnUpdateSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateSaveActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -196,7 +215,9 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
                 .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnUpdateSave, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(217, 217, 217))
         );
         layout.setVerticalGroup(
@@ -234,16 +255,53 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
                         .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33)
                 .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnUpdateSave, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private int getSelectedRow() {
+        int selectedRowIndex = tblCustomerList.getSelectedRow();
+        return selectedRowIndex;
+    }
 
+    private Customer getSelectedCustomer() {
+        int selectedRowIndex = tblCustomerList.getSelectedRow();
+
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Oops! Please select a customer first.");
+            return null;
+        }
+
+        Customer cs = (Customer) tblCustomerList.getValueAt(selectedRowIndex, 1);
+
+        return cs;
+    }
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        Customer cs = getSelectedCustomer();
+
+        if (cs != null) {
+            txtName.setText(cs.getName());
+            txtAddress.setText(cs.getAddress());
+            txtPassword.setText(cs.getPassword());
+            txtPhoneNumber.setText(cs.getPhone());
+            txtUsername.setText(cs.getUsername());
+            btnUpdateSave.setVisible(true);
+            btnSave.setVisible(false);
+            txtUsername.setEditable(false);
+        }
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        Customer cs = getSelectedCustomer();
 
+        if (cs != null) {
+            ecosystem.getCustomerDirectory().removeCustomer(cs);
+            JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
+            populateTable();
+        }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -273,21 +331,62 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
             ecosystem.getCustomerDirectory().addCustomer(customer);
 
             populateTable();
-            
+
             txtName.setText(null);
             txtAddress.setText(null);
             txtPassword.setText(null);
             txtPhoneNumber.setText(null);
             txtUsername.setText(null);
         }
-
     }//GEN-LAST:event_btnSaveActionPerformed
 
+    private void btnUpdateSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateSaveActionPerformed
+        // TODO add your handling code here:
+        Customer cs = getSelectedCustomer();
+
+        if (cs != null) {
+            String name = txtName.getText().trim(),
+                    address = txtAddress.getText().trim(),
+                    password = txtPassword.getText().trim();
+
+            String phoneNo = txtPhoneNumber.getText().trim();
+
+            if (!utils.isStringInputValid(name)) {
+                JOptionPane.showMessageDialog(this, "Please enter valid name");
+            } else if (!utils.isStringInputValid(address)) {
+                JOptionPane.showMessageDialog(this, "Please enter valid address");
+            } else if (!utils.isStringInputValid(phoneNo) || phoneNo.length() != 10) {
+                JOptionPane.showMessageDialog(this, "Please enter valid 10 digit phone number");
+            } else if (!utils.isStringInputValid(password)) {
+                JOptionPane.showMessageDialog(this, "Please enter valid password");
+            } else {
+                txtUsername.setEditable(true);
+                btnUpdateSave.setVisible(false);
+                btnSave.setVisible(true);
+
+                cs.setName(name);
+                cs.setAddress(address);
+                cs.setPassword(password);
+                cs.setPhone(phoneNo);
+                
+                populateTable();
+
+                JOptionPane.showMessageDialog(this, name + " updated in the list successfully!");
+
+                txtName.setText(null);
+                txtAddress.setText(null);
+                txtPassword.setText(null);
+                txtPhoneNumber.setText(null);
+                txtUsername.setText(null);
+            }
+        }
+    }//GEN-LAST:event_btnUpdateSaveActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton btnUpdateSave;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblName;
