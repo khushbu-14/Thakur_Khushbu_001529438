@@ -146,7 +146,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPassword.setText("Delivery Man Password :");
 
-        btnSave.setBackground(new java.awt.Color(108, 175, 243));
+        btnSave.setBackground(new java.awt.Color(176, 222, 144));
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnSave.setText("Submit");
         btnSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
@@ -164,7 +164,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblUsername.setText("Delivery Man Username :");
 
-        btnUpdateSave.setBackground(new java.awt.Color(108, 175, 243));
+        btnUpdateSave.setBackground(new java.awt.Color(204, 255, 204));
         btnUpdateSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnUpdateSave.setText("Update");
         btnUpdateSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));

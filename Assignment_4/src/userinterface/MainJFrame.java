@@ -56,6 +56,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         loginJLabel = new javax.swing.JLabel();
         logoutJButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -119,6 +120,19 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jSplitPane1.setLeftComponent(loginJPanel);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jSplitPane1.setRightComponent(jPanel1);
 
         container.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(container);
@@ -203,6 +217,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton loginJButton;
     private javax.swing.JLabel loginJLabel;
@@ -221,6 +236,23 @@ public class MainJFrame extends javax.swing.JFrame {
             crdLyt.next(container);
 
             logoutJButton.setEnabled(true);
+            
+            String accountRole = userAccount.getRole().toString().toUpperCase();
+
+            switch (accountRole) {
+                case "CUSTOMER":
+                    break;
+
+                case "RESTAURANT":
+                    break;
+
+                case "DELIVERYMAN":
+                    break;
+
+                default:
+                    break;
+            }
+            
 //            if(userAccount.getRole().toString().equalsIgnoreCase("CUSTOMER")){
 //                 greetings += 
 //            }

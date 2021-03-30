@@ -153,7 +153,7 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPassword.setText("Customer Password :");
 
-        btnSave.setBackground(new java.awt.Color(108, 175, 243));
+        btnSave.setBackground(new java.awt.Color(204, 255, 204));
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnSave.setText("Submit");
         btnSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
