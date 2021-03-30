@@ -146,7 +146,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPassword.setText("Delivery Man Password :");
 
-        btnSave.setBackground(new java.awt.Color(176, 222, 144));
+        btnSave.setBackground(new java.awt.Color(138, 177, 138));
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnSave.setText("Submit");
         btnSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
@@ -164,7 +164,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblUsername.setText("Delivery Man Username :");
 
-        btnUpdateSave.setBackground(new java.awt.Color(204, 255, 204));
+        btnUpdateSave.setBackground(new java.awt.Color(138, 177, 138));
         btnUpdateSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnUpdateSave.setText("Update");
         btnUpdateSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
@@ -265,7 +265,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblDeliveryManList.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Oops! Please select a customer first.");
+            JOptionPane.showMessageDialog(this, "Oops! Please select a delivery man first.");
             return null;
         }
 

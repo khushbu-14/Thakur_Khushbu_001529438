@@ -5,6 +5,11 @@
  */
 package userinterface.RestaurantAdminRole;
 
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author khushbu
@@ -14,8 +19,15 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     /**
      * Creates new form RestaurantAdminWorkAreaPanel
      */
-    public RestaurantAdminWorkAreaPanel() {
+    JPanel userProcessContainer;
+    EcoSystem ecosystem;
+    UserAccount userAccount;
+
+    public RestaurantAdminWorkAreaPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.ecosystem = ecosystem;
+        this.userAccount = userAccount;
     }
 
     /**
@@ -27,21 +39,155 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(237, 255, 236));
+        adminPanel = new javax.swing.JPanel();
+        navbar = new javax.swing.JPanel();
+        btnOrders = new javax.swing.JButton();
+        btnMenu = new javax.swing.JButton();
+        btnInformation = new javax.swing.JButton();
+        mainPanel = new javax.swing.JPanel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
+        setBackground(new java.awt.Color(237, 255, 236));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        adminPanel.setBackground(new java.awt.Color(237, 255, 236));
+
+        navbar.setBackground(new java.awt.Color(204, 255, 204));
+
+        btnOrders.setBackground(new java.awt.Color(255, 255, 255));
+        btnOrders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/consumer.png"))); // NOI18N
+        btnOrders.setText("Orders");
+        btnOrders.setToolTipText("View Orders list");
+        btnOrders.setAlignmentY(0.0F);
+        btnOrders.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 1, 0));
+        btnOrders.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnOrders.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnOrders.setIconTextGap(10);
+        btnOrders.setMargin(new java.awt.Insets(10, 5, 0, 2));
+        btnOrders.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrdersActionPerformed(evt);
+            }
+        });
+
+        btnMenu.setBackground(new java.awt.Color(255, 255, 255));
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dinner.png"))); // NOI18N
+        btnMenu.setText("Menu");
+        btnMenu.setToolTipText("View Menu list");
+        btnMenu.setAlignmentY(0.0F);
+        btnMenu.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 1, 0));
+        btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnMenu.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnMenu.setIconTextGap(10);
+        btnMenu.setMargin(new java.awt.Insets(10, 5, 0, 2));
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+
+        btnInformation.setBackground(new java.awt.Color(255, 255, 255));
+        btnInformation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delivery-man.png"))); // NOI18N
+        btnInformation.setText("Information");
+        btnInformation.setToolTipText("View Information list");
+        btnInformation.setAlignmentY(0.0F);
+        btnInformation.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 1, 0));
+        btnInformation.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnInformation.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnInformation.setIconTextGap(10);
+        btnInformation.setMargin(new java.awt.Insets(10, 5, 0, 2));
+        btnInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInformationActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout navbarLayout = new javax.swing.GroupLayout(navbar);
+        navbar.setLayout(navbarLayout);
+        navbarLayout.setHorizontalGroup(
+            navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navbarLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(btnOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106)
+                .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                .addComponent(btnInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 626, Short.MAX_VALUE)
+        navbarLayout.setVerticalGroup(
+            navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navbarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        mainPanel.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout adminPanelLayout = new javax.swing.GroupLayout(adminPanel);
+        adminPanel.setLayout(adminPanelLayout);
+        adminPanelLayout.setHorizontalGroup(
+            adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(543, 543, 543))
+        );
+        adminPanelLayout.setVerticalGroup(
+            adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(adminPanelLayout.createSequentialGroup()
+                .addComponent(navbar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        add(adminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, -1, 630));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdersActionPerformed
+        // TODO add your handling code here:
+        manageOrders();
+    }//GEN-LAST:event_btnOrdersActionPerformed
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+
+        manageMenu();
+    }//GEN-LAST:event_btnMenuActionPerformed
+
+    private void btnInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformationActionPerformed
+        // TODO add your handling code here:
+        manageInformation();
+    }//GEN-LAST:event_btnInformationActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel adminPanel;
+    private javax.swing.JButton btnInformation;
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnOrders;
+    private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel navbar;
     // End of variables declaration//GEN-END:variables
+
+    private void manageInformation() {
+        ManageRestaurantInformation manageRestaurantInfo = new ManageRestaurantInformation(userProcessContainer, ecosystem, userAccount);
+
+        mainPanel.add("RestaurantAdminWorkAreaPanel", manageRestaurantInfo);
+
+        CardLayout layout = (CardLayout) mainPanel.getLayout();
+        layout.next(mainPanel);
+    }
+
+    private void manageMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void manageOrders() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

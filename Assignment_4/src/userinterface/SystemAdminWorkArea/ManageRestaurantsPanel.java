@@ -156,7 +156,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPassword.setText("Restaurant Password :");
 
-        btnSave.setBackground(new java.awt.Color(204, 255, 204));
+        btnSave.setBackground(new java.awt.Color(138, 177, 138));
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnSave.setText("Submit");
         btnSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
@@ -174,7 +174,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblUsername.setText("Restaurant Username :");
 
-        btnUpdateSave.setBackground(new java.awt.Color(108, 175, 243));
+        btnUpdateSave.setBackground(new java.awt.Color(138, 177, 138));
         btnUpdateSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
         btnUpdateSave.setText("Update");
         btnUpdateSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
@@ -278,7 +278,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblRestaurantList.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Oops! Please select a customer first.");
+            JOptionPane.showMessageDialog(this, "Oops! Please select a restaurant first.");
             return null;
         }
 
@@ -311,7 +311,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
             
             ecosystem.getUserAccountDirectory().removeUserAccount(r);
 
-            JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
+            JOptionPane.showMessageDialog(this, "Restaurant deleted successfully!");
             populateTable();
         }
     }//GEN-LAST:event_btnDeleteActionPerformed

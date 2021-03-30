@@ -340,7 +340,7 @@ public class MainJFrame1 extends javax.swing.JFrame {
     private void changePanel(UserAccount userAccount) {
         if (userAccount != null) {
             String greetings = "Admin";
-            
+
             if (userAccount instanceof Customer) {
                 greetings = ((Customer) userAccount).getName();
             } else if (userAccount instanceof Restaurant) {
@@ -357,21 +357,9 @@ public class MainJFrame1 extends javax.swing.JFrame {
             container.setVisible(true);
             loginPanel.setVisible(false);
 
-//            loginPanel.setVisible(false);
             CardLayout crdLyt = (CardLayout) container.getLayout();
             container.add("workArea", userAccount.getRole().createWorkArea(container, userAccount, system));
             crdLyt.next(container);
         }
     }
-
-    private void setupLoginScreen() {
-
-//        loginPanel.setVisible(true);
-        LoginScreen1 ls = new LoginScreen1(container, system, navbarPanel);
-
-        CardLayout crdLyt = (CardLayout) container.getLayout();
-        container.add("LoginScreen", ls);
-        crdLyt.next(container);
-    }
-
 }

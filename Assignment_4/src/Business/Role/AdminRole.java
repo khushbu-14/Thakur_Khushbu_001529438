@@ -10,18 +10,22 @@ import Business.Organization;
 import Business.UserAccount.UserAccount;
 import userinterface.RestaurantAdminRole.AdminWorkAreaJPanel;
 import javax.swing.JPanel;
+import userinterface.RestaurantAdminRole.RestaurantAdminWorkAreaPanel;
 
 /**
  *
- * @author raunak
+ * @author khushbu
  */
-public class AdminRole extends Role{
+
+public class AdminRole extends Role {
 
     @Override
+//    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+//        return new AdminWorkAreaJPanel(userProcessContainer);
+//    }
+
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        return new AdminWorkAreaJPanel(userProcessContainer);
+        return new RestaurantAdminWorkAreaPanel(userProcessContainer, account, business);
     }
 
-    
-    
 }

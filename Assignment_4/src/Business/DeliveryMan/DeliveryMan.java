@@ -5,7 +5,7 @@
  */
 package Business.DeliveryMan;
 
-import Business.Role.CustomerRole;
+import Business.Role.DeliverManRole;
 import Business.UserAccount.UserAccount;
 
 /**
@@ -23,7 +23,7 @@ public class DeliveryMan extends UserAccount {
         setPassword(password);
         setUsername(username);
         this.phone = phone;
-        setRole(new CustomerRole());
+        setRole(new DeliverManRole());
     }
 
     public String getName() {

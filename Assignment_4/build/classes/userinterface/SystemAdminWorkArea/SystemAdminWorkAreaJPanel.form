@@ -98,6 +98,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/assets/consumer.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Customer"/>
                 <Property name="toolTipText" type="java.lang.String" value="View Customer list"/>
                 <Property name="alignmentY" type="float" value="0.0"/>
@@ -124,6 +127,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/assets/dinner.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Restaurants"/>
                 <Property name="toolTipText" type="java.lang.String" value="View Restaurants list"/>
                 <Property name="alignmentY" type="float" value="0.0"/>
@@ -149,6 +155,9 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/assets/delivery-man.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delivery Man"/>
                 <Property name="toolTipText" type="java.lang.String" value="View Delivery Man list"/>

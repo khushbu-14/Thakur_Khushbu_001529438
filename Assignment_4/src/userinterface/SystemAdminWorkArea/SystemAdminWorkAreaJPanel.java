@@ -52,6 +52,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         navbar.setBackground(new java.awt.Color(204, 255, 204));
 
         btnCustomer.setBackground(new java.awt.Color(255, 255, 255));
+        btnCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/consumer.png"))); // NOI18N
         btnCustomer.setText("Customer");
         btnCustomer.setToolTipText("View Customer list");
         btnCustomer.setAlignmentY(0.0F);
@@ -67,6 +68,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnRestaurant.setBackground(new java.awt.Color(255, 255, 255));
+        btnRestaurant.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dinner.png"))); // NOI18N
         btnRestaurant.setText("Restaurants");
         btnRestaurant.setToolTipText("View Restaurants list");
         btnRestaurant.setAlignmentY(0.0F);
@@ -82,6 +84,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnDeliveryMan.setBackground(new java.awt.Color(255, 255, 255));
+        btnDeliveryMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delivery-man.png"))); // NOI18N
         btnDeliveryMan.setText("Delivery Man");
         btnDeliveryMan.setToolTipText("View Delivery Man list");
         btnDeliveryMan.setAlignmentY(0.0F);

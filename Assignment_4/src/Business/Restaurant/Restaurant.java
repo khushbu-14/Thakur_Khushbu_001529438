@@ -5,13 +5,14 @@
  */
 package Business.Restaurant;
 
-import Business.Role.CustomerRole;
+import Business.Role.AdminRole;
 import Business.UserAccount.UserAccount;
 
 /**
  *
  * @author khushbu
  */
+
 public class Restaurant extends UserAccount {
 
     private String name;
@@ -27,7 +28,7 @@ public class Restaurant extends UserAccount {
         setPassword(password);
         setUsername(username);
 
-        setRole(new CustomerRole());
+        setRole(new AdminRole());
         this.menu = new Menu();
     }
 
@@ -62,8 +63,8 @@ public class Restaurant extends UserAccount {
     public void setMenu(Menu menu) {
         this.menu = menu;
     }
-    
-      @Override
+
+    @Override
     public String toString() {
         return this.name;
     }
