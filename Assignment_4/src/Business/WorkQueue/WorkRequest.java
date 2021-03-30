@@ -4,13 +4,17 @@
  */
 package Business.WorkQueue;
 
+import Business.Customer.Customer;
+import Business.DeliveryMan.DeliveryMan;
+import Business.Restaurant.Restaurant;
 import Business.UserAccount.UserAccount;
 import java.util.Date;
 
 /**
  *
- * @author raunak
+ * @author khushbu
  */
+
 public abstract class WorkRequest {
 
     private String message;
@@ -19,8 +23,12 @@ public abstract class WorkRequest {
     private String status;
     private Date requestDate;
     private Date resolveDate;
-    
-    public WorkRequest(){
+
+    private Customer customer;
+    private Restaurant restaurant;
+    private DeliveryMan deliverMan;
+
+    public WorkRequest() {
         requestDate = new Date();
     }
 
@@ -70,5 +78,34 @@ public abstract class WorkRequest {
 
     public void setResolveDate(Date resolveDate) {
         this.resolveDate = resolveDate;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public DeliveryMan getDeliverMan() {
+        return deliverMan;
+    }
+
+    public void setDeliverMan(DeliveryMan deliverMan) {
+        this.deliverMan = deliverMan;
+    }
+
+    @Override
+    public String toString() {
+        return this.message;
     }
 }

@@ -5,6 +5,19 @@
  */
 package userinterface.RestaurantAdminRole;
 
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import Business.UserAccount.UserAccountDirectory;
+import Business.WorkQueue.OrderList;
+import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author khushbu
@@ -14,9 +27,32 @@ public class ManageOrders extends javax.swing.JPanel {
     /**
      * Creates new form ManageOrders
      */
-    public ManageOrders() {
+    JPanel userProcessContainer;
+    EcoSystem ecosystem;
+    UserAccountDirectory userAccountList;
+    private List<WorkRequest> workRequestList;
+    UserAccount account;
+
+    public ManageOrders(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount account) {
+        this.userProcessContainer = userProcessContainer;
+        this.ecosystem = ecosystem;
+        this.account = account;
+
         initComponents();
         populateTable();
+    }
+
+    private WorkRequest getSelectedRow() {
+        int selectedRowIndex = tblOrderList.getSelectedRow();
+
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Oops! Please select a order first.");
+            return null;
+        }
+
+        WorkRequest request = (WorkRequest) tblOrderList.getValueAt(selectedRowIndex, 2);
+
+        return request;
     }
 
     /**
@@ -29,14 +65,14 @@ public class ManageOrders extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblRestaurantList = new javax.swing.JTable();
-        btnUpdate = new javax.swing.JButton();
+        tblOrderList = new javax.swing.JTable();
+        btnViewDetails = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(237, 255, 236));
 
-        tblRestaurantList.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        tblRestaurantList.setModel(new javax.swing.table.DefaultTableModel(
+        tblOrderList.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        tblOrderList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -62,17 +98,17 @@ public class ManageOrders extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblRestaurantList.setSelectionBackground(new java.awt.Color(0, 102, 204));
-        jScrollPane1.setViewportView(tblRestaurantList);
+        tblOrderList.setSelectionBackground(new java.awt.Color(0, 102, 204));
+        jScrollPane1.setViewportView(tblOrderList);
 
-        btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/view-details.png"))); // NOI18N
-        btnUpdate.setText("View Details");
-        btnUpdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
-        btnUpdate.setBorderPainted(false);
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnViewDetails.setBackground(new java.awt.Color(255, 255, 255));
+        btnViewDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/view-details.png"))); // NOI18N
+        btnViewDetails.setText("View Details");
+        btnViewDetails.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnViewDetails.setBorderPainted(false);
+        btnViewDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btnViewDetailsActionPerformed(evt);
             }
         });
 
@@ -85,9 +121,9 @@ public class ManageOrders extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(573, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(578, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(52, 52, 52)
@@ -96,14 +132,14 @@ public class ManageOrders extends javax.swing.JPanel {
                             .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGap(288, 288, 288))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(66, Short.MAX_VALUE)))
+                    .addContainerGap(70, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(293, 293, 293)
-                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(483, Short.MAX_VALUE))
+                .addGap(292, 292, 292)
+                .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(484, 484, 484))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(72, 72, 72)
@@ -114,19 +150,48 @@ public class ManageOrders extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
 
+        WorkRequest request = getSelectedRow();
+
+        if (request != null && request instanceof OrderList) {
+            OrderList orderListData = (OrderList) request;
+
+            ManageOrderDetailsPanel manageOrderDetails = new ManageOrderDetailsPanel(userProcessContainer, account, ecosystem, orderListData);
+            
+            userProcessContainer.add("ManageOrderDetailsPanel", manageOrderDetails);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+    }//GEN-LAST:event_btnViewDetailsActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton btnViewDetails;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JTable tblRestaurantList;
+    private javax.swing.JTable tblOrderList;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        DefaultTableModel model = (DefaultTableModel) tblOrderList.getModel();
+
+        int count = 1;
+
+        model.setRowCount(0);
+
+        workRequestList = ecosystem.getWorkQueue().getRestaurantRequestList(account);
+
+        for (WorkRequest wr : workRequestList) {
+            Object[] row = new Object[5];
+            row[0] = "" + count++;
+            row[1] = wr.getCustomer().getName();
+            row[2] = wr;
+            row[3] = wr.getStatus();
+            row[4] = wr.getRequestDate();
+
+            model.addRow(row);
+
+        }
     }
 }

@@ -22,9 +22,9 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-              <Component id="btnUpdate" min="-2" pref="139" max="-2" attributes="0"/>
-              <EmptySpace pref="573" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              <Component id="btnViewDetails" min="-2" pref="139" max="-2" attributes="0"/>
+              <EmptySpace pref="578" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -36,7 +36,7 @@
                       </Group>
                       <Component id="jScrollPane1" min="-2" pref="647" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                  <EmptySpace pref="70" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -44,9 +44,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="293" max="-2" attributes="0"/>
-              <Component id="btnUpdate" min="-2" pref="46" max="-2" attributes="0"/>
-              <EmptySpace pref="483" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+              <Component id="btnViewDetails" min="-2" pref="46" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="484" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -68,7 +68,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblRestaurantList">
+        <Component class="javax.swing.JTable" name="tblOrderList">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Grande" size="14" style="0"/>
@@ -89,7 +89,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnUpdate">
+    <Component class="javax.swing.JButton" name="btnViewDetails">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -108,7 +108,7 @@
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewDetailsActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTitle">

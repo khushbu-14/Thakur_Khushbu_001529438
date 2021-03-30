@@ -5,6 +5,11 @@
  */
 package userinterface.RestaurantAdminRole;
 
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.WorkRequest;
+import javax.swing.JPanel;
+
 /**
  *
  * @author khushbu
@@ -14,7 +19,18 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageOrderDetailsPanel
      */
-    public ManageOrderDetailsPanel() {
+    JPanel userProcessContainer;
+    UserAccount userAccount;
+    EcoSystem ecosystem;
+    WorkRequest workRequest;
+
+    public ManageOrderDetailsPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem, WorkRequest workRequest) {
+        
+        this.ecosystem = ecosystem;
+        this.userProcessContainer = userProcessContainer;
+        this.workRequest = workRequest;
+        this.userAccount = userAccount;
+        
         initComponents();
     }
 

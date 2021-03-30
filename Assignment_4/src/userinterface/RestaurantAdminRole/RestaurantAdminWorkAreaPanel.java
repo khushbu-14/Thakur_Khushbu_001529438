@@ -19,6 +19,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     /**
      * Creates new form RestaurantAdminWorkAreaPanel
      */
+    
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAccount;
@@ -47,7 +48,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
         mainPanel = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(237, 255, 236));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new java.awt.BorderLayout());
 
         adminPanel.setBackground(new java.awt.Color(237, 255, 236));
 
@@ -106,23 +107,23 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
         navbarLayout.setHorizontalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navbarLayout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(70, 70, 70)
                 .addComponent(btnOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
+                .addGap(82, 82, 82)
                 .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
                 .addComponent(btnInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         navbarLayout.setVerticalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -133,21 +134,20 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
         adminPanelLayout.setHorizontalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(543, 543, 543))
+                .addGap(0, 31, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(662, 662, 662))
+            .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
-                .addComponent(navbar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(navbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 566, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        add(adminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, -1, 630));
+        add(adminPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdersActionPerformed
@@ -158,6 +158,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
 
         manageMenu();
+        
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformationActionPerformed
@@ -175,7 +176,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void manageInformation() {
-        ManageRestaurantInformation manageRestaurantInfo = new ManageRestaurantInformation(userProcessContainer, ecosystem, userAccount);
+        ManageRestaurantInformation manageRestaurantInfo = new ManageRestaurantInformation(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("RestaurantAdminWorkAreaPanel", manageRestaurantInfo);
 
@@ -184,10 +185,15 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     private void manageOrders() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ManageOrders manageOrders = new ManageOrders(mainPanel, ecosystem, userAccount);
+
+        mainPanel.add("ManageOrders", manageOrders);
+
+        CardLayout layout = (CardLayout) mainPanel.getLayout();
+        layout.next(mainPanel);
     }
 }
