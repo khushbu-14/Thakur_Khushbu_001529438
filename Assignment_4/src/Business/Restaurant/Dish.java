@@ -5,15 +5,24 @@
  */
 package Business.Restaurant;
 
+import java.util.UUID;
+
 /**
  *
  * @author khushbu
  */
-
 public class Dish {
 
     private String name;
     private double price;
+    private String dishId;
+
+    public Dish(String name, double price) {
+        this.name = name;
+        this.price = price;
+        UUID uid = UUID.randomUUID();
+        dishId = uid.toString();
+    }
 
     public String getName() {
         return name;

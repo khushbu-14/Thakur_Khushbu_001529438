@@ -5,6 +5,16 @@
  */
 package userinterface.RestaurantAdminRole;
 
+import Business.EcoSystem;
+import Business.Restaurant.Dish;
+import Business.Restaurant.Menu;
+import Business.Restaurant.Restaurant;
+import Business.UserAccount.UserAccount;
+import constants.Utils;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author khushbu
@@ -14,8 +24,21 @@ public class ManageMenuPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageMenuPanel
      */
-    public ManageMenuPanel() {
+    JPanel parentContainerPanel;
+    EcoSystem ecosystem;
+    UserAccount userAccount;
+    Restaurant restaurant;
+    Utils utils;
+
+    public ManageMenuPanel(JPanel parentContainerPanel, EcoSystem ecosystem, UserAccount userAccount) {
+        this.parentContainerPanel = parentContainerPanel;
+        this.ecosystem = ecosystem;
+        this.userAccount = userAccount;
+        this.restaurant = (Restaurant) userAccount;
+        utils = new Utils();
         initComponents();
+        populateDishTable();
+        btnUpdateSave.setVisible(false);
     }
 
     /**
@@ -27,19 +50,305 @@ public class ManageMenuPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblMenuList = new javax.swing.JTable();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtDishPrice = new javax.swing.JFormattedTextField();
+        lblPhoneNumber = new javax.swing.JLabel();
+        btnSave = new javax.swing.JButton();
+        btnUpdateSave = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(237, 255, 236));
+
+        tblMenuList.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        tblMenuList.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Sr No.", "Dish Name", "Dish Price"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblMenuList.setSelectionBackground(new java.awt.Color(0, 102, 204));
+        jScrollPane1.setViewportView(tblMenuList);
+
+        btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
+        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/edit.png"))); // NOI18N
+        btnUpdate.setText("Update");
+        btnUpdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnUpdate.setBorderPainted(false);
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
+
+        btnDelete.setBackground(new java.awt.Color(255, 204, 204));
+        btnDelete.setForeground(new java.awt.Color(102, 102, 102));
+        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delete-1.png"))); // NOI18N
+        btnDelete.setText("Delete");
+        btnDelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 204), 1, true));
+        btnDelete.setBorderPainted(false);
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+
+        lblTitle.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTitle.setText(" Manage Menu");
+
+        lblName.setBackground(new java.awt.Color(249, 244, 244));
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblName.setText("Dish Name :");
+
+        txtName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+
+        txtDishPrice.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        txtDishPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+
+        lblPhoneNumber.setBackground(new java.awt.Color(249, 244, 244));
+        lblPhoneNumber.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblPhoneNumber.setText("Dish Price :");
+
+        btnSave.setBackground(new java.awt.Color(138, 177, 138));
+        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
+        btnSave.setText("Add Dish");
+        btnSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnSave.setBorderPainted(false);
+        btnSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+
+        btnUpdateSave.setBackground(new java.awt.Color(138, 177, 138));
+        btnUpdateSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
+        btnUpdateSave.setText("Update Dish");
+        btnUpdateSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnUpdateSave.setBorderPainted(false);
+        btnUpdateSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnUpdateSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateSaveActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblPhoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtDishPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnUpdateSave, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(238, 238, 238))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblName)
+                        .addGap(15, 15, 15)
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblPhoneNumber)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtDishPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41)
+                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(btnUpdateSave, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(228, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private Dish getSelectedDish() {
+        int selectedRowIndex = tblMenuList.getSelectedRow();
+
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Oops! Please select a dish first.");
+            return null;
+        }
+
+        Dish dish = (Dish) tblMenuList.getValueAt(selectedRowIndex, 1);
+
+        return dish;
+    }
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        Dish d = getSelectedDish();
+
+        if (d != null) {
+            txtName.setText(d.getName());
+            txtDishPrice.setText(String.valueOf(d.getPrice()));
+            btnUpdateSave.setVisible(true);
+            btnSave.setVisible(false);
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        Dish d = getSelectedDish();
+
+        if (d != null) {
+            restaurant.getMenu().removeDish(d);
+            JOptionPane.showMessageDialog(this, "Dish deleted successfully!");
+            populateDishTable();
+        }
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // validations
+
+        String name = txtName.getText().trim();
+        String price = txtDishPrice.getText().trim();
+
+        if (!utils.isStringInputValid(name)) {
+            JOptionPane.showMessageDialog(this, "Please enter valid name");
+        } else if (!utils.isStringInputValid(price)) {
+            JOptionPane.showMessageDialog(this, "Please enter valid price");
+        } else {
+
+            double priceVal = Double.parseDouble(price);
+
+            if (priceVal > 0) {
+                Dish dish = new Dish(name, priceVal);
+
+                restaurant.getMenu().addDish(dish);
+
+                populateDishTable();
+
+                txtName.setText(null);
+                txtDishPrice.setText(null);
+            } else {
+                JOptionPane.showMessageDialog(this, "Please enter valid price greater than 0");
+            }
+
+        }
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnUpdateSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateSaveActionPerformed
+        // TODO add your handling code here:
+
+        Dish d = getSelectedDish();
+
+        if (d != null) {
+            String name = txtName.getText().trim();
+            String price = txtDishPrice.getText().trim();
+
+            if (!utils.isStringInputValid(name)) {
+                JOptionPane.showMessageDialog(this, "Please enter valid name");
+            } else if (!utils.isStringInputValid(price)) {
+                JOptionPane.showMessageDialog(this, "Please enter valid price");
+            } else {
+
+                double priceVal = Double.parseDouble(price);
+
+                if (priceVal > 0) {
+
+                    btnUpdateSave.setVisible(false);
+                    btnSave.setVisible(true);
+
+                    d.setName(name);
+                    d.setPrice(priceVal);
+
+                    populateDishTable();
+
+                    JOptionPane.showMessageDialog(this, d.getName() + " updated in list successfully!");
+
+                    txtName.setText(null);
+                    txtDishPrice.setText(null);
+                }
+            }
+        }
+    }//GEN-LAST:event_btnUpdateSaveActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton btnUpdateSave;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblPhoneNumber;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JTable tblMenuList;
+    private javax.swing.JFormattedTextField txtDishPrice;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
+
+    private void populateDishTable() {
+        Menu menuList = restaurant.getMenu();
+
+        DefaultTableModel model = (DefaultTableModel) tblMenuList.getModel();
+
+        int count = 1;
+
+        model.setRowCount(0);
+        for (Dish dish : menuList.getMenuList()) {
+            Object[] row = new Object[3];
+            row[0] = "" + count++;
+            row[1] = dish;
+            row[2] = dish.getPrice();
+
+            model.addRow(row);
+
+        }
+    }
 }

@@ -11,7 +11,6 @@ import java.util.ArrayList;
  *
  * @author khushbu
  */
-
 public class WorkQueue {
 
     private ArrayList<WorkRequest> workRequestList;
@@ -64,5 +63,9 @@ public class WorkQueue {
         }
 
         return deliveryManRequestList;
+    }
+
+    public void addWorkRequest(WorkRequest workRequest) {
+        workRequestList.add(workRequest);
     }
 }

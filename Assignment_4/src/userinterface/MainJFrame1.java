@@ -249,7 +249,7 @@ public class MainJFrame1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initalSetup() {
-        System.out.println("Btn will be hidden");
+//        System.out.println("Btn will be hidden");
         btnLogout.setVisible(false);
         btnLogout.setEnabled(false);
         container.setVisible(false);

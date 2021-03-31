@@ -6,6 +6,7 @@
 package userinterface.RestaurantAdminRole;
 
 import Business.EcoSystem;
+import Business.Restaurant.Restaurant;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -19,16 +20,19 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     /**
      * Creates new form RestaurantAdminWorkAreaPanel
      */
-    
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAccount;
+    Restaurant restaurant;
 
     public RestaurantAdminWorkAreaPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         this.userAccount = userAccount;
+
+        restaurant = (Restaurant) userAccount;
+        manageOrders();
     }
 
     /**
@@ -158,7 +162,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
 
         manageMenu();
-        
+
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformationActionPerformed
@@ -185,7 +189,12 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageMenu() {
-        
+        ManageMenuPanel manageMenuPanel = new ManageMenuPanel(adminPanel, ecosystem, userAccount);
+
+        mainPanel.add("ManageMenuPanel", manageMenuPanel);
+
+        CardLayout layout = (CardLayout) mainPanel.getLayout();
+        layout.next(mainPanel);
     }
 
     private void manageOrders() {

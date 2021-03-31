@@ -159,7 +159,6 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     private void btnOrderHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderHistoryActionPerformed
 
         manageOrderHistory();
-
     }//GEN-LAST:event_btnOrderHistoryActionPerformed
 
     private void btnInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformationActionPerformed
@@ -207,6 +206,13 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageOrderHistory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        ManageOrderHistory manageOrderHistory = new ManageOrderHistory(mainPanel, ecosystem, userAccount);
+
+        mainPanel.add("ManageOrderHistory", manageOrderHistory);
+
+        CardLayout layout = (CardLayout) mainPanel.getLayout();
+        layout.next(mainPanel);
+
     }
 }
