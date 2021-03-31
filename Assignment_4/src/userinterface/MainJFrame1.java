@@ -254,6 +254,7 @@ public class MainJFrame1 extends javax.swing.JFrame {
         btnLogout.setEnabled(false);
         container.setVisible(false);
         loginPanel.setVisible(true);
+        lblGreeting.setText("");
     }
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed

@@ -205,7 +205,7 @@ public class ManageCustomerInformation extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Please enter valid password");
             } else {
 
-                btnUpdateSave.setVisible(false);
+//                btnUpdateSave.setVisible(false);
 
                 customer.setName(name);
                 customer.setAddress(address);
