@@ -157,8 +157,8 @@ public class ManageOrders extends javax.swing.JPanel {
         if (request != null && request instanceof OrderList) {
             OrderList orderListData = (OrderList) request;
 
-            ManageOrderDetailsPanel manageOrderDetails = new ManageOrderDetailsPanel(userProcessContainer, account, ecosystem, orderListData);
-            
+            ManageOrderDetailsPanel manageOrderDetails = new ManageOrderDetailsPanel(userProcessContainer, account, ecosystem, request, orderListData);
+
             userProcessContainer.add("ManageOrderDetailsPanel", manageOrderDetails);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -172,7 +172,7 @@ public class ManageOrders extends javax.swing.JPanel {
     private javax.swing.JTable tblOrderList;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
+    public void populateTable() {
 
         DefaultTableModel model = (DefaultTableModel) tblOrderList.getModel();
 

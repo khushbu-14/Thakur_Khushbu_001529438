@@ -319,7 +319,7 @@ public class ManageCartPanel extends javax.swing.JPanel {
                 newOrderList.setRestaurant(restaurant);
 
                 newOrderList.setRequestDate(new Date());
-                newOrderList.setStatus("Ordered");
+                newOrderList.setStatus("ORDERED");
                 
                 newOrderList.setMessage(msg);
 

@@ -5,10 +5,19 @@
  */
 package userinterface.RestaurantAdminRole;
 
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.OrderItem;
+import Business.WorkQueue.OrderList;
 import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -23,15 +32,22 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     UserAccount userAccount;
     EcoSystem ecosystem;
     WorkRequest workRequest;
+    OrderList orderListData;
+    DeliveryManDirectory deliveryManList;
 
-    public ManageOrderDetailsPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem, WorkRequest workRequest) {
-        
+    public ManageOrderDetailsPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem, WorkRequest workRequest, OrderList orderListData) {
+
         this.ecosystem = ecosystem;
         this.userProcessContainer = userProcessContainer;
         this.workRequest = workRequest;
         this.userAccount = userAccount;
-        
+        this.orderListData = orderListData;
+        deliveryManList = ecosystem.getDeliveryManDirectory();
+
         initComponents();
+
+        assignDeliveryManPanel.setVisible(false);
+        renderData();
     }
 
     /**
@@ -43,19 +59,550 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblCart = new javax.swing.JTable();
+        lblName = new javax.swing.JLabel();
+        lblCustomerName = new javax.swing.JLabel();
+        lblDeliveryManName1 = new javax.swing.JLabel();
+        lblDeliveryManName = new javax.swing.JLabel();
+        lblRequestDate1 = new javax.swing.JLabel();
+        lblRequestDate = new javax.swing.JLabel();
+        lblOrderStatus1 = new javax.swing.JLabel();
+        lblOrderStatus = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        lblTotalQty1 = new javax.swing.JLabel();
+        lblTotalQty = new javax.swing.JLabel();
+        lblTotalPrice2 = new javax.swing.JLabel();
+        lblTotalPrice = new javax.swing.JLabel();
+        lblTotalPrice1 = new javax.swing.JLabel();
+        lblMsg = new javax.swing.JLabel();
+        lblPageTitle = new javax.swing.JLabel();
+        btnReadyOrder = new javax.swing.JButton();
+        btnRejectOrder = new javax.swing.JButton();
+        btnAcceptOrder = new javax.swing.JButton();
+        assignDeliveryManPanel = new javax.swing.JPanel();
+        btnAddDeliveryMan = new javax.swing.JButton();
+        lblChoseDM = new javax.swing.JLabel();
+        comboBoxDeliveryMan = new javax.swing.JComboBox<>();
+        lblResolveDate1 = new javax.swing.JLabel();
+        lblResolveDate = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(237, 255, 236));
+
+        tblCart.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        tblCart.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Sr No.", "Dish Name", "Single Price", "Total Quantity"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblCart.setSelectionBackground(new java.awt.Color(0, 102, 204));
+        jScrollPane2.setViewportView(tblCart);
+
+        lblName.setBackground(new java.awt.Color(249, 244, 244));
+        lblName.setForeground(new java.awt.Color(102, 102, 102));
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblName.setText("Customer Name :");
+
+        lblCustomerName.setBackground(new java.awt.Color(249, 244, 244));
+        lblCustomerName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCustomerName.setText("NA");
+
+        lblDeliveryManName1.setBackground(new java.awt.Color(249, 244, 244));
+        lblDeliveryManName1.setForeground(new java.awt.Color(102, 102, 102));
+        lblDeliveryManName1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDeliveryManName1.setText("Delivery Man Name :");
+
+        lblDeliveryManName.setBackground(new java.awt.Color(249, 244, 244));
+        lblDeliveryManName.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        lblDeliveryManName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDeliveryManName.setText("NA");
+
+        lblRequestDate1.setBackground(new java.awt.Color(249, 244, 244));
+        lblRequestDate1.setForeground(new java.awt.Color(102, 102, 102));
+        lblRequestDate1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblRequestDate1.setText("Request Date :");
+
+        lblRequestDate.setBackground(new java.awt.Color(249, 244, 244));
+        lblRequestDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblRequestDate.setText("NA");
+
+        lblOrderStatus1.setBackground(new java.awt.Color(249, 244, 244));
+        lblOrderStatus1.setForeground(new java.awt.Color(102, 102, 102));
+        lblOrderStatus1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblOrderStatus1.setText("Order Status :");
+
+        lblOrderStatus.setBackground(new java.awt.Color(249, 244, 244));
+        lblOrderStatus.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        lblOrderStatus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblOrderStatus.setText("NA");
+
+        btnBack.setBackground(new java.awt.Color(255, 255, 255));
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/back.png"))); // NOI18N
+        btnBack.setText("Back");
+        btnBack.setToolTipText("");
+        btnBack.setActionCommand("University");
+        btnBack.setAlignmentY(0.0F);
+        btnBack.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true), new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true)));
+        btnBack.setBorderPainted(false);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnBack.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnBack.setIconTextGap(10);
+        btnBack.setMargin(new java.awt.Insets(10, 5, 0, 2));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        lblTotalQty1.setBackground(new java.awt.Color(249, 244, 244));
+        lblTotalQty1.setForeground(new java.awt.Color(102, 102, 102));
+        lblTotalQty1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTotalQty1.setText("Total Quantity :");
+
+        lblTotalQty.setBackground(new java.awt.Color(249, 244, 244));
+        lblTotalQty.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTotalQty.setText("NA");
+
+        lblTotalPrice2.setBackground(new java.awt.Color(249, 244, 244));
+        lblTotalPrice2.setForeground(new java.awt.Color(102, 102, 102));
+        lblTotalPrice2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTotalPrice2.setText("Total Price :");
+
+        lblTotalPrice.setBackground(new java.awt.Color(249, 244, 244));
+        lblTotalPrice.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTotalPrice.setText("NA");
+
+        lblTotalPrice1.setBackground(new java.awt.Color(249, 244, 244));
+        lblTotalPrice1.setForeground(new java.awt.Color(102, 102, 102));
+        lblTotalPrice1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTotalPrice1.setText("Message :");
+
+        lblMsg.setBackground(new java.awt.Color(249, 244, 244));
+        lblMsg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblMsg.setText("NA");
+
+        lblPageTitle.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        lblPageTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPageTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dinner.png"))); // NOI18N
+        lblPageTitle.setText("Order Details");
+
+        btnReadyOrder.setBackground(new java.awt.Color(255, 255, 255));
+        btnReadyOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
+        btnReadyOrder.setText("Mark Order Ready");
+        btnReadyOrder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnReadyOrder.setBorderPainted(false);
+        btnReadyOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReadyOrderActionPerformed(evt);
+            }
+        });
+
+        btnRejectOrder.setBackground(new java.awt.Color(255, 204, 204));
+        btnRejectOrder.setForeground(new java.awt.Color(102, 102, 102));
+        btnRejectOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delete-1.png"))); // NOI18N
+        btnRejectOrder.setText("Reject Order");
+        btnRejectOrder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 204), 1, true));
+        btnRejectOrder.setBorderPainted(false);
+        btnRejectOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRejectOrderActionPerformed(evt);
+            }
+        });
+
+        btnAcceptOrder.setBackground(new java.awt.Color(255, 255, 255));
+        btnAcceptOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
+        btnAcceptOrder.setText("Accept Order");
+        btnAcceptOrder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnAcceptOrder.setBorderPainted(false);
+        btnAcceptOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcceptOrderActionPerformed(evt);
+            }
+        });
+
+        assignDeliveryManPanel.setBackground(new java.awt.Color(237, 255, 236));
+
+        btnAddDeliveryMan.setBackground(new java.awt.Color(255, 255, 255));
+        btnAddDeliveryMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/plus.png"))); // NOI18N
+        btnAddDeliveryMan.setText("Add Delivery Man");
+        btnAddDeliveryMan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnAddDeliveryMan.setBorderPainted(false);
+        btnAddDeliveryMan.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnAddDeliveryMan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddDeliveryManActionPerformed(evt);
+            }
+        });
+
+        lblChoseDM.setBackground(new java.awt.Color(249, 244, 244));
+        lblChoseDM.setForeground(new java.awt.Color(102, 102, 102));
+        lblChoseDM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblChoseDM.setText("Choose Delivery Man :");
+
+        comboBoxDeliveryMan.setBackground(new java.awt.Color(255, 255, 255));
+        comboBoxDeliveryMan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxDeliveryManActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout assignDeliveryManPanelLayout = new javax.swing.GroupLayout(assignDeliveryManPanel);
+        assignDeliveryManPanel.setLayout(assignDeliveryManPanelLayout);
+        assignDeliveryManPanelLayout.setHorizontalGroup(
+            assignDeliveryManPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(assignDeliveryManPanelLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addGroup(assignDeliveryManPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(assignDeliveryManPanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnAddDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboBoxDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblChoseDM, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
+        );
+        assignDeliveryManPanelLayout.setVerticalGroup(
+            assignDeliveryManPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(assignDeliveryManPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblChoseDM)
+                .addGap(16, 16, 16)
+                .addComponent(comboBoxDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnAddDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+
+        lblResolveDate1.setBackground(new java.awt.Color(249, 244, 244));
+        lblResolveDate1.setForeground(new java.awt.Color(102, 102, 102));
+        lblResolveDate1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblResolveDate1.setText("Last Status Update Date :");
+
+        lblResolveDate.setBackground(new java.awt.Color(249, 244, 244));
+        lblResolveDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblResolveDate.setText("NA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 763, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDeliveryManName1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDeliveryManName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblRequestDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblRequestDate, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblOrderStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMsg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblTotalPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblResolveDate, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblTotalPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblResolveDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblTotalQty1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblTotalQty, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(assignDeliveryManPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 81, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnAcceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(89, 89, 89)
+                                    .addComponent(btnRejectOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnReadyOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(220, 220, 220)
+                                .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(429, 429, 429))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 612, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblName)
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblTotalQty))
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblDeliveryManName1)
+                                    .addComponent(lblTotalPrice2)))
+                            .addComponent(lblTotalQty1)))
+                    .addComponent(assignDeliveryManPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDeliveryManName, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTotalPrice))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRequestDate1)
+                    .addComponent(lblResolveDate1))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRequestDate, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblResolveDate, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblOrderStatus1)
+                        .addGap(10, 10, 10)
+                        .addComponent(lblOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblTotalPrice1)
+                        .addGap(10, 10, 10)
+                        .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRejectOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAcceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReadyOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // back btn logic
+        backAction();
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnReadyOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadyOrderActionPerformed
+
+        orderListData.setStatus("READY");
+        lblOrderStatus.setText("READY");
+        orderListData.setResolveDate(new Date());
+        if (orderListData.getDeliverMan() == null) {
+            JOptionPane.showMessageDialog(null, "Order preparations done successfully! Please assign a delivery person");
+        } else {
+            JOptionPane.showMessageDialog(null, "Order preparations done successfully! We will notify customer");
+        }
+
+        changeBtns();
+    }//GEN-LAST:event_btnReadyOrderActionPerformed
+
+    private void btnRejectOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectOrderActionPerformed
+        orderListData.setStatus("REJECTED");
+        orderListData.setResolveDate(new Date());
+        changeBtns();
+        JOptionPane.showMessageDialog(null, "Order rejected successfully!");
+        lblOrderStatus.setText("REJECTED");
+    }//GEN-LAST:event_btnRejectOrderActionPerformed
+
+    private void btnAcceptOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptOrderActionPerformed
+        // TODO add your handling code here:
+        orderListData.setStatus("PROCESSING");
+        lblOrderStatus.setText("PROCESSING");
+        orderListData.setResolveDate(new Date());
+        changeBtns();
+        JOptionPane.showMessageDialog(null, "Order accepted successfully!, Please assign delivery person after you have prepared order!");
+    }//GEN-LAST:event_btnAcceptOrderActionPerformed
+
+    private void btnAddDeliveryManActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDeliveryManActionPerformed
+        // TODO add your handling code here:
+        int index = comboBoxDeliveryMan.getSelectedIndex();
+        if (index >= 0) {
+            DeliveryMan deliveryMan = deliveryManList.getDeliveryManList().get(index);
+            if (deliveryMan != null) {
+                workRequest.setDeliverMan(deliveryMan);
+                JOptionPane.showMessageDialog(null, "Delivery person assigned successfully!!!");
+
+                assignDeliveryManPanel.setVisible(false);
+                lblDeliveryManName.setText(deliveryMan.getName());
+            }
+        }
+    }//GEN-LAST:event_btnAddDeliveryManActionPerformed
+
+    private void comboBoxDeliveryManActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxDeliveryManActionPerformed
+
+    }//GEN-LAST:event_comboBoxDeliveryManActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel assignDeliveryManPanel;
+    private javax.swing.JButton btnAcceptOrder;
+    private javax.swing.JButton btnAddDeliveryMan;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnReadyOrder;
+    private javax.swing.JButton btnRejectOrder;
+    private javax.swing.JComboBox<Object> comboBoxDeliveryMan;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblChoseDM;
+    private javax.swing.JLabel lblCustomerName;
+    private javax.swing.JLabel lblDeliveryManName;
+    private javax.swing.JLabel lblDeliveryManName1;
+    private javax.swing.JLabel lblMsg;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblOrderStatus;
+    private javax.swing.JLabel lblOrderStatus1;
+    private javax.swing.JLabel lblPageTitle;
+    private javax.swing.JLabel lblRequestDate;
+    private javax.swing.JLabel lblRequestDate1;
+    private javax.swing.JLabel lblResolveDate;
+    private javax.swing.JLabel lblResolveDate1;
+    private javax.swing.JLabel lblTotalPrice;
+    private javax.swing.JLabel lblTotalPrice1;
+    private javax.swing.JLabel lblTotalPrice2;
+    private javax.swing.JLabel lblTotalQty;
+    private javax.swing.JLabel lblTotalQty1;
+    private javax.swing.JTable tblCart;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
+
+        int count = 1;
+        int qtyTotal = 0;
+        double sumTotal = 0;
+
+        model.setRowCount(0);
+        for (OrderItem item : orderListData.getOrderList()) {
+
+            int qty = item.getQuantity();
+            double price = item.getDish().getPrice();
+
+            Object[] row = new Object[4];
+            row[0] = "" + count++;
+            row[1] = item;
+            row[2] = price;
+            row[3] = qty;
+
+            qtyTotal += qty;
+            sumTotal += price * qty;
+
+            model.addRow(row);
+
+        }
+
+        lblTotalPrice.setText(String.valueOf(sumTotal));
+        lblTotalQty.setText(String.valueOf(qtyTotal));
+    }
+
+    private void renderData() {
+
+        changeBtns();
+
+        lblCustomerName.setText(orderListData.getCustomer().getName());
+
+        String deliveryManName = "NA";
+
+        if (orderListData.getDeliverMan() != null) {
+            deliveryManName = orderListData.getDeliverMan().getName();
+        }
+
+        lblDeliveryManName.setText(deliveryManName);
+
+        lblRequestDate.setText(orderListData.getRequestDate().toString());
+        lblOrderStatus.setText(orderListData.getStatus());
+        lblMsg.setText(orderListData.getMessage());
+
+        populateTable();
+    }
+
+    private void backAction() {
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+
+        Component component = componentArray[componentArray.length - 1];
+
+        ManageOrders manageOrders = (ManageOrders) component;
+        manageOrders.populateTable();
+
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }
+
+    private void changeBtns() {
+        String status = orderListData.getStatus().toUpperCase();
+        switch (status) {
+            case "READY":
+                btnAcceptOrder.setVisible(false);
+                btnRejectOrder.setVisible(false);
+                btnReadyOrder.setVisible(false);
+                if (orderListData.getDeliverMan() == null) {
+                    assignDeliveryManPanel.setVisible(true);
+                    assignDM();
+                }
+                break;
+
+            case "PROCESSING":
+                btnAcceptOrder.setVisible(false);
+                btnRejectOrder.setVisible(false);
+                btnReadyOrder.setVisible(true);
+                assignDeliveryManPanel.setVisible(false);
+                break;
+
+            case "REJECTED":
+                btnAcceptOrder.setVisible(false);
+                btnRejectOrder.setVisible(false);
+                btnReadyOrder.setVisible(false);
+                assignDeliveryManPanel.setVisible(false);
+                break;
+
+            case "ORDERED":
+                btnAcceptOrder.setVisible(true);
+                btnRejectOrder.setVisible(true);
+                btnReadyOrder.setVisible(false);
+                assignDeliveryManPanel.setVisible(false);
+                break;
+        }
+
+        if (orderListData.getResolveDate() != null) {
+            lblResolveDate.setText(orderListData.getResolveDate().toString());
+        } else {
+            lblResolveDate.setText(orderListData.getRequestDate().toString());
+        }
+    }
+
+    private void assignDM() {
+        for (DeliveryMan dm : deliveryManList.getDeliveryManList()) {
+            comboBoxDeliveryMan.addItem(dm.getName());
+        }
+    }
 }

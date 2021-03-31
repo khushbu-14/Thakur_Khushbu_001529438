@@ -65,6 +65,8 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblTotalPrice1 = new javax.swing.JLabel();
         lblMsg = new javax.swing.JLabel();
         lblPageTitle = new javax.swing.JLabel();
+        lblResolveDate1 = new javax.swing.JLabel();
+        lblResolveDate = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(237, 255, 236));
 
@@ -104,7 +106,6 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblName.setText("Restaurant Name :");
 
         lblRestaurantName.setBackground(new java.awt.Color(249, 244, 244));
-        lblRestaurantName.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         lblRestaurantName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblRestaurantName.setText("abc");
 
@@ -124,7 +125,6 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblRequestDate1.setText("Request Date :");
 
         lblRequestDate.setBackground(new java.awt.Color(249, 244, 244));
-        lblRequestDate.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         lblRequestDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblRequestDate.setText("abc");
 
@@ -162,7 +162,6 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblTotalQty1.setText("Total Quantity :");
 
         lblTotalQty.setBackground(new java.awt.Color(249, 244, 244));
-        lblTotalQty.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         lblTotalQty.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblTotalQty.setText("abc");
 
@@ -172,7 +171,6 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblTotalPrice2.setText("Total Price :");
 
         lblTotalPrice.setBackground(new java.awt.Color(249, 244, 244));
-        lblTotalPrice.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         lblTotalPrice.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblTotalPrice.setText("abc");
 
@@ -182,7 +180,6 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblTotalPrice1.setText("Message :");
 
         lblMsg.setBackground(new java.awt.Color(249, 244, 244));
-        lblMsg.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         lblMsg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblMsg.setText("abc");
 
@@ -191,6 +188,15 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblPageTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dinner.png"))); // NOI18N
         lblPageTitle.setText("Order Details");
 
+        lblResolveDate1.setBackground(new java.awt.Color(249, 244, 244));
+        lblResolveDate1.setForeground(new java.awt.Color(102, 102, 102));
+        lblResolveDate1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblResolveDate1.setText("Last Status Update Date :");
+
+        lblResolveDate.setBackground(new java.awt.Color(249, 244, 244));
+        lblResolveDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblResolveDate.setText("abc");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -198,46 +204,50 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblResolveDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(lblResolveDate, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(220, 220, 220)
-                                    .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(220, 220, 220)
-                                    .addComponent(lblRestaurantName, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblRequestDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(lblRequestDate, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblDeliveryManName1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(lblDeliveryManName, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(btnBack, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblOrderStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(lblOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 1038, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(lblName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblTotalPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblTotalPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(lblTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblTotalQty1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(lblTotalQty, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(44, 44, 44)))))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblRequestDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblRequestDate, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(220, 220, 220)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblRestaurantName, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblDeliveryManName1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblDeliveryManName, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnBack, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblOrderStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 1038, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblTotalPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblTotalPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblTotalQty1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblTotalQty, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(44, 44, 44))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,9 +284,13 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblTotalPrice1))
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblResolveDate1)
+                    .addComponent(lblResolveDate, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -298,6 +312,8 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPageTitle;
     private javax.swing.JLabel lblRequestDate;
     private javax.swing.JLabel lblRequestDate1;
+    private javax.swing.JLabel lblResolveDate;
+    private javax.swing.JLabel lblResolveDate1;
     private javax.swing.JLabel lblRestaurantName;
     private javax.swing.JLabel lblTotalPrice;
     private javax.swing.JLabel lblTotalPrice1;
@@ -360,6 +376,12 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         lblRequestDate.setText(orderListData.getRequestDate().toString());
         lblOrderStatus.setText(orderListData.getStatus());
         lblMsg.setText(orderListData.getMessage());
+
+        if (orderListData.getResolveDate() != null) {
+            lblResolveDate.setText(orderListData.getResolveDate().toString());
+        } else {
+            lblResolveDate.setText(orderListData.getRequestDate().toString());
+        }
 
         populateTable();
     }
