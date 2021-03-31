@@ -10,17 +10,19 @@ import Business.Organization;
 import Business.UserAccount.UserAccount;
 import userinterface.CustomerRole.CustomerAreaJPanel;
 import javax.swing.JPanel;
+import userinterface.CustomerRole.CustomerAdminWorkAreaPanel;
 
 /**
  *
- * @author raunak
+ * @author khushbu
  */
-public class CustomerRole extends Role{
+public class CustomerRole extends Role {
 
-    
+//    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+//        return new CustomerAreaJPanel(userProcessContainer, account);
+//    }
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        return new CustomerAreaJPanel(userProcessContainer, account);
+        return new CustomerAdminWorkAreaPanel(userProcessContainer, account, business);
     }
-    
-    
+
 }
