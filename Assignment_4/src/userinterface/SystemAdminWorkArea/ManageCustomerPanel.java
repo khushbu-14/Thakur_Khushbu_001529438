@@ -305,13 +305,26 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         Customer cs = getSelectedCustomer();
 
         if (cs != null) {
+            resetForm();
             ecosystem.getCustomerDirectory().removeCustomer(cs);
             ecosystem.getUserAccountDirectory().removeUserAccount(cs);
-            
+
             JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
             populateTable();
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void resetForm() {
+        txtName.setText(null);
+        txtAddress.setText(null);
+        txtPassword.setText(null);
+        txtPhoneNumber.setText(null);
+        txtUsername.setText(null);
+        txtUsername.setEditable(true);
+
+        btnUpdateSave.setVisible(false);
+        btnSave.setVisible(true);
+    }
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // validations
@@ -333,19 +346,14 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         } else if (!utils.isStringInputValid(username) || !ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
             JOptionPane.showMessageDialog(this, "Please enter valid and unique username");
         } else {
-
+            username = username.toLowerCase();
             Customer customer = new Customer(name, password, phoneNo, address, username);
 
             ecosystem.getUserAccountDirectory().addUserAccount(customer);
             ecosystem.getCustomerDirectory().addCustomer(customer);
 
             populateTable();
-
-            txtName.setText(null);
-            txtAddress.setText(null);
-            txtPassword.setText(null);
-            txtPhoneNumber.setText(null);
-            txtUsername.setText(null);
+            resetForm();
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -369,9 +377,6 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
             } else if (!utils.isStringInputValid(password)) {
                 JOptionPane.showMessageDialog(this, "Please enter valid password");
             } else {
-                txtUsername.setEditable(true);
-                btnUpdateSave.setVisible(false);
-                btnSave.setVisible(true);
 
                 cs.setName(name);
                 cs.setAddress(address);
@@ -382,11 +387,7 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
 
                 JOptionPane.showMessageDialog(this, name + " updated in the list successfully!");
 
-                txtName.setText(null);
-                txtAddress.setText(null);
-                txtPassword.setText(null);
-                txtPhoneNumber.setText(null);
-                txtUsername.setText(null);
+                resetForm();
             }
         }
     }//GEN-LAST:event_btnUpdateSaveActionPerformed

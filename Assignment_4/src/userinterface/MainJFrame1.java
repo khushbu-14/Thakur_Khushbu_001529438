@@ -276,7 +276,8 @@ public class MainJFrame1 extends javax.swing.JFrame {
         } else if (!util.isStringInputValid(password)) {
             JOptionPane.showMessageDialog(null, "Plesae enter valid password");
         } else {
-
+            userName = userName.toLowerCase();
+            
             userAccount = system.getUserAccountDirectory().authenticateUser(userName, password);
 
             if (userAccount == null) {

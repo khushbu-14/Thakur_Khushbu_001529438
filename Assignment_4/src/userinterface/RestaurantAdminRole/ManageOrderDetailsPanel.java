@@ -416,8 +416,8 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
 
     private void btnReadyOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadyOrderActionPerformed
 
-        orderListData.setStatus("READY");
-        lblOrderStatus.setText("READY");
+        orderListData.setStatus("READY TO DELIVER");
+        lblOrderStatus.setText("READY TO DELIVER");
         orderListData.setResolveDate(new Date());
         if (orderListData.getDeliverMan() == null) {
             JOptionPane.showMessageDialog(null, "Order preparations done successfully! Please assign a delivery person");
@@ -561,7 +561,7 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     private void changeBtns() {
         String status = orderListData.getStatus().toUpperCase();
         switch (status) {
-            case "READY":
+            case "READY TO DELIVER":
                 btnAcceptOrder.setVisible(false);
                 btnRejectOrder.setVisible(false);
                 btnReadyOrder.setVisible(false);
@@ -588,6 +588,13 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
             case "ORDERED":
                 btnAcceptOrder.setVisible(true);
                 btnRejectOrder.setVisible(true);
+                btnReadyOrder.setVisible(false);
+                assignDeliveryManPanel.setVisible(false);
+                break;
+
+            default:
+                btnAcceptOrder.setVisible(false);
+                btnRejectOrder.setVisible(false);
                 btnReadyOrder.setVisible(false);
                 assignDeliveryManPanel.setVisible(false);
                 break;

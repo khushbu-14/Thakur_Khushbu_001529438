@@ -18,7 +18,6 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author khushbu
  */
-
 public class ManageDeliveryManPanel extends javax.swing.JPanel {
 
     /**
@@ -261,6 +260,16 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         return selectedRowIndex;
     }
 
+    private void resetForm() {
+        txtName.setText(null);
+        txtPassword.setText(null);
+        txtPhoneNumber.setText(null);
+        txtUsername.setText(null);
+        txtUsername.setEditable(true);
+        btnUpdateSave.setVisible(false);
+        btnSave.setVisible(true);
+    }
+
     private DeliveryMan getSelectedDeliveryMan() {
         int selectedRowIndex = tblDeliveryManList.getSelectedRow();
 
@@ -292,6 +301,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         DeliveryMan dm = getSelectedDeliveryMan();
 
         if (dm != null) {
+            resetForm();
             ecosystem.getDeliveryManDirectory().removeDeliveryMan(dm);
 
             ecosystem.getUserAccountDirectory().removeUserAccount(dm);
@@ -318,7 +328,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         } else if (!utils.isStringInputValid(username) || !ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
             JOptionPane.showMessageDialog(this, "Please enter valid and unique username");
         } else {
-
+            username = username.toLowerCase();
             DeliveryMan deliveryMan = new DeliveryMan(name, password, phoneNo, username);
 
             ecosystem.getUserAccountDirectory().addUserAccount(deliveryMan);
@@ -326,10 +336,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
 
             populateTable();
 
-            txtName.setText(null);
-            txtPassword.setText(null);
-            txtPhoneNumber.setText(null);
-            txtUsername.setText(null);
+            resetForm();
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -351,9 +358,6 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
             } else if (!utils.isStringInputValid(password)) {
                 JOptionPane.showMessageDialog(this, "Please enter valid password");
             } else {
-                txtUsername.setEditable(true);
-                btnUpdateSave.setVisible(false);
-                btnSave.setVisible(true);
 
                 dm.setName(name);
                 dm.setPassword(password);
@@ -363,10 +367,7 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
 
                 JOptionPane.showMessageDialog(this, name + " updated in the list successfully!");
 
-                txtName.setText(null);
-                txtPassword.setText(null);
-                txtPhoneNumber.setText(null);
-                txtUsername.setText(null);
+                resetForm();
             }
         }
     }//GEN-LAST:event_btnUpdateSaveActionPerformed

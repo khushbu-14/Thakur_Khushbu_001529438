@@ -20,7 +20,6 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author khushbu
  */
-
 public class ManageRestaurantsPanel extends javax.swing.JPanel {
 
     /**
@@ -101,6 +100,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tblRestaurantList.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tblRestaurantList.setSelectionBackground(new java.awt.Color(0, 102, 204));
         jScrollPane1.setViewportView(tblRestaurantList);
 
@@ -188,7 +188,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
 
         lblTitle.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblTitle.setText(" Manage Restaurant Admin");
+        lblTitle.setText(" Manage Restaurants");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -306,15 +306,28 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
         Restaurant r = getSelectedRestaurant();
 
         if (r != null) {
+            resetForm();
             RestaurantDirectory rd = ecosystem.getRestaurantDirectory();
             rd.removeRestaurant(r);
-            
+
             ecosystem.getUserAccountDirectory().removeUserAccount(r);
 
             JOptionPane.showMessageDialog(this, "Restaurant deleted successfully!");
             populateTable();
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void resetForm() {
+        txtName.setText(null);
+        txtAddress.setText(null);
+        txtPassword.setText(null);
+        txtPhoneNumber.setText(null);
+        txtUsername.setText(null);
+
+        txtUsername.setEditable(true);
+        btnUpdateSave.setVisible(false);
+        btnSave.setVisible(true);
+    }
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // validations
@@ -336,7 +349,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
         } else if (!utils.isStringInputValid(username) || !ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
             JOptionPane.showMessageDialog(this, "Please enter valid and unique username");
         } else {
-
+            username = username.toLowerCase();
             Restaurant restaurant = new Restaurant(name, password, phoneNo, address, username);
 
             ecosystem.getUserAccountDirectory().addUserAccount(restaurant);
@@ -344,11 +357,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
 
             populateTable();
 
-            txtName.setText(null);
-            txtAddress.setText(null);
-            txtPassword.setText(null);
-            txtPhoneNumber.setText(null);
-            txtUsername.setText(null);
+            resetForm();
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -373,9 +382,6 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
             } else if (!utils.isStringInputValid(password)) {
                 JOptionPane.showMessageDialog(this, "Please enter valid password");
             } else {
-                txtUsername.setEditable(true);
-                btnUpdateSave.setVisible(false);
-                btnSave.setVisible(true);
 
                 r.setName(name);
                 r.setAddress(address);
@@ -386,11 +392,7 @@ public class ManageRestaurantsPanel extends javax.swing.JPanel {
 
                 JOptionPane.showMessageDialog(this, name + " updated in the list successfully!");
 
-                txtName.setText(null);
-                txtAddress.setText(null);
-                txtPassword.setText(null);
-                txtPhoneNumber.setText(null);
-                txtUsername.setText(null);
+                resetForm();
             }
         }
     }//GEN-LAST:event_btnUpdateSaveActionPerformed
