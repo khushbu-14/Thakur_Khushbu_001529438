@@ -176,16 +176,12 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void manageInformation() {
-        ManageRestaurantInformation manageRestaurantInfo = new ManageRestaurantInformation(mainPanel, ecosystem, userAccount);
+        ManageCustomerInformation manageCustomerInformation = new ManageCustomerInformation(userProcessContainer, ecosystem, userAccount);
 
-        mainPanel.add("RestaurantAdminWorkAreaPanel", manageRestaurantInfo);
+        mainPanel.add("ManageCustomerInformation", manageCustomerInformation);
 
         CardLayout layout = (CardLayout) mainPanel.getLayout();
         layout.next(mainPanel);
-    }
-
-    private void manageMenu() {
-
     }
 
     private void manageOrders() {
@@ -206,7 +202,7 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageOrderHistory() {
-        
+
         ManageOrderHistory manageOrderHistory = new ManageOrderHistory(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageOrderHistory", manageOrderHistory);
