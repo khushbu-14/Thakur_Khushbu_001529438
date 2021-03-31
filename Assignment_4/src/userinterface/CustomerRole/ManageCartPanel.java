@@ -16,6 +16,7 @@ import Business.WorkQueue.OrderList;
 import constants.Utils;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
@@ -320,7 +321,7 @@ public class ManageCartPanel extends javax.swing.JPanel {
 
                 newOrderList.setRequestDate(new Date());
                 newOrderList.setStatus("ORDERED");
-                
+
                 newOrderList.setMessage(msg);
 
                 ecoSystem.getWorkQueue().addWorkRequest(newOrderList);
@@ -352,7 +353,8 @@ public class ManageCartPanel extends javax.swing.JPanel {
             try {
                 qty = Integer.parseInt(response);
             } catch (NumberFormatException e) {
-
+                JOptionPane.showMessageDialog(this, "Oops! Please provide valid quantity in numbers only");
+                System.out.println("error " + e.getMessage());
             }
 
             if (qty != 0) {
@@ -452,7 +454,9 @@ public class ManageCartPanel extends javax.swing.JPanel {
 
         }
 
-        txtTotalPrice.setText(String.valueOf(sumTotal));
+        DecimalFormat df = new DecimalFormat("###.###");
+
+        txtTotalPrice.setText(String.valueOf(df.format(sumTotal)));
         txtTotalQuantity.setText(String.valueOf(qtyTotal));
     }
 

@@ -173,10 +173,8 @@ public class SelectRestaurantPanel extends javax.swing.JPanel {
             Object[] row = new Object[6];
             row[0] = "" + count++;
             row[1] = restaurant;
-            row[2] = restaurant.getUsername();
-            row[3] = restaurant.getPhone();
-            row[4] = restaurant.getAddress();
-            row[5] = restaurant.getPassword();
+            row[2] = restaurant.getPhone();
+            row[3] = restaurant.getAddress();
 
             model.addRow(row);
         }

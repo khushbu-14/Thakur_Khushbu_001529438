@@ -52,15 +52,15 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
 
         lblPageTitle = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
-        lblCustomerAddress1 = new javax.swing.JLabel();
+        lblOrderS = new javax.swing.JLabel();
         lblOrderStatus = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        lblCustomerContact = new javax.swing.JLabel();
+        lblCustomerContact1 = new javax.swing.JLabel();
         lblCustomerName = new javax.swing.JLabel();
-        lblCustomerName3 = new javax.swing.JLabel();
+        lblCustomerContact = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
-        lblCustomerName2 = new javax.swing.JLabel();
         lblCustomerAddress = new javax.swing.JLabel();
+        lblCustomerAddress1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lblCustomerName1 = new javax.swing.JLabel();
         lblRestaurantName2 = new javax.swing.JLabel();
@@ -69,7 +69,7 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
         lblRestaurantName1 = new javax.swing.JLabel();
         lblRestaurantContact = new javax.swing.JLabel();
         btnMarkDeliver = new javax.swing.JButton();
-        btnPickupOrder1 = new javax.swing.JButton();
+        btnPickupOrder = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(237, 255, 236));
 
@@ -96,10 +96,10 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
             }
         });
 
-        lblCustomerAddress1.setBackground(new java.awt.Color(249, 244, 244));
-        lblCustomerAddress1.setForeground(new java.awt.Color(102, 102, 102));
-        lblCustomerAddress1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblCustomerAddress1.setText("Order Status :");
+        lblOrderS.setBackground(new java.awt.Color(249, 244, 244));
+        lblOrderS.setForeground(new java.awt.Color(102, 102, 102));
+        lblOrderS.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblOrderS.setText("Order Status :");
 
         lblOrderStatus.setBackground(new java.awt.Color(249, 244, 244));
         lblOrderStatus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -107,32 +107,32 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
-        lblCustomerContact.setBackground(new java.awt.Color(249, 244, 244));
-        lblCustomerContact.setForeground(new java.awt.Color(102, 102, 102));
-        lblCustomerContact.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblCustomerContact.setText("Customer Contact :");
+        lblCustomerContact1.setBackground(new java.awt.Color(249, 244, 244));
+        lblCustomerContact1.setForeground(new java.awt.Color(102, 102, 102));
+        lblCustomerContact1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCustomerContact1.setText("Customer Contact :");
 
         lblCustomerName.setBackground(new java.awt.Color(249, 244, 244));
         lblCustomerName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblCustomerName.setText("NA");
 
-        lblCustomerName3.setBackground(new java.awt.Color(249, 244, 244));
-        lblCustomerName3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblCustomerName3.setText("NA");
+        lblCustomerContact.setBackground(new java.awt.Color(249, 244, 244));
+        lblCustomerContact.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCustomerContact.setText("NA");
 
         lblName.setBackground(new java.awt.Color(249, 244, 244));
         lblName.setForeground(new java.awt.Color(102, 102, 102));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblName.setText("Customer Name :");
 
-        lblCustomerName2.setBackground(new java.awt.Color(249, 244, 244));
-        lblCustomerName2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblCustomerName2.setText("NA");
-
         lblCustomerAddress.setBackground(new java.awt.Color(249, 244, 244));
-        lblCustomerAddress.setForeground(new java.awt.Color(102, 102, 102));
         lblCustomerAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblCustomerAddress.setText("Customer Address :");
+        lblCustomerAddress.setText("NA");
+
+        lblCustomerAddress1.setBackground(new java.awt.Color(249, 244, 244));
+        lblCustomerAddress1.setForeground(new java.awt.Color(102, 102, 102));
+        lblCustomerAddress1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCustomerAddress1.setText("Customer Address :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -143,10 +143,10 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCustomerName2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCustomerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCustomerName3, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCustomerContact, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblCustomerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCustomerAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCustomerContact, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCustomerContact1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
@@ -157,13 +157,13 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
                 .addGap(15, 15, 15)
                 .addComponent(lblCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
-                .addComponent(lblCustomerContact)
+                .addComponent(lblCustomerContact1)
                 .addGap(15, 15, 15)
-                .addComponent(lblCustomerName3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCustomerContact, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
-                .addComponent(lblCustomerAddress)
+                .addComponent(lblCustomerAddress1)
                 .addGap(15, 15, 15)
-                .addComponent(lblCustomerName2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCustomerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
@@ -226,7 +226,7 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
                 .addComponent(lblRestaurantName1)
                 .addGap(15, 15, 15)
                 .addComponent(lblRestaurantAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         btnMarkDeliver.setBackground(new java.awt.Color(255, 255, 255));
@@ -240,14 +240,14 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
             }
         });
 
-        btnPickupOrder1.setBackground(new java.awt.Color(255, 255, 255));
-        btnPickupOrder1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
-        btnPickupOrder1.setText("Pickup Order");
-        btnPickupOrder1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
-        btnPickupOrder1.setBorderPainted(false);
-        btnPickupOrder1.addActionListener(new java.awt.event.ActionListener() {
+        btnPickupOrder.setBackground(new java.awt.Color(255, 255, 255));
+        btnPickupOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/save.png"))); // NOI18N
+        btnPickupOrder.setText("Pickup Order");
+        btnPickupOrder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnPickupOrder.setBorderPainted(false);
+        btnPickupOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPickupOrder1ActionPerformed(evt);
+                btnPickupOrderActionPerformed(evt);
             }
         });
 
@@ -257,50 +257,47 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(39, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(209, 209, 209))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblOrderStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblCustomerAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(158, 158, 158))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(284, 284, 284)
+                .addComponent(lblOrderS, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(284, 284, 284)
+                .addComponent(lblOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
                 .addGap(104, 104, 104)
-                .addComponent(btnPickupOrder1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnMarkDeliver, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101))
+                .addComponent(btnPickupOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(197, 197, 197)
+                .addComponent(btnMarkDeliver, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(lblPageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(lblCustomerAddress1)
+                .addComponent(lblOrderS)
                 .addGap(15, 15, 15)
                 .addComponent(lblOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMarkDeliver, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPickupOrder1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPickupOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMarkDeliver, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -318,30 +315,30 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null, "Hey thanks for delivering the order to customer successfully!");
     }//GEN-LAST:event_btnMarkDeliverActionPerformed
 
-    private void btnPickupOrder1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPickupOrder1ActionPerformed
+    private void btnPickupOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPickupOrderActionPerformed
         // TODO add your handling code here:
         orderListData.setStatus("OUT FOR DELIVERY");
         lblOrderStatus.setText("OUT FOR DELIVERY");
         orderListData.setResolveDate(new Date());
         changeBtns();
         JOptionPane.showMessageDialog(null, "Order pickup successful!");
-    }//GEN-LAST:event_btnPickupOrder1ActionPerformed
+    }//GEN-LAST:event_btnPickupOrderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnMarkDeliver;
-    private javax.swing.JButton btnPickupOrder1;
+    private javax.swing.JButton btnPickupOrder;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblCustomerAddress;
     private javax.swing.JLabel lblCustomerAddress1;
     private javax.swing.JLabel lblCustomerContact;
+    private javax.swing.JLabel lblCustomerContact1;
     private javax.swing.JLabel lblCustomerName;
     private javax.swing.JLabel lblCustomerName1;
-    private javax.swing.JLabel lblCustomerName2;
-    private javax.swing.JLabel lblCustomerName3;
     private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblOrderS;
     private javax.swing.JLabel lblOrderStatus;
     private javax.swing.JLabel lblPageTitle;
     private javax.swing.JLabel lblRestaurantAddress;
@@ -357,7 +354,8 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
         
         Component component = componentArray[componentArray.length - 1];
         
-        ManageOrders manageOrders = (ManageOrders) component;
+        ManageDeliveryManOrders manageOrders = (ManageDeliveryManOrders) component;
+        
         manageOrders.populateTable();
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -369,17 +367,22 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
         switch (status) {
             case "COMPLETED":
                 btnMarkDeliver.setVisible(false);
-                btnPickupOrder1.setVisible(false);
+                btnPickupOrder.setVisible(false);
                 break;
             
             case "OUT FOR DELIVERY":
                 btnMarkDeliver.setVisible(true);
-                btnPickupOrder1.setVisible(false);
+                btnPickupOrder.setVisible(false);
                 break;
             
+            case "DLEIVERY MAN ASSIGNED":
+                 btnMarkDeliver.setVisible(false);
+                btnPickupOrder.setVisible(true);
+                break;
+                
             default:
                 btnMarkDeliver.setVisible(false);
-                btnPickupOrder1.setVisible(true);
+                btnPickupOrder.setVisible(true);
                 break;
         }
     }

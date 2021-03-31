@@ -14,6 +14,7 @@ import Business.WorkQueue.OrderList;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.text.DecimalFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -34,18 +35,18 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     WorkRequest workRequest;
     OrderList orderListData;
     DeliveryManDirectory deliveryManList;
-
+    
     public ManageOrderDetailsPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem, WorkRequest workRequest, OrderList orderListData) {
-
+        
         this.ecosystem = ecosystem;
         this.userProcessContainer = userProcessContainer;
         this.workRequest = workRequest;
         this.userAccount = userAccount;
         this.orderListData = orderListData;
         deliveryManList = ecosystem.getDeliveryManDirectory();
-
+        
         initComponents();
-
+        
         assignDeliveryManPanel.setVisible(false);
         renderData();
     }
@@ -415,7 +416,7 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnReadyOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadyOrderActionPerformed
-
+        
         orderListData.setStatus("READY TO DELIVER");
         lblOrderStatus.setText("READY TO DELIVER");
         orderListData.setResolveDate(new Date());
@@ -424,7 +425,7 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Order preparations done successfully! We will notify customer");
         }
-
+        
         changeBtns();
     }//GEN-LAST:event_btnReadyOrderActionPerformed
 
@@ -453,7 +454,7 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
             if (deliveryMan != null) {
                 workRequest.setDeliverMan(deliveryMan);
                 JOptionPane.showMessageDialog(null, "Delivery person assigned successfully!!!");
-
+                
                 assignDeliveryManPanel.setVisible(false);
                 lblDeliveryManName.setText(deliveryMan.getName());
             }
@@ -496,68 +497,69 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
 
     private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
-
+        
         int count = 1;
         int qtyTotal = 0;
         double sumTotal = 0;
-
+        
         model.setRowCount(0);
         for (OrderItem item : orderListData.getOrderList()) {
-
+            
             int qty = item.getQuantity();
             double price = item.getDish().getPrice();
-
+            
             Object[] row = new Object[4];
             row[0] = "" + count++;
             row[1] = item;
             row[2] = price;
             row[3] = qty;
-
+            
             qtyTotal += qty;
             sumTotal += price * qty;
-
+            
             model.addRow(row);
-
+            
         }
-
-        lblTotalPrice.setText(String.valueOf(sumTotal));
+        DecimalFormat df = new DecimalFormat("###.###");
+        
+        lblTotalPrice.setText(String.valueOf(df.format(sumTotal)));
         lblTotalQty.setText(String.valueOf(qtyTotal));
     }
-
+    
     private void renderData() {
-
+        
         changeBtns();
-
+        
         lblCustomerName.setText(orderListData.getCustomer().getName());
-
+        
         String deliveryManName = "NA";
-
+        
         if (orderListData.getDeliverMan() != null) {
             deliveryManName = orderListData.getDeliverMan().getName();
         }
-
+        
         lblDeliveryManName.setText(deliveryManName);
-
+        
         lblRequestDate.setText(orderListData.getRequestDate().toString());
         lblOrderStatus.setText(orderListData.getStatus());
         lblMsg.setText(orderListData.getMessage());
-
+        
         populateTable();
     }
-
+    
     private void backAction() {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
-
+        
         Component component = componentArray[componentArray.length - 1];
-
+        
         ManageOrders manageOrders = (ManageOrders) component;
         manageOrders.populateTable();
-
+        
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }
-
+    
     private void changeBtns() {
         String status = orderListData.getStatus().toUpperCase();
         switch (status) {
@@ -570,28 +572,28 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
                     assignDM();
                 }
                 break;
-
+            
             case "PROCESSING":
                 btnAcceptOrder.setVisible(false);
                 btnRejectOrder.setVisible(false);
                 btnReadyOrder.setVisible(true);
                 assignDeliveryManPanel.setVisible(false);
                 break;
-
+            
             case "REJECTED":
                 btnAcceptOrder.setVisible(false);
                 btnRejectOrder.setVisible(false);
                 btnReadyOrder.setVisible(false);
                 assignDeliveryManPanel.setVisible(false);
                 break;
-
+            
             case "ORDERED":
                 btnAcceptOrder.setVisible(true);
                 btnRejectOrder.setVisible(true);
                 btnReadyOrder.setVisible(false);
                 assignDeliveryManPanel.setVisible(false);
                 break;
-
+            
             default:
                 btnAcceptOrder.setVisible(false);
                 btnRejectOrder.setVisible(false);
@@ -599,14 +601,14 @@ public class ManageOrderDetailsPanel extends javax.swing.JPanel {
                 assignDeliveryManPanel.setVisible(false);
                 break;
         }
-
+        
         if (orderListData.getResolveDate() != null) {
             lblResolveDate.setText(orderListData.getResolveDate().toString());
         } else {
             lblResolveDate.setText(orderListData.getRequestDate().toString());
         }
     }
-
+    
     private void assignDM() {
         for (DeliveryMan dm : deliveryManList.getDeliveryManList()) {
             comboBoxDeliveryMan.addItem(dm.getName());

@@ -54,6 +54,7 @@ public class ManageOrderHistory extends javax.swing.JPanel {
         btnViewDetails = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(237, 255, 236));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblCart.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
@@ -86,6 +87,8 @@ public class ManageOrderHistory extends javax.swing.JPanel {
         tblCart.setSelectionBackground(new java.awt.Color(0, 102, 204));
         jScrollPane2.setViewportView(tblCart);
 
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 53, 704, 157));
+
         btnViewDetails.setBackground(new java.awt.Color(255, 255, 255));
         btnViewDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/view-details.png"))); // NOI18N
         btnViewDetails.setText("View Details");
@@ -96,29 +99,7 @@ public class ManageOrderHistory extends javax.swing.JPanel {
                 btnViewDetailsActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(533, 533, 533)
-                .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane2)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(388, Short.MAX_VALUE))
-        );
+        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 228, 139, 46));
     }// </editor-fold>//GEN-END:initComponents
 
     private WorkRequest getSelectedRow() {

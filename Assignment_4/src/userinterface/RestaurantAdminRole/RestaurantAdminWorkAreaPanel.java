@@ -189,7 +189,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageMenu() {
-        ManageMenuPanel manageMenuPanel = new ManageMenuPanel(adminPanel, ecosystem, userAccount);
+        ManageMenuPanel manageMenuPanel = new ManageMenuPanel(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageMenuPanel", manageMenuPanel);
 

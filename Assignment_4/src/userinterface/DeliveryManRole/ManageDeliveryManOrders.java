@@ -49,7 +49,7 @@ public class ManageDeliveryManOrders extends javax.swing.JPanel {
             return null;
         }
 
-        WorkRequest request = (WorkRequest) tblOrderList.getValueAt(selectedRowIndex, 2);
+        WorkRequest request = (WorkRequest) tblOrderList.getValueAt(selectedRowIndex, 3);
 
         return request;
     }
@@ -121,44 +121,35 @@ public class ManageDeliveryManOrders extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
-                .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(578, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(52, 52, 52)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(288, 288, 288))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(70, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(292, 292, 292)
+                .addGap(72, 72, 72)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
                 .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(484, 484, 484))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(72, 72, 72)
-                    .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(546, Short.MAX_VALUE)))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
-
+        System.out.println("Button clicked");
         WorkRequest request = getSelectedRow();
 
         if (request != null && request instanceof OrderList) {
             OrderList orderListData = (OrderList) request;
 
-            ManageOrderDetailsPanel manageOrderDetails = new ManageOrderDetailsPanel(userProcessContainer, account, ecosystem, request, orderListData);
+            ManageDeliveryManOrderDetails manageDeliveryManOrderDetails = new ManageDeliveryManOrderDetails(userProcessContainer, account, ecosystem, request, orderListData);
 
-            userProcessContainer.add("ManageOrderDetailsPanel", manageOrderDetails);
+            userProcessContainer.add("ManageDeliveryManOrderDetails", manageDeliveryManOrderDetails);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }
@@ -185,7 +176,7 @@ public class ManageDeliveryManOrders extends javax.swing.JPanel {
             Object[] row = new Object[6];
             row[0] = "" + count++;
             row[1] = wr.getRestaurant().getName();
-            row[3] = wr.getCustomer().getName();
+            row[2] = wr.getCustomer().getName();
             row[3] = wr;
             row[4] = wr.getStatus();
             row[5] = wr.getRequestDate();

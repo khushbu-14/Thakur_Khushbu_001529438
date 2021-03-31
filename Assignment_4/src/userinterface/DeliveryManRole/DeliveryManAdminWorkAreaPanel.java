@@ -102,7 +102,7 @@ public class DeliveryManAdminWorkAreaPanel extends javax.swing.JPanel {
                 .addComponent(btnOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(121, 121, 121)
                 .addComponent(btnInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
         navbarLayout.setVerticalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,18 +121,15 @@ public class DeliveryManAdminWorkAreaPanel extends javax.swing.JPanel {
         adminPanel.setLayout(adminPanelLayout);
         adminPanelLayout.setHorizontalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPanelLayout.createSequentialGroup()
-                .addGap(0, 31, Short.MAX_VALUE)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(662, 662, 662))
             .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addComponent(navbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 566, Short.MAX_VALUE)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE))
         );
 
         add(adminPanel, java.awt.BorderLayout.CENTER);
@@ -157,7 +154,7 @@ public class DeliveryManAdminWorkAreaPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void manageInformation() {
-        ManageDeliveryManInformation manageDeliveryManInformation = new ManageDeliveryManInformation(userProcessContainer, ecosystem, userAccount);
+        ManageDeliveryManInformation manageDeliveryManInformation = new ManageDeliveryManInformation(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageDeliveryManInformation", manageDeliveryManInformation);
 
@@ -167,7 +164,7 @@ public class DeliveryManAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void manageOrders() {
 
-        ManageDeliveryManOrders manageDeliveryManOrders = new ManageDeliveryManOrders(userProcessContainer, ecosystem, userAccount);
+        ManageDeliveryManOrders manageDeliveryManOrders = new ManageDeliveryManOrders(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageDeliveryManOrders", manageDeliveryManOrders);
 
