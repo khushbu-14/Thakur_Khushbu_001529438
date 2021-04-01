@@ -97,7 +97,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/assets/consumer.png"/>
+                  <Image iconType="3" name="/assets/shopping-list.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Orders"/>
                 <Property name="toolTipText" type="java.lang.String" value="View Orders list"/>
@@ -155,7 +155,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/assets/delivery-man.png"/>
+                  <Image iconType="3" name="/assets/user-profile.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Information"/>
                 <Property name="toolTipText" type="java.lang.String" value="View Information list"/>

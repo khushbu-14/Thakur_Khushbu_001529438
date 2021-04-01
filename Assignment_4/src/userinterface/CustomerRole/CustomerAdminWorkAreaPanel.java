@@ -9,6 +9,7 @@ import userinterface.RestaurantAdminRole.*;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.awt.Color;
 import javax.swing.JPanel;
 
 /**
@@ -55,8 +56,8 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
 
         navbar.setBackground(new java.awt.Color(204, 255, 204));
 
-        btnCart.setBackground(new java.awt.Color(255, 255, 255));
-        btnCart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/consumer.png"))); // NOI18N
+        btnCart.setBackground(new java.awt.Color(250, 213, 134));
+        btnCart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/order-food.png"))); // NOI18N
         btnCart.setText("Place Order");
         btnCart.setToolTipText("Choose Restaurant and dishes");
         btnCart.setAlignmentY(0.0F);
@@ -72,7 +73,7 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
         });
 
         btnOrderHistory.setBackground(new java.awt.Color(255, 255, 255));
-        btnOrderHistory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/dinner.png"))); // NOI18N
+        btnOrderHistory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/shopping-list.png"))); // NOI18N
         btnOrderHistory.setText("Order History");
         btnOrderHistory.setToolTipText("View Order History list");
         btnOrderHistory.setAlignmentY(0.0F);
@@ -88,7 +89,7 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
         });
 
         btnInformation.setBackground(new java.awt.Color(255, 255, 255));
-        btnInformation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delivery-man.png"))); // NOI18N
+        btnInformation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/user-profile.png"))); // NOI18N
         btnInformation.setText("Information");
         btnInformation.setToolTipText("View Information list");
         btnInformation.setAlignmentY(0.0F);
@@ -175,6 +176,7 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void manageInformation() {
+        changeBtnBgs("info");
         ManageCustomerInformation manageCustomerInformation = new ManageCustomerInformation(userProcessContainer, ecosystem, userAccount);
 
         mainPanel.add("ManageCustomerInformation", manageCustomerInformation);
@@ -184,6 +186,7 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageOrders() {
+        changeBtnBgs("orders");
         ManageOrders manageOrders = new ManageOrders(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageOrders", manageOrders);
@@ -193,6 +196,7 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageCart() {
+        changeBtnBgs("cart");
         SelectRestaurantPanel selectRestaurantPanel = new SelectRestaurantPanel(mainPanel, ecosystem, userAccount);
         mainPanel.add("SelectRestaurantPanel", selectRestaurantPanel);
 
@@ -201,13 +205,29 @@ public class CustomerAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageOrderHistory() {
-
+        changeBtnBgs("orders");
         ManageOrderHistory manageOrderHistory = new ManageOrderHistory(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageOrderHistory", manageOrderHistory);
 
         CardLayout layout = (CardLayout) mainPanel.getLayout();
         layout.next(mainPanel);
+    }
 
+    private void changeBtnBgs(String type) {
+        Color activeColor = Color.getColor("eabf9f");
+        Color notActiveColor = Color.WHITE;
+
+        btnCart.setBackground(notActiveColor);
+        btnInformation.setBackground(notActiveColor);
+        btnOrderHistory.setBackground(notActiveColor);
+
+        if ("cart".equals(type)) {
+            btnCart.setBackground(activeColor);
+        } else if ("info".equals(type)) {
+            btnInformation.setBackground(activeColor);
+        } else if (type.equals("orders")) {
+            btnOrderHistory.setBackground(activeColor);
+        }
     }
 }

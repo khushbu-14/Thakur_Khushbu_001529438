@@ -37,7 +37,7 @@ public class MainJFrame1 extends javax.swing.JFrame {
         // does not create new ecosystem, but uses database to retrieve the system
         system = dB4OUtil.retrieveSystem();
 
-        this.setSize(850, 800);
+        this.setSize(840, 800);
         this.setResizable(false);
         initalSetup();
     }
@@ -250,7 +250,6 @@ public class MainJFrame1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initalSetup() {
-//        System.out.println("Btn will be hidden");
         btnLogout.setVisible(false);
         btnLogout.setEnabled(false);
         container.setVisible(false);

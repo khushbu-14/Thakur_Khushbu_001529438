@@ -9,6 +9,7 @@ import Business.EcoSystem;
 import Business.Restaurant.Restaurant;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.awt.Color;
 import javax.swing.JPanel;
 
 /**
@@ -59,7 +60,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
         navbar.setBackground(new java.awt.Color(204, 255, 204));
 
         btnOrders.setBackground(new java.awt.Color(255, 255, 255));
-        btnOrders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/consumer.png"))); // NOI18N
+        btnOrders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/shopping-list.png"))); // NOI18N
         btnOrders.setText("Orders");
         btnOrders.setToolTipText("View Orders list");
         btnOrders.setAlignmentY(0.0F);
@@ -91,7 +92,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
         });
 
         btnInformation.setBackground(new java.awt.Color(255, 255, 255));
-        btnInformation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delivery-man.png"))); // NOI18N
+        btnInformation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/user-profile.png"))); // NOI18N
         btnInformation.setText("Information");
         btnInformation.setToolTipText("View Information list");
         btnInformation.setAlignmentY(0.0F);
@@ -180,6 +181,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void manageInformation() {
+        changeBtnBgs("info");
         ManageRestaurantInformation manageRestaurantInfo = new ManageRestaurantInformation(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("RestaurantAdminWorkAreaPanel", manageRestaurantInfo);
@@ -189,6 +191,7 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageMenu() {
+        changeBtnBgs("menu");
         ManageMenuPanel manageMenuPanel = new ManageMenuPanel(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageMenuPanel", manageMenuPanel);
@@ -198,11 +201,29 @@ public class RestaurantAdminWorkAreaPanel extends javax.swing.JPanel {
     }
 
     private void manageOrders() {
+        changeBtnBgs("orders");
         ManageOrders manageOrders = new ManageOrders(mainPanel, ecosystem, userAccount);
 
         mainPanel.add("ManageOrders", manageOrders);
 
         CardLayout layout = (CardLayout) mainPanel.getLayout();
         layout.next(mainPanel);
+    }
+
+    private void changeBtnBgs(String type) {
+        Color activeColor = Color.getColor("eabf9f");
+        Color notActiveColor = Color.WHITE;
+
+        btnMenu.setBackground(notActiveColor);
+        btnInformation.setBackground(notActiveColor);
+        btnOrders.setBackground(notActiveColor);
+
+        if ("menu".equals(type)) {
+            btnMenu.setBackground(activeColor);
+        } else if ("info".equals(type)) {
+            btnInformation.setBackground(activeColor);
+        } else if (type.equals("orders")) {
+            btnOrders.setBackground(activeColor);
+        }
     }
 }

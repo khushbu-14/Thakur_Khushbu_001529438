@@ -11,6 +11,7 @@ import Business.EcoSystem;
 import Business.Restaurant.Restaurant;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
@@ -179,7 +180,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnTree.setBackground(new java.awt.Color(255, 255, 255));
-        btnTree.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/delivery-man.png"))); // NOI18N
+        btnTree.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/hierarchical-structure.png"))); // NOI18N
         btnTree.setText("Tree Structure");
         btnTree.setToolTipText("View Delivery Man list");
         btnTree.setAlignmentY(0.0F);
@@ -359,7 +360,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void manageCustomer() {
-
+        changeBtnBgs("customer");
         userinterface.SystemAdminWorkArea.ManageCustomerPanel manageCustomer = new userinterface.SystemAdminWorkArea.ManageCustomerPanel(mainPanel, ecosystem);
 
         mainPanel.add("ManageCustomerJPanel", manageCustomer);
@@ -369,6 +370,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     private void manageRestaurants() {
+        changeBtnBgs("restaurant");
         userinterface.SystemAdminWorkArea.ManageRestaurantsPanel manageRestaurant = new userinterface.SystemAdminWorkArea.ManageRestaurantsPanel(mainPanel, ecosystem);
 
         mainPanel.add("ManageRestaurantPanel", manageRestaurant);
@@ -378,6 +380,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     private void manageDeliveryMan() {
+        changeBtnBgs("delivery");
         userinterface.SystemAdminWorkArea.ManageDeliveryManPanel manageDeliveryManPanel = new userinterface.SystemAdminWorkArea.ManageDeliveryManPanel(mainPanel, ecosystem);
 
         mainPanel.add("ManageDeliveryManPanel", manageDeliveryManPanel);
@@ -387,11 +390,32 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     private void manageTree() {
+        changeBtnBgs("tree");
         userinterface.SystemAdminWorkArea.ManageTreePanel manageTreePanel = new userinterface.SystemAdminWorkArea.ManageTreePanel(userProcessContainer, ecosystem);
 
         mainPanel.add("ManageTreePanel", manageTreePanel);
 
         CardLayout layout = (CardLayout) mainPanel.getLayout();
         layout.next(mainPanel);
+    }
+
+    private void changeBtnBgs(String type) {
+        Color activeColor = Color.getColor("eabf9f");
+        Color notActiveColor = Color.WHITE;
+
+        btnCustomer.setBackground(notActiveColor);
+        btnDeliveryMan1.setBackground(notActiveColor);
+        btnRestaurant.setBackground(notActiveColor);
+        btnTree.setBackground(notActiveColor);
+
+        if ("customer".equals(type)) {
+            btnCustomer.setBackground(activeColor);
+        } else if ("delivery".equals(type)) {
+            btnDeliveryMan1.setBackground(activeColor);
+        } else if (type.equals("restaurant")) {
+            btnRestaurant.setBackground(activeColor);
+        } else if (type.equals("tree")) {
+            btnTree.setBackground(activeColor);
+        }
     }
 }
