@@ -156,7 +156,10 @@ public class ManageTreePanel extends javax.swing.JPanel {
             workRequestList = ecosystem.getWorkQueue().getCustomerRequestList(customer);
             int count = 0;
             for (WorkRequest req : workRequestList) {
-                orderNode = new DefaultMutableTreeNode(req.getRestaurant().getName());
+                String txt = req.getRestaurant().getName() + " - " + req.getStatus();
+                orderNode = new DefaultMutableTreeNode(txt);
+
+//                orderNode = new DefaultMutableTreeNode(req.getRestaurant().getName());
                 networkNode.insert(orderNode, count);
                 count++;
             }
@@ -173,7 +176,10 @@ public class ManageTreePanel extends javax.swing.JPanel {
             workRequestList = ecosystem.getWorkQueue().getRestaurantRequestList(restaurant);
             int count = 0;
             for (WorkRequest req : workRequestList) {
-                orderNode = new DefaultMutableTreeNode(req.getCustomer().getName());
+//                orderNode = new DefaultMutableTreeNode(req.getCustomer().getName());
+                String txt = req.getCustomer().getName() + " - " + req.getStatus();
+                orderNode = new DefaultMutableTreeNode(txt);
+                
                 networkNode.insert(orderNode, count);
                 count++;
             }

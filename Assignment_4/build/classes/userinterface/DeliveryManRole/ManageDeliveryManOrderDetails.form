@@ -277,8 +277,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblCustomerName1" alignment="0" min="-2" pref="238" max="-2" attributes="0"/>
-                      <Component id="lblRestaurantName" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                      <Component id="lblRestaurantName" alignment="0" min="-2" pref="238" max="-2" attributes="0"/>
+                      <Component id="lblRestaurantNameLable" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
                       <Component id="lblRestaurantAddress" alignment="0" min="-2" pref="238" max="-2" attributes="0"/>
                       <Component id="lblRestaurantName1" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
                       <Component id="lblRestaurantContact" alignment="0" min="-2" pref="238" max="-2" attributes="0"/>
@@ -292,9 +292,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="lblRestaurantName" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblRestaurantNameLable" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                  <Component id="lblCustomerName1" min="-2" pref="19" max="-2" attributes="0"/>
+                  <Component id="lblRestaurantName" min="-2" pref="19" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="lblRestaurantName2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -309,7 +309,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblCustomerName1">
+        <Component class="javax.swing.JLabel" name="lblRestaurantName">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f4" green="f4" red="f9" type="rgb"/>
@@ -330,7 +330,7 @@
             <Property name="text" type="java.lang.String" value="Restaurant Contact :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblRestaurantName">
+        <Component class="javax.swing.JLabel" name="lblRestaurantNameLable">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="ff" red="cc" type="rgb"/>

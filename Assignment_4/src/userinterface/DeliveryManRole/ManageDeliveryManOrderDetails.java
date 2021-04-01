@@ -62,9 +62,9 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
         lblCustomerAddress = new javax.swing.JLabel();
         lblCustomerAddress1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        lblCustomerName1 = new javax.swing.JLabel();
-        lblRestaurantName2 = new javax.swing.JLabel();
         lblRestaurantName = new javax.swing.JLabel();
+        lblRestaurantName2 = new javax.swing.JLabel();
+        lblRestaurantNameLable = new javax.swing.JLabel();
         lblRestaurantAddress = new javax.swing.JLabel();
         lblRestaurantName1 = new javax.swing.JLabel();
         lblRestaurantContact = new javax.swing.JLabel();
@@ -169,19 +169,19 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
-        lblCustomerName1.setBackground(new java.awt.Color(249, 244, 244));
-        lblCustomerName1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblCustomerName1.setText("NA");
+        lblRestaurantName.setBackground(new java.awt.Color(249, 244, 244));
+        lblRestaurantName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblRestaurantName.setText("NA");
 
         lblRestaurantName2.setBackground(new java.awt.Color(249, 244, 244));
         lblRestaurantName2.setForeground(new java.awt.Color(102, 102, 102));
         lblRestaurantName2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblRestaurantName2.setText("Restaurant Contact :");
 
-        lblRestaurantName.setBackground(new java.awt.Color(204, 255, 204));
-        lblRestaurantName.setForeground(new java.awt.Color(102, 102, 102));
-        lblRestaurantName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblRestaurantName.setText("Restaurant Name :");
+        lblRestaurantNameLable.setBackground(new java.awt.Color(204, 255, 204));
+        lblRestaurantNameLable.setForeground(new java.awt.Color(102, 102, 102));
+        lblRestaurantNameLable.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblRestaurantNameLable.setText("Restaurant Name :");
 
         lblRestaurantAddress.setBackground(new java.awt.Color(249, 244, 244));
         lblRestaurantAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -203,8 +203,8 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCustomerName1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRestaurantName, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRestaurantName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRestaurantNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblRestaurantAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblRestaurantName1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblRestaurantContact, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,9 +215,9 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(lblRestaurantName)
+                .addComponent(lblRestaurantNameLable)
                 .addGap(15, 15, 15)
-                .addComponent(lblCustomerName1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblRestaurantName, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(lblRestaurantName2)
                 .addGap(15, 15, 15)
@@ -336,7 +336,6 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
     private javax.swing.JLabel lblCustomerContact;
     private javax.swing.JLabel lblCustomerContact1;
     private javax.swing.JLabel lblCustomerName;
-    private javax.swing.JLabel lblCustomerName1;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblOrderS;
     private javax.swing.JLabel lblOrderStatus;
@@ -346,6 +345,7 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
     private javax.swing.JLabel lblRestaurantName;
     private javax.swing.JLabel lblRestaurantName1;
     private javax.swing.JLabel lblRestaurantName2;
+    private javax.swing.JLabel lblRestaurantNameLable;
     // End of variables declaration//GEN-END:variables
 
     private void backAction() {

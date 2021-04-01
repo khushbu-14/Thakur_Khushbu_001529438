@@ -136,7 +136,7 @@ public class ManageOrderHistory extends javax.swing.JPanel {
     private javax.swing.JTable tblCart;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
+    public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
 
         workRequestList = ecosystem.getWorkQueue().getCustomerRequestList(userAccount);
