@@ -37,7 +37,8 @@ public class MainJFrame1 extends javax.swing.JFrame {
         // does not create new ecosystem, but uses database to retrieve the system
         system = dB4OUtil.retrieveSystem();
 
-//        this.setSize(1680, 1050);
+        this.setSize(850, 800);
+        this.setResizable(false);
         initalSetup();
     }
 
