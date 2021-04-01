@@ -141,7 +141,7 @@ public class ManageDeliveryManOrders extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
-        System.out.println("Button clicked");
+//        System.out.println("Button clicked");
         WorkRequest request = getSelectedRow();
 
         if (request != null && request instanceof OrderList) {

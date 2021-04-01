@@ -30,7 +30,7 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
     EcoSystem ecosystem;
     WorkRequest workRequest;
     OrderList orderListData;
-    
+
     public ManageDeliveryManOrderDetails(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem, WorkRequest workRequest, OrderList orderListData) {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
@@ -351,17 +351,17 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
     private void backAction() {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
-        
+
         Component component = componentArray[componentArray.length - 1];
-        
+
         ManageDeliveryManOrders manageOrders = (ManageDeliveryManOrders) component;
-        
+
         manageOrders.populateTable();
-        
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }
-    
+
     private void changeBtns() {
         String status = orderListData.getStatus().toUpperCase();
         switch (status) {
@@ -369,35 +369,35 @@ public class ManageDeliveryManOrderDetails extends javax.swing.JPanel {
                 btnMarkDeliver.setVisible(false);
                 btnPickupOrder.setVisible(false);
                 break;
-            
+
             case "OUT FOR DELIVERY":
                 btnMarkDeliver.setVisible(true);
                 btnPickupOrder.setVisible(false);
                 break;
-            
-            case "DLEIVERY MAN ASSIGNED":
-                 btnMarkDeliver.setVisible(false);
+
+            case "ASSIGNED DELIVERY MAN":
+                btnMarkDeliver.setVisible(false);
                 btnPickupOrder.setVisible(true);
                 break;
-                
+
             default:
                 btnMarkDeliver.setVisible(false);
                 btnPickupOrder.setVisible(true);
                 break;
         }
     }
-    
+
     private void renderData() {
         changeBtns();
-        
+
         lblCustomerName.setText(orderListData.getCustomer().getName());
         lblCustomerAddress.setText(orderListData.getCustomer().getAddress());
         lblCustomerContact.setText(orderListData.getCustomer().getPhone());
-        
+
         lblRestaurantName.setText(orderListData.getRestaurant().getName());
         lblRestaurantAddress.setText(orderListData.getRestaurant().getAddress());
         lblRestaurantContact.setText(orderListData.getRestaurant().getPhone());
-        
+
         lblOrderStatus.setText(orderListData.getStatus());
     }
 }

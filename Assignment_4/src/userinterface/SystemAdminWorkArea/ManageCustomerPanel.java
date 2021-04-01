@@ -319,6 +319,8 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         txtAddress.setText(null);
         txtPassword.setText(null);
         txtPhoneNumber.setText(null);
+        
+        txtPhoneNumber.setText("");
         txtUsername.setText(null);
         txtUsername.setEditable(true);
 
