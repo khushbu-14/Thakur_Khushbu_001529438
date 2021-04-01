@@ -5,9 +5,15 @@
  */
 package userinterface.SystemAdminWorkArea;
 
+import Business.Customer.Customer;
+import Business.DeliveryMan.DeliveryMan;
 import Business.EcoSystem;
+import Business.Restaurant.Restaurant;
 import java.awt.CardLayout;
+import java.util.ArrayList;
 import javax.swing.JPanel;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
@@ -25,7 +31,59 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
+        
+        treePane.setVisible(true);
+        
         manageCustomer();
+        populateTree();
+    }
+
+    public void populateTree() {
+        DefaultTreeModel model = (DefaultTreeModel) jTree.getModel();
+        // Add the code for draw your system structure shown by JTree
+
+        ArrayList<Customer> customerList = ecosystem.getCustomerDirectory().getCustomerList();
+
+        ArrayList<Restaurant> restaurantList = ecosystem.getRestaurantDirectory().getRestaurantList();
+
+        ArrayList<DeliveryMan> deliveryManList = ecosystem.getDeliveryManDirectory().getDeliveryManList();
+
+        Customer customer;
+        Restaurant restaurant;
+        DeliveryMan deliveryMan;
+
+        DefaultMutableTreeNode customers = new DefaultMutableTreeNode("Customers");
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
+        root.removeAllChildren();
+        root.insert(customers, 0);
+
+        DefaultMutableTreeNode networkNode;
+
+        for (int i = 0; i < customerList.size(); i++) {
+            customer = customerList.get(i);
+            networkNode = new DefaultMutableTreeNode(customer.getName());
+            customers.insert(networkNode, i);
+        }
+
+        DefaultMutableTreeNode restaurants = new DefaultMutableTreeNode("Restaurants");
+        root.insert(restaurants, 1);
+
+        for (int i = 0; i < restaurantList.size(); i++) {
+            restaurant = restaurantList.get(i);
+            networkNode = new DefaultMutableTreeNode(restaurant.getName());
+            restaurants.insert(networkNode, i);
+        }
+
+        DefaultMutableTreeNode deliveryMans = new DefaultMutableTreeNode("Delivery Man");
+        root.insert(restaurants, 2);
+
+        for (int i = 0; i < deliveryManList.size(); i++) {
+            deliveryMan = deliveryManList.get(i);
+            networkNode = new DefaultMutableTreeNode(deliveryMan.getName());
+            deliveryMans.insert(networkNode, i);
+        }
+
+        model.reload();
     }
 
     /**
@@ -43,6 +101,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnRestaurant = new javax.swing.JButton();
         btnDeliveryMan = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
+        treePane = new javax.swing.JScrollPane();
+        treePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lblSelectedNode = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTree = new javax.swing.JTree();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
@@ -126,6 +190,48 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setLayout(new java.awt.CardLayout());
 
+        treePanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setText("Selected Node:");
+
+        lblSelectedNode.setText("<View_selected_node>");
+
+        jTree.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
+            public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
+                jTreeValueChanged(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTree);
+
+        javax.swing.GroupLayout treePanelLayout = new javax.swing.GroupLayout(treePanel);
+        treePanel.setLayout(treePanelLayout);
+        treePanelLayout.setHorizontalGroup(
+            treePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(treePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(treePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(treePanelLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblSelectedNode)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        treePanelLayout.setVerticalGroup(
+            treePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(treePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(treePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblSelectedNode))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        treePane.setViewportView(treePanel);
+
         javax.swing.GroupLayout adminPanelLayout = new javax.swing.GroupLayout(adminPanel);
         adminPanel.setLayout(adminPanelLayout);
         adminPanelLayout.setHorizontalGroup(
@@ -135,14 +241,21 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addGap(1, 1, 1)
-                .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(adminPanelLayout.createSequentialGroup()
+                        .addComponent(treePane, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPanelLayout.createSequentialGroup()
                 .addComponent(navbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 474, Short.MAX_VALUE)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(treePane, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(293, 293, 293))
         );
 
         add(adminPanel, java.awt.BorderLayout.CENTER);
@@ -150,28 +263,42 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
         // TODO add your handling code here:
+        treePane.setVisible(true);
         manageCustomer();
     }//GEN-LAST:event_btnCustomerActionPerformed
 
     private void btnRestaurantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaurantActionPerformed
-
+        treePane.setVisible(false);
         manageRestaurants();
     }//GEN-LAST:event_btnRestaurantActionPerformed
 
     private void btnDeliveryManActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliveryManActionPerformed
         // TODO add your handling code here:
-
+        treePane.setVisible(false);
         manageDeliveryMan();
     }//GEN-LAST:event_btnDeliveryManActionPerformed
 
+    private void jTreeValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_jTreeValueChanged
+
+        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) jTree.getLastSelectedPathComponent();
+        if (selectedNode != null) {
+            lblSelectedNode.setText(selectedNode.toString());
+        }
+    }//GEN-LAST:event_jTreeValueChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel adminPanel;
     private javax.swing.JButton btnCustomer;
     private javax.swing.JButton btnDeliveryMan;
     private javax.swing.JButton btnRestaurant;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTree jTree;
+    private javax.swing.JLabel lblSelectedNode;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel navbar;
+    private javax.swing.JScrollPane treePane;
+    private javax.swing.JPanel treePanel;
     // End of variables declaration//GEN-END:variables
 
     private void manageCustomer() {
