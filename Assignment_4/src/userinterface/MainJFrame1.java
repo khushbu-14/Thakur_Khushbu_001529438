@@ -272,16 +272,24 @@ public class MainJFrame1 extends javax.swing.JFrame {
         String password = String.valueOf(passwordCharArray);
 
         if (!util.isStringInputValid(userName)) {
-            JOptionPane.showMessageDialog(null, "Plesae enter valid user name");
+//  JOptionPane.showMessageDialog(null, "Plesae enter valid user name");
+            JOptionPane.showMessageDialog(this, "Plesae enter valid user name",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         } else if (!util.isStringInputValid(password)) {
-            JOptionPane.showMessageDialog(null, "Plesae enter valid password");
+//  JOptionPane.showMessageDialog(null, "Plesae enter valid password");
+            JOptionPane.showMessageDialog(this, "Plesae enter valid password",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             userName = userName.toLowerCase();
-            
+
             userAccount = system.getUserAccountDirectory().authenticateUser(userName, password);
 
             if (userAccount == null) {
-                JOptionPane.showMessageDialog(null, "Invalid credentials");
+
+                JOptionPane.showMessageDialog(this, "Invalid credentials",
+                        "Error", JOptionPane.ERROR_MESSAGE);
+
+//                JOptionPane.showMessageDialog(null, "Invalid credentials");
             } else {
                 userNameJTextField.setText("");
                 txtPassword.setText("");

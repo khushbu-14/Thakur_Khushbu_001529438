@@ -287,7 +287,9 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblCustomerList.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Oops! Please select a customer first.");
+//            JOptionPane.showMessageDialog(this, "Oops! Please select a customer first.");
+            JOptionPane.showMessageDialog(this, "Oops! Please select a customer first.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
             return null;
         }
 
@@ -319,7 +321,9 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
             ecosystem.getCustomerDirectory().removeCustomer(cs);
             ecosystem.getUserAccountDirectory().removeUserAccount(cs);
 
-            JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
+            JOptionPane.showMessageDialog(this, "Customer deleted successfully!",
+                    "Success", JOptionPane.INFORMATION_MESSAGE);
+            // JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
             populateTable();
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
@@ -348,15 +352,25 @@ public class ManageCustomerPanel extends javax.swing.JPanel {
         String phoneNo = txtPhoneNumber.getText().trim();
 
         if (!utils.isStringInputValid(name)) {
-            JOptionPane.showMessageDialog(this, "Please enter valid name");
+//            JOptionPane.showMessageDialog(this, "Please enter valid name");
+            JOptionPane.showMessageDialog(this, "Please enter valid name",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         } else if (!utils.isStringInputValid(address)) {
-            JOptionPane.showMessageDialog(this, "Please enter valid address");
+//            JOptionPane.showMessageDialog(this, "Please enter valid address");
+            JOptionPane.showMessageDialog(this, "Please enter valid address",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         } else if (!utils.isStringInputValid(phoneNo) || phoneNo.length() != 10) {
-            JOptionPane.showMessageDialog(this, "Please enter valid 10 digit phone number");
-        } else if (!utils.isStringInputValid(password)) {
-            JOptionPane.showMessageDialog(this, "Please enter valid password");
+//            JOptionPane.showMessageDialog(this, "Please enter valid 10 digit phone number");
+            JOptionPane.showMessageDialog(this, "Please enter valid 10 digit phone number",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         } else if (!utils.isStringInputValid(username) || !ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
-            JOptionPane.showMessageDialog(this, "Please enter valid and unique username");
+        //  JOptionPane.showMessageDialog(this, "Please enter valid and unique username");
+            JOptionPane.showMessageDialog(this, "Please enter valid and unique username",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (!utils.isStringInputValid(password)) {
+        //  JOptionPane.showMessageDialog(this, "Please enter valid password");
+            JOptionPane.showMessageDialog(this, "Please enter valid password",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             username = username.toLowerCase();
             Customer customer = new Customer(name, password, phoneNo, address, username);

@@ -348,12 +348,32 @@ public class ManageCartPanel extends javax.swing.JPanel {
         int qty = 0;
 
         if (d != null) {
+
+            /*boolean inputAccepted = false;
+
+            while (!inputAccepted) {
+                try {
+                    int userQty = Integer.parseInt("Please provide quantity for " + d.getName());
+                    if (userQty > 0) {
+                        qty = userQty;
+                        inputAccepted = true;
+                    } else {
+                        inputAccepted = false;
+                    }
+                } catch (NumberFormatException e) {
+                    inputAccepted = false;
+//                    JOptionPane.showMessageDialog(this, "Oops! Please provide valid quantity in numbers only");
+                }
+            } */
             String response = JOptionPane.showInputDialog("Please provide quantity for " + d.getName());
 
             try {
                 qty = Integer.parseInt(response);
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "Oops! Please provide valid quantity in numbers only");
+                
+                JOptionPane.showMessageDialog(this, "Oops! Please provide valid quantity in numbers only",
+                        "Input Error", JOptionPane.ERROR_MESSAGE);
+                
                 System.out.println("error " + e.getMessage());
             }
 
@@ -364,7 +384,7 @@ public class ManageCartPanel extends javax.swing.JPanel {
                 orderList.add(oi);
 
                 populateCartTable();
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(this, "Only positive numbers allowed");
             }
         }
