@@ -104,6 +104,11 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
         lblName.setText("Delivery Man Name :");
 
         txtName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 10, true));
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNameKeyPressed(evt);
+            }
+        });
 
         btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
         btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/edit.png"))); // NOI18N
@@ -371,6 +376,17 @@ public class ManageDeliveryManPanel extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_btnUpdateSaveActionPerformed
+
+    private void txtNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (Character.isDigit(c)) {
+            txtName.setEditable(false);
+            JOptionPane.showMessageDialog(this, "Sorry! no numbers allowed");
+        } else {
+            txtName.setEditable(true);
+        }
+    }//GEN-LAST:event_txtNameKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
