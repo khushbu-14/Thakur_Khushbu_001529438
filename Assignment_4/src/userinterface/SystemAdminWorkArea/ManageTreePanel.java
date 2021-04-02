@@ -140,10 +140,16 @@ public class ManageTreePanel extends javax.swing.JPanel {
         DeliveryMan deliveryMan;
         List<WorkRequest> workRequestList;
 
-        DefaultMutableTreeNode customers = new DefaultMutableTreeNode("Customers");
+        DefaultMutableTreeNode systemAdmin = new DefaultMutableTreeNode("SystemAdmin");
+
+//        DefaultMutableTreeNode customers = new DefaultMutableTreeNode("Customers");
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
         root.removeAllChildren();
-        root.insert(customers, 0);
+//        root.insert(customers, 0);
+        root.insert(systemAdmin, 0);
+
+        DefaultMutableTreeNode customers = new DefaultMutableTreeNode("Customers");
+        systemAdmin.insert(customers, 0);
 
         DefaultMutableTreeNode networkNode;
         DefaultMutableTreeNode orderNode;
@@ -159,14 +165,14 @@ public class ManageTreePanel extends javax.swing.JPanel {
                 String txt = req.getRestaurant().getName() + " - " + req.getStatus();
                 orderNode = new DefaultMutableTreeNode(txt);
 
-//                orderNode = new DefaultMutableTreeNode(req.getRestaurant().getName());
+                // orderNode = new DefaultMutableTreeNode(req.getRestaurant().getName());
                 networkNode.insert(orderNode, count);
                 count++;
             }
         }
 
         DefaultMutableTreeNode restaurants = new DefaultMutableTreeNode("Restaurants");
-        root.insert(restaurants, 1);
+        systemAdmin.insert(restaurants, 1);
 
         for (int i = 0; i < restaurantList.size(); i++) {
             restaurant = restaurantList.get(i);
@@ -179,14 +185,14 @@ public class ManageTreePanel extends javax.swing.JPanel {
 //                orderNode = new DefaultMutableTreeNode(req.getCustomer().getName());
                 String txt = req.getCustomer().getName() + " - " + req.getStatus();
                 orderNode = new DefaultMutableTreeNode(txt);
-                
+
                 networkNode.insert(orderNode, count);
                 count++;
             }
         }
 
         DefaultMutableTreeNode deliveryMans = new DefaultMutableTreeNode("Delivery Man");
-        root.insert(deliveryMans, 2);
+        systemAdmin.insert(deliveryMans, 2);
 
         for (int i = 0; i < deliveryManList.size(); i++) {
             deliveryMan = deliveryManList.get(i);
