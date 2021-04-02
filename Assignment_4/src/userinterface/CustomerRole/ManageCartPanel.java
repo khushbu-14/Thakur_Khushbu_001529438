@@ -357,13 +357,15 @@ public class ManageCartPanel extends javax.swing.JPanel {
                 System.out.println("error " + e.getMessage());
             }
 
-            if (qty != 0) {
+            if (qty > 0) {
                 OrderItem oi = new OrderItem(d, qty);
 //                orderList.addOrderItem(oi);
 
                 orderList.add(oi);
 
                 populateCartTable();
+            }else{
+                JOptionPane.showMessageDialog(this, "Only positive numbers allowed");
             }
         }
     }//GEN-LAST:event_btnAddDishActionPerformed

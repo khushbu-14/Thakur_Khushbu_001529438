@@ -51,6 +51,7 @@ public class ManageOrderHistory extends javax.swing.JPanel {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         tblCart = new javax.swing.JTable();
+        btnRefresh = new javax.swing.JButton();
         btnViewDetails = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(237, 255, 236));
@@ -89,6 +90,18 @@ public class ManageOrderHistory extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 53, 704, 157));
 
+        btnRefresh.setBackground(new java.awt.Color(255, 255, 255));
+        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/refresh.png"))); // NOI18N
+        btnRefresh.setText("Refresh");
+        btnRefresh.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        btnRefresh.setBorderPainted(false);
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefreshActionPerformed(evt);
+            }
+        });
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 139, 46));
+
         btnViewDetails.setBackground(new java.awt.Color(255, 255, 255));
         btnViewDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/view-details.png"))); // NOI18N
         btnViewDetails.setText("View Details");
@@ -99,7 +112,7 @@ public class ManageOrderHistory extends javax.swing.JPanel {
                 btnViewDetailsActionPerformed(evt);
             }
         });
-        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 228, 139, 46));
+        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 139, 46));
     }// </editor-fold>//GEN-END:initComponents
 
     private WorkRequest getSelectedRow() {
@@ -115,9 +128,13 @@ public class ManageOrderHistory extends javax.swing.JPanel {
         return request;
     }
 
-    private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+        populateTable();
+    }//GEN-LAST:event_btnRefreshActionPerformed
 
-        WorkRequest request = getSelectedRow();
+    private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
+        // TODO add your handling code here:
+          WorkRequest request = getSelectedRow();
 
         if (request != null && request instanceof OrderList) {
             OrderList orderListData = (OrderList) request;
@@ -131,6 +148,7 @@ public class ManageOrderHistory extends javax.swing.JPanel {
     }//GEN-LAST:event_btnViewDetailsActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnViewDetails;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblCart;
